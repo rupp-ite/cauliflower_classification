@@ -4,6 +4,8 @@ Research code and reproducibility records for **Comparative Evaluation of CNNs a
 
 This project compares eight pretrained image classifiers using an audited, harmonized dataset and a separate five-fold source-held-out evaluation. It also includes statistical comparisons, inference-efficiency measurements and Grad-CAM analysis.
 
+Repository: https://github.com/rupp-ite/cauliflower_classification
+
 ## Study overview
 
 - Five public repositories; 5,394 downloaded images.
@@ -34,17 +36,22 @@ Raw and augmented image folders are excluded from the GitHub package to keep it 
 The publication package groups existing files as follows. Names within copied report folders are preserved. No separate `dataset_sources.csv` or `eligibility_reports` folder is required.
 
 ```text
-CauliflowerV2/
+cauliflower_classification/
 ├── README.md
 ├── LICENSE
 ├── requirements.txt
+├── .gitattributes
 ├── scripts/                         # Final scripts used for the study
 ├── records/                         # Audit, harmonization and split records
 │   └── source_held_out/
 │       ├── retained_manifest_input.csv
 │       ├── protocol.json
 │       ├── eligibility_summary.csv
-│       └── ... five fold folders containing reports only
+│       ├── fold_1_source_1/
+│       ├── fold_2_source_2/
+│       ├── fold_3_cauli_net/
+│       ├── fold_4_vegnet/
+│       └── fold_5_source_5/            # reports/ and offline_augmentation_reports/ only
 └── results/
     ├── main/                        # Final baseline–E6 summaries
     ├── source_held_out/              # Five-fold results and run records
@@ -60,6 +67,12 @@ CauliflowerV2/
 
 The publication layout is separate from the original execution layout. Scripts may expect `Dataset/`, `Results/` or `Result/`, or recorded Windows paths. Keep those local runtime directories outside version control and pass explicit path arguments where supported. Check `--help` before running a copied script. Moving files into this publication layout does not automatically update saved paths or script defaults.
 
+The seven authoritative main summaries are `results/main/baseline_FinalReports/` and `results/main/E1_FinalReports/` through `E6_FinalReports/`. They combine the final non-EfficientNet runs with EfficientNetV2-S BF16 runs. Each contains `test_runs.csv`, `test_mean_sd.csv`, validation summaries, efficiency summaries and supporting metadata. The 162 main-run predictions and efficiency records are also available in their dedicated collection folders. Main training histories, individual main-run configurations and trained weights are not included in the compact final-summary folders.
+
+### Preserve file integrity
+
+The root `.gitattributes` disables text conversion with `* -text`. Preserve the original bytes of tracked records and results. File hashes in collection manifests refer to exact bytes, including line endings and any byte-order mark. Do not open and resave these files merely to change formatting or line endings.
+
 ## Environment
 
 Main experiments used Windows 11, Python 3.12.10 and an NVIDIA GeForce RTX 5060 Ti with 16 GB memory. Install the study dependencies from the supplied `requirements.txt`, including timm 1.0.30. Use the appropriate PyTorch/CUDA installation for the recorded environment and retain the exported environment records with the results.
@@ -68,11 +81,17 @@ Main experiments used Windows 11, Python 3.12.10 and an NVIDIA GeForce RTX 5060 
 python -m venv .venv
 ```
 
-Activate the environment on Windows PowerShell:
+Activate the environment on Windows PowerShell. Install the recorded CUDA-compatible PyTorch and torchvision builds using the appropriate PyTorch wheel source before installing the full requirements:
 
 ```powershell
 .\.venv\Scripts\Activate.ps1
 python -m pip install -r requirements.txt
+```
+
+The computation-counting code additionally requires the recorded dependency below. Include it in `requirements.txt`; if using an earlier requirements file that omits it, install it explicitly:
+
+```powershell
+python -m pip install fvcore==0.1.5.post20221221
 ```
 
 The saved statistical analysis was produced separately with Python 3.12.14 and NumPy 2.3.5; see `analysis_protocol.json`. Hardware, library versions and deterministic settings can affect timing and numerical results.
@@ -101,8 +120,8 @@ Training uses batch size 32, AdamW, learning rate 0.0001, weight decay 0.0001, l
 
 1. Download the five source datasets and retain their source directory identities.
 2. Run `01_audit_downloads.py`. Apply the published manually reviewed duplicate and label-conflict decisions. Do not replace the review decisions with automatic similarity thresholds alone.
-3. Run the final cleaning/harmonization script using the source-label mapping. Check the retained manifest and the 3,914-image total.
-4. Run the main split script with split seed 42. Verify the published assignments and the 2,756/579/579 counts before augmentation.
+3. Run `02_clean_dataset.py` using the source-label mapping. Check the retained manifest and the 3,914-image total.
+4. Run `03_split_dataset.py` with split seed 42. Verify the published assignments and the 2,756/579/579 counts before augmentation.
 5. Run `04_augment_train.py` using the saved policy and seed. Verify the augmentation manifest, parent-image linkage and 7,191-image training total. Validation and test images are not augmented.
 6. Run `05_train_experiments.py` for the seven non-EfficientNet models and `05_train_experiments_amp_memory_cleanup.py` with `--amp-dtype bfloat16` for EfficientNetV2-S. Use seeds 42, 43 and 44 and the experiment settings above. Omit ViT from E3/E4.
 7. Combine only final completed runs using the report-combination script. Retain class mappings, configuration files, histories, checkpoint-selection records, predictions and efficiency logs.
@@ -110,11 +129,19 @@ Training uses batch size 32, AdamW, learning rate 0.0001, weight decay 0.0001, l
 
 The source-held-out models are ResNet50, MobileNetV3-Large, ViT-Base-Patch16 and Twins-SVT-Base. Training uses offline augmentation to a minimum of 500 images per class plus online augmentation. Each fold has a fixed 85%/15% development split, split seed 42, and a source-exclusive held-out test set. Photographs associated with the held-out source and another source are excluded from that fold. Report all five folds, including limited class supports.
 
-For preparation and training scripts, use their final published filenames and `--help` to supply the local input/output paths. The original cleaning and main-splitting filenames are preserved rather than renamed here. Before releasing this repository, record the exact commands used for these steps alongside the corresponding scripts or run configurations.
+Use `python scripts/SCRIPT_NAME.py --help` to inspect each preparation/training interface. Paths must point to reconstructed local data and newly generated local reports. In particular, the cleaning script requires an audit directory containing `download_manifest.csv`; regenerate that audit from the original downloads. The reviewed decisions are in `records/audit/`, and the published label mapping is `records/harmonized_dataset_reports/run_20261019T053300Z_wnpcpkvs/mapping.csv`. Supply these explicitly using `--exact`, `--near` and `--mapping` rather than relying on defaults beside the scripts.
+
+The split and augmentation scripts validate paths and report hashes. Generate new reports for the local reconstruction instead of editing the archived report files to substitute local paths. Published report files remain the reference for image membership and recorded decisions. Full dataset reconstruction and GPU training have not been validated by the saved-result checks described below.
 
 ## Reproduce statistical analysis from saved predictions
 
-`12_collect_test_predictions.py` collects the final predictions. Preserve `collection_manifest.csv`, `collection_summary.json`, each experiment's `class_to_index.json`, and the 162 model/seed `test_predictions.csv` files. Package that collection as `results/test_prediction.zip`, retaining its internal directory structure.
+`12_collect_test_predictions.py` collects the final predictions. Preserve `collection_manifest.csv`, `collection_summary.json`, each experiment's `class_to_index.json`, and the 162 model/seed `test_predictions.csv` files. Package that collection as `results/test_prediction.zip`, retaining its internal directory structure. From the repository root in Windows PowerShell:
+
+```powershell
+Compress-Archive -Path results/test_prediction -DestinationPath results/test_prediction.zip
+```
+
+Create the ZIP only if it does not already exist. It is a local analysis input; it does not need to be committed because its constituent files are already in the repository.
 
 ```bash
 python scripts/13_analyze_test_predictions.py --input results/test_prediction.zip --output results/analysis/statistics_reproduced --bootstrap 10000 --permutations 50000 --seed 20261025
@@ -151,13 +178,15 @@ Rebuild the main comparison and additional panels from saved outputs:
 python scripts/15_build_gradcam_comparison.py --input results/analysis/gradcam/gradcam_E6_seed42 --output results/analysis/gradcam/comparison_reproduced --correct-rows 2 --error-rows 2 --selection-seed 42 --apply
 ```
 
-To regenerate the maps themselves, run `14_generate_gradcam.py` with the original E6 run root, reconstructed split images and the four `best.pt` checkpoints. The run root must include `experiment.json`, `class_to_index.json` and each model/seed's `config.json`, `status.json`, `test_evaluation.json` and `test_predictions.csv`. The script verifies checkpoint hashes. The README does not imply that checkpoints or raw images are included; regeneration from weights requires obtaining them or rerunning training.
+To regenerate the maps themselves, run `14_generate_gradcam.py` with the original E6 run root, reconstructed split images and the four `best.pt` checkpoints. The run root must include `experiment.json`, `class_to_index.json` and each model/seed's `config.json`, `status.json`, `test_evaluation.json` and `test_predictions.csv`. The script verifies checkpoint hashes. Raw dataset directories and trained checkpoints are not included. Regeneration from weights requires obtaining the checkpoints separately or rerunning training; the saved CAM files support rebuilding the comparison figure without the checkpoints.
 
 The main figure displays two common-correct examples and two examples with an error from at least one model, selected from 20 candidates. Keep `main_figure_rows.csv` and `figure_protocol.json` with the figure. Maps target predicted-class logits; additional ground-truth maps are generated for errors. Maps are normalized individually and are qualitative attributions, not validated lesion segmentations.
 
 ## Availability and interpretation
 
-Keep scripts, manually reviewed decisions, manifests, split assignments and analysis outputs under version control. Exclude raw/augmented image directories, caches, failed runs and superseded runs. Large checkpoints may be distributed separately with documented hashes and links. A final public release should contain the files described here; this README alone does not establish their availability.
+The repository includes scripts, manually reviewed decisions, manifests, split assignments, fold augmentation reports, final summaries, test predictions, efficiency logs and saved Grad-CAM outputs. Bulk raw/augmented dataset directories, caches, failed runs and superseded runs are excluded. Selected dataset-derived images are included in the Grad-CAM outputs and comparison figures; their source rights remain applicable. Trained checkpoints are not included. Any later checkpoint archive should document its hashes and access link.
+
+Checks on repository commit `e83c50b` confirmed that all 169 prediction-package files and 162 efficiency logs match their recorded hashes. Prediction input validation passed. Recomputed efficiency summaries matched the saved outputs, and the Grad-CAM comparison input validation passed. These checks did not rerun GPU training, GPU benchmarks or Grad-CAM generation from checkpoints.
 
 Reported mixed-source performance should be interpreted together with the source-held-out results. Different folds have different class sets and supports. Nonsignificant paired comparisons do not establish equivalence. Partial computation estimates and desktop GPU measurements do not establish deployment performance on other devices.
 

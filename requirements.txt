@@ -15,6 +15,7 @@ executing==2.3.0
 filelock==3.32.3
 fonttools==4.67.0
 fsspec==2026.7.0
+fvcore==0.1.5.post20221221
 grad-cam==1.5.7
 h11==0.16.0
 hf-xet==1.7.0
