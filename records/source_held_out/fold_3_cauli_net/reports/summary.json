@@ -1,0 +1,10 @@
+{
+  "fold": "fold_3_cauli_net",
+  "held_out_source": "3_Cauli-Net",
+  "eligible_classes": 3,
+  "train": 1386,
+  "val": 243,
+  "test": 342,
+  "excluded_shared": 12,
+  "excluded_class": 1931
+}

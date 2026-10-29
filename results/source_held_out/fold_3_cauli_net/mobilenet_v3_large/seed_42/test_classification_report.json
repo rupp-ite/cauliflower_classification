@@ -1,0 +1,33 @@
+{
+  "Alternaria Leaf Spot": {
+    "precision": 0.6,
+    "recall": 0.05844155844155844,
+    "f1-score": 0.10650887573964497,
+    "support": 154.0
+  },
+  "Bacterial Soft Rot": {
+    "precision": 1.0,
+    "recall": 0.3225806451612903,
+    "f1-score": 0.4878048780487805,
+    "support": 93.0
+  },
+  "Healthy": {
+    "precision": 0.31986531986531985,
+    "recall": 1.0,
+    "f1-score": 0.4846938775510204,
+    "support": 95.0
+  },
+  "accuracy": 0.391812865497076,
+  "macro avg": {
+    "precision": 0.6399551066217734,
+    "recall": 0.4603407345342829,
+    "f1-score": 0.359669210446482,
+    "support": 342.0
+  },
+  "weighted avg": {
+    "precision": 0.6309567408982614,
+    "recall": 0.391812865497076,
+    "f1-score": 0.3152460201455814,
+    "support": 342.0
+  }
+}

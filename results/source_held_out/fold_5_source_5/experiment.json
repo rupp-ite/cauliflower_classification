@@ -1,0 +1,76 @@
+{
+  "runner_version": "source_held_out_1",
+  "fold": "fold_5_source_5",
+  "held_out_source": "5_Cauliflower_Image_Dataset",
+  "experiment": "source_held_out_224_offline_online",
+  "models": [
+    "resnet50",
+    "mobilenet_v3_large",
+    "vit_base_patch16_224",
+    "twins_svt_base"
+  ],
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "class_names": [
+    "Alternaria Leaf Spot",
+    "Bacterial Soft Rot",
+    "Black Rot",
+    "Downy Mildew"
+  ],
+  "image_size": [
+    224,
+    224
+  ],
+  "counts": {
+    "train": 2000,
+    "val": 199,
+    "test": 382
+  },
+  "raw_training_images": 1139,
+  "train_folder": "augmented_train",
+  "offline_augmentation": true,
+  "online_augmentation": true,
+  "precision": "FP16 AMP",
+  "hyperparameters": {
+    "epochs": 100,
+    "batch_size": 32,
+    "learning_rate": 0.0001,
+    "weight_decay": 0.0001,
+    "label_smoothing": 0.1,
+    "early_stopping_patience": 10,
+    "scheduler": "ReduceLROnPlateau on validation loss",
+    "lr_patience": 3,
+    "lr_factor": 0.3,
+    "optimizer": "AdamW",
+    "normalization": "checkpoint",
+    "workers": 4,
+    "strict_deterministic": true,
+    "amp": true
+  },
+  "pretrained": true,
+  "completed": true,
+  "output": "D:\\Projects\\CauliflowerV2\\Results\\source_held_out_224_offline_online\\fold_5_source_5",
+  "split_root": "D:\\Projects\\CauliflowerV2\\Dataset\\source_held_out\\fold_5_source_5",
+  "split_report": "D:\\Projects\\CauliflowerV2\\Dataset\\source_held_out\\fold_5_source_5\\reports",
+  "split_manifest_sha256": "032d8a9600c9407eed5d122f6a0dfbf286ccbbc6e05157fdd988ec381655a715",
+  "augmentation_report": "D:\\Projects\\CauliflowerV2\\Dataset\\source_held_out\\fold_5_source_5\\offline_augmentation_reports\\run_20261024T134247Z_2dl8_c0h",
+  "augmentation_manifest_sha256": "ecf15fd2596fb57615f74634fdac9197cea3d7cb2c07e42fdeb7a9961eedb646",
+  "augmentation_policy_sha256": "0bf15bc40eae2b7496360065d2303a0085db826fbdb68ae78be4eb4dfc206a6b",
+  "script_sha256": "aeca695d7b2c7170c64264211278656ed9abacb8556e8c26b1b217c34200f8b1",
+  "training_device": "cuda:0",
+  "automatic_test": true,
+  "checkpoint_rule": "highest validation accuracy; earliest ties",
+  "memory_cleanup": "gc.collect and synchronized unused CUDA cache release between model-seed jobs",
+  "benchmark_protocol": {
+    "batch_size": 32,
+    "warmup": 20,
+    "repeats": 100,
+    "precision": "FP32",
+    "scope": "model forward only; synthetic device input"
+  },
+  "interpretation": "Shared-class source-held-out task; class sets and supports differ between folds. Do not tune on held-out test results.",
+  "test_completed": true
+}

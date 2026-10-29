@@ -1,0 +1,54 @@
+{
+  "mode": "apply",
+  "download_root": "D:\\Projects\\CauliflowerV2\\Dataset\\downloaded_dataset",
+  "output": "D:\\Projects\\CauliflowerV2\\Dataset\\harmonized_dataset",
+  "input_files": 5394,
+  "included_before_cleaning": 4707,
+  "exact_review_groups": 464,
+  "near_review_pairs": 346,
+  "exact_decisions": {
+    "keep_one": 419,
+    "exclude_conflict": 45
+  },
+  "near_decisions": {
+    "duplicate": 346
+  },
+  "statuses": {
+    "retain": 3914,
+    "exclude_redundant_copy": 684,
+    "exclude_out_of_scope": 687,
+    "exclude_conflict": 109
+  },
+  "retained_images": 3914,
+  "retained_classes": 14,
+  "retained_by_class": {
+    "Alternaria Leaf Spot": 591,
+    "Bacterial Soft Rot": 405,
+    "Bacterial Spot Rot": 212,
+    "Black Leg": 103,
+    "Black Rot": 186,
+    "Black Spot": 243,
+    "Cabbage Aphid Colony": 139,
+    "Clubroot": 137,
+    "Downy Mildew": 567,
+    "Healthy": 987,
+    "Mosaic": 76,
+    "Powdery Mildew": 86,
+    "Ring Spot": 91,
+    "White Rust": 91
+  },
+  "zero_remaining_classes": [],
+  "source_file_verification": "all_downloaded_files_match_audit",
+  "representative_rule": "Largest decoded pixel area, then lexicographically first eligible source path; not a quality or diagnostic claim.",
+  "notes": [
+    "All source copies of retained images are recorded in retained_manifest.csv.",
+    "All duplicate-linked copies of excluded conflict groups remain excluded.",
+    "Mixed included/excluded clusters are excluded conservatively.",
+    "No train/validation/test split or augmentation is created.",
+    "Zero remaining classes must be investigated before training.",
+    "No claim that unflagged images are free of near-duplicates or related captures."
+  ],
+  "report_directory": "D:\\Projects\\CauliflowerV2\\Dataset\\harmonized_dataset_reports\\run_20261019T053300Z_wnpcpkvs",
+  "copied_and_verified": 3914,
+  "completed": true
+}

@@ -1,0 +1,29 @@
+﻿true_label,category,available,selected
+Alternaria Leaf Spot,common_correct,88,1
+Alternaria Leaf Spot,any_model_error,0,0
+Bacterial Soft Rot,common_correct,55,1
+Bacterial Soft Rot,any_model_error,5,1
+Bacterial Spot Rot,common_correct,29,1
+Bacterial Spot Rot,any_model_error,2,1
+Black Leg,common_correct,15,1
+Black Leg,any_model_error,0,0
+Black Rot,common_correct,26,1
+Black Rot,any_model_error,1,1
+Black Spot,common_correct,36,1
+Black Spot,any_model_error,0,0
+Cabbage Aphid Colony,common_correct,20,1
+Cabbage Aphid Colony,any_model_error,0,0
+Clubroot,common_correct,20,1
+Clubroot,any_model_error,0,0
+Downy Mildew,common_correct,81,1
+Downy Mildew,any_model_error,4,1
+Healthy,common_correct,148,1
+Healthy,any_model_error,0,0
+Mosaic,common_correct,11,1
+Mosaic,any_model_error,0,0
+Powdery Mildew,common_correct,9,1
+Powdery Mildew,any_model_error,3,1
+Ring Spot,common_correct,12,1
+Ring Spot,any_model_error,1,1
+White Rust,common_correct,13,1
+White Rust,any_model_error,0,0

@@ -1,0 +1,28 @@
+{
+  "script_version": "source_held_out_1",
+  "held_out_source": "5_Cauliflower_Image_Dataset",
+  "mode": "plan_only",
+  "split_root": "D:\\Projects\\CauliflowerV2\\Dataset\\source_held_out\\fold_5_source_5",
+  "split_report": "D:\\Projects\\CauliflowerV2\\Dataset\\source_held_out\\fold_5_source_5\\reports",
+  "output": "D:\\Projects\\CauliflowerV2\\Dataset\\source_held_out\\fold_5_source_5\\augmented_train",
+  "report_directory": "D:\\Projects\\CauliflowerV2\\Dataset\\source_held_out\\fold_5_source_5\\offline_augmentation_reports\\run_20261024T133405Z_0q629z82",
+  "seed": 42,
+  "minimum_per_class": 500,
+  "original_training_images": 1139,
+  "planned_generated_images": 861,
+  "planned_total_images": 2000,
+  "classes": 4,
+  "split_manifest_sha256": "032d8a9600c9407eed5d122f6a0dfbf286ccbbc6e05157fdd988ec381655a715",
+  "completed": true,
+  "notes": [
+    "Output includes unchanged original training images plus accepted offline variants.",
+    "No original is removed or downsampled; target is max(original_count, minimum).",
+    "No validation or test image is used as an augmentation parent.",
+    "Source-held-out assignments are checked against retained provenance and deterministic split rules.",
+    "Duplicate rejection includes all retained original pixel hashes, including fold exclusions.",
+    "Transform parameters follow the previous code except explicitly configured noise and modern Affine implementation.",
+    "No-op outputs and exact decoded-pixel matches to any original split or earlier generated output are retried.",
+    "Augmented variants are not independent observations; keep raw train for the no-offline baseline.",
+    "Inspect generated examples to assess preservation of disease symptoms."
+  ]
+}

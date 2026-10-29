@@ -1,0 +1,1558 @@
+{
+  "experiments": [
+    "baseline",
+    "E1",
+    "E2",
+    "E3",
+    "E4",
+    "E5",
+    "E6"
+  ],
+  "prediction_files": 162,
+  "class_mapping_files": 7,
+  "runs_per_experiment": {
+    "baseline": 24,
+    "E1": 24,
+    "E2": 24,
+    "E3": 21,
+    "E4": 21,
+    "E5": 24,
+    "E6": 24
+  },
+  "matched_test_images": 579,
+  "split_manifest_sha256": "9c700f7707969848bf09b068050ce2d56290eb077b6a91f9775427bc0ebd1e83",
+  "source_metadata_sha256": {
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\experiment.json": "dacdded5191101fc4c0c31ab415249dd4cef84a8ece1b0247a661db20f5cb86b",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\class_to_index.json": "77e3ac61bf04c76878f3da7dd2f207b42a3939f39e18f20282e28239d81fae3f",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\resnet50\\seed_42\\status.json": "39e9fa1256014f4d53d2b4beb9551f37d78d99461d37b8db9592def9b883aaca",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\resnet50\\seed_42\\config.json": "5d9be560df9a4d03348086d6c910ac94f7fc4d3125c8ed4dfcc47b7e9b63aa5e",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\resnet50\\seed_42\\test_evaluation.json": "564a97edd1515fe9b2d9f520ac11f7ee55e4e46d95ccf8dfc1a443b4f2c5d66a",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\resnet50\\seed_42\\test_metrics.json": "1c4c6f8b09892ffe50137218058a136585196a86ad375c3f7b9c84b4a56cd6a4",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\resnet50\\seed_43\\status.json": "c058edf9277bcaf597797a79a2df27baff9e8c1cf9f7b5a3f6c72e2004108405",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\resnet50\\seed_43\\config.json": "48312ab2f78fa8b95ed0e7c9f3b065675e83487ba01feb3904bef649a2d1cd16",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\resnet50\\seed_43\\test_evaluation.json": "e9c44f837e68a19831ac6fd24b1a8d1e7277316b8a1e851fd78466fbc438b738",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\resnet50\\seed_43\\test_metrics.json": "bc9919d94f04b445dd0165cd943e3c0a49da6556e0b22058eb0f2cfa44709ec8",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\resnet50\\seed_44\\status.json": "641c501442d71cab8601c38cf3403250489ef6b7b368d8aca7a45915d1ab63e7",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\resnet50\\seed_44\\config.json": "85cba397273ffbc795abd5a9c1bd7cfef5df240cee6956df28dbd6800944b163",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\resnet50\\seed_44\\test_evaluation.json": "c57ea680213d45b3c1a5e7dc404f07fe0770a52005919f1b2e4a8e6cb4425aef",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\resnet50\\seed_44\\test_metrics.json": "e90bfb154d73cccf4219af8269e366250526e69d41db182a728a309ee8deadf0",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\densenet121\\seed_42\\status.json": "645aed53b1a50910b1427a08a154af4148d604baa31efc1d9c90bd0c54a503b0",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\densenet121\\seed_42\\config.json": "e8f4eca04d7ea2c7eca14ef4e9a635bd2fa2cc74fb5a174c4dd0366a8e5b49e6",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\densenet121\\seed_42\\test_evaluation.json": "89784b801863842ce84d6487519cdb7be4e5663c1ef00bfcb31ff7c409a58ef5",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\densenet121\\seed_42\\test_metrics.json": "5012d601fc507a4a9fd3ee8b9c4baba86e67a813eea1f56522b2c999eafb10ae",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\densenet121\\seed_43\\status.json": "bf6b5a79590d208d30a882955037ef1e2c1eed93ba5786844d56965c93cbb36c",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\densenet121\\seed_43\\config.json": "5116f9b453fef8f9029753288fa999660cafe8cb3779f2f864724d8209e53485",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\densenet121\\seed_43\\test_evaluation.json": "decae43a91659761c163754b9a2b51ddaf83e861ebc24cb3577cccc5a72e1e09",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\densenet121\\seed_43\\test_metrics.json": "f65ed0cb67b2ae87940434c4094c8d4ec44993c8284352dae039fb9945e66bb9",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\densenet121\\seed_44\\status.json": "93fea20c3d468b5ac3a643d214101cacac4d587f07dbc4136e7b32495a815033",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\densenet121\\seed_44\\config.json": "70127347d8df7cbcb386d0c108b3b765fd76482bbd079b793c884263df9b052b",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\densenet121\\seed_44\\test_evaluation.json": "5c609da01e0c4957a3dcd03151fc52fbfee5e5a64edf34fdf62f3784efa608c0",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\densenet121\\seed_44\\test_metrics.json": "3a0f1d213a2138341acad17a8eadb433abcca88ca797a1b2f17cb8bc5242cc58",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\mobilenet_v3_large\\seed_42\\status.json": "72834c6e6197b74cf8132cf7a0b0c8d355db4f5cda83d3e93733b818337e3eb8",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\mobilenet_v3_large\\seed_42\\config.json": "70ecda4e90d9b9f2f1ac065ad658539bda58b083760c77e97980e083aafafaed",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\mobilenet_v3_large\\seed_42\\test_evaluation.json": "55e7aade5d7069f461ee180f922f367b2b72e926fde7460cd85e4e190987a7ec",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\mobilenet_v3_large\\seed_42\\test_metrics.json": "327c944646d3f79986b82f126c6a3bff50f37a1140822f2c061cbe5a5ef62ba0",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\mobilenet_v3_large\\seed_43\\status.json": "d9c6514d793381ba0682013af99d4752d2c9a56d45af799eb39188be4c8b8865",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\mobilenet_v3_large\\seed_43\\config.json": "32a554dcbcb9ea5a6c760bb63949e2bd26796da19f5a69d056fe2b0bbd5e2b79",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\mobilenet_v3_large\\seed_43\\test_evaluation.json": "be235be521eec7f5d98908ee795f776cc197547294ac0373cd417dd54325d506",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\mobilenet_v3_large\\seed_43\\test_metrics.json": "c1c23a08190d7f9e1bdcd0fa4af2ad731393180edb6efcbaa8390d9c407b1542",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\mobilenet_v3_large\\seed_44\\status.json": "c223704771f51350fabc4323439b0b2748603d3d6c76eee7169af2b66f1da7e2",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\mobilenet_v3_large\\seed_44\\config.json": "c6338bfc9b1c29ec8246803014d2a34419182a3896925278fbc197a8846d32b4",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\mobilenet_v3_large\\seed_44\\test_evaluation.json": "42d1439c32baf4d98ab35ee0a2104ff8c679fc7b61d670ac2985a29cc4d1a274",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\mobilenet_v3_large\\seed_44\\test_metrics.json": "d992306fe9d097c69f6dfa464dfd0def401d411745785976c2a808807b671c21",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\xception\\seed_42\\status.json": "2266722747bddb3813f7fe9a19cd2a37b67f8446e4aa7a7d1d77e0d6837b2b5e",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\xception\\seed_42\\config.json": "02fb061e7ba351f156ce5eadd2fcbcb2674ced22730a1d40c291504d9917d87a",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\xception\\seed_42\\test_evaluation.json": "6520bd4fbf10a6217d699be50b1ec523b79d1ef127d33661e8109ea37b384df3",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\xception\\seed_42\\test_metrics.json": "223de632cc32a513c12be2c61ca1150e7535967cb10e7eaf3351a391d249e7fc",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\xception\\seed_43\\status.json": "cac84690cec2b309a0ffa67671fe87ede6047ab2dfd92d096739dd2cfeed91c6",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\xception\\seed_43\\config.json": "767ed77fc5faf716743e65885cf5322fe2d3636ae4c8bc59e605e3663371245b",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\xception\\seed_43\\test_evaluation.json": "c0c540181f4c18a22038c0ed4aa741a5e070c0ad21feebe115699f389667f434",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\xception\\seed_43\\test_metrics.json": "d3bd91eca73951a8b429ab3fc52d2d5d2b88688768496f9ec25f33ecc9d4d60a",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\xception\\seed_44\\status.json": "e9d66a38b4e0f160034c1c5ad27046c31f040995d6909c80fb0ea81e53b39d4d",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\xception\\seed_44\\config.json": "58726dc4cfd078e2f90622b65daf2466e738e96c1129d9c695d6e0db5983aea1",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\xception\\seed_44\\test_evaluation.json": "5768b61a2532b71240b330af4d328a8e87eb130772dc8d28dc1ab2012951f6e0",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\xception\\seed_44\\test_metrics.json": "313d3f7494e7c1a1de4bb91e6e4ee133e02b70f60b9707660b3ca4d35b0ebd6f",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\convnext_tiny\\seed_42\\status.json": "d4e02382bd3dc15130839a83b375ebc03dc6cbcc088e36ecb08affda11cdb7a5",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\convnext_tiny\\seed_42\\config.json": "5486f1cd71e42e3186ebef68fb634e054bb094447c5b5b01658ba871f3e62c8b",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\convnext_tiny\\seed_42\\test_evaluation.json": "fb269a6092d58c29fb9cfbdf1d914748aba35cfc0dcd8a1c25c6fbfff28cdaaa",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\convnext_tiny\\seed_42\\test_metrics.json": "ea6d8b3bdcfeca157ecdeede8bbb7fc20f9652e47d8765cba0c5823955edf917",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\convnext_tiny\\seed_43\\status.json": "6e3dd8da6aa358f5ce715b4f6b9b7f9d8b0f8ab9da500721958eba5795cdcdf5",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\convnext_tiny\\seed_43\\config.json": "9ccb3e2553bab4ea06d02bbbfffa63deaa2e5fc3ff49c1add29d1249b6cace14",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\convnext_tiny\\seed_43\\test_evaluation.json": "26592ff704eb76fc07fe48a33a89c6ba7370fb2d68721783b31db325b4cfaddc",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\convnext_tiny\\seed_43\\test_metrics.json": "bfe3a1ac2ab419894cf8808fb6dee6a0dee15ed1e276f0e2a48621dd182d778b",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\convnext_tiny\\seed_44\\status.json": "924fdd09b55bb8c2d455ce63cbb8194b0a6030f92cec8667477e0afffe55a8b4",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\convnext_tiny\\seed_44\\config.json": "d80919da35100eeee5c73ad8b762179fd7a71ca2b97756d6cb417411fa9a88ad",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\convnext_tiny\\seed_44\\test_evaluation.json": "6f5762922b314cef154855f5265a6ca1d4acc76c94cd7196e854a32dd0abbddf",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\convnext_tiny\\seed_44\\test_metrics.json": "1644c5a0aa7dfa6d1397c15a990d12d8bf2190c7d53115dcb41eb947eb86d4c8",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\vit_base_patch16_224\\seed_42\\status.json": "c742f6d27725cb77a57f027b2375ee26618bcabd96612b1446d496986c13eed4",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\vit_base_patch16_224\\seed_42\\config.json": "58f3f02715df85a1213ea950cca4c1572e14c4637c54339785079e89d5d6f70f",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\vit_base_patch16_224\\seed_42\\test_evaluation.json": "4d789257130bfa19bacb2b474d60292bccd9504da87a5301932e32f24cf5a4f4",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\vit_base_patch16_224\\seed_42\\test_metrics.json": "1d5e2cc1db4b429fa06694974ceb71cb0b36edefbbf843f937c9c589dac332a4",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\vit_base_patch16_224\\seed_43\\status.json": "cd2ff36cba6ac04e145c39f289b9a91da076d27c73bfea87a4c4c05fd6b6d74b",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\vit_base_patch16_224\\seed_43\\config.json": "00827f17f89ba435c77a1a01f4a5a0fb885a5cf669be4ab2c90bbf6ae6a82705",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\vit_base_patch16_224\\seed_43\\test_evaluation.json": "0bd57937582b926ba3c9c01121c4b2b2c701efb33a8158e697ef43f9d8856aff",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\vit_base_patch16_224\\seed_43\\test_metrics.json": "f7b128b8a6f6368ef046f24cb36bd53d948c20d6259a79ea1b7586b9a323d288",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\vit_base_patch16_224\\seed_44\\status.json": "dea7640b24b97f5edab9a5364b92ce037ad1723b2b1d3a186aab68f96da08b77",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\vit_base_patch16_224\\seed_44\\config.json": "2cbec00c36b48e1743467a93187836560a01e4fe7f5e51157840087bf14d9ef0",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\vit_base_patch16_224\\seed_44\\test_evaluation.json": "366390b5e8424b670db719c0710dfe774a588a83e80e742527edcc9954395bdb",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\vit_base_patch16_224\\seed_44\\test_metrics.json": "481d8c5fb445a80a1eab4b8ec329a2face588a937b24dfd5f8c2a5950943e704",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\twins_svt_base\\seed_42\\status.json": "502bf6ec84404a97c4172c30a4b1a4d24f7c0db71bad9fa35e2dd30ada355290",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\twins_svt_base\\seed_42\\config.json": "4c02f9dc3bd83125f4b103fde4eb85541b1e2d7db6dd2191e4c7fbd3dd514025",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\twins_svt_base\\seed_42\\test_evaluation.json": "bc321f3733122eeb528b8394d089faaf5cafa1ae105b9bb42863a0ddbc4ba13a",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\twins_svt_base\\seed_42\\test_metrics.json": "2ea947dc4ca47e6aabb4a5afa18f8f13173c5d700f8fb56f27033abdc5e3655c",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\twins_svt_base\\seed_43\\status.json": "5c5fbd6d3f748d0c342b9146b517cc70348e8bc931576ded8543a05fbbd717a4",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\twins_svt_base\\seed_43\\config.json": "8cca17f033495ae217583f7beabd6d2b8a11a57cc408f7077477c16cb8cec71b",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\twins_svt_base\\seed_43\\test_evaluation.json": "07d290f5df93f9c14c1780e0cc93e73ee4166a8974afe2804a89eb3f5c16079e",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\twins_svt_base\\seed_43\\test_metrics.json": "0193484d150591c719d1a2caa8efd013c284666fd76f2eeaff55296cd2a920e3",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\twins_svt_base\\seed_44\\status.json": "d4c220fdf15d540b04184f7f2b9fd1069961ef82242c82dcb0f40fb1a3d51258",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\twins_svt_base\\seed_44\\config.json": "4aaefa3169f5a9426df4e8668151a9c42b005a938921843e5ab4ebc0cc79a253",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\twins_svt_base\\seed_44\\test_evaluation.json": "be005b6b44cb768f7cd209a24425106532bde25cf6dc120f2832e363b503d2ab",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\twins_svt_base\\seed_44\\test_metrics.json": "3adb136cd78cddd8504f31cde2e352b71c5c7e87439e4a5b7a7f39fd9abbbb21",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_efficientnet_bf16\\experiment.json": "1e5add9452f0ce9ef9161d7af34712ba48a5ceadfbbcaa4dfd4f2dd27491971c",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_efficientnet_bf16\\class_to_index.json": "77e3ac61bf04c76878f3da7dd2f207b42a3939f39e18f20282e28239d81fae3f",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_efficientnet_bf16\\efficientnet_v2_s\\seed_42\\status.json": "bedfd6c1caebbd4893d29786d61fd34e4b7b95abf746edfbc57c45bcee998dd1",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_efficientnet_bf16\\efficientnet_v2_s\\seed_42\\config.json": "a2ff2be748fa9a5a933c73a56573e99a0b33ddd0fcf4f21dc27242a2ab6bc7ff",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_efficientnet_bf16\\efficientnet_v2_s\\seed_42\\test_evaluation.json": "81078fe12177a99990633a73540676113e66b983953791d3d80a94143543d78b",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_efficientnet_bf16\\efficientnet_v2_s\\seed_42\\test_metrics.json": "f516e539c36fa537f6c1cfb37c71f4f8da2fcb23d63691a506ca7d8bcf8f0f2b",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_efficientnet_bf16\\efficientnet_v2_s\\seed_43\\status.json": "287197e7fee651de85d6ecc25ded4ea1ebb598d8fc923dba7c8e3d638c4728de",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_efficientnet_bf16\\efficientnet_v2_s\\seed_43\\config.json": "919a784204529b80fa2f56b1db1558f11064ca4cab42d25d441cdd0de2943165",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_efficientnet_bf16\\efficientnet_v2_s\\seed_43\\test_evaluation.json": "a8880d623651dfa5679402314d51cd48486fcf89b3d426768e5dbf9bb1ba0d6e",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_efficientnet_bf16\\efficientnet_v2_s\\seed_43\\test_metrics.json": "0e20b2e53ef10aa664be14b763d4397fdf024f254838b5675f90d4fb2f9baf8d",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_efficientnet_bf16\\efficientnet_v2_s\\seed_44\\status.json": "b2bf560f2183e73685775e1bd1044befb40351c5df60db7370e8fa4deb4b312d",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_efficientnet_bf16\\efficientnet_v2_s\\seed_44\\config.json": "8cbd192608fd2c3821d2fedd6718ab50baf46608a45f816923608450838ee16c",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_efficientnet_bf16\\efficientnet_v2_s\\seed_44\\test_evaluation.json": "13c3c60b3034db376f44a8479f2d9c4e62e4de2854c8f163decb5bee22ea8f53",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_efficientnet_bf16\\efficientnet_v2_s\\seed_44\\test_metrics.json": "4cb52e2a4f3d0b74ef4f4da30d4b9f4531f26052501c98e6903f7a70cbf66422",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\experiment.json": "efa42aa4c3819d32ed2a9ea3342a6ba60d42b129a05ace795aeace241e66e924",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\class_to_index.json": "77e3ac61bf04c76878f3da7dd2f207b42a3939f39e18f20282e28239d81fae3f",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\resnet50\\seed_42\\status.json": "ae8cebf20baa2393e0c09491a7af45dde9e3af20c078a189c0a62e0072b678d9",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\resnet50\\seed_42\\config.json": "dc73204f172f2afda2f2e6d86155a52bae9ca0f1b5628cad0b6d15b28550a4e3",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\resnet50\\seed_42\\test_evaluation.json": "38868e933c288c7c6c884254ace9b8163d305cb775682d19b2ce5a8a8610fa72",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\resnet50\\seed_42\\test_metrics.json": "545daf11c4e7dd98a690d4a9a65a3fb12a9d91b8a5f9b11f89484e8fb2db5a3e",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\resnet50\\seed_43\\status.json": "f431e28932df0a7d016e375bb63bf6419cb27efc25027fc0f03f71dfdd5dd404",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\resnet50\\seed_43\\config.json": "6167f453ad44e465c74be3de4a8c60eaedeab7cfe4c0803a7d784de50df7bc65",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\resnet50\\seed_43\\test_evaluation.json": "63191d3181bf224ff378175a1c80c2c1df3609e1a61ce5ed65ed2e262a6132be",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\resnet50\\seed_43\\test_metrics.json": "8c46350b99d005afbe543768cbb5bc7544cb0d8428061209bd2f230deadab6d6",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\resnet50\\seed_44\\status.json": "7bc1a38dd5b0e73c9289483257985ed003f0f6ae76c73cc6bc1c511844151ca7",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\resnet50\\seed_44\\config.json": "df0d7b92bdc6da536cc8fbff28a495b9eb3dd495774ff398cd1408728d751171",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\resnet50\\seed_44\\test_evaluation.json": "9136912113cea9a794a1c0c3d0087be819a8b4863fc6ec8edec0021f9015addd",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\resnet50\\seed_44\\test_metrics.json": "4bffa20152cd3da81501502349df3fa942d3c647cf32aea4e32c4595e6b8fd06",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\densenet121\\seed_42\\status.json": "60ced8756ca282144f811dd3ed15120863407628bd40738b33e64f9a2c3addd9",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\densenet121\\seed_42\\config.json": "471d8b0bf1e560e30d3c2dbed382a2e47681eca46170260e775739b59aa9a40a",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\densenet121\\seed_42\\test_evaluation.json": "944ecf2084f8ddf0aedc213bd6401b437fb01aafb89bc6cf0bc003c5fd18498a",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\densenet121\\seed_42\\test_metrics.json": "7fb4103ce8c1269add8899388d846e575c8968e78ce58efd3a06b1dbc17a99c2",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\densenet121\\seed_43\\status.json": "8dbba896bac5041845a662c13414829c79e08d0031b8ceb535372b8e171828f8",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\densenet121\\seed_43\\config.json": "437a6520546eb8fc4aa56470fc810eaeee69487d4bd17a240b2433e4640a23d6",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\densenet121\\seed_43\\test_evaluation.json": "e993253c9c5e29186a36fb40d2bc1a419e534b452a93752d3af4b5d9409e1938",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\densenet121\\seed_43\\test_metrics.json": "0a79e29df20b9c37fc7f0e5e60da13f16f183f5528aabb6f7023c0ab4e186fb3",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\densenet121\\seed_44\\status.json": "3992f62b25c18c61d24ee3a8d282aa4864aca5db19043cd12434605241308f4c",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\densenet121\\seed_44\\config.json": "9d500416edf647e48aab5b7af588b8adc56f805fdb36c7563147659bdf864a74",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\densenet121\\seed_44\\test_evaluation.json": "2bada4e10b8611db5da9ec4b248b1a42efe161baed1bccad7430385306cd63ae",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\densenet121\\seed_44\\test_metrics.json": "f6868cea4441dfdd8e569ddc6c4562fef857905f05d97e8ece7fe59a35a2baec",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\mobilenet_v3_large\\seed_42\\status.json": "7c23eac249d1b07d5d5ccdb910d196f266fee2894e77e8e0f9e996b23a68a2e4",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\mobilenet_v3_large\\seed_42\\config.json": "0a096f1beb079ca7eb20a3f3976ca55aa26880a65b77059179ea2d008c2de011",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\mobilenet_v3_large\\seed_42\\test_evaluation.json": "9dac56541b5d279c4109db90ed8a71eae008783188cdaf3e9b1b99376cfce983",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\mobilenet_v3_large\\seed_42\\test_metrics.json": "ac85fd2e81f30b54cc6ab383cb517dad3560f56d591e193a0056e5654e914a7d",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\mobilenet_v3_large\\seed_43\\status.json": "835247f783bda716981eaa85836f5c9bf4e393dd15d430023ead5e16fe45332c",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\mobilenet_v3_large\\seed_43\\config.json": "0c73c103df4231ec705e770e5edf3e9a8aed5808a9157bb9207c74489f36f06c",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\mobilenet_v3_large\\seed_43\\test_evaluation.json": "f3d17d5bd34608198fffa85a5101d7af8330d0940200dbd8204bebe9e8a6c1e3",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\mobilenet_v3_large\\seed_43\\test_metrics.json": "f0ad97298d4d0173918efd16349a5f0dcf862f97171d7c23318cab3dc3802f3e",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\mobilenet_v3_large\\seed_44\\status.json": "361254110031a868ea224732d462b59304cd5930408032b80caacdeaf82ba2c3",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\mobilenet_v3_large\\seed_44\\config.json": "728dcc13a2c1984ee3a54d115724e3cdd1b50589fa20a1a5f62aae82465ff99b",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\mobilenet_v3_large\\seed_44\\test_evaluation.json": "9f6ba4298de9fb23115524339799fcb24f446cadda9ec28a9ac9af770cea37fc",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\mobilenet_v3_large\\seed_44\\test_metrics.json": "fa44e00414f4cdb856f9e652ebfe5120202f8040b8167a7794117a6d8cf7d25d",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\xception\\seed_42\\status.json": "525366ea069cc2e1df80df6688a0887ac66870104fd2f954c9e9a554ac0a7575",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\xception\\seed_42\\config.json": "145c48c6a8fb24c73fcaa1af8641ef7476520aaaad6c65195ae2214d05e75dc4",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\xception\\seed_42\\test_evaluation.json": "b711aff9a11e89cb4b696a473f0576fec95586e9b90f22a07c050be805c8fc0e",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\xception\\seed_42\\test_metrics.json": "30bd8c779c8ebfc3788f8b4504c4cdcc1677fddcebe61c98418fd102422f6953",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\xception\\seed_43\\status.json": "6ca2f7938c65991691233ec8aa5942228bda16095c15bc99a2e4062f83491fd7",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\xception\\seed_43\\config.json": "8c543d9f277d0887897937b8cbea02cbc35406a838ddba45ca5e07f5948bd140",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\xception\\seed_43\\test_evaluation.json": "d3c970193a7c91a443a636766d16c957f636da1401c21db5f09be1e40f0ba15d",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\xception\\seed_43\\test_metrics.json": "366b4f020a9361490cc86c1260ea377b28d35e5a70f330a816beb57f3569f40a",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\xception\\seed_44\\status.json": "e2652a42e3db48a6609c04b61ed5a0d8d26fd2c03e47cf50664a849872a0d8fb",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\xception\\seed_44\\config.json": "07c5c596c148519473808d00a0c966d6ce1847f18f27f6e02f7ace5290fa48b3",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\xception\\seed_44\\test_evaluation.json": "64c6089dc50fda40bb0c0e4c39cc1eee34c67a98a3b4304e723ca93637017af0",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\xception\\seed_44\\test_metrics.json": "2257277dc9f64d995f28d37520735e6470f28eb6e896a3534f43c264f9c57e0e",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\convnext_tiny\\seed_42\\status.json": "5c64c85a04aed0b9df7175fa8a757eb8efa65610c710a374e4aaf31869bac569",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\convnext_tiny\\seed_42\\config.json": "c3310265487f9dd79b81cd55abaffc5b4cd042a5342f52a1b3ae5a7fb79b6d91",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\convnext_tiny\\seed_42\\test_evaluation.json": "809f32b29a431eabd8cb6b52de59a5c677f89899a36510efc947a48de8aea6fb",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\convnext_tiny\\seed_42\\test_metrics.json": "61bcb62d0fb24a67fe1985926325f0f4a28c598f8ca3eb98d671986fcfae2697",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\convnext_tiny\\seed_43\\status.json": "f3acedaa1ea4b7916a8edfe224e010777d201ad30a7d7c08ea41ad41813a5c67",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\convnext_tiny\\seed_43\\config.json": "b1dc01a0489e98ab50bdaf38c6a9b4cff12650395e2a3ff0c45dc88ff4ea3ffb",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\convnext_tiny\\seed_43\\test_evaluation.json": "7de53e656c646fcd0c623b1ce5cd4c0cac4bf2b47d92f6b0de3646400550d93e",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\convnext_tiny\\seed_43\\test_metrics.json": "cae9565494166d5d99f413c818530c95400ebd3ed3a444bae9fce475d0a4fa9f",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\convnext_tiny\\seed_44\\status.json": "e9fa9c69331127abcdf723277d992aa27dc3d1b55f9fc4c18c7fe26bfca6cebe",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\convnext_tiny\\seed_44\\config.json": "c8bb4b6c40eeeb5e8a56395b4d54379715eec0f4b0916e85232eca984a76e26d",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\convnext_tiny\\seed_44\\test_evaluation.json": "508831304e744bacc9a591d445949d02f82d6a24597911014069634473ac1cff",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\convnext_tiny\\seed_44\\test_metrics.json": "386dd666d1b24d9e7437d613dc6ab94acd11850e96db421a8110b240c145b42b",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\vit_base_patch16_224\\seed_42\\status.json": "06fc94536fa02566ce69e6aa5bf54c4a6f9f4e0d102085f604ad4a4de6b2e032",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\vit_base_patch16_224\\seed_42\\config.json": "d8ea694e49a89418a64e2a8d0e6557093e40a7c75b4f2cbd9dffe2aaba8c84c8",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\vit_base_patch16_224\\seed_42\\test_evaluation.json": "71d4d121ffd0ffbf421b6979b283b8aed639896e6d3fb607dfaa9648867d3778",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\vit_base_patch16_224\\seed_42\\test_metrics.json": "5c7fbc97dd50b42d4806dacecd779db09323f947111fececd60755b0093db9a6",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\vit_base_patch16_224\\seed_43\\status.json": "09ed74ed0cdf9eb246b0376d9a442b4eca6b34328f40f9252a07a4c5999ec497",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\vit_base_patch16_224\\seed_43\\config.json": "798e08515dafa293d12fc5b48e3bbc7ec4617cbd576bd7d94f8b71a4a035dcdd",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\vit_base_patch16_224\\seed_43\\test_evaluation.json": "dc4a3dbb40e1f40a6149a58cf1fd06c6ba790f98168af589668fa4f6835261ed",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\vit_base_patch16_224\\seed_43\\test_metrics.json": "be43acf0b92b826937094f6fff230d9a01948cf3f2c2a1244d53cf3bfce90e61",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\vit_base_patch16_224\\seed_44\\status.json": "af71690aa5a4f568b739db551fc38eb9cfa2d31f50a972f3820110c4db4d646b",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\vit_base_patch16_224\\seed_44\\config.json": "b94eb694aa0129c58f599d53b3cc74e302da527b6f0611e86e6f57de955b45e2",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\vit_base_patch16_224\\seed_44\\test_evaluation.json": "62d4da808b0d2bbfd2e85d8c2eda81ecd2f3eb379f13203c3e0b8ba691a4e40d",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\vit_base_patch16_224\\seed_44\\test_metrics.json": "014be58dcb6d10fa6841ee78e96b0fbda772fedab777202f5e6a46465e2c592d",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\twins_svt_base\\seed_42\\status.json": "6ca3e48e93b36c46fdfee9930ce1f4acf122fe107653f56cd5c93271be29e97f",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\twins_svt_base\\seed_42\\config.json": "c5af26de1bfc26d557b77267c3fc8743ec679c5a3121b0ad8c13936121064d7a",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\twins_svt_base\\seed_42\\test_evaluation.json": "70843c2abd63c56e766e64af976fd882c69d6c0ed617f162232aa718e0137060",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\twins_svt_base\\seed_42\\test_metrics.json": "d9452ea4c60ab2890a0c0f00faf6f5a2f5ef9aa1b48a824e32b904a76ce528b0",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\twins_svt_base\\seed_43\\status.json": "2cb0eb4042a64437ac420fe129960ae0c79c477ad70dcaeba5adb3c8b3b5747f",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\twins_svt_base\\seed_43\\config.json": "a749c91ca174d3465e3a68a6359bb381cb601c6a26bdf7a7e8c52c0189763709",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\twins_svt_base\\seed_43\\test_evaluation.json": "9089262f09f641b7d98fcd3c8aa29834a1b08d7baa5a7a0817c01ac5e899de6d",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\twins_svt_base\\seed_43\\test_metrics.json": "63e5143448d211bd3aa92978f8b152b8167a2f8e9b431c07f47de43eb5df25e5",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\twins_svt_base\\seed_44\\status.json": "b57bddeb7e81c909d2e4007f1056267bb2c1a49c2ae0b8029f61107008040a30",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\twins_svt_base\\seed_44\\config.json": "d90dc7274939259d8f1ea9bc36ec9a4d15ca901025d2a0923056daf0d0e81948",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\twins_svt_base\\seed_44\\test_evaluation.json": "448b2a807751fd77558281f90a4de831ce08d6584286af354144c3a000d1202c",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\twins_svt_base\\seed_44\\test_metrics.json": "2e2ea3a493b8a0cf87e009b290056eb0ce6cb0cdfd6a7835d1e38128419c679d",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_efficientnet_bf16\\experiment.json": "d985d58bcd35f08e866aabf1a6c8fc9d8058148ad368dca388fe6139f4f67948",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_efficientnet_bf16\\class_to_index.json": "77e3ac61bf04c76878f3da7dd2f207b42a3939f39e18f20282e28239d81fae3f",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_efficientnet_bf16\\efficientnet_v2_s\\seed_42\\status.json": "836e6811203b710a52dad61c0c21eb2dbf50f36adf7f299709c017e8b8f6229a",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_efficientnet_bf16\\efficientnet_v2_s\\seed_42\\config.json": "223a645e55654f5ba02cc2d4dc0494e61f263ee188d03e26515d8e92c256efb8",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_efficientnet_bf16\\efficientnet_v2_s\\seed_42\\test_evaluation.json": "55bb1612eaff187b1df21480e274d4778764be5598178c4f636e10a08ca1f6b4",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_efficientnet_bf16\\efficientnet_v2_s\\seed_42\\test_metrics.json": "c71912c7bd19bd6362147c5acde0067c0363f0da87f53dfd207ee495d586cdff",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_efficientnet_bf16\\efficientnet_v2_s\\seed_43\\status.json": "4fa63dcc7e40ed5489d9d51a0073b79e0d3d69e9aa1fe621438277de288a81ce",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_efficientnet_bf16\\efficientnet_v2_s\\seed_43\\config.json": "c44c432a843a067e05a010168be9fa384945bf9ef21f816188cc7f2081e71904",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_efficientnet_bf16\\efficientnet_v2_s\\seed_43\\test_evaluation.json": "a6f873014b0685fdc5a2fe086e20b749488c1047c1e6f770cf32005a604e3cf3",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_efficientnet_bf16\\efficientnet_v2_s\\seed_43\\test_metrics.json": "1db7bd305ff6bc2cf0da10e251af26a46fa7086cb582d6158e90df1c38665d86",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_efficientnet_bf16\\efficientnet_v2_s\\seed_44\\status.json": "2fd31414722565f91275f0cfa5a0041a2c64a42d7e8945ebb3523e053d9255cb",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_efficientnet_bf16\\efficientnet_v2_s\\seed_44\\config.json": "6a084e27e22ef7b52b9fdb8600995cfada1a95b902bc63d679aa37923bb84dc2",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_efficientnet_bf16\\efficientnet_v2_s\\seed_44\\test_evaluation.json": "d0b34c1f84a38959287413b01b6cae3f5f48f42d8d4212a632672bb30706e94b",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_efficientnet_bf16\\efficientnet_v2_s\\seed_44\\test_metrics.json": "188f869581beea2e3bee305a1f93e1c40155d2d872d765b85b00ada744712293",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\experiment.json": "473e2d3c09552c2311e6722d079280ccf92bf3094c7f2c0a8f8a4a0f8c3fd264",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\class_to_index.json": "77e3ac61bf04c76878f3da7dd2f207b42a3939f39e18f20282e28239d81fae3f",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\resnet50\\seed_42\\status.json": "5f2f78cda84325ffcf51b3b05da0e202c9c51cbd40b497c093bb19e4635cfdfc",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\resnet50\\seed_42\\config.json": "ea551b524022a15d92df9ffe7d2d4b92b2ca49b72db47178b9573f4e4a505421",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\resnet50\\seed_42\\test_evaluation.json": "411aadad2cbd217fb5d7a500144339b1727560cebed9e90ca4d57e653153b25e",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\resnet50\\seed_42\\test_metrics.json": "da4312475faa8ddef19b5c495881c1d991bd36297b9766998cfe3f2b921654ce",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\resnet50\\seed_43\\status.json": "adbd6cb3c0308ffddeb5611c4addb53b0dfec40c7a619a005db23c035d2c5612",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\resnet50\\seed_43\\config.json": "3278a4e94505f87dc0eb8efb50c127f0cb3b1c1c02862dcfbde1061e2fb2f71c",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\resnet50\\seed_43\\test_evaluation.json": "d079295495a7e1803cd2a08e109fc0fdbc62bdc405d58af543ed796bbf72f845",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\resnet50\\seed_43\\test_metrics.json": "0d210d05290b1867addd46e5a97a811043ca093bd7019ce96967920be97d81be",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\resnet50\\seed_44\\status.json": "9e9c3c28a72838c570cfd35c7f8c4a40e5713ab60483e421be656affd5db8589",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\resnet50\\seed_44\\config.json": "67d080c2f5724a0b3029b4838d1ae8455085d073fb8177dfe2116b6d867936d2",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\resnet50\\seed_44\\test_evaluation.json": "f3e7e784721fb20c697d31bea4ad94e897ca25c23344502c0956a02fecebf64d",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\resnet50\\seed_44\\test_metrics.json": "6358e2193bc03c3acad986044d4dd74ce7efdfd58666d6f8b2d7943b5103a401",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\densenet121\\seed_42\\status.json": "0558fb8e3f6555c7082d5bf423ff2df911770c789fe1f2de0295c41f7ef62dd5",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\densenet121\\seed_42\\config.json": "be9d8ddbb9d737a12f514c7252b78b3acaa52498573117e3ee80f21b10f9810c",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\densenet121\\seed_42\\test_evaluation.json": "74f30bf6ceb24b97aa802c05a17f7bf8b40c47897bbaae3ff4d2acc5f73958d2",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\densenet121\\seed_42\\test_metrics.json": "4139fcacdf6bfa1f0255e82ca21428ba695c819fbb388789fe6f46e6bac9f3ba",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\densenet121\\seed_43\\status.json": "1f7ccf57ecbe18d5280b98d7a3ebf49f029fe1e7a9a4c88ccbc098056ebaddf2",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\densenet121\\seed_43\\config.json": "ba55b8f97d6c5d5000c256a6d25e046d9dc25e779ea3286f20fbf08441d975ea",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\densenet121\\seed_43\\test_evaluation.json": "7b97ce0bcaa9335ffe874e7e43221d709e094b74b4ddf7caa10e35056c90a1a2",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\densenet121\\seed_43\\test_metrics.json": "625c28d0e542b2457b582f79f52c3c3ee1744660df40243252bc12545d16e490",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\densenet121\\seed_44\\status.json": "e1dd78988dc891d2c9b55b7e13b67f6b94cb6def7788cfe7e0c3eb07be2075bf",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\densenet121\\seed_44\\config.json": "d22ab7cf4752a21501dc2fcb87d54cee8bdc197933b83a333eb9ceb831553d47",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\densenet121\\seed_44\\test_evaluation.json": "44d73500733f315a52bbb8a8ef46f91880fa91f559aa2589bdb6ecbbfcd05b4b",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\densenet121\\seed_44\\test_metrics.json": "def3fa2053f11166453259dbcc19f6af74eaec2b2abec1437eb3ffa9d8dea7b8",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\mobilenet_v3_large\\seed_42\\status.json": "2a05e4dc934b6eedd1306caf8c40345de4e09f7a6d48b260c77dc1f4319941e9",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\mobilenet_v3_large\\seed_42\\config.json": "f369fa6fa6f2d4adefe419ad5dfdaab97f00fe79ce01775401a0b300e446c390",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\mobilenet_v3_large\\seed_42\\test_evaluation.json": "bc4f4f1cae99df025a959e02817c56c64ad69d6bbd0204456801e3422dab8aea",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\mobilenet_v3_large\\seed_42\\test_metrics.json": "fe5df1eb55d24dce00c467be8f734440a63cdcc4c76b58352581266a6fe76c7d",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\mobilenet_v3_large\\seed_43\\status.json": "c563e463346d2a0fd2d1e7b0287081bd802affde35bc0e03e8cd8926b2209edf",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\mobilenet_v3_large\\seed_43\\config.json": "ce393a12c2c0a45486096eaafe4375176754a285a8fa388cb197ebd4bb33c406",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\mobilenet_v3_large\\seed_43\\test_evaluation.json": "58f22885e7b7c7aefbfdfb1b57a2cafaff52c753de0ec7581d960197d793cb2f",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\mobilenet_v3_large\\seed_43\\test_metrics.json": "f25f37f6acb0f15a6dded1b9623bdfe95e0562240ed916bae162ed0fa587c2b7",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\mobilenet_v3_large\\seed_44\\status.json": "02c75ac12b34066ff9630daf70963a8ac0d00424c21516a32318e274d2ac8d47",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\mobilenet_v3_large\\seed_44\\config.json": "57d596eff5efa7a56381d2f231645b6d50ab7a581675026380ca609d91392920",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\mobilenet_v3_large\\seed_44\\test_evaluation.json": "36beaacdd397d3bbbbcd0fa5498826839a1c5eb43edf102afc5e4a0f4b0ceee3",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\mobilenet_v3_large\\seed_44\\test_metrics.json": "855010a2123d028f3a7cdbf09ef49fa084b25cd611d1b713c23b939d6171a33b",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\xception\\seed_42\\status.json": "6128eb2af76461ef6024a9df89bd65ac3b259abb1a594fea0dd47d9d1862485a",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\xception\\seed_42\\config.json": "62bbc5e065547dead676e97c913e458a0d01ba875a1935c02e58df3f52996c2a",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\xception\\seed_42\\test_evaluation.json": "d800672623e8184a5138161cace9caa23300d4839db1a8a97250e059c96b6b53",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\xception\\seed_42\\test_metrics.json": "afd9b19d4071ad135cb44f6787bdf4a364b9ad867d787004506aa7fec8a6168c",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\xception\\seed_43\\status.json": "b3eb4cb31decddd7d4ac1d8c8b475c23c34ee53d706602cb5946876bcb88930a",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\xception\\seed_43\\config.json": "0d0085e66f2747d86217cc43a73d35dc7f14209a67d7233cf990acaefde72b56",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\xception\\seed_43\\test_evaluation.json": "dc3129e77fa0defb4ab0938461d3b5db532c8540a5ad8c94ec62a6283918e6ff",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\xception\\seed_43\\test_metrics.json": "a7fbace4c42a7820827599e724c5f8ad85c9afb933d04a168ab31c7bba21fa8e",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\xception\\seed_44\\status.json": "0644e568a90b36b43df26580092d249b7cb64d758d16f0e39ec82cc3edab5242",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\xception\\seed_44\\config.json": "aa8544b122aeec06f4aa384236472f113957a91bbfc55dd3fde5cb3b4d4e353c",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\xception\\seed_44\\test_evaluation.json": "902f44b0b81466a1be442cbf195f9cf9df7a1ee508997c82688c5cb893c745ad",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\xception\\seed_44\\test_metrics.json": "e25ff826fe5f25edbdebb54a73d0b995e5766d179a28d44148c433905a955240",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\convnext_tiny\\seed_42\\status.json": "728d79a6ee6308395c094ae820db9b05aee2d9e42327b285a02f0f1176189e36",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\convnext_tiny\\seed_42\\config.json": "75aaecea8d649f719d57a73a6f5c8bd4dc12724840e1cd6e2967eb08f6c5adc3",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\convnext_tiny\\seed_42\\test_evaluation.json": "3bb0acb61513ba98e6898812b85761e894794ff204d15ad03abcc4b722ae3ba7",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\convnext_tiny\\seed_42\\test_metrics.json": "53a8b5d92693416492cc86ecf549a724d7241f7b395e41291dd9b4c749ac1da5",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\convnext_tiny\\seed_43\\status.json": "537793ec8e7b426e6d2b66a5d166490ead8358455e73cfee522c7ab60abb1a9a",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\convnext_tiny\\seed_43\\config.json": "2028af2dcc56ade2c4b34c511581f4162e9494a30b55e06c8392b9aa59942414",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\convnext_tiny\\seed_43\\test_evaluation.json": "5171918514f51f52adb4d1d6eda0db15dfdbe66a4ea0cbad6a8dcfdeb68ad36d",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\convnext_tiny\\seed_43\\test_metrics.json": "1d9356c2057bed92e3b8b55d5130495d93c61da11c91e467057cd9cc09d9a910",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\convnext_tiny\\seed_44\\status.json": "a7c32a68615f9610e78ed50aee22f99b41fd3d6af1bf19a744696415fa207fc2",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\convnext_tiny\\seed_44\\config.json": "000446527f911c0c0391288a3f45d4affdd3e8b4c7bf7a02f5912ad1bb57d046",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\convnext_tiny\\seed_44\\test_evaluation.json": "7ea377c8ce1166f1e3f6a8108ea9fe34653539f07c4deecf804712c579d06ce6",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\convnext_tiny\\seed_44\\test_metrics.json": "2fd482528f987a631d0a49f0334ab1b49754f6b2fbda6742ae4311ae47716b82",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\vit_base_patch16_224\\seed_42\\status.json": "c3d80253acfba4d13931412943ac410abb6b057361aefeeff5742da3981c6321",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\vit_base_patch16_224\\seed_42\\config.json": "743783cab4cd750d9eb8bb101a45ba6d0b7749cfe1b9dd9c060e5026a8f69d09",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\vit_base_patch16_224\\seed_42\\test_evaluation.json": "2a79227a0ad05decf1a7352b870d35fd84c0ae8bf97df57888efdc58d7d22901",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\vit_base_patch16_224\\seed_42\\test_metrics.json": "6c62ff1afc49d51c3c72be18598a7685e19f4c7c4de39a40c68eb0a8b51885ce",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\vit_base_patch16_224\\seed_43\\status.json": "72f8b79615bed0771534ba706ba8e0d1ae78715f30743bc138bd6563bdbf780f",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\vit_base_patch16_224\\seed_43\\config.json": "6e8fcf1d35f67252006b1f724cb5981c9234d0bcc6d2f20dd403251270aa250a",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\vit_base_patch16_224\\seed_43\\test_evaluation.json": "f64a6298a32d5a84c7fc02a05e7514e8cf7b9b924c2cb42f2acfe00f5fb61e0a",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\vit_base_patch16_224\\seed_43\\test_metrics.json": "2ae412faca6b3940c427d2e2227e4cbb2fa0c1e6998aac6d410e85df2e41f3ec",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\vit_base_patch16_224\\seed_44\\status.json": "bd774bbde0a76d0e14b8ed0e8970545a2dfc936fada929f5a67a0e89d16c62d6",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\vit_base_patch16_224\\seed_44\\config.json": "cf4ea3ab00350e84e9d994e08bf1d9fd0510e4cfcd7967d1d53da13075b546e3",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\vit_base_patch16_224\\seed_44\\test_evaluation.json": "1e02d54576c22da50946571d7bada9d73894434fc6ed5cac436f1b0c87ba5eb2",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\vit_base_patch16_224\\seed_44\\test_metrics.json": "fd21da37b66391e4c26f0c73cd01b3020dcc1552c72ed18fb0759ae7f924ad4c",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\twins_svt_base\\seed_42\\status.json": "ef9a252a80f8f9c26c6994b420671bec18cff18702fd32b4254263f812a751cd",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\twins_svt_base\\seed_42\\config.json": "699395a5ea2d50afbee18c2e9c2df2836a5e3d559322626cb948114aa4448317",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\twins_svt_base\\seed_42\\test_evaluation.json": "7a3885ad1400e2a8410bb39ee292a5571efb41257c4f91795a2f17b734b4675c",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\twins_svt_base\\seed_42\\test_metrics.json": "70ffb09a5d6611cafa92517c7eba2d17e285f3ada1ea8cf4d8e8edf1a8ed8886",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\twins_svt_base\\seed_43\\status.json": "807c9ec2ef72dba22469b785d47a0292842c40425df46cc80910064c4700bda3",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\twins_svt_base\\seed_43\\config.json": "bdf7bd8eb0efbe87c1c7c6e4aca0950301274b123a7e9d96a49453a768bf6bc1",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\twins_svt_base\\seed_43\\test_evaluation.json": "c7f6f647007d96bb27cdfad95e0a191aad6c49928d0ad6263d837e720ac83101",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\twins_svt_base\\seed_43\\test_metrics.json": "5fe76957d1a1ade8d8730aa4ff341ea2dbd31a7cf97466ccf8411e4a147f7cd5",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\twins_svt_base\\seed_44\\status.json": "bca4dda9c382103c5bc7acb9645a0fd2bd3b601f8a67e07632e48bb5281c4501",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\twins_svt_base\\seed_44\\config.json": "9093cbba76a108ce66726dd3962ac160db4a409205e2914843a6b4cfa33de2eb",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\twins_svt_base\\seed_44\\test_evaluation.json": "6f3bd049090bd3593c3f5916f41ab974754a7fd8a9f570911c546a16c66581f1",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\twins_svt_base\\seed_44\\test_metrics.json": "473337986dc662a00bb9bca5d302ee185dfc01677f5bc33681434ae7af6088e5",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_efficientnet_bf16\\experiment.json": "0537b5ef7344e6ef6326925ff03f990819a3d722cee904470e74eeb59485ebdd",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_efficientnet_bf16\\class_to_index.json": "77e3ac61bf04c76878f3da7dd2f207b42a3939f39e18f20282e28239d81fae3f",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_efficientnet_bf16\\efficientnet_v2_s\\seed_42\\status.json": "20155bf04795c41adc03e29306780c8596a1c9dfa3272591f79705f4f4bae363",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_efficientnet_bf16\\efficientnet_v2_s\\seed_42\\config.json": "723e9f7cfb8cb0a4bb9bea162af91d4541311464ffa92f062322dfaa6ff631b0",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_efficientnet_bf16\\efficientnet_v2_s\\seed_42\\test_evaluation.json": "9e53dbb0e5e38922a522b395b8810ac58c4c1314c5e7463d03863917ab41ff7e",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_efficientnet_bf16\\efficientnet_v2_s\\seed_42\\test_metrics.json": "9cb7577d5dbd2742e0b57e8976e71b93e7841f7506ff27c77cb1b51c4d1aa1a4",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_efficientnet_bf16\\efficientnet_v2_s\\seed_43\\status.json": "e791daab73813c114aafb23d7a118d8acfde3368d0c6feb0779d308ad5194068",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_efficientnet_bf16\\efficientnet_v2_s\\seed_43\\config.json": "f41ba2dd569eea6cb9ad87c304660f987625fc7cb3cafa053bfe094e6821f5fe",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_efficientnet_bf16\\efficientnet_v2_s\\seed_43\\test_evaluation.json": "443a1164fe59adc4d9c4ad0779902221ade8525a1364e65149ab1e5aef85133d",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_efficientnet_bf16\\efficientnet_v2_s\\seed_43\\test_metrics.json": "82e57d81e3382bcd344f111be674fbad0be2fc2cd1ac65c742efcfbb33431b70",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_efficientnet_bf16\\efficientnet_v2_s\\seed_44\\status.json": "67a4096bc66855e77e786452e01f6f5d44452a2a582953559cc1c4071d9aee08",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_efficientnet_bf16\\efficientnet_v2_s\\seed_44\\config.json": "e06b1821691278203e283bf6563ec9bd80d80bbfbbc0b118c4fba02c4248ef8a",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_efficientnet_bf16\\efficientnet_v2_s\\seed_44\\test_evaluation.json": "224597c76a8575f26e6efc91ea708ba9bb78cd5309072de33a17c70419104c5a",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_efficientnet_bf16\\efficientnet_v2_s\\seed_44\\test_metrics.json": "54e335821d9ea65fba55a3a5bd0e8a144c6e6d8bfc4c8b4bb024b4f3b6cdfb47",
+    "D:\\Projects\\CauliflowerV2\\Results\\E3_300_offline_no_online\\experiment.json": "2b6fd496abfbdc318146876d4c616ff448c8535735e4b401887ee1be479b60ca",
+    "D:\\Projects\\CauliflowerV2\\Results\\E3_300_offline_no_online\\class_to_index.json": "77e3ac61bf04c76878f3da7dd2f207b42a3939f39e18f20282e28239d81fae3f",
+    "D:\\Projects\\CauliflowerV2\\Results\\E3_300_offline_no_online\\resnet50\\seed_42\\status.json": "d4e8c386f3ac9edd163c3a6263d7cd861d6d1a7badc1c3ea035f58457a4a061b",
+    "D:\\Projects\\CauliflowerV2\\Results\\E3_300_offline_no_online\\resnet50\\seed_42\\config.json": "33c373a757ba74a4d0f005018f31bdaee97e76d110f89a25a9e32875ea8779d3",
+    "D:\\Projects\\CauliflowerV2\\Results\\E3_300_offline_no_online\\resnet50\\seed_42\\test_evaluation.json": "94037535d8575628d9cb42db672809ed7ff1d24eb7e8f0a22233cae162705c5d",
+    "D:\\Projects\\CauliflowerV2\\Results\\E3_300_offline_no_online\\resnet50\\seed_42\\test_metrics.json": "0620725a74cca5690fe686a0db030f78cb8413145c1baaedc4808c4c00636ace",
+    "D:\\Projects\\CauliflowerV2\\Results\\E3_300_offline_no_online\\resnet50\\seed_43\\status.json": "345680884305d96a42eb3dbb0b977c12d119f4cff8f839a4168cf7560ce0aff6",
+    "D:\\Projects\\CauliflowerV2\\Results\\E3_300_offline_no_online\\resnet50\\seed_43\\config.json": "9c68b7588588f4087ee2244bd9a51a61ad0f6e9a4a7a2756eef17fb31596f60a",
+    "D:\\Projects\\CauliflowerV2\\Results\\E3_300_offline_no_online\\resnet50\\seed_43\\test_evaluation.json": "3d3b752930b1428780e65281b67ac07ad6d737aa0195f083333361e432ab48b3",
+    "D:\\Projects\\CauliflowerV2\\Results\\E3_300_offline_no_online\\resnet50\\seed_43\\test_metrics.json": "a0a9b3ad4aff12c21731cfc9613fbe2f1a9cfce7655215e5c62c9370b9c74c50",
+    "D:\\Projects\\CauliflowerV2\\Results\\E3_300_offline_no_online\\resnet50\\seed_44\\status.json": "e2226395481f2dea1a163fd687b2b615ca9df074cccfc6e6cf9778afe29f0661",
+    "D:\\Projects\\CauliflowerV2\\Results\\E3_300_offline_no_online\\resnet50\\seed_44\\config.json": "f98908b34ea4e18bbae46b5105a0c564c5a1bc7b324b8809b36dcd03b5ed81d2",
+    "D:\\Projects\\CauliflowerV2\\Results\\E3_300_offline_no_online\\resnet50\\seed_44\\test_evaluation.json": "426228cd2ba164cd9cba2286cbbedce561efb01b1a2bf00897c8ce09dd64701a",
+    "D:\\Projects\\CauliflowerV2\\Results\\E3_300_offline_no_online\\resnet50\\seed_44\\test_metrics.json": "5068989b54681506074291621e2ef92b5861f61ee4f57b791d58a6077ce72006",
+    "D:\\Projects\\CauliflowerV2\\Results\\E3_300_offline_no_online\\densenet121\\seed_42\\status.json": "d4a50df3a922ec248d1fecc60fb0b5a40668ddc5e2f52f1ea194dca70b459fc1",
+    "D:\\Projects\\CauliflowerV2\\Results\\E3_300_offline_no_online\\densenet121\\seed_42\\config.json": "21a521bf79626f629042445b26f58debd06e5f78a9f02e5090140b4bfb9d469b",
+    "D:\\Projects\\CauliflowerV2\\Results\\E3_300_offline_no_online\\densenet121\\seed_42\\test_evaluation.json": "120ebbe5a485081241984069e98dd945ad9b3628b61100592835102a970faa3a",
+    "D:\\Projects\\CauliflowerV2\\Results\\E3_300_offline_no_online\\densenet121\\seed_42\\test_metrics.json": "84cda0dc1e6a2c35b617111285ee0ca01254a114d607d4d90a06c280589283f3",
+    "D:\\Projects\\CauliflowerV2\\Results\\E3_300_offline_no_online\\densenet121\\seed_43\\status.json": "ec1c1cf10a975b61a20d3ed81e88d9d3b853061545ada4a2707a44bd518b5098",
+    "D:\\Projects\\CauliflowerV2\\Results\\E3_300_offline_no_online\\densenet121\\seed_43\\config.json": "b9455f7dfbbaec4164342b22058c3c5591de6af4dcbfdd8c024466166a6726fb",
+    "D:\\Projects\\CauliflowerV2\\Results\\E3_300_offline_no_online\\densenet121\\seed_43\\test_evaluation.json": "5d49950e2e5d1c168dbde3c9ad9b8e475cd8c3f05bc627b54542a7d8cbee0202",
+    "D:\\Projects\\CauliflowerV2\\Results\\E3_300_offline_no_online\\densenet121\\seed_43\\test_metrics.json": "6f4635c6d5adbfb991ca975694e01df31c039ad933f37d1cc3ebcde57f973017",
+    "D:\\Projects\\CauliflowerV2\\Results\\E3_300_offline_no_online\\densenet121\\seed_44\\status.json": "623fc113e1a60380a13d0ac2be3158a58eb14f91b6b375bd92c875e688c20558",
+    "D:\\Projects\\CauliflowerV2\\Results\\E3_300_offline_no_online\\densenet121\\seed_44\\config.json": "caa660d51454ba472ecbd05340f456ee106e0b5a0f8b20b5e32f399dfeb77cda",
+    "D:\\Projects\\CauliflowerV2\\Results\\E3_300_offline_no_online\\densenet121\\seed_44\\test_evaluation.json": "b7a4b9cbd206bcea9cbccc2f33861d8eb4160fd0df803f83a17aa624a4e631ea",
+    "D:\\Projects\\CauliflowerV2\\Results\\E3_300_offline_no_online\\densenet121\\seed_44\\test_metrics.json": "4f9c3eba12cdfcb78eed39187c811edbaedfe364db16d66f8be8a81e13b98ebd",
+    "D:\\Projects\\CauliflowerV2\\Results\\E3_300_offline_no_online\\mobilenet_v3_large\\seed_42\\status.json": "8e761a2d1c0664a459f4cd29eda2be178327064b3544c55c72021f7d234205c5",
+    "D:\\Projects\\CauliflowerV2\\Results\\E3_300_offline_no_online\\mobilenet_v3_large\\seed_42\\config.json": "dfff2fc2b4d0d3cb937741a151bac9709e7cd42b47819f0501649d7d33e669bc",
+    "D:\\Projects\\CauliflowerV2\\Results\\E3_300_offline_no_online\\mobilenet_v3_large\\seed_42\\test_evaluation.json": "e3955accd478644460e19f01c6d6ce5beb908ec9cf37cb560ed2a1fee9b97f85",
+    "D:\\Projects\\CauliflowerV2\\Results\\E3_300_offline_no_online\\mobilenet_v3_large\\seed_42\\test_metrics.json": "1cbef11b37919a1ae9526512df3c5af67bd47dbf102c8d63f1d36521bcf8b485",
+    "D:\\Projects\\CauliflowerV2\\Results\\E3_300_offline_no_online\\mobilenet_v3_large\\seed_43\\status.json": "b571bca449dddf95d0e75de46677cbd2116155f95cf3ab49128ba3022a4a73c2",
+    "D:\\Projects\\CauliflowerV2\\Results\\E3_300_offline_no_online\\mobilenet_v3_large\\seed_43\\config.json": "b30d84c989585f0600d398af7091205c9bfbfd89aaffd11df4637bb56d2b81b5",
+    "D:\\Projects\\CauliflowerV2\\Results\\E3_300_offline_no_online\\mobilenet_v3_large\\seed_43\\test_evaluation.json": "bcf0af41f261d18f779b85f546f4f71b811b3da5a4d80a4f16875a494156f138",
+    "D:\\Projects\\CauliflowerV2\\Results\\E3_300_offline_no_online\\mobilenet_v3_large\\seed_43\\test_metrics.json": "809d6de9843d0afc83111a85d3b8fa21bae616a8f7e3d80d175bc5f1c27476b5",
+    "D:\\Projects\\CauliflowerV2\\Results\\E3_300_offline_no_online\\mobilenet_v3_large\\seed_44\\status.json": "26e4dd276039ff3c85c6e52abb4610da654c1a7e6e0a8a7bd11ed950a05dedc2",
+    "D:\\Projects\\CauliflowerV2\\Results\\E3_300_offline_no_online\\mobilenet_v3_large\\seed_44\\config.json": "96326ac0abadf7d8d6556045f965f8f2af12a483a48f894635ddc6dc6f6dacb6",
+    "D:\\Projects\\CauliflowerV2\\Results\\E3_300_offline_no_online\\mobilenet_v3_large\\seed_44\\test_evaluation.json": "ad7dc1131b63262f4618daa7e35b14c34b040e52bbc21afda266df6dacadcf1e",
+    "D:\\Projects\\CauliflowerV2\\Results\\E3_300_offline_no_online\\mobilenet_v3_large\\seed_44\\test_metrics.json": "24b984b49b50f2ead10e5b707708c2a00cab81ad17c1b8df2d5d039d24d9af04",
+    "D:\\Projects\\CauliflowerV2\\Results\\E3_300_offline_no_online\\xception\\seed_42\\status.json": "3cbefc7badc886216d15502b7c4badd93ea42edb310b23a9edf5e8b4b3932f8b",
+    "D:\\Projects\\CauliflowerV2\\Results\\E3_300_offline_no_online\\xception\\seed_42\\config.json": "cfe96d64dd630ae7c488af5ee82182dbf12e200ad4a2a92c1e358500826637d7",
+    "D:\\Projects\\CauliflowerV2\\Results\\E3_300_offline_no_online\\xception\\seed_42\\test_evaluation.json": "17e17d99f08e0f06c64d895b956eadb14ad7c373009c84b09312d7d00c3a74e8",
+    "D:\\Projects\\CauliflowerV2\\Results\\E3_300_offline_no_online\\xception\\seed_42\\test_metrics.json": "4777b14a884e3d5520e9d457c0f61096c0b7cc2649668e419fb5dcc644dedfc2",
+    "D:\\Projects\\CauliflowerV2\\Results\\E3_300_offline_no_online\\xception\\seed_43\\status.json": "dd67b27d7c5ac94344fd2c200f32152079563fd95179a1716631eedb095a81f4",
+    "D:\\Projects\\CauliflowerV2\\Results\\E3_300_offline_no_online\\xception\\seed_43\\config.json": "e2dceb3d095e9f286694ef40589c5d2902fa6514e0ad1496251a5c1cc92777d4",
+    "D:\\Projects\\CauliflowerV2\\Results\\E3_300_offline_no_online\\xception\\seed_43\\test_evaluation.json": "36a9e2ea6a1c96000d7174e8ec5a4dc89a91c97b87118e1100e140e9417ce391",
+    "D:\\Projects\\CauliflowerV2\\Results\\E3_300_offline_no_online\\xception\\seed_43\\test_metrics.json": "5f970ba8d15b073a6c88e01f46c8e2043af142744f832a7cc8c94de24b548730",
+    "D:\\Projects\\CauliflowerV2\\Results\\E3_300_offline_no_online\\xception\\seed_44\\status.json": "9546099d4acceb2c3347ff183bf02e45fd428f067c3b240290727f1f2e8eeade",
+    "D:\\Projects\\CauliflowerV2\\Results\\E3_300_offline_no_online\\xception\\seed_44\\config.json": "77fc3fabf022b32604fca8acd3eb24a232e71946d679e65580cd624900b3c862",
+    "D:\\Projects\\CauliflowerV2\\Results\\E3_300_offline_no_online\\xception\\seed_44\\test_evaluation.json": "f73894df8e9ccfa167df4628dcdd823a6f4d52fc3cad2cdc53b7f6a9d7c95166",
+    "D:\\Projects\\CauliflowerV2\\Results\\E3_300_offline_no_online\\xception\\seed_44\\test_metrics.json": "653c13f6574dc811e59aef6dbfeadb340afa5ad7955832b73e55b3da4162796d",
+    "D:\\Projects\\CauliflowerV2\\Results\\E3_300_offline_no_online\\convnext_tiny\\seed_42\\status.json": "4485c75e229f97928565fc253524779f937a4f285a905a3bb6322a8c26d23fa5",
+    "D:\\Projects\\CauliflowerV2\\Results\\E3_300_offline_no_online\\convnext_tiny\\seed_42\\config.json": "253dd5e10878b031a669f0956f6ca0076975f2aa1173ba3926fd16f93c9d5dda",
+    "D:\\Projects\\CauliflowerV2\\Results\\E3_300_offline_no_online\\convnext_tiny\\seed_42\\test_evaluation.json": "586675fc632a8f6476b8212a2cd9f560d7d51707954a210c4d78327cbb702c6e",
+    "D:\\Projects\\CauliflowerV2\\Results\\E3_300_offline_no_online\\convnext_tiny\\seed_42\\test_metrics.json": "d1bcfe380cbbc8613ac7191f56c3ef8f7d41691cb4d98846c268f41f39b00775",
+    "D:\\Projects\\CauliflowerV2\\Results\\E3_300_offline_no_online\\convnext_tiny\\seed_43\\status.json": "175e749a2ed6548bb8f1750c79138eafbd77b31d117a5ecd99dbf1e1d8016c3d",
+    "D:\\Projects\\CauliflowerV2\\Results\\E3_300_offline_no_online\\convnext_tiny\\seed_43\\config.json": "f6198ab8db149a03bae659e94cc7513ff317f2fac47529d825e4fe8f7b30204f",
+    "D:\\Projects\\CauliflowerV2\\Results\\E3_300_offline_no_online\\convnext_tiny\\seed_43\\test_evaluation.json": "41bbbb3ddde6190d522d1cf64c3f3a83501c73e85ece1f735d485249720f5b33",
+    "D:\\Projects\\CauliflowerV2\\Results\\E3_300_offline_no_online\\convnext_tiny\\seed_43\\test_metrics.json": "57eee93be863a872524e6fcc442d832dc1c0b555bb8e63cac820d6a31a2978db",
+    "D:\\Projects\\CauliflowerV2\\Results\\E3_300_offline_no_online\\convnext_tiny\\seed_44\\status.json": "ba82f0c46fd81ce4acfbfa987014829113cfef20c5d473dfe81b71d2a7b35839",
+    "D:\\Projects\\CauliflowerV2\\Results\\E3_300_offline_no_online\\convnext_tiny\\seed_44\\config.json": "01119641d1c2849aa5a71670336fa0d5f739a31ba65aa592b497efae77f0d427",
+    "D:\\Projects\\CauliflowerV2\\Results\\E3_300_offline_no_online\\convnext_tiny\\seed_44\\test_evaluation.json": "2b6eabff9c46da05bea604de02994b6443f561c8dc2b11e2b47c783cb1b10b8b",
+    "D:\\Projects\\CauliflowerV2\\Results\\E3_300_offline_no_online\\convnext_tiny\\seed_44\\test_metrics.json": "705521855a4d5a82d5cfa139d254fa84750f374f88428010f52697502ef6788d",
+    "D:\\Projects\\CauliflowerV2\\Results\\E3_300_offline_no_online\\twins_svt_base\\seed_42\\status.json": "6f97628872762a2637b534f824adbec5f060ef11343453a8bb8414e5b5db5b59",
+    "D:\\Projects\\CauliflowerV2\\Results\\E3_300_offline_no_online\\twins_svt_base\\seed_42\\config.json": "9b89017c4734cea5c7c4b1fb756ab07381182236f88908c5887b0673418e9ae6",
+    "D:\\Projects\\CauliflowerV2\\Results\\E3_300_offline_no_online\\twins_svt_base\\seed_42\\test_evaluation.json": "1f5a723b7a33b0d47d6d21f0caa8b09491659de7ba5d51d57628082ebac8a0ae",
+    "D:\\Projects\\CauliflowerV2\\Results\\E3_300_offline_no_online\\twins_svt_base\\seed_42\\test_metrics.json": "642ab7ab05bb39f34c20a869a438909195b122b0e1b331c6d9b7959f18a90c92",
+    "D:\\Projects\\CauliflowerV2\\Results\\E3_300_offline_no_online\\twins_svt_base\\seed_43\\status.json": "3aa3fea80e14d82d7529ffa3d3663b38fd2ec5edf6c24751b573f5befe6cd99d",
+    "D:\\Projects\\CauliflowerV2\\Results\\E3_300_offline_no_online\\twins_svt_base\\seed_43\\config.json": "78321557ee2aa91ec9c709d0e48eda3f1005df3e5384c0dbf5b5d908b4163781",
+    "D:\\Projects\\CauliflowerV2\\Results\\E3_300_offline_no_online\\twins_svt_base\\seed_43\\test_evaluation.json": "6c0af23e135a87a60e23316425d19e474c5bea3850f6eae179f68115cca9d071",
+    "D:\\Projects\\CauliflowerV2\\Results\\E3_300_offline_no_online\\twins_svt_base\\seed_43\\test_metrics.json": "ed4fef468acf830581a7f9d881f0d792f376ff7001936fba46c4c2ac05a0da70",
+    "D:\\Projects\\CauliflowerV2\\Results\\E3_300_offline_no_online\\twins_svt_base\\seed_44\\status.json": "2ce05592cc8f6e97601d4b6e16d3574977ad6b29b324b6efa879c07bade45411",
+    "D:\\Projects\\CauliflowerV2\\Results\\E3_300_offline_no_online\\twins_svt_base\\seed_44\\config.json": "8433cc3d0309a7caecce73a410ba05e107ba831d9cd29fcb999d869352968e38",
+    "D:\\Projects\\CauliflowerV2\\Results\\E3_300_offline_no_online\\twins_svt_base\\seed_44\\test_evaluation.json": "81ffe10b1e297ad83f13e5652f11e8b6f26d3195f1af0521d50ed72a4fd44a31",
+    "D:\\Projects\\CauliflowerV2\\Results\\E3_300_offline_no_online\\twins_svt_base\\seed_44\\test_metrics.json": "e83171e67fea2b175eb00122d39389a32b7e0cbae673d266fee2887c5081f65e",
+    "D:\\Projects\\CauliflowerV2\\Results\\E3_efficientnet_bf16\\experiment.json": "e2b0ff9ec4394b40feff6aa8cf3471ca6dc876ea044c516bedab30a1634eaf30",
+    "D:\\Projects\\CauliflowerV2\\Results\\E3_efficientnet_bf16\\class_to_index.json": "77e3ac61bf04c76878f3da7dd2f207b42a3939f39e18f20282e28239d81fae3f",
+    "D:\\Projects\\CauliflowerV2\\Results\\E3_efficientnet_bf16\\efficientnet_v2_s\\seed_42\\status.json": "e2071fc2a49bc9834c0531b9b4af9e608d0f4a5d044152217203836900882744",
+    "D:\\Projects\\CauliflowerV2\\Results\\E3_efficientnet_bf16\\efficientnet_v2_s\\seed_42\\config.json": "db0e130856332941853c8a6b5af2a5201f43317ded7f8e5e7c4981ab728207e1",
+    "D:\\Projects\\CauliflowerV2\\Results\\E3_efficientnet_bf16\\efficientnet_v2_s\\seed_42\\test_evaluation.json": "0502e972653fc2171d7451f4e90540b73f2bf3c430082ff2b4efb807a0024254",
+    "D:\\Projects\\CauliflowerV2\\Results\\E3_efficientnet_bf16\\efficientnet_v2_s\\seed_42\\test_metrics.json": "6b939ab7e1ec01457a4a0e42407046a014ba957bcdfe72b7fe86cc8acef9fd02",
+    "D:\\Projects\\CauliflowerV2\\Results\\E3_efficientnet_bf16\\efficientnet_v2_s\\seed_43\\status.json": "39070e9c950617aa36ba966a75e665ce547bc569c16172d79554ab1db3e24ad9",
+    "D:\\Projects\\CauliflowerV2\\Results\\E3_efficientnet_bf16\\efficientnet_v2_s\\seed_43\\config.json": "4b0015ec6e7dc23c75904952b03ce388de48b9e4d0015e08db18616b27677c5b",
+    "D:\\Projects\\CauliflowerV2\\Results\\E3_efficientnet_bf16\\efficientnet_v2_s\\seed_43\\test_evaluation.json": "c5a1cb0862f00b775a0a946d7bc3508e4de5494de464de01fd8d90cd67ee5a31",
+    "D:\\Projects\\CauliflowerV2\\Results\\E3_efficientnet_bf16\\efficientnet_v2_s\\seed_43\\test_metrics.json": "0ca630e789925b698b76f790743ca5ac3f4c93e597dae51936d793e2a7eb9bf2",
+    "D:\\Projects\\CauliflowerV2\\Results\\E3_efficientnet_bf16\\efficientnet_v2_s\\seed_44\\status.json": "3cca307aaa2b89341b8b760db1f5ca9f5762fe2729676d595871ac4a9b8e4cc0",
+    "D:\\Projects\\CauliflowerV2\\Results\\E3_efficientnet_bf16\\efficientnet_v2_s\\seed_44\\config.json": "f70acb8d1746b9274efbd6ba4ce724ab7877242f8e552c72396268d47ee909da",
+    "D:\\Projects\\CauliflowerV2\\Results\\E3_efficientnet_bf16\\efficientnet_v2_s\\seed_44\\test_evaluation.json": "ddfcaaaf6bc3b22fb865031c6c05c5b2083f6b71fe586d0becffd00e8b118a7a",
+    "D:\\Projects\\CauliflowerV2\\Results\\E3_efficientnet_bf16\\efficientnet_v2_s\\seed_44\\test_metrics.json": "7b496ef959becb2419a2e5ca6735cf63530426d4e945dd731852b7aadfb03163",
+    "D:\\Projects\\CauliflowerV2\\Results\\E4_300_offline_online\\experiment.json": "250cf0ca13251ee933356045556642e26fbf2b4e9993926d64c2102cd3269d78",
+    "D:\\Projects\\CauliflowerV2\\Results\\E4_300_offline_online\\class_to_index.json": "77e3ac61bf04c76878f3da7dd2f207b42a3939f39e18f20282e28239d81fae3f",
+    "D:\\Projects\\CauliflowerV2\\Results\\E4_300_offline_online\\resnet50\\seed_42\\status.json": "ce9e53c1aca774c2e061aafcfff7c641e99574dd01eb621f010017255068b6d1",
+    "D:\\Projects\\CauliflowerV2\\Results\\E4_300_offline_online\\resnet50\\seed_42\\config.json": "dceff4194a85d362c2465f3e487fb90a3300a9d01ae701f487d30f32d5579b69",
+    "D:\\Projects\\CauliflowerV2\\Results\\E4_300_offline_online\\resnet50\\seed_42\\test_evaluation.json": "09f07dd8e983088e0089787cc670be61439a2805d2c93da1019300b50ad7c6d1",
+    "D:\\Projects\\CauliflowerV2\\Results\\E4_300_offline_online\\resnet50\\seed_42\\test_metrics.json": "6d00d64246a617aed17ba8046d5dc9d7f2b505a5bd8a1c0e5cd63728ed558cb2",
+    "D:\\Projects\\CauliflowerV2\\Results\\E4_300_offline_online\\resnet50\\seed_43\\status.json": "e97736ded9f47f150d2d4a6e915fe7a0fc49621d5c5744b05ef42c2de0bcc980",
+    "D:\\Projects\\CauliflowerV2\\Results\\E4_300_offline_online\\resnet50\\seed_43\\config.json": "d8d5d91e136360a65e8d4eba747797f6c69fdfa3ff84e14bb8c0a45590c2f2ed",
+    "D:\\Projects\\CauliflowerV2\\Results\\E4_300_offline_online\\resnet50\\seed_43\\test_evaluation.json": "2615df77bc3afb92900acc542b9e6bc0d8717b3867471c44e0c03b76e973870e",
+    "D:\\Projects\\CauliflowerV2\\Results\\E4_300_offline_online\\resnet50\\seed_43\\test_metrics.json": "f073ebb877b826d78a1a22029d912b5b5afe6d0fa420b1d4351d03ee045d7b77",
+    "D:\\Projects\\CauliflowerV2\\Results\\E4_300_offline_online\\resnet50\\seed_44\\status.json": "5e8e3a73bcebaf6ed459a82be7c1199a1fd28d2e3ad8ae3b323cac70b1af991d",
+    "D:\\Projects\\CauliflowerV2\\Results\\E4_300_offline_online\\resnet50\\seed_44\\config.json": "9afa02c71cef3a65f1bd09d84a56202e2347bd9776b7741c07c4669628714f86",
+    "D:\\Projects\\CauliflowerV2\\Results\\E4_300_offline_online\\resnet50\\seed_44\\test_evaluation.json": "15377af15c3e9e579bd48ddb64bba47b883fc374f7d7bc70f7f92a48d574805e",
+    "D:\\Projects\\CauliflowerV2\\Results\\E4_300_offline_online\\resnet50\\seed_44\\test_metrics.json": "9027fed94ee093449cbba970f3f12ee3122de1ab07a81018b0d50a4c45605803",
+    "D:\\Projects\\CauliflowerV2\\Results\\E4_300_offline_online\\densenet121\\seed_42\\status.json": "08de0d9b5f1b2548eddd174579fb547d94d64c8bebd3c97b1ba9a7e93df70fdd",
+    "D:\\Projects\\CauliflowerV2\\Results\\E4_300_offline_online\\densenet121\\seed_42\\config.json": "8e88e732ef16d0e369cb86fc462edabc95345b43c286b8b3281b7bce372d3e42",
+    "D:\\Projects\\CauliflowerV2\\Results\\E4_300_offline_online\\densenet121\\seed_42\\test_evaluation.json": "ac9358a0f1dd45b10ac3846bd48ef3e33fcb2c44f46469de04465979467494b6",
+    "D:\\Projects\\CauliflowerV2\\Results\\E4_300_offline_online\\densenet121\\seed_42\\test_metrics.json": "8682576e7d0369112303b7e85212a2fded6165d765467f5e8191f090eab030b2",
+    "D:\\Projects\\CauliflowerV2\\Results\\E4_300_offline_online\\densenet121\\seed_43\\status.json": "050d96635c93921ef2c7212dd5b9f44f01af4cc63801ea41b6ec3eb7fcab9558",
+    "D:\\Projects\\CauliflowerV2\\Results\\E4_300_offline_online\\densenet121\\seed_43\\config.json": "17f91252405aa0972eb6fcacd68be532df409273f83b7ded776fd0b4785eb11a",
+    "D:\\Projects\\CauliflowerV2\\Results\\E4_300_offline_online\\densenet121\\seed_43\\test_evaluation.json": "664c0bf1e86b6acaee7494c67dafb9c4b4a3eed25ca656bba7d85ebca8615964",
+    "D:\\Projects\\CauliflowerV2\\Results\\E4_300_offline_online\\densenet121\\seed_43\\test_metrics.json": "8bf23e813a5cbc199e7ecebb9c8cb38225311c4f7aa837ccb66f970450dc7ec5",
+    "D:\\Projects\\CauliflowerV2\\Results\\E4_300_offline_online\\densenet121\\seed_44\\status.json": "4d974dc19ac34fe5c7d231758afbfd70a5f81a3186d5b9feb099acc7ee7abe3d",
+    "D:\\Projects\\CauliflowerV2\\Results\\E4_300_offline_online\\densenet121\\seed_44\\config.json": "a087862b16de3401c6fc9c7776e32f4c6bc1f612c1f60c509f5b66f621960e99",
+    "D:\\Projects\\CauliflowerV2\\Results\\E4_300_offline_online\\densenet121\\seed_44\\test_evaluation.json": "a7a730ce8febbcfe3649540c0e70eaaf90662153dba2b5530877b340c245cfaa",
+    "D:\\Projects\\CauliflowerV2\\Results\\E4_300_offline_online\\densenet121\\seed_44\\test_metrics.json": "0df3219e0357c7e9bf7fab1dcd745a0fa464c2c4d0207211af3c666203f379f5",
+    "D:\\Projects\\CauliflowerV2\\Results\\E4_300_offline_online\\mobilenet_v3_large\\seed_42\\status.json": "60bee04b1e7feae178fc7394ed89fce6ff72bb96c65aae32327705178fdb0dc4",
+    "D:\\Projects\\CauliflowerV2\\Results\\E4_300_offline_online\\mobilenet_v3_large\\seed_42\\config.json": "233afd707c8adec03acc182bb9ae3aea6003da40e37de6c0dd448b7af622aa89",
+    "D:\\Projects\\CauliflowerV2\\Results\\E4_300_offline_online\\mobilenet_v3_large\\seed_42\\test_evaluation.json": "aab7ef003a7ebe2f8c90e3ba2abb6532b2b3ad3eb3799b2f78c942bfa1143230",
+    "D:\\Projects\\CauliflowerV2\\Results\\E4_300_offline_online\\mobilenet_v3_large\\seed_42\\test_metrics.json": "212f5009c754f43d172b4fbd5a813bce4924d26d1fa7028efa99a29497fcae9c",
+    "D:\\Projects\\CauliflowerV2\\Results\\E4_300_offline_online\\mobilenet_v3_large\\seed_43\\status.json": "f510d2e8c2821c3a4b60fb173617724528d55fbdc0b0dfa78b796e8fe4a02ed9",
+    "D:\\Projects\\CauliflowerV2\\Results\\E4_300_offline_online\\mobilenet_v3_large\\seed_43\\config.json": "9d1d6604e2fed3a60ff8d8642f2c1d8cf12952b5cf0cf829e0ac9d9d9c17b84c",
+    "D:\\Projects\\CauliflowerV2\\Results\\E4_300_offline_online\\mobilenet_v3_large\\seed_43\\test_evaluation.json": "18a505d7cbc0b85bf27d330569d083b53780ec7a2c209872dbf583caa649d494",
+    "D:\\Projects\\CauliflowerV2\\Results\\E4_300_offline_online\\mobilenet_v3_large\\seed_43\\test_metrics.json": "82a7768822b544cf683334631b0f6bb0ea5034fcb81d948df905ae5536bf2b91",
+    "D:\\Projects\\CauliflowerV2\\Results\\E4_300_offline_online\\mobilenet_v3_large\\seed_44\\status.json": "122c61d4aad2ecd37f145a459eaa0be51250b933d9220033cac8ab9fb0ba2ad0",
+    "D:\\Projects\\CauliflowerV2\\Results\\E4_300_offline_online\\mobilenet_v3_large\\seed_44\\config.json": "4a1306de3a140c92da21c37ff8ceeeb94b0ead057c90e776db9e609966fd66d6",
+    "D:\\Projects\\CauliflowerV2\\Results\\E4_300_offline_online\\mobilenet_v3_large\\seed_44\\test_evaluation.json": "5c60fe71cc9b001b8fd73f7439af5b5fdf461943a061128543973d3c2f8d059c",
+    "D:\\Projects\\CauliflowerV2\\Results\\E4_300_offline_online\\mobilenet_v3_large\\seed_44\\test_metrics.json": "c49212af2034c140500d7a4b38d3dffda5eb7c76046102fc0bf9f7563caf686f",
+    "D:\\Projects\\CauliflowerV2\\Results\\E4_300_offline_online\\xception\\seed_42\\status.json": "80f8465970a3ae189b288cf8fc63798741ae319280f0e7ad6d2222ee6449a2ee",
+    "D:\\Projects\\CauliflowerV2\\Results\\E4_300_offline_online\\xception\\seed_42\\config.json": "88f00aceeec55b1747f8767b9c0d7066331f5ba2ce63fa9b46e53bfa6aed5fc9",
+    "D:\\Projects\\CauliflowerV2\\Results\\E4_300_offline_online\\xception\\seed_42\\test_evaluation.json": "bea5f9295a8ffe71a450efb9a25537d6797ffcf0775cd3eb5cf1471e7e545582",
+    "D:\\Projects\\CauliflowerV2\\Results\\E4_300_offline_online\\xception\\seed_42\\test_metrics.json": "42715af73c800aa447279ded823548dfbfc9d1de363abf5a72cd8f1fcaaec3ad",
+    "D:\\Projects\\CauliflowerV2\\Results\\E4_300_offline_online\\xception\\seed_43\\status.json": "b367a13592a24a540b9fa220048c8565be1a4bf4f781cbe7e3cbe2c9ce767dac",
+    "D:\\Projects\\CauliflowerV2\\Results\\E4_300_offline_online\\xception\\seed_43\\config.json": "23600786c849ea6f56d4a42c3b37cc054c5038df93d60ecb646a71238c002f60",
+    "D:\\Projects\\CauliflowerV2\\Results\\E4_300_offline_online\\xception\\seed_43\\test_evaluation.json": "7a4245558bc5cccc150f31240b34ebcd1c151f7bc58f55b8fbec37294c9482e2",
+    "D:\\Projects\\CauliflowerV2\\Results\\E4_300_offline_online\\xception\\seed_43\\test_metrics.json": "8171bd1cb9296c9b3ef5fd5ee5b53c36b058e6e0bfa1c4e822b5f0966ebf2eeb",
+    "D:\\Projects\\CauliflowerV2\\Results\\E4_300_offline_online\\xception\\seed_44\\status.json": "2ae6f53fa554cdca4f095af37786bc56b69a0d85237bafb3b42ea40146a89b4d",
+    "D:\\Projects\\CauliflowerV2\\Results\\E4_300_offline_online\\xception\\seed_44\\config.json": "12dc3fa70745775324c47081cc39c915ce2e18c9c931ec003f45725551e9577c",
+    "D:\\Projects\\CauliflowerV2\\Results\\E4_300_offline_online\\xception\\seed_44\\test_evaluation.json": "5d42112775f6f0ade57477a5c8d07ad8ff2240df1b2e447a82b9b18ef71fd8bb",
+    "D:\\Projects\\CauliflowerV2\\Results\\E4_300_offline_online\\xception\\seed_44\\test_metrics.json": "a71f7fe9711034406d5ebdd28408c4e61f3a1136959e9a255e0ea7df86b5f103",
+    "D:\\Projects\\CauliflowerV2\\Results\\E4_300_offline_online\\convnext_tiny\\seed_42\\status.json": "41d52f85b4902884616692c1a21bc925947101d52b36828f84ddbac25e64fe9b",
+    "D:\\Projects\\CauliflowerV2\\Results\\E4_300_offline_online\\convnext_tiny\\seed_42\\config.json": "1f8c1bd01eac46ab75a007766c8eda7a721baa7a4f055a669c6fe47ea00ba74b",
+    "D:\\Projects\\CauliflowerV2\\Results\\E4_300_offline_online\\convnext_tiny\\seed_42\\test_evaluation.json": "c08efdf3af85367f38f456e899267140d8255c233b24059c08463dadda238b75",
+    "D:\\Projects\\CauliflowerV2\\Results\\E4_300_offline_online\\convnext_tiny\\seed_42\\test_metrics.json": "e9af7820eed06bb32cc28eda0eecb892b9cfa7e3206c7063fc70bdf37dc43b75",
+    "D:\\Projects\\CauliflowerV2\\Results\\E4_300_offline_online\\convnext_tiny\\seed_43\\status.json": "84ffba51010c2cea5bacac29a84d5deec104f39485ef378d565bc7b96305d633",
+    "D:\\Projects\\CauliflowerV2\\Results\\E4_300_offline_online\\convnext_tiny\\seed_43\\config.json": "039cef4ddc683498e861b13d74d1af3be44664443cec57b5b85ecc0ac64b2a9a",
+    "D:\\Projects\\CauliflowerV2\\Results\\E4_300_offline_online\\convnext_tiny\\seed_43\\test_evaluation.json": "7fbdfe38425ada26d3879133484c41bda0a1f84739f5239f1ffc88ff355fef6b",
+    "D:\\Projects\\CauliflowerV2\\Results\\E4_300_offline_online\\convnext_tiny\\seed_43\\test_metrics.json": "4fa0abbd1bf44d2770b3008c21940fc2efeabf562f2adc63cdee884feaf6d6eb",
+    "D:\\Projects\\CauliflowerV2\\Results\\E4_300_offline_online\\convnext_tiny\\seed_44\\status.json": "6f3f68e467c9a2378b6a93ee7fc8e0377f408b661d66276e40f25cfac2dda0fc",
+    "D:\\Projects\\CauliflowerV2\\Results\\E4_300_offline_online\\convnext_tiny\\seed_44\\config.json": "f682f6fbee768f0ea24b8bf19f7a6a572e7976375c7c7deae0d80337fbc84a93",
+    "D:\\Projects\\CauliflowerV2\\Results\\E4_300_offline_online\\convnext_tiny\\seed_44\\test_evaluation.json": "71c678c21ed53baa61544af9fd80be24b90d04c756ccec821e66723f489a534e",
+    "D:\\Projects\\CauliflowerV2\\Results\\E4_300_offline_online\\convnext_tiny\\seed_44\\test_metrics.json": "869b8674ff663756fa69501858e1212438a5329bc0e2df6c29ead43cb5372c5a",
+    "D:\\Projects\\CauliflowerV2\\Results\\E4_300_offline_online\\twins_svt_base\\seed_42\\status.json": "8220a8eee78b18c2ccf4c8ded8057e2296ceaa10a3f48d93959de0b87963dee9",
+    "D:\\Projects\\CauliflowerV2\\Results\\E4_300_offline_online\\twins_svt_base\\seed_42\\config.json": "d98a11e2868744375dc6425aa8f88f4068e0a1d945d8e1b5889ff40fb9da0500",
+    "D:\\Projects\\CauliflowerV2\\Results\\E4_300_offline_online\\twins_svt_base\\seed_42\\test_evaluation.json": "b38511e97cce46e7d2e4f334a1851fca52205066f1891a8e760f1084e43ca85f",
+    "D:\\Projects\\CauliflowerV2\\Results\\E4_300_offline_online\\twins_svt_base\\seed_42\\test_metrics.json": "feaf125e21a21835fca9fb270ae1d603db54e913f53fe5f30755cff24b97e921",
+    "D:\\Projects\\CauliflowerV2\\Results\\E4_300_offline_online\\twins_svt_base\\seed_43\\status.json": "b56f146b3a441980fa7086b73523fd7fa943b8b47f252a20b1172ee26d114bf9",
+    "D:\\Projects\\CauliflowerV2\\Results\\E4_300_offline_online\\twins_svt_base\\seed_43\\config.json": "d268be1d95d9759904a4c62000314bcd6b3107479fa4aa0ad468739dd32d48b4",
+    "D:\\Projects\\CauliflowerV2\\Results\\E4_300_offline_online\\twins_svt_base\\seed_43\\test_evaluation.json": "9bc21ef560fdc482e687563cf0bcabe0baecbc8769da701e9777f37aed924213",
+    "D:\\Projects\\CauliflowerV2\\Results\\E4_300_offline_online\\twins_svt_base\\seed_43\\test_metrics.json": "c3db034b24c76cecdf9a77b3d9ed70fde2378b2ea4391ff58934c62bd2bc8405",
+    "D:\\Projects\\CauliflowerV2\\Results\\E4_300_offline_online\\twins_svt_base\\seed_44\\status.json": "b29ab57bab8fb4cf585f9eadcf3babafebb0041d11c8dc623fd0dabd3688ca45",
+    "D:\\Projects\\CauliflowerV2\\Results\\E4_300_offline_online\\twins_svt_base\\seed_44\\config.json": "4772d8ae0b3ffb5e183193b0bf81961f3926903bfa2b5322d8a4f85776b0fbfd",
+    "D:\\Projects\\CauliflowerV2\\Results\\E4_300_offline_online\\twins_svt_base\\seed_44\\test_evaluation.json": "b5d0fa69a4588aa07b14e4c17f56780c33cd31b89e6d9ff665944ff4cebf0240",
+    "D:\\Projects\\CauliflowerV2\\Results\\E4_300_offline_online\\twins_svt_base\\seed_44\\test_metrics.json": "50b9f266d282c1dbf814525a6c39e237b8b47ea37b5d42804a3fe4b046ecac97",
+    "D:\\Projects\\CauliflowerV2\\Results\\E4_efficientnet_bf16\\experiment.json": "53e1988e2dc7943a5ec49a0a9783d3d5775d4bd538fe238152659797b5130324",
+    "D:\\Projects\\CauliflowerV2\\Results\\E4_efficientnet_bf16\\class_to_index.json": "77e3ac61bf04c76878f3da7dd2f207b42a3939f39e18f20282e28239d81fae3f",
+    "D:\\Projects\\CauliflowerV2\\Results\\E4_efficientnet_bf16\\efficientnet_v2_s\\seed_42\\status.json": "02e181394596e5b98cc281d7aac5e74508af2ba640fd62f82a5099edf43387af",
+    "D:\\Projects\\CauliflowerV2\\Results\\E4_efficientnet_bf16\\efficientnet_v2_s\\seed_42\\config.json": "5f299d71b705e6d90e4b2c742881b3083dbbad488ce4b5dfee7071bf0e788fb2",
+    "D:\\Projects\\CauliflowerV2\\Results\\E4_efficientnet_bf16\\efficientnet_v2_s\\seed_42\\test_evaluation.json": "7b1f08b4f3e3b64b3b7bb6f7d33fb6732e34fcd903a65ff022e860a4f945e2e2",
+    "D:\\Projects\\CauliflowerV2\\Results\\E4_efficientnet_bf16\\efficientnet_v2_s\\seed_42\\test_metrics.json": "111d960119137aacdddc1ee9074f5e2b72e6108c7da63732d4e2ef206ffe9c50",
+    "D:\\Projects\\CauliflowerV2\\Results\\E4_efficientnet_bf16\\efficientnet_v2_s\\seed_43\\status.json": "b8711df8deaf33fd27f88f5d4c2c36535867a55bb1add547d6341f062a012d53",
+    "D:\\Projects\\CauliflowerV2\\Results\\E4_efficientnet_bf16\\efficientnet_v2_s\\seed_43\\config.json": "ecd3cf492d34d322c5811f1d8163f0d3d50d44aaf6b8aa63ea1dd4c6847a6b6b",
+    "D:\\Projects\\CauliflowerV2\\Results\\E4_efficientnet_bf16\\efficientnet_v2_s\\seed_43\\test_evaluation.json": "942ca3ee92172dfefd3bfb3b0e914139ef87869c4e96253ca3ec3591e0c5b96d",
+    "D:\\Projects\\CauliflowerV2\\Results\\E4_efficientnet_bf16\\efficientnet_v2_s\\seed_43\\test_metrics.json": "28f0f2640f717674a475ef51f4e9e4512f816a91537fc08899f5eb86114b6637",
+    "D:\\Projects\\CauliflowerV2\\Results\\E4_efficientnet_bf16\\efficientnet_v2_s\\seed_44\\status.json": "2c26b321b471255118aa9d2b9597cf7876740a0929bde29d97e682d8f01ad19f",
+    "D:\\Projects\\CauliflowerV2\\Results\\E4_efficientnet_bf16\\efficientnet_v2_s\\seed_44\\config.json": "67cf96a946e64a6d8a988c0ff0244bdc582f5a4b2e3fd4b1afa6275cedb5f017",
+    "D:\\Projects\\CauliflowerV2\\Results\\E4_efficientnet_bf16\\efficientnet_v2_s\\seed_44\\test_evaluation.json": "1cc539b44b0a118ce952e08ec22780a675cef240abcb5c68cd6f184bbacba772",
+    "D:\\Projects\\CauliflowerV2\\Results\\E4_efficientnet_bf16\\efficientnet_v2_s\\seed_44\\test_metrics.json": "70d8cf4e27bb00feaa5cf69ca74bffc63a635600dca47348c4a9be4568cdafc0",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\experiment.json": "84864d2c9821b25b4155f994625d40d43e8e916ab78436193778cfa72a8d4132",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\class_to_index.json": "77e3ac61bf04c76878f3da7dd2f207b42a3939f39e18f20282e28239d81fae3f",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\resnet50\\seed_42\\status.json": "0030165f0104cfa5dae08cfd52a30ac91eaa35e41e2beebb37c55d94d5f3eed6",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\resnet50\\seed_42\\config.json": "1ab669777d63c34c7a28cb2f1b766f734f83fe7a3bb079712f4ec46c84bbbe1a",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\resnet50\\seed_42\\test_evaluation.json": "de96a36094a2382071c348be24a337e9365732c1bfcd1734903425d3adeb713c",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\resnet50\\seed_42\\test_metrics.json": "7e4c6a8e9ff0c727971c520fe72e2b544032f31daa277bb6fb5dff9171f08437",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\resnet50\\seed_43\\status.json": "4483da0417bae635afb8506667f70fa71f6f36aaff0d140182c9e9eba9cb35f8",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\resnet50\\seed_43\\config.json": "a2caa23d036efc953b2199e8a9bf16a65e798414cadd7077f80ff37462c603b5",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\resnet50\\seed_43\\test_evaluation.json": "5f03c7b9839106c704e198ee2d4eb4d91f6e6720318fb3ad1bf98027b742b4ac",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\resnet50\\seed_43\\test_metrics.json": "aa18d7ce2436db566bc7dad335982a80af90dfd1cd635c5df5ec73694abe0a74",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\resnet50\\seed_44\\status.json": "57481e0c0d95b3ec2de9887a656c3c05d889011e9fbd95299bb117dd671ccb97",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\resnet50\\seed_44\\config.json": "4e70b3a433744e022770f89b2ec4559a205f2c58365fdd0a2ad7a638a820659b",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\resnet50\\seed_44\\test_evaluation.json": "1fce7576a518ad7b33cc2de7c91dc9abb4fd6b7a0872913d00183b445d295f47",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\resnet50\\seed_44\\test_metrics.json": "ae5d5491cc9cbb48e3acc07e926507c941dd1258a894e4e13344d833086b00c0",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\densenet121\\seed_42\\status.json": "9ae9f96e2a2ead6c788c619353d32a56fc3e4db1b8deb36e67fdfce4e41fd981",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\densenet121\\seed_42\\config.json": "4a6b5925e8db8c94b773632622d82201b79c6ffc06adf4728f5b2bd37602ed77",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\densenet121\\seed_42\\test_evaluation.json": "a6a3571c4dd7070c88cdccb833de337b9163d4c1e7c055cc80dcdb0973c4cdee",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\densenet121\\seed_42\\test_metrics.json": "c3d772eb4a62f0cd66950d4eb64b7e915eeb4a12359c43484d26f159c097a5d6",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\densenet121\\seed_43\\status.json": "b32e71647a48a595b015950ba649261f5b58740f90f30e49998020d912720ce4",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\densenet121\\seed_43\\config.json": "f56daade518afaff69f18d9cd3f6ac42670dd7bd8f962caa81151e045e4c8659",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\densenet121\\seed_43\\test_evaluation.json": "f1876eea3a78854f89d79df815ec020d9c19b35f13e85264bfcba3c02502b5c1",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\densenet121\\seed_43\\test_metrics.json": "914f04f1b08c9fc46b50a670171a17a8a65d9cef79699ef0c1fc133d6669933b",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\densenet121\\seed_44\\status.json": "5dc5bc45855602f8708a33ec4156a7bc2dec6147b1ba2f7c6cce9f2f37377e72",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\densenet121\\seed_44\\config.json": "2b1a5ac6c9162ce76a2d3ca3439d853263b33dc1d3424d78098d9ac8ebf6e52d",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\densenet121\\seed_44\\test_evaluation.json": "b84f636ce7ca3be21f61f34be53454ed4cb51e9e38a3fbebe0c5dd52a69432e2",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\densenet121\\seed_44\\test_metrics.json": "a66539260fc6092a6f84930e303348c9e3aa71824c17935a59bf72d63ad34554",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\mobilenet_v3_large\\seed_42\\status.json": "0fa77e346f368d6e52b3c34a4eb811c8a36ca9b1e805cd9d24960739739cfa0d",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\mobilenet_v3_large\\seed_42\\config.json": "f4105a51969c6b43ac0d5c91601f04bd672ec263f585dc676c3e5829cb6faa40",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\mobilenet_v3_large\\seed_42\\test_evaluation.json": "2db4f97dd541efb7ed7dcbe5bc44ea1b90cbd6ec320c74d69a3fddbacb07cb0e",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\mobilenet_v3_large\\seed_42\\test_metrics.json": "7c39585bae79241541980702dfa5b5d0736e93260b5d23422e52c66981661f6b",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\mobilenet_v3_large\\seed_43\\status.json": "b0603f36e8426ecf4cb07083f8c71d229679d92c0c14d6f66f37e294a1546dda",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\mobilenet_v3_large\\seed_43\\config.json": "d759965258fc7530f42df65f225e53fb1426814706a47c8ee126a5bea102b155",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\mobilenet_v3_large\\seed_43\\test_evaluation.json": "e7dcac832013edb2ad6a4147d71173371084c40ab77a8397d1e814a3d85f4d11",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\mobilenet_v3_large\\seed_43\\test_metrics.json": "3e3695063fe5fac772f052c2c1e13f5662ec4613b8874c44cee3ff3823c1e092",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\mobilenet_v3_large\\seed_44\\status.json": "f784334362e6c7ce93d8e5b6414b8d28b04327bb1b3011913d5811428fcea7f2",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\mobilenet_v3_large\\seed_44\\config.json": "4f76c30eb948c02a292a5769eca177f94346b1f1fce165eebde79d79810d316f",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\mobilenet_v3_large\\seed_44\\test_evaluation.json": "6f7fdadcb871f8169b83ee055375989f268b899a8330305a3570d5e5237eb345",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\mobilenet_v3_large\\seed_44\\test_metrics.json": "b57365ff91b12179c671a80cc042ae2becbeac99104788608beb9aa5ff1cf738",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\xception\\seed_42\\status.json": "9a3afc73e548c981ef32d23ba72992d94444d9ae622093c6e99427f3fe1909f8",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\xception\\seed_42\\config.json": "53134bb36f647d9c89717d91f21c3bda34280ae82e400250fa223feceb8ac4ea",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\xception\\seed_42\\test_evaluation.json": "f0c05384a97a2127544e330eaa2623945ecb89630e6fccdc913271a00656dfcd",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\xception\\seed_42\\test_metrics.json": "70c17e00e493412187dec19edf84633f3019092dd97be7b0db0c97ae78186973",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\xception\\seed_43\\status.json": "cfa6b06e16f0347a6633a43dd666964dffc8704d832b2afdde2adc52e1bae717",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\xception\\seed_43\\config.json": "ba1c105844eef8ce9e68f25cd7a6bc3b42eba0def2dbdc54176f08d4ecd0f081",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\xception\\seed_43\\test_evaluation.json": "befdd010983f75a23808c3e6b18db238ba51d1685d72dedef6407b8157dc31a4",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\xception\\seed_43\\test_metrics.json": "ad6bab947fe2dd6058705206e13cedd9d8d95702849f414122330fe5732273f5",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\xception\\seed_44\\status.json": "b3460543d3b0f29585e5f582b25b3c44f404091ced9d417af2e69e2632956d65",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\xception\\seed_44\\config.json": "412fc442ff54d1f2caf5315aa0d696d350b20c6a5fc388b918df193179348f6e",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\xception\\seed_44\\test_evaluation.json": "a513bbc550d2220e57c306ce982c7a22228042d66a6c7b85370a320923dbc97f",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\xception\\seed_44\\test_metrics.json": "a68316074ea455de852bcec83cd868ce7859b7240b72ca7a08b19fa2daba72bd",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\convnext_tiny\\seed_42\\status.json": "af019b5dc558dfdbf3659d21984fbcb3fab95a8b42ed524bf9793882e8b2809a",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\convnext_tiny\\seed_42\\config.json": "ed28afa628a6f53af36e34d08091ad1928dba1e80bd18b6ec0559fbea1adf0fe",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\convnext_tiny\\seed_42\\test_evaluation.json": "0f3769464d3718e3940967925692a84ff11d3dd891e28bb539ed6e528f64b3d7",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\convnext_tiny\\seed_42\\test_metrics.json": "3ddde7d0a91772fb317f70301b9e67d86c2c070a95a6b796ff88bdcf6ec4eba2",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\convnext_tiny\\seed_43\\status.json": "be6932ed2cdc674d9f873f1c0e73cc7b228658a9ec241c41ee196f3a02713c29",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\convnext_tiny\\seed_43\\config.json": "74a84c176c433c34c9e78715e11141912fcb6f8dc85ee47e3a44fb6bc3ea69e5",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\convnext_tiny\\seed_43\\test_evaluation.json": "c09e0608e2e17f487a67c66eabe4de18bb30174a7de99ae1c891a1ed0d6e1241",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\convnext_tiny\\seed_43\\test_metrics.json": "42e10efbb0aee02cbf2a38df48cdada8718a19b16e5c4d016047561ff771043f",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\convnext_tiny\\seed_44\\status.json": "9ba7b37e068bf7ccbcbd45ad3005c7c51b2d691a39af287419c0cdb0d9c95593",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\convnext_tiny\\seed_44\\config.json": "7ace314bf2c18dbf8ed18679b1cce265c810625368fe3da617cbe8fab7c3224f",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\convnext_tiny\\seed_44\\test_evaluation.json": "4a94ef4dc3f582f5e77c19579ba705543ceb909521955f3a0f4b0ef48b6fe84b",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\convnext_tiny\\seed_44\\test_metrics.json": "bc0647ca9116c8ecc48740cf92ea43467f87a4b58210ba8793691f0f0e790993",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\vit_base_patch16_224\\seed_42\\status.json": "7f8fd47edb660dce5c699d15962bd66b84999beaf08a41b12429db66795c0c40",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\vit_base_patch16_224\\seed_42\\config.json": "be34431d8e556b880703893b913000157f9d797c99351b10e1233d64d9b37924",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\vit_base_patch16_224\\seed_42\\test_evaluation.json": "3c4126fec9ab818a5fac8ec9a27ad4142133e54a433ff3c851a7114adf448493",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\vit_base_patch16_224\\seed_42\\test_metrics.json": "ff142b038e009848625a23aedee1b0e666189cf96b69b241a37e9e6d915272cd",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\vit_base_patch16_224\\seed_43\\status.json": "b900075886f8f4d8fc346a59387602013ee16eee005e4ddd323c37000120ef44",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\vit_base_patch16_224\\seed_43\\config.json": "9da858a97855e5fde84d64d59a7ed9588c2c558a5e7b65cadd006ce2e2962e30",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\vit_base_patch16_224\\seed_43\\test_evaluation.json": "31fb42acbea480668325f435831788a397f313674a624ac1bd8c3953eb216072",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\vit_base_patch16_224\\seed_43\\test_metrics.json": "fd1117294f77b204d0b9131cdee31e0047da3097ad49ee3c543a08bba9f73d4e",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\vit_base_patch16_224\\seed_44\\status.json": "6fd637eed7a5ef229757991fd001979edef31b5d01e89c24717e7fdcaf614fe5",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\vit_base_patch16_224\\seed_44\\config.json": "4695a876601e31de4d8c11ef70d24ae12384b7e0abd204402390c6557f7d9ed7",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\vit_base_patch16_224\\seed_44\\test_evaluation.json": "6c6f6d2c320d43b6bf9e8621fad5541e5effaf84899312c41188f988e7f3d7c5",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\vit_base_patch16_224\\seed_44\\test_metrics.json": "96fc535c02baf4e0608452ad36759e36174a883d1c82d8af33b6a9ea04406ccb",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\twins_svt_base\\seed_42\\status.json": "790d8c8024a778968624826cad2a25e99e75359cbd2a4ea02621578d02d9df38",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\twins_svt_base\\seed_42\\config.json": "33023aeb4f33d4546402a2105166e1632e1729e3a354300a556b976d8554a2f3",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\twins_svt_base\\seed_42\\test_evaluation.json": "5d9c18c34382a2e48ba615dd04fe23fff091b7e6ca9bb0f46e904b4b892ac8e4",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\twins_svt_base\\seed_42\\test_metrics.json": "ed446a1e9fb3532f927a43c838f380b065bfb43980946ac29494f911c3092a3d",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\twins_svt_base\\seed_43\\status.json": "4c62b1ccfff3ae9c20a014f5e44fcbd45d5e7ec8935a2e03468ddd11efbe80fb",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\twins_svt_base\\seed_43\\config.json": "0c4559d7647ef30cd1a25443c51b9a4962d4afb381cf4c429d22976312b360a9",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\twins_svt_base\\seed_43\\test_evaluation.json": "2cb09398461d75ac0666afad631ab7bb17122758445cb9cc353e3ea9865d6d24",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\twins_svt_base\\seed_43\\test_metrics.json": "b06bf6e5c8e76d48e3bea132e7148c0491cce38b488ec1ea1c22799fa72a5214",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\twins_svt_base\\seed_44\\status.json": "602999538ec800aa8fa061c093abf8b0baf2b98068e4f71a1d50d23c6b28f62c",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\twins_svt_base\\seed_44\\config.json": "554ccb4268dc5724d03686a69f323f2aeb3643717a3a1d993971db15547e6962",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\twins_svt_base\\seed_44\\test_evaluation.json": "3afc308f7f4b4b4c08a53217ac4ea59e9a335ce10b2d879ffa23848f94619f91",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\twins_svt_base\\seed_44\\test_metrics.json": "5c9dc5cbfbbe693ce1f66d5ad9a13a0d863b998bbeb89090124faabbabaaf951",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_efficientnet_bf16\\experiment.json": "24da49453fc087accfaafb5c52ca9dc24225ab31e7ea2e26bb1e1fa01ad40039",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_efficientnet_bf16\\class_to_index.json": "77e3ac61bf04c76878f3da7dd2f207b42a3939f39e18f20282e28239d81fae3f",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_efficientnet_bf16\\efficientnet_v2_s\\seed_42\\status.json": "ff5b2d83352fbe4b5f379b2eb89801741c90b59f87bcd4591a3612688d75b466",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_efficientnet_bf16\\efficientnet_v2_s\\seed_42\\config.json": "af94425d29701e78315380d7fce70ee587e59c5589f2fb575a34881fb8a6b62d",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_efficientnet_bf16\\efficientnet_v2_s\\seed_42\\test_evaluation.json": "510305bd63ff4158c204db85aa629d8973aeb6317e16d334ca10627d1f8e2655",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_efficientnet_bf16\\efficientnet_v2_s\\seed_42\\test_metrics.json": "e7a02fbc85408b99ba020455e8ddd010a59caa1b89bbb83fe4f4afed51c6e53a",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_efficientnet_bf16\\efficientnet_v2_s\\seed_43\\status.json": "a4706173e883cb06ddc766de8d68fc2d10391acca53c7613fa2ec535bd81b15f",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_efficientnet_bf16\\efficientnet_v2_s\\seed_43\\config.json": "8caf1c17a151f070842e45bf42521858bb8b7b39c04075a4313e1f4d2d9c9a0a",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_efficientnet_bf16\\efficientnet_v2_s\\seed_43\\test_evaluation.json": "353b1d16592504d0bc7cd40fa7a45e875fa7434c7c539e0e465def0cdba77be3",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_efficientnet_bf16\\efficientnet_v2_s\\seed_43\\test_metrics.json": "0fca9361dfeeccd918d6057df2a300374392f4e20c8cf093f3217fe154e13c82",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_efficientnet_bf16\\efficientnet_v2_s\\seed_44\\status.json": "8e7603da02b55296f64824a97eea20b0d0866a0ce06135b440c2276ea60d3d8e",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_efficientnet_bf16\\efficientnet_v2_s\\seed_44\\config.json": "ae4c85f7e80b5a2fc043e9031e644f030bee8b4cfa6cfc1f7c0d382a0cb99bc9",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_efficientnet_bf16\\efficientnet_v2_s\\seed_44\\test_evaluation.json": "08812d3e0815712649f5f63ae389d7d9897f4b6ded3ceeccb698386ab66f6488",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_efficientnet_bf16\\efficientnet_v2_s\\seed_44\\test_metrics.json": "e7fa3e8f007a1802fde0da1b0f52a92851bd2557d981179d1b24cd5d1ae15470",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\experiment.json": "b55cdc46537a6b2fc323304dc29f5f4cedb9be3df9735d7bfb51db0e5252b02f",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\class_to_index.json": "77e3ac61bf04c76878f3da7dd2f207b42a3939f39e18f20282e28239d81fae3f",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\resnet50\\seed_42\\status.json": "146131d46269182912fc42032ba6a8e6f231fa041d46a86f4b7c14fdc66f5639",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\resnet50\\seed_42\\config.json": "5f1aaf46bdaa3fe399cf5572b51a81a40befceea8d938574ce69f5912d0c2b0f",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\resnet50\\seed_42\\test_evaluation.json": "5b3235a404dff469d7684565f44336a0c2d29739240dc5154d78e7c8fd81ae08",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\resnet50\\seed_42\\test_metrics.json": "21f39379dd9ebcbd5d5fcc343c717c0e0aa868fe65bea1d574fb8a0c49d1df7a",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\resnet50\\seed_43\\status.json": "68376ae5a206168cd2791942c492cce402b6ffd3ac9241bd7391b545039db61a",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\resnet50\\seed_43\\config.json": "0fe3eda8fcfc4f8b8a789513b3d0fa48545083863f03182b015709ba1c91085f",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\resnet50\\seed_43\\test_evaluation.json": "61993f658b14b09e139879774f36392983da5482e87b42d6176762f3de936051",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\resnet50\\seed_43\\test_metrics.json": "44a2db8ad8904bbc46ef07d1f1fa5128d6103e3b783c299ec98430ac3f288a7f",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\resnet50\\seed_44\\status.json": "175fbfd59d7fbe021dd8c1b7581986a91d206cc0cfd12e73e931792a8d6ca7d0",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\resnet50\\seed_44\\config.json": "f2e81761af1bf2b6bf317b82e129affbb6a8469028e118eac860cccfe7ffdf2e",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\resnet50\\seed_44\\test_evaluation.json": "de5faf8bf58705c9f9f64aa7ac4b374289b88c6bce4db4ecbb4e5fcf678f8efc",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\resnet50\\seed_44\\test_metrics.json": "60ff3934ce9a8978823f18ec84ab71c0385fb9286bed2f386476ae603eb87487",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\densenet121\\seed_42\\status.json": "02b2c7c973bab4c931648af4bd8607dc9f88fc387cb4f97282f817f8e4a5a296",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\densenet121\\seed_42\\config.json": "d4c45185b7d542cc6bb0c494859edd4bcce8a5415165527bc6c4fda4923f28e0",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\densenet121\\seed_42\\test_evaluation.json": "2e4651569d4a282442968201a20e7c293bf938de6162092180109c798c3b1227",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\densenet121\\seed_42\\test_metrics.json": "a29ea0d66e2c75bc2c1fec74a88455f45118d9ac0b33d212c2266fc0ea0259db",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\densenet121\\seed_43\\status.json": "c1fe1f60bc441a5100c018b39350de52cebc07cbabc53c6ad1c0ed795a23b3f3",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\densenet121\\seed_43\\config.json": "2b91b3ea73ed911c5b89c772acad012416cf8a07b0bd2e8a931258130ba7957e",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\densenet121\\seed_43\\test_evaluation.json": "e08dba86673548c6d2a4b7acbe471a7020ef46f5c8b548b78d0ac9691ae6b362",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\densenet121\\seed_43\\test_metrics.json": "8dbdf365060bf101fe4cd75e926054b605fb4b95727da6487e5c214c0c4544ae",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\densenet121\\seed_44\\status.json": "48776639008ddd8a0898b625458e2a29f0b240cf573e206dc5a2510b122ee167",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\densenet121\\seed_44\\config.json": "466077c4c6c37932a1619a9a8130293bb2b45b7b4db9fd4552cc492d8ceafb7c",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\densenet121\\seed_44\\test_evaluation.json": "8fec337e976d22be909060f329bad5f576c9fcdcbe88e203610134026b761b85",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\densenet121\\seed_44\\test_metrics.json": "0f3db50b259bee87d4c6b70611c4e657e4b198c4f135238865d04b75fc9b5726",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\mobilenet_v3_large\\seed_42\\status.json": "fa68f70d8e199ae53ef3f739d7783a996843db5707da5d51fabc777d514e6986",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\mobilenet_v3_large\\seed_42\\config.json": "390da668eb480211ffca49cad7688dc3d600e52c1c69006d709c6bed9ce02fe8",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\mobilenet_v3_large\\seed_42\\test_evaluation.json": "1b99262e277f1e15fdce575744d49869f5c2852414d48da5d8151322115d4d43",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\mobilenet_v3_large\\seed_42\\test_metrics.json": "8642b8c0788fa20cfbb15f4d23d9c9dd14b84940d58f5f6ead6c7a24d3f01ae3",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\mobilenet_v3_large\\seed_43\\status.json": "c619a1a8b63339d2ba5004891632ab5a61d0d685e4a2af7286f0a12b4a21129c",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\mobilenet_v3_large\\seed_43\\config.json": "1e70260e892523b55cf532202379b04bd1c69cb92e1600387b6fca4c84d21089",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\mobilenet_v3_large\\seed_43\\test_evaluation.json": "2234b64b94d62e5f8caa066704f19d5f3350fb6c3b2080a5d988d4ab54625424",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\mobilenet_v3_large\\seed_43\\test_metrics.json": "0cf5520df3fd8503db0e5bfd69482d765154d212bcbce8de0a5077928816a910",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\mobilenet_v3_large\\seed_44\\status.json": "d76748e39552a06ef0a271d4fbddbbaf8e6872bbcd82da9a5a45a3ae1db1120c",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\mobilenet_v3_large\\seed_44\\config.json": "235bd9b59082d9d98a16664ded757874053a48ed2b15eae619943561ba569cae",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\mobilenet_v3_large\\seed_44\\test_evaluation.json": "e6fc20676f6978cf228c522677109a523d4669d6b0ff228b17be6a44dfbc17b2",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\mobilenet_v3_large\\seed_44\\test_metrics.json": "6b33e31ae42974acaae8b5ee88e86f68cf4a2824576a075df7ccc033ccf358c4",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\xception\\seed_42\\status.json": "ed3dc412f2ced894b91412e786e12b6c3834da5b27782c057b1f968a30c01318",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\xception\\seed_42\\config.json": "53a3ec9492cfb9924dcc28c7105ef66178e442c55d7f332c66d393d781b79bc8",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\xception\\seed_42\\test_evaluation.json": "3f643dc56010400d7bf6c483d6035262a01fa1a7f4ed49bac4b88e42acfa2c32",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\xception\\seed_42\\test_metrics.json": "1e6dfa807c6091fda988a16a2a62c2fbeadc710e249e1aa33a0f14085331ca55",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\xception\\seed_43\\status.json": "a446016c479b7662c6ff6cc3bdffb5c02c8e60d4ad4757958e1be42e2559179a",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\xception\\seed_43\\config.json": "5b60e111b47fc38ec0c82d44c923d51572d1e9fdb4067a0096c45dcc2c06a092",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\xception\\seed_43\\test_evaluation.json": "ac7d1b7d537050cba049e6a22a50d52133221f23e788737761f02d71cd278752",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\xception\\seed_43\\test_metrics.json": "aef3c636197cc75350750d7ce8b8214e2bbe3eb7262e0ea2f8cc4dba764bc881",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\xception\\seed_44\\status.json": "0402d690ece2c5af9da8e257b61875c5cfc548de69146ca1b4cd1e0c5da15196",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\xception\\seed_44\\config.json": "5f691ee2aa02260faf531e701f36482df5c66acdcf00a0b55b860292196c7721",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\xception\\seed_44\\test_evaluation.json": "6b155cd557da89ad10cf8165668bd9313e806ec51be763d70d93ae1acff8619c",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\xception\\seed_44\\test_metrics.json": "b68bb1abdfecb279eecc2958cabd5a2c4797e1f39d153bfc17346d83cc327f24",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\convnext_tiny\\seed_42\\status.json": "7c2a257e61437487b03abebec3626dc6d3e6047b2c60ca04cf11ea30f22e09c2",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\convnext_tiny\\seed_42\\config.json": "0c13dcfea2fa6d6b73c3484e3675a10c633a9e3debcfefdf11587d907c1b3fe2",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\convnext_tiny\\seed_42\\test_evaluation.json": "d5b86236a28a39816f842725967077e4490d0e70a636d1ec67ffc009f7ed490b",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\convnext_tiny\\seed_42\\test_metrics.json": "76b4d13235b5e42d0a4e462b2d291652571ed6453cf16382d6685b01b42292b6",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\convnext_tiny\\seed_43\\status.json": "97ae83d201d0bed3ff5e9823784ab69f263fbeb785f623eb0053cc78e6e9d86a",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\convnext_tiny\\seed_43\\config.json": "38aabe892bc2052e15c95494d496d4986953ec5ce82d28fc7451086f2d3b1ed4",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\convnext_tiny\\seed_43\\test_evaluation.json": "f3b7b829f7f2c6e733f107cd7124b68f0a8c9e7ef702fe1e6ac60b01ac5f5252",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\convnext_tiny\\seed_43\\test_metrics.json": "a80757f49cb67c32fd6bb2230cdc472be3779c96e0d376259405d927fc2dba74",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\convnext_tiny\\seed_44\\status.json": "da0e2c3ac9c657bca5e43c33b1adb4f23e1aecd64a04bfe4e62c1271cc1faa81",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\convnext_tiny\\seed_44\\config.json": "9a29fb59f8c67848a6a14a3a2b3841c86c77cb9251bfb35f82f1f68f3a55d89a",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\convnext_tiny\\seed_44\\test_evaluation.json": "cb1e04d93f4f1af01fbccc482e8a2843683971994d43f7a00dbcf46e7b084afb",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\convnext_tiny\\seed_44\\test_metrics.json": "d40017f2c9e87d5e0434ac59af0ce31b14c8e48f3f4c8dbc1854834b2b97f6b0",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\vit_base_patch16_224\\seed_42\\status.json": "0b015fdd85886ee3a4915a377520cd332134b0452c01a501ad77df254df96dea",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\vit_base_patch16_224\\seed_42\\config.json": "e7b469df2ceffee8c8a1c65942b82ed6935d8581be508ab8ebdff71c34b4a8ad",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\vit_base_patch16_224\\seed_42\\test_evaluation.json": "48a2444807a801dd68c0a79c67e12ba47a429ecfccdfbf130d32b680bcd4e6b7",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\vit_base_patch16_224\\seed_42\\test_metrics.json": "70e85ecf86265e2bd76905533efa54032182811ef71b32ad7f8ebc28f3c4c41e",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\vit_base_patch16_224\\seed_43\\status.json": "fd3824d8476d238d4d0de7a702ee6f32f20974c6b868673de34b0e62f227826c",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\vit_base_patch16_224\\seed_43\\config.json": "99b2f54d19878d230143b60bdedbce25f1174618c672a96f4004a69b8365a89c",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\vit_base_patch16_224\\seed_43\\test_evaluation.json": "e912fd659a74201a57f8bddffa0f6714483e5bc604130789f9e7b8c8c5573fc6",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\vit_base_patch16_224\\seed_43\\test_metrics.json": "fbbf2f789400990877a775ce8ff037f583d92849242218c86f38402da7698792",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\vit_base_patch16_224\\seed_44\\status.json": "9f8f3290e135f5b906becca4e23e50fb7ff4aebf6da4b252c23445df82fe69bd",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\vit_base_patch16_224\\seed_44\\config.json": "c01117f95e41a89610b68f79c086c929c6e18f02a4d421dc0de7e641fabc3e8b",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\vit_base_patch16_224\\seed_44\\test_evaluation.json": "0cdb32dac5959050798aa87fd505c03424d9eebedcf15b055a1d7cb4b838a888",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\vit_base_patch16_224\\seed_44\\test_metrics.json": "d89c500b635d411baaed210a573d969f7e7235ab932d3429223dfae1acaaafcd",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\twins_svt_base\\seed_42\\status.json": "e0ea581c95795d6477853e55ca7f48eb542060255c14d0cfe8f96dcc96c16a1d",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\twins_svt_base\\seed_42\\config.json": "fa88d9b483ecbff99c2560677defe5051a91d51d20c790c8a54767da1520ddac",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\twins_svt_base\\seed_42\\test_evaluation.json": "4c0377033bc0a34bdb0c742992025aaca29f0643e9b7bfb59dd184db444bef3e",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\twins_svt_base\\seed_42\\test_metrics.json": "ad621be7b96efdb1f295f09af01306102655ba1ba5d2f51dd2a8cf79c9f6c230",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\twins_svt_base\\seed_43\\status.json": "8281bed3160111afe4adf2ab2f635245f88bf4f8b495d1a4869e7337d7d21d3e",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\twins_svt_base\\seed_43\\config.json": "1f8c466b302c856c36ddaaea6c078c49cd4bea116407fb8ee7f8a545fed4f5a6",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\twins_svt_base\\seed_43\\test_evaluation.json": "b7bb12a65e3564215c50886d9f2f1625011ac61c10ebbbfe33f207754d3ce8e2",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\twins_svt_base\\seed_43\\test_metrics.json": "6935c89b249ed647854f47863dbc6bf23e5aebd33df23d5310d1d12bf8bab3b2",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\twins_svt_base\\seed_44\\status.json": "5c48a8d8e11743f4a45874e493ea9b4b1c4f9fd44ced66071fe4091502777bb0",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\twins_svt_base\\seed_44\\config.json": "11adc7782fd7a46cfa66de6053e37c3e8e44a7fa72fe1354036c91e677ea4ee5",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\twins_svt_base\\seed_44\\test_evaluation.json": "c0a087b8bc08906edcd2691df59096f32dba1b2fb919b66f0b0cb707d49c9abc",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\twins_svt_base\\seed_44\\test_metrics.json": "e516758aa51c364169f44d53fa4ca1faff49c8fc4731a5f87ebbc9cf02c9da9d",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_efficientnet_bf16\\experiment.json": "8ca2c835af4aad07f8db8584025830392d26caa2e06b9a5886ae83fe50537c0e",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_efficientnet_bf16\\class_to_index.json": "77e3ac61bf04c76878f3da7dd2f207b42a3939f39e18f20282e28239d81fae3f",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_efficientnet_bf16\\efficientnet_v2_s\\seed_42\\status.json": "b36dd2366611894f732d53ea570004f60893b1fe0ba5a6eb6d2b630ac163abb8",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_efficientnet_bf16\\efficientnet_v2_s\\seed_42\\config.json": "70e1625785228bcbc8046289250080bde0a355cac78c259ffd8c5d8ff8869d6f",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_efficientnet_bf16\\efficientnet_v2_s\\seed_42\\test_evaluation.json": "e7a65ca42dc7d780a7836f789168c078097c40bbcdc605cd24f7ee6145528ded",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_efficientnet_bf16\\efficientnet_v2_s\\seed_42\\test_metrics.json": "675790e3a3fbf5c46a60eb719202e8fabeb4ffcc8b78af0581afa67d464c140f",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_efficientnet_bf16\\efficientnet_v2_s\\seed_43\\status.json": "b86cea5aa81755333234c8d73f574ed0716eb27027935970a14992322bb737a6",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_efficientnet_bf16\\efficientnet_v2_s\\seed_43\\config.json": "cf517ec4c78c1c7a11c5e56e65845af1257c35e00bab873cba8b4d7e7232c186",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_efficientnet_bf16\\efficientnet_v2_s\\seed_43\\test_evaluation.json": "b80981fc58d58725c7680fd93defa6273f43e615829dbe84ea12de443dcfe364",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_efficientnet_bf16\\efficientnet_v2_s\\seed_43\\test_metrics.json": "9a573f21910476b9a739a3799a9e75c5720a05368edc6db2f06d053f04730c89",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_efficientnet_bf16\\efficientnet_v2_s\\seed_44\\status.json": "4ccb1e4efb3499649030de1e4fe6e391587f4abd9e3a05f4ac136cc1c5728f80",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_efficientnet_bf16\\efficientnet_v2_s\\seed_44\\config.json": "c1feba297218067f19574a80236629e6d9bc4399f8c9f74905b98392e9e8b53a",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_efficientnet_bf16\\efficientnet_v2_s\\seed_44\\test_evaluation.json": "cf3354a4492a932b07b6b034f8546492a1baf5c6fced4401937181afa503cba1",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_efficientnet_bf16\\efficientnet_v2_s\\seed_44\\test_metrics.json": "14401a33c5c61c563372032a851ec39fc03edf08ef6be661be8b512e377f9976"
+  },
+  "copied_files": [
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\resnet50\\seed_42\\test_predictions.csv",
+      "destination": "baseline/resnet50/seed_42/test_predictions.csv",
+      "sha256": "d2fddf8cfc358e0de2649bdead8c292e4647e12abb5c7b00131d8e4ee241e3c6"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\resnet50\\seed_43\\test_predictions.csv",
+      "destination": "baseline/resnet50/seed_43/test_predictions.csv",
+      "sha256": "1819a799c95244c75e39148578f067e5209bb7e7048a61d589fba0026215dd3e"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\resnet50\\seed_44\\test_predictions.csv",
+      "destination": "baseline/resnet50/seed_44/test_predictions.csv",
+      "sha256": "badf0b4d1bbdba357ed2df57923e647e1b79586aec245af18ed2366feb7b9f43"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\densenet121\\seed_42\\test_predictions.csv",
+      "destination": "baseline/densenet121/seed_42/test_predictions.csv",
+      "sha256": "d9f55710ef308b7c83febd505b905aa3b4e178b0d525e36176df4d3902630444"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\densenet121\\seed_43\\test_predictions.csv",
+      "destination": "baseline/densenet121/seed_43/test_predictions.csv",
+      "sha256": "69bf63b15ad4aa6323c5aeae5eb9cb3290efd9e94543b9bd5160415ec68790b7"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\densenet121\\seed_44\\test_predictions.csv",
+      "destination": "baseline/densenet121/seed_44/test_predictions.csv",
+      "sha256": "bdc461b38b5dccb5d8117c039ca326c4355724b73fab6498b8064c2ac19131b0"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\mobilenet_v3_large\\seed_42\\test_predictions.csv",
+      "destination": "baseline/mobilenet_v3_large/seed_42/test_predictions.csv",
+      "sha256": "f3abee76399a4c03283fa98bae83649717a3cc6db666faa93f9367308902ede5"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\mobilenet_v3_large\\seed_43\\test_predictions.csv",
+      "destination": "baseline/mobilenet_v3_large/seed_43/test_predictions.csv",
+      "sha256": "f503de8028ad6c9a9d27037a53482560530eff4ca46955ccf659a3a66abbdf8e"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\mobilenet_v3_large\\seed_44\\test_predictions.csv",
+      "destination": "baseline/mobilenet_v3_large/seed_44/test_predictions.csv",
+      "sha256": "cee028a7aaa214ac0a216f2079cf6879ab07f642a514622ceb5a2048c127e51a"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\xception\\seed_42\\test_predictions.csv",
+      "destination": "baseline/xception/seed_42/test_predictions.csv",
+      "sha256": "c2481dac43d6ee50150d2fd1a49d6138edf5a226a32324526c186236838664ee"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\xception\\seed_43\\test_predictions.csv",
+      "destination": "baseline/xception/seed_43/test_predictions.csv",
+      "sha256": "b6a705bc867886350ee53c61e9617e016a911d4fcdc8b1ae36d9ea89ffe57299"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\xception\\seed_44\\test_predictions.csv",
+      "destination": "baseline/xception/seed_44/test_predictions.csv",
+      "sha256": "1d756795bdcdfa1dfe41992c1d8515acd42e1a4eb35e34000afa6596ed7c3425"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\convnext_tiny\\seed_42\\test_predictions.csv",
+      "destination": "baseline/convnext_tiny/seed_42/test_predictions.csv",
+      "sha256": "c9e8b35e729ed53d9ea2ddb33c2a65a172e91f1a35751036ef1a01fea9de3369"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\convnext_tiny\\seed_43\\test_predictions.csv",
+      "destination": "baseline/convnext_tiny/seed_43/test_predictions.csv",
+      "sha256": "add0a384fa0e85944c8b6843634f86d0d2ccfdd2369fb0fb75d636e5b93b8160"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\convnext_tiny\\seed_44\\test_predictions.csv",
+      "destination": "baseline/convnext_tiny/seed_44/test_predictions.csv",
+      "sha256": "dd662449fcc44898eca87803b19221291dd8e3772afc8655f63a20e3473a068c"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\vit_base_patch16_224\\seed_42\\test_predictions.csv",
+      "destination": "baseline/vit_base_patch16_224/seed_42/test_predictions.csv",
+      "sha256": "fef0926c6f32a1add57f8e2a47de397fd5593b3368031b4ada5f9b73e41e7341"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\vit_base_patch16_224\\seed_43\\test_predictions.csv",
+      "destination": "baseline/vit_base_patch16_224/seed_43/test_predictions.csv",
+      "sha256": "d0f1a48d3b5c0220dbd412c8d63d0175e21e9695f1028e759d135932638f3b94"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\vit_base_patch16_224\\seed_44\\test_predictions.csv",
+      "destination": "baseline/vit_base_patch16_224/seed_44/test_predictions.csv",
+      "sha256": "a6cc7e1f71f5ff7e7875a7314c9827b50bb6dc2fce42fcea7c7f0f55354be284"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\twins_svt_base\\seed_42\\test_predictions.csv",
+      "destination": "baseline/twins_svt_base/seed_42/test_predictions.csv",
+      "sha256": "35bcfa951253855937c8ae71fb1504e0dd5dcf6b1cbc368150f1a25a803ce57e"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\twins_svt_base\\seed_43\\test_predictions.csv",
+      "destination": "baseline/twins_svt_base/seed_43/test_predictions.csv",
+      "sha256": "0ed6c21ce0d0a84798d854863d534f88c93675f0ffa0484bddc5d119181ba506"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\twins_svt_base\\seed_44\\test_predictions.csv",
+      "destination": "baseline/twins_svt_base/seed_44/test_predictions.csv",
+      "sha256": "26627551ccf849e0c5dbc13903c5c4505e2b2d7715e2fca121d9344743e4a2a2"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\baseline_efficientnet_bf16\\efficientnet_v2_s\\seed_42\\test_predictions.csv",
+      "destination": "baseline/efficientnet_v2_s/seed_42/test_predictions.csv",
+      "sha256": "745543010c8ba486b6fd962cfa6ca7b58b2d50c3d84eb2e975fe2f31d8063406"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\baseline_efficientnet_bf16\\efficientnet_v2_s\\seed_43\\test_predictions.csv",
+      "destination": "baseline/efficientnet_v2_s/seed_43/test_predictions.csv",
+      "sha256": "9bbb8bceee92e0eeae7ef2ff62e6f752d36606ed906d6baf8499edaad9799cb3"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\baseline_efficientnet_bf16\\efficientnet_v2_s\\seed_44\\test_predictions.csv",
+      "destination": "baseline/efficientnet_v2_s/seed_44/test_predictions.csv",
+      "sha256": "ed9e6d68b456e5d4b913297e5a0a5a89f299d59447cb3eefd8e069b5a697aa29"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\class_to_index.json",
+      "destination": "baseline/class_to_index.json",
+      "sha256": "77e3ac61bf04c76878f3da7dd2f207b42a3939f39e18f20282e28239d81fae3f"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\resnet50\\seed_42\\test_predictions.csv",
+      "destination": "E1/resnet50/seed_42/test_predictions.csv",
+      "sha256": "78a9af32cf2ae91e6e634699935deb445ca19fad441f50505ee7d6528764dc39"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\resnet50\\seed_43\\test_predictions.csv",
+      "destination": "E1/resnet50/seed_43/test_predictions.csv",
+      "sha256": "7c9f30c1f85cc0089cc0e7a4bb599d7fbcd3f2385d68e635e289e411a55810dd"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\resnet50\\seed_44\\test_predictions.csv",
+      "destination": "E1/resnet50/seed_44/test_predictions.csv",
+      "sha256": "2dc24c2ba48e5fadac344d3fd41d5c41fb7c8977c75e45876ac26f9e1a374e3b"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\densenet121\\seed_42\\test_predictions.csv",
+      "destination": "E1/densenet121/seed_42/test_predictions.csv",
+      "sha256": "837fa19ce4e3e4ef8e80d27fdedb9dbf5f7d8d7931b6a01d9899c3c84d18e9d3"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\densenet121\\seed_43\\test_predictions.csv",
+      "destination": "E1/densenet121/seed_43/test_predictions.csv",
+      "sha256": "43f9fce5eb890a32ed158079df66c61ce3f3fee750412333d950a28ea8e66c7b"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\densenet121\\seed_44\\test_predictions.csv",
+      "destination": "E1/densenet121/seed_44/test_predictions.csv",
+      "sha256": "9d0e226520f661f4fb0b2c97cfb7ebbc5588fb19a1ba48c399117c3f7189758d"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\mobilenet_v3_large\\seed_42\\test_predictions.csv",
+      "destination": "E1/mobilenet_v3_large/seed_42/test_predictions.csv",
+      "sha256": "5cd5bbd9659e9f209fc8593bc39913cad2765231c658be65fcac042bb141befa"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\mobilenet_v3_large\\seed_43\\test_predictions.csv",
+      "destination": "E1/mobilenet_v3_large/seed_43/test_predictions.csv",
+      "sha256": "521fdd1a13b8fb8318263382e149f5b237f7c94840edd399df845509615f23b1"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\mobilenet_v3_large\\seed_44\\test_predictions.csv",
+      "destination": "E1/mobilenet_v3_large/seed_44/test_predictions.csv",
+      "sha256": "f7e26ea72b671741e815698ace9d959ed71dc84bf7e95ec92928faa4928f01d9"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\xception\\seed_42\\test_predictions.csv",
+      "destination": "E1/xception/seed_42/test_predictions.csv",
+      "sha256": "b8c55dd297e545ed3f08758daca561afee06b7cd954b52902c3cf8e434f39149"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\xception\\seed_43\\test_predictions.csv",
+      "destination": "E1/xception/seed_43/test_predictions.csv",
+      "sha256": "9355905f51c06794d6d82c1a5c9ed95ab62aa6adc139466cf0b893ff18eb48a8"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\xception\\seed_44\\test_predictions.csv",
+      "destination": "E1/xception/seed_44/test_predictions.csv",
+      "sha256": "b2db8a81776412d520989dc7780d2b7a835c52ba9a47804169994686f17e6101"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\convnext_tiny\\seed_42\\test_predictions.csv",
+      "destination": "E1/convnext_tiny/seed_42/test_predictions.csv",
+      "sha256": "a565795a8bba33baf4251d0dec08885e92a39af4ca8dead9322e6133f1a76e99"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\convnext_tiny\\seed_43\\test_predictions.csv",
+      "destination": "E1/convnext_tiny/seed_43/test_predictions.csv",
+      "sha256": "b0f65f1346e5d9a500da5fd1331e43084bb2dd2e98b8e3c979877d9dd4b4a0e5"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\convnext_tiny\\seed_44\\test_predictions.csv",
+      "destination": "E1/convnext_tiny/seed_44/test_predictions.csv",
+      "sha256": "359144802e73761517a4d1898bb1fe308974ed272428d45f09588f4f0598fe3e"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\vit_base_patch16_224\\seed_42\\test_predictions.csv",
+      "destination": "E1/vit_base_patch16_224/seed_42/test_predictions.csv",
+      "sha256": "f1244144ebbb0cba0b27375989f9d11aa6bf2b6c0986c4025c3862b8cfb8be0a"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\vit_base_patch16_224\\seed_43\\test_predictions.csv",
+      "destination": "E1/vit_base_patch16_224/seed_43/test_predictions.csv",
+      "sha256": "305c92218005fbc054989f2851b6fc34afd10bf9b843d1f4b6addeb05b697bdc"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\vit_base_patch16_224\\seed_44\\test_predictions.csv",
+      "destination": "E1/vit_base_patch16_224/seed_44/test_predictions.csv",
+      "sha256": "10fee5c35662969ad173cf2cb286815dc0cd8c62c231d3bc859aa5784ff02e33"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\twins_svt_base\\seed_42\\test_predictions.csv",
+      "destination": "E1/twins_svt_base/seed_42/test_predictions.csv",
+      "sha256": "837ac988d2b0232a55ebcf3b67b87eef46a1f647b08bae8d4a7c690ffa92d219"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\twins_svt_base\\seed_43\\test_predictions.csv",
+      "destination": "E1/twins_svt_base/seed_43/test_predictions.csv",
+      "sha256": "e31f787b45f714aaa99a424c858049601a064916a57d6a4b3bacd84dd0cf8144"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\twins_svt_base\\seed_44\\test_predictions.csv",
+      "destination": "E1/twins_svt_base/seed_44/test_predictions.csv",
+      "sha256": "80b56a19f0f9f4b22ac190c35f5da6381d5b61d5674874f5c94a25cd79f1f343"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E1_efficientnet_bf16\\efficientnet_v2_s\\seed_42\\test_predictions.csv",
+      "destination": "E1/efficientnet_v2_s/seed_42/test_predictions.csv",
+      "sha256": "f579663c047bfc8f813d14b44bb9b5fef0afde4e5afcccfb27b89c260919b6df"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E1_efficientnet_bf16\\efficientnet_v2_s\\seed_43\\test_predictions.csv",
+      "destination": "E1/efficientnet_v2_s/seed_43/test_predictions.csv",
+      "sha256": "e0a68307713c71ae0e3aeb856ef8491937d57c035c783b346e705848973f4901"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E1_efficientnet_bf16\\efficientnet_v2_s\\seed_44\\test_predictions.csv",
+      "destination": "E1/efficientnet_v2_s/seed_44/test_predictions.csv",
+      "sha256": "2515990e937a03ef26ba70a6c35e9d7d834cbd37e5c2090c9400243c213f20e6"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\class_to_index.json",
+      "destination": "E1/class_to_index.json",
+      "sha256": "77e3ac61bf04c76878f3da7dd2f207b42a3939f39e18f20282e28239d81fae3f"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\resnet50\\seed_42\\test_predictions.csv",
+      "destination": "E2/resnet50/seed_42/test_predictions.csv",
+      "sha256": "77fefde24b1e4b72c0dace9debb12e2bf95cfad30d958cd9c743cf2d590c4145"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\resnet50\\seed_43\\test_predictions.csv",
+      "destination": "E2/resnet50/seed_43/test_predictions.csv",
+      "sha256": "ebfe45ad4e3d35b9c01cd0fca84e027792bed902a227a6a32b68174c53b41aee"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\resnet50\\seed_44\\test_predictions.csv",
+      "destination": "E2/resnet50/seed_44/test_predictions.csv",
+      "sha256": "e98341cd06c6717a12ea000861a26f74a4ea354c7a61b715f61faac0f4373dca"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\densenet121\\seed_42\\test_predictions.csv",
+      "destination": "E2/densenet121/seed_42/test_predictions.csv",
+      "sha256": "6c086afb0029436da7b30f1306d25e3c94bb3be24589eb18865c50890b8f2229"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\densenet121\\seed_43\\test_predictions.csv",
+      "destination": "E2/densenet121/seed_43/test_predictions.csv",
+      "sha256": "857d447598e07bbe1eeb1f12d2a2bdaab9c4119d5778a65d8435880a784e3171"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\densenet121\\seed_44\\test_predictions.csv",
+      "destination": "E2/densenet121/seed_44/test_predictions.csv",
+      "sha256": "00cdad5e4622b3d5f246083ae6b83c9ea92b6d9e0eac370f68b2a8bf246896fa"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\mobilenet_v3_large\\seed_42\\test_predictions.csv",
+      "destination": "E2/mobilenet_v3_large/seed_42/test_predictions.csv",
+      "sha256": "982c99275542ae9c4cd48f8edea74f9f2bd642a63cd405c64d98e7e637c45159"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\mobilenet_v3_large\\seed_43\\test_predictions.csv",
+      "destination": "E2/mobilenet_v3_large/seed_43/test_predictions.csv",
+      "sha256": "2bd6bf3bb37c1203e1e210c6523bdbaed4d5697aca696d6264e8a440a42051cc"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\mobilenet_v3_large\\seed_44\\test_predictions.csv",
+      "destination": "E2/mobilenet_v3_large/seed_44/test_predictions.csv",
+      "sha256": "2ac411a05bfca766ab8776fcb7c641c24cc50a08d4c048778570feb8d6db8631"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\xception\\seed_42\\test_predictions.csv",
+      "destination": "E2/xception/seed_42/test_predictions.csv",
+      "sha256": "81ca0af3d875d4de9d96cd59cc0f830a5c5b57459dece87cd070c7626a15a98e"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\xception\\seed_43\\test_predictions.csv",
+      "destination": "E2/xception/seed_43/test_predictions.csv",
+      "sha256": "e42fc95e582c9bb8d1a00b7d47f5b16035971217509c6340198a8f35128427d5"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\xception\\seed_44\\test_predictions.csv",
+      "destination": "E2/xception/seed_44/test_predictions.csv",
+      "sha256": "f3481d88734198aa3a57177b5d372816ff49e0db0e2abbab7560e0e99e7e5128"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\convnext_tiny\\seed_42\\test_predictions.csv",
+      "destination": "E2/convnext_tiny/seed_42/test_predictions.csv",
+      "sha256": "26cf9bfbce403a091ffdf070148e49cefafa9027d6c0a8cab102636c525db6e2"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\convnext_tiny\\seed_43\\test_predictions.csv",
+      "destination": "E2/convnext_tiny/seed_43/test_predictions.csv",
+      "sha256": "246d97896af62e5b81c047dd4a4c9a55b309c385c49446d3e48725d572992c63"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\convnext_tiny\\seed_44\\test_predictions.csv",
+      "destination": "E2/convnext_tiny/seed_44/test_predictions.csv",
+      "sha256": "d2b647909b1bf3b7446d58fa53f321e9965e807f72d5c8cdf333937623d49e68"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\vit_base_patch16_224\\seed_42\\test_predictions.csv",
+      "destination": "E2/vit_base_patch16_224/seed_42/test_predictions.csv",
+      "sha256": "63d6aae02885e6b14db1c278d8219d7c4f5a89dd2934fc0a08a5cecae9ec21bb"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\vit_base_patch16_224\\seed_43\\test_predictions.csv",
+      "destination": "E2/vit_base_patch16_224/seed_43/test_predictions.csv",
+      "sha256": "6244e69867eb44940678422ce56c3851c3935376eee2ea6536a4cf6d853b0675"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\vit_base_patch16_224\\seed_44\\test_predictions.csv",
+      "destination": "E2/vit_base_patch16_224/seed_44/test_predictions.csv",
+      "sha256": "f10d8d8703407e7c61ff249d1c7e13bf634d2ec2ca3e52543c18b5e2994628c9"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\twins_svt_base\\seed_42\\test_predictions.csv",
+      "destination": "E2/twins_svt_base/seed_42/test_predictions.csv",
+      "sha256": "288888206cace66f62edffeda0ef02b5a08c0c766f02b257b9f3100a47fd4c23"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\twins_svt_base\\seed_43\\test_predictions.csv",
+      "destination": "E2/twins_svt_base/seed_43/test_predictions.csv",
+      "sha256": "00ff3d95b1beee6ec4daaffdf38096e21d3c82fcb41ea837bfd85ae6f8bba3e4"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\twins_svt_base\\seed_44\\test_predictions.csv",
+      "destination": "E2/twins_svt_base/seed_44/test_predictions.csv",
+      "sha256": "680b8b023fca83843e4c47a9b1c7765006c5e4855e6153ad7fa3e0cdad008634"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E2_efficientnet_bf16\\efficientnet_v2_s\\seed_42\\test_predictions.csv",
+      "destination": "E2/efficientnet_v2_s/seed_42/test_predictions.csv",
+      "sha256": "4e12448b744ee6b4a54421e724ddc90fd50c9ee5fe49cc9b1d4b36b0ac1bd6cf"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E2_efficientnet_bf16\\efficientnet_v2_s\\seed_43\\test_predictions.csv",
+      "destination": "E2/efficientnet_v2_s/seed_43/test_predictions.csv",
+      "sha256": "c0b1e65437dce7d65b351f403a36845e7ec069f0f8c254975775566326a9dff1"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E2_efficientnet_bf16\\efficientnet_v2_s\\seed_44\\test_predictions.csv",
+      "destination": "E2/efficientnet_v2_s/seed_44/test_predictions.csv",
+      "sha256": "b26729898e7bbd09449d19d42b6d43ea8a74842a919019f6c8217accc8f0e57b"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\class_to_index.json",
+      "destination": "E2/class_to_index.json",
+      "sha256": "77e3ac61bf04c76878f3da7dd2f207b42a3939f39e18f20282e28239d81fae3f"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E3_300_offline_no_online\\resnet50\\seed_42\\test_predictions.csv",
+      "destination": "E3/resnet50/seed_42/test_predictions.csv",
+      "sha256": "bb3293c8e0ece2208bf195b3ff346fa067200293163bad8889f23530bcdd2a02"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E3_300_offline_no_online\\resnet50\\seed_43\\test_predictions.csv",
+      "destination": "E3/resnet50/seed_43/test_predictions.csv",
+      "sha256": "820ce098b8a64317e7095dd6520c7400488709e3fb5c2f95a4609abf5f4f36f6"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E3_300_offline_no_online\\resnet50\\seed_44\\test_predictions.csv",
+      "destination": "E3/resnet50/seed_44/test_predictions.csv",
+      "sha256": "a21221569d3b3312003fb6bcb47ed54586b5d8ce45a4b5aef8a903fc6a8aa51d"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E3_300_offline_no_online\\densenet121\\seed_42\\test_predictions.csv",
+      "destination": "E3/densenet121/seed_42/test_predictions.csv",
+      "sha256": "6b43180ce470d459e93542cc563c0e8f731abb4d9303fd56159790fd0e37b8e0"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E3_300_offline_no_online\\densenet121\\seed_43\\test_predictions.csv",
+      "destination": "E3/densenet121/seed_43/test_predictions.csv",
+      "sha256": "1d78a8441f052385252eedf101dc2bf11a1ac2e17432f280b5ad6f5f27773ef7"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E3_300_offline_no_online\\densenet121\\seed_44\\test_predictions.csv",
+      "destination": "E3/densenet121/seed_44/test_predictions.csv",
+      "sha256": "5aca9e145bccd665b49b526174bf0f53265773d132e72f4e0508970ac24b5dbe"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E3_300_offline_no_online\\mobilenet_v3_large\\seed_42\\test_predictions.csv",
+      "destination": "E3/mobilenet_v3_large/seed_42/test_predictions.csv",
+      "sha256": "02dddd071b22655e82cc560114b792b628c64103574f4783e9218ae4ad9cf33c"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E3_300_offline_no_online\\mobilenet_v3_large\\seed_43\\test_predictions.csv",
+      "destination": "E3/mobilenet_v3_large/seed_43/test_predictions.csv",
+      "sha256": "8f20f402a393deac2eef6139724af5cb73ce36894410bd473630384f973bee83"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E3_300_offline_no_online\\mobilenet_v3_large\\seed_44\\test_predictions.csv",
+      "destination": "E3/mobilenet_v3_large/seed_44/test_predictions.csv",
+      "sha256": "03711b402f65145e690a35e3c6b70d5c00af041417441f3c6a9131119c4919af"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E3_300_offline_no_online\\xception\\seed_42\\test_predictions.csv",
+      "destination": "E3/xception/seed_42/test_predictions.csv",
+      "sha256": "6e5978887b37ce4d8d7cb4d0c88cabfbb6b14db9ba9468ebe3912ca878a15e15"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E3_300_offline_no_online\\xception\\seed_43\\test_predictions.csv",
+      "destination": "E3/xception/seed_43/test_predictions.csv",
+      "sha256": "b74023194567d64510c21c488f591a1b0c949d9828bdbe66a253300200be348e"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E3_300_offline_no_online\\xception\\seed_44\\test_predictions.csv",
+      "destination": "E3/xception/seed_44/test_predictions.csv",
+      "sha256": "f66babb3680d446588a1ceac0f585447dbe2f927217f653bea18bfef06ffe656"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E3_300_offline_no_online\\convnext_tiny\\seed_42\\test_predictions.csv",
+      "destination": "E3/convnext_tiny/seed_42/test_predictions.csv",
+      "sha256": "564f1af78a41ee17abcb6918b3926a1f9665a87c277c62c2401ccce825bcc9ff"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E3_300_offline_no_online\\convnext_tiny\\seed_43\\test_predictions.csv",
+      "destination": "E3/convnext_tiny/seed_43/test_predictions.csv",
+      "sha256": "9a2b67f898d34556ae6eacce1339114c21cedc4f5bc092fb3dc4756aec664db2"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E3_300_offline_no_online\\convnext_tiny\\seed_44\\test_predictions.csv",
+      "destination": "E3/convnext_tiny/seed_44/test_predictions.csv",
+      "sha256": "4b97a9e11a69fdeba5aba7614ed6164f3fe0422486ad9e1dafd4e6f18fa91c71"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E3_300_offline_no_online\\twins_svt_base\\seed_42\\test_predictions.csv",
+      "destination": "E3/twins_svt_base/seed_42/test_predictions.csv",
+      "sha256": "1514ec6b4dbe2bb1e557bc5b35063e36c99104c042310b70ff950fe6c875095f"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E3_300_offline_no_online\\twins_svt_base\\seed_43\\test_predictions.csv",
+      "destination": "E3/twins_svt_base/seed_43/test_predictions.csv",
+      "sha256": "ff2b14b9e308cafbff624de36d57ae899131f91b836fda01f9f1a017bb07f764"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E3_300_offline_no_online\\twins_svt_base\\seed_44\\test_predictions.csv",
+      "destination": "E3/twins_svt_base/seed_44/test_predictions.csv",
+      "sha256": "394e2f8827f5f04e395ceaa0d8e3dc937fd31e3d9dbc15129c7385bdb8e66ac5"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E3_efficientnet_bf16\\efficientnet_v2_s\\seed_42\\test_predictions.csv",
+      "destination": "E3/efficientnet_v2_s/seed_42/test_predictions.csv",
+      "sha256": "297de1b9f476066cec330e2ab889c224d5954e7edc4183f883768eefb4e8131f"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E3_efficientnet_bf16\\efficientnet_v2_s\\seed_43\\test_predictions.csv",
+      "destination": "E3/efficientnet_v2_s/seed_43/test_predictions.csv",
+      "sha256": "334cefc7effb91d7f856212b61961442e0eb63b540769aa8d5618cb4de595ead"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E3_efficientnet_bf16\\efficientnet_v2_s\\seed_44\\test_predictions.csv",
+      "destination": "E3/efficientnet_v2_s/seed_44/test_predictions.csv",
+      "sha256": "353b8dfccb1aed8e0f123a3e650dcee130b3beb2ba10d2a351adb5a7a52257bc"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E3_300_offline_no_online\\class_to_index.json",
+      "destination": "E3/class_to_index.json",
+      "sha256": "77e3ac61bf04c76878f3da7dd2f207b42a3939f39e18f20282e28239d81fae3f"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E4_300_offline_online\\resnet50\\seed_42\\test_predictions.csv",
+      "destination": "E4/resnet50/seed_42/test_predictions.csv",
+      "sha256": "11aa3d2368a5241f78423c1b93f0d3939a91a429f2be2e5657c95ca8c6c63bc2"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E4_300_offline_online\\resnet50\\seed_43\\test_predictions.csv",
+      "destination": "E4/resnet50/seed_43/test_predictions.csv",
+      "sha256": "c69d5c89cc32322f5c76ae95776e671a33f265cf542179117af1dab604836491"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E4_300_offline_online\\resnet50\\seed_44\\test_predictions.csv",
+      "destination": "E4/resnet50/seed_44/test_predictions.csv",
+      "sha256": "66f4975ed62f6e46e6987adc2988ad1945065bb14b073b0a807261c6748ecaf9"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E4_300_offline_online\\densenet121\\seed_42\\test_predictions.csv",
+      "destination": "E4/densenet121/seed_42/test_predictions.csv",
+      "sha256": "850144aa151970fdd0eca9bc6cb1987b7e8d0844cd5797720203772442f165c0"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E4_300_offline_online\\densenet121\\seed_43\\test_predictions.csv",
+      "destination": "E4/densenet121/seed_43/test_predictions.csv",
+      "sha256": "68703b080072d9f8cbd9e18ba3f261332d0be881fdb7ad1565bcbac729d17732"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E4_300_offline_online\\densenet121\\seed_44\\test_predictions.csv",
+      "destination": "E4/densenet121/seed_44/test_predictions.csv",
+      "sha256": "3b4938b13c40c0f46874a9746e86f603ed6c439d9f6da8109d6a39e5af139439"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E4_300_offline_online\\mobilenet_v3_large\\seed_42\\test_predictions.csv",
+      "destination": "E4/mobilenet_v3_large/seed_42/test_predictions.csv",
+      "sha256": "0c12a3cecdc6faf597f602de905702829061bab70c207372fbb66688b73923bb"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E4_300_offline_online\\mobilenet_v3_large\\seed_43\\test_predictions.csv",
+      "destination": "E4/mobilenet_v3_large/seed_43/test_predictions.csv",
+      "sha256": "216dc5ee1cc13ca0c58c16508749a7b3b689bc9e98d22e2b06488096df42d76a"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E4_300_offline_online\\mobilenet_v3_large\\seed_44\\test_predictions.csv",
+      "destination": "E4/mobilenet_v3_large/seed_44/test_predictions.csv",
+      "sha256": "54cdbdb3e72f4fa6be1f33dfb7e42187c488e06001d785aec98cf04b81f9b4b3"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E4_300_offline_online\\xception\\seed_42\\test_predictions.csv",
+      "destination": "E4/xception/seed_42/test_predictions.csv",
+      "sha256": "5eda271343a64ad11c3ade3034eb277cf0beabf7315a54c21c6c359f417d5511"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E4_300_offline_online\\xception\\seed_43\\test_predictions.csv",
+      "destination": "E4/xception/seed_43/test_predictions.csv",
+      "sha256": "a72ce8ee7258e22c87d7ed3276628cbd96a25c8d3eec00c87395dad631c5a351"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E4_300_offline_online\\xception\\seed_44\\test_predictions.csv",
+      "destination": "E4/xception/seed_44/test_predictions.csv",
+      "sha256": "5baca25f2ecc75008048654c554f800a5f880c9b157968154b80c1c7c0b98b4e"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E4_300_offline_online\\convnext_tiny\\seed_42\\test_predictions.csv",
+      "destination": "E4/convnext_tiny/seed_42/test_predictions.csv",
+      "sha256": "fa2541db41ec4e49b9393371781d9aeba144bcd6135375a3a893688a4b2cbe16"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E4_300_offline_online\\convnext_tiny\\seed_43\\test_predictions.csv",
+      "destination": "E4/convnext_tiny/seed_43/test_predictions.csv",
+      "sha256": "616bb9b8b983804261eb99732d192372c77818d9d329d1735a73c8caf71db2fb"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E4_300_offline_online\\convnext_tiny\\seed_44\\test_predictions.csv",
+      "destination": "E4/convnext_tiny/seed_44/test_predictions.csv",
+      "sha256": "dc9c4133db598ef1ce281c18fa11e9fb01cdbed88507cf7291d2a90707286924"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E4_300_offline_online\\twins_svt_base\\seed_42\\test_predictions.csv",
+      "destination": "E4/twins_svt_base/seed_42/test_predictions.csv",
+      "sha256": "79764d7d6bab1b93b3b013ba67ba818288a7f352ab2e3a941fdf24de07b73944"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E4_300_offline_online\\twins_svt_base\\seed_43\\test_predictions.csv",
+      "destination": "E4/twins_svt_base/seed_43/test_predictions.csv",
+      "sha256": "236ece3054428b2124a429fa6d73d6f7bea703cdc45a38e3a9e313198de3e93e"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E4_300_offline_online\\twins_svt_base\\seed_44\\test_predictions.csv",
+      "destination": "E4/twins_svt_base/seed_44/test_predictions.csv",
+      "sha256": "e7c59afdbadee6ac12cbe119cc971934aa71e6daeacd7f46f7b98a227f27d7cb"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E4_efficientnet_bf16\\efficientnet_v2_s\\seed_42\\test_predictions.csv",
+      "destination": "E4/efficientnet_v2_s/seed_42/test_predictions.csv",
+      "sha256": "632b6916d46dac5da176a31de8db7576b09e634e87fde51ae2a4531bfce2a2b9"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E4_efficientnet_bf16\\efficientnet_v2_s\\seed_43\\test_predictions.csv",
+      "destination": "E4/efficientnet_v2_s/seed_43/test_predictions.csv",
+      "sha256": "c7b187a6cde37f1f5ec327fc935a2d27f7ca1b56fc951bc6cb352745074df428"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E4_efficientnet_bf16\\efficientnet_v2_s\\seed_44\\test_predictions.csv",
+      "destination": "E4/efficientnet_v2_s/seed_44/test_predictions.csv",
+      "sha256": "b602f24a282c97b1a5203650dccb8fcf73d09618d6c891decc19157eeccb443a"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E4_300_offline_online\\class_to_index.json",
+      "destination": "E4/class_to_index.json",
+      "sha256": "77e3ac61bf04c76878f3da7dd2f207b42a3939f39e18f20282e28239d81fae3f"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\resnet50\\seed_42\\test_predictions.csv",
+      "destination": "E5/resnet50/seed_42/test_predictions.csv",
+      "sha256": "9316fdccae8bb755f67133893fb56d8c66b62b6d7be065dc5567cb72a215254a"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\resnet50\\seed_43\\test_predictions.csv",
+      "destination": "E5/resnet50/seed_43/test_predictions.csv",
+      "sha256": "a0025b4b144fa60b87b510959d3161d35c1ea76bb694b9738e04728fd4ce25c3"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\resnet50\\seed_44\\test_predictions.csv",
+      "destination": "E5/resnet50/seed_44/test_predictions.csv",
+      "sha256": "0f48c0eea998db3ac59fadcb0da5e4ac718ea82f31d523c2d6b703e911f6ea43"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\densenet121\\seed_42\\test_predictions.csv",
+      "destination": "E5/densenet121/seed_42/test_predictions.csv",
+      "sha256": "0a4673b2320ca333d8216c99af415612debfe9b9d6b6daf4a40a5a4ef57deec0"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\densenet121\\seed_43\\test_predictions.csv",
+      "destination": "E5/densenet121/seed_43/test_predictions.csv",
+      "sha256": "35d02ea5c89efa53c71167265c36e5ae219e4742ef334516a24d41debeccdfa4"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\densenet121\\seed_44\\test_predictions.csv",
+      "destination": "E5/densenet121/seed_44/test_predictions.csv",
+      "sha256": "988a2bd4f489e4b09989e7f80df5c5e6a0dd657cfcda9f69a2ba1e9959bafa65"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\mobilenet_v3_large\\seed_42\\test_predictions.csv",
+      "destination": "E5/mobilenet_v3_large/seed_42/test_predictions.csv",
+      "sha256": "7410fec2cb8e32bfce5662e233e5a1bf2895c9a50015caa74fe8e93bb9224b13"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\mobilenet_v3_large\\seed_43\\test_predictions.csv",
+      "destination": "E5/mobilenet_v3_large/seed_43/test_predictions.csv",
+      "sha256": "6da6fb894bf7ccbb557baddb8b8171eaaa550c6df9bfa4e92d0c47188759a905"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\mobilenet_v3_large\\seed_44\\test_predictions.csv",
+      "destination": "E5/mobilenet_v3_large/seed_44/test_predictions.csv",
+      "sha256": "e1fb79d71959f666eb15e4ae7074142253fbab6724a34e55dcf9c8798356f490"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\xception\\seed_42\\test_predictions.csv",
+      "destination": "E5/xception/seed_42/test_predictions.csv",
+      "sha256": "4b8fc4e94dc3eec54d12b65d7be3ed50a8653efc5e185d6203bedf911e98af40"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\xception\\seed_43\\test_predictions.csv",
+      "destination": "E5/xception/seed_43/test_predictions.csv",
+      "sha256": "6f05b60838bdbe4264dbac5e7cc665fc76c15af01acf758904fd258e1540592c"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\xception\\seed_44\\test_predictions.csv",
+      "destination": "E5/xception/seed_44/test_predictions.csv",
+      "sha256": "3b11e0b270e78a326b9ef6717fc8b76a8fb36c045ca55993d93be3651e53bba1"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\convnext_tiny\\seed_42\\test_predictions.csv",
+      "destination": "E5/convnext_tiny/seed_42/test_predictions.csv",
+      "sha256": "2ae79c29048c4731f839a649ee98b8934bd2d3a16e132bbfb423ec9171d15635"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\convnext_tiny\\seed_43\\test_predictions.csv",
+      "destination": "E5/convnext_tiny/seed_43/test_predictions.csv",
+      "sha256": "9c818f9d1bfa1546e25cef26af77016ef25785ea3d59c65ddc04ebfbcce1da26"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\convnext_tiny\\seed_44\\test_predictions.csv",
+      "destination": "E5/convnext_tiny/seed_44/test_predictions.csv",
+      "sha256": "c652a013487a0adec3c194c111350a59543dce1ad76dfe9c086afc6730cab147"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\vit_base_patch16_224\\seed_42\\test_predictions.csv",
+      "destination": "E5/vit_base_patch16_224/seed_42/test_predictions.csv",
+      "sha256": "db008233fe221a0847925e5d2f7ad6560180e8d22fdb5d38a683bb22ce7c4eb0"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\vit_base_patch16_224\\seed_43\\test_predictions.csv",
+      "destination": "E5/vit_base_patch16_224/seed_43/test_predictions.csv",
+      "sha256": "34889ef5dae38ae48707381ac69d137124d61fd70ef26aa1617491722b307a53"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\vit_base_patch16_224\\seed_44\\test_predictions.csv",
+      "destination": "E5/vit_base_patch16_224/seed_44/test_predictions.csv",
+      "sha256": "9ecdf9e1d72cd647223d7923dccb62b8abde7cd5eb819e2fb6054d7cf4a86199"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\twins_svt_base\\seed_42\\test_predictions.csv",
+      "destination": "E5/twins_svt_base/seed_42/test_predictions.csv",
+      "sha256": "9b48d6bbe0fa15b5d601aa7c738252098fbc80aa121cb36929ce4067a86071f8"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\twins_svt_base\\seed_43\\test_predictions.csv",
+      "destination": "E5/twins_svt_base/seed_43/test_predictions.csv",
+      "sha256": "de86e2b1026a80f8678a1b9992eea0ee30738f84647e875c70f68d86b1a7fe07"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\twins_svt_base\\seed_44\\test_predictions.csv",
+      "destination": "E5/twins_svt_base/seed_44/test_predictions.csv",
+      "sha256": "be750ec7d21b984243ca5311518e29031e2ed0846e2a4c2cadcfd5d6e2ab0bb2"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E5_efficientnet_bf16\\efficientnet_v2_s\\seed_42\\test_predictions.csv",
+      "destination": "E5/efficientnet_v2_s/seed_42/test_predictions.csv",
+      "sha256": "a72c78bf71b4679529f75c09b43c57ed40287015a6a5e6007a8862ba25ec386d"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E5_efficientnet_bf16\\efficientnet_v2_s\\seed_43\\test_predictions.csv",
+      "destination": "E5/efficientnet_v2_s/seed_43/test_predictions.csv",
+      "sha256": "0dcc253bef8fc66e54c8f83e5b5aee0c25a88030cfbff9cf91f8fbc546d94a6a"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E5_efficientnet_bf16\\efficientnet_v2_s\\seed_44\\test_predictions.csv",
+      "destination": "E5/efficientnet_v2_s/seed_44/test_predictions.csv",
+      "sha256": "6e3d454143e3c81227826d2f8912d9ad68736a8d7bc6812fb703a88f9b6f8b93"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\class_to_index.json",
+      "destination": "E5/class_to_index.json",
+      "sha256": "77e3ac61bf04c76878f3da7dd2f207b42a3939f39e18f20282e28239d81fae3f"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\resnet50\\seed_42\\test_predictions.csv",
+      "destination": "E6/resnet50/seed_42/test_predictions.csv",
+      "sha256": "2dad0b71cabe92f94147fe30841cb6a3b718a317c40da7dab11d6e67c9612993"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\resnet50\\seed_43\\test_predictions.csv",
+      "destination": "E6/resnet50/seed_43/test_predictions.csv",
+      "sha256": "84b8fe3db176aaeb83335277a25786b3f6706e94acbdb162bd0024ea2851f539"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\resnet50\\seed_44\\test_predictions.csv",
+      "destination": "E6/resnet50/seed_44/test_predictions.csv",
+      "sha256": "878b3e32cc1e10f536149ae3861ecf5f649b2b48f5234bcddadc333c1a96a1c7"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\densenet121\\seed_42\\test_predictions.csv",
+      "destination": "E6/densenet121/seed_42/test_predictions.csv",
+      "sha256": "1d668e1829823b6e9a15a22592a227a57a78a968d07c1f48c1be32300bfd8255"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\densenet121\\seed_43\\test_predictions.csv",
+      "destination": "E6/densenet121/seed_43/test_predictions.csv",
+      "sha256": "ee40ed178d07b3d5f10dd524dec5aa0e45a24d267dd36ddcdffbe2007a072cb2"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\densenet121\\seed_44\\test_predictions.csv",
+      "destination": "E6/densenet121/seed_44/test_predictions.csv",
+      "sha256": "1b4b7d20fe6357050dbb2719a02bacf39b163d40cb24edaf1c4bf9931d34aba8"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\mobilenet_v3_large\\seed_42\\test_predictions.csv",
+      "destination": "E6/mobilenet_v3_large/seed_42/test_predictions.csv",
+      "sha256": "c25c91d258ba3c7245cc2e50b42189da05a3a069bb8c9d9a2a73f9b834d430ac"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\mobilenet_v3_large\\seed_43\\test_predictions.csv",
+      "destination": "E6/mobilenet_v3_large/seed_43/test_predictions.csv",
+      "sha256": "22241dc4a361ee9bb597997d83339dcbb7a5db7301045e99804f650d89b6cc8b"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\mobilenet_v3_large\\seed_44\\test_predictions.csv",
+      "destination": "E6/mobilenet_v3_large/seed_44/test_predictions.csv",
+      "sha256": "e64cdf7f30c30fda169f02f798bc360c6603a669d16987bdeda4de025c15e1e1"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\xception\\seed_42\\test_predictions.csv",
+      "destination": "E6/xception/seed_42/test_predictions.csv",
+      "sha256": "32b20d06dc75296071c139700616b5e78f018a56ec5781451414ad6adff83430"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\xception\\seed_43\\test_predictions.csv",
+      "destination": "E6/xception/seed_43/test_predictions.csv",
+      "sha256": "fca858eca785f39878b06b3327e0e18295dd1c6ac630f0be52e5e693a3222abe"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\xception\\seed_44\\test_predictions.csv",
+      "destination": "E6/xception/seed_44/test_predictions.csv",
+      "sha256": "c09f979059793e1d681a97dc01e7858d31c133266ffa30e8a8d00a585adf1978"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\convnext_tiny\\seed_42\\test_predictions.csv",
+      "destination": "E6/convnext_tiny/seed_42/test_predictions.csv",
+      "sha256": "920045e8af3c058c0cba2c071b2e5859f138c11dd8c1b9463ca47e35a537ce11"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\convnext_tiny\\seed_43\\test_predictions.csv",
+      "destination": "E6/convnext_tiny/seed_43/test_predictions.csv",
+      "sha256": "efaa1c5d5fa3838a3b067db00c2e3b0a8643190db8ac859e5da4e3d0930d240b"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\convnext_tiny\\seed_44\\test_predictions.csv",
+      "destination": "E6/convnext_tiny/seed_44/test_predictions.csv",
+      "sha256": "c8ba928c847d813180b519c4f759ac0768d7b6f6405bdaa36a6381593a1090bc"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\vit_base_patch16_224\\seed_42\\test_predictions.csv",
+      "destination": "E6/vit_base_patch16_224/seed_42/test_predictions.csv",
+      "sha256": "45a40fb90e127daffc19ea994b466e78de97d5339c83de1567f129de4f8581c0"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\vit_base_patch16_224\\seed_43\\test_predictions.csv",
+      "destination": "E6/vit_base_patch16_224/seed_43/test_predictions.csv",
+      "sha256": "21c75eb7f2a2171529947bdfb85bbba8f32640705f6d4a1163357d8bec896f08"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\vit_base_patch16_224\\seed_44\\test_predictions.csv",
+      "destination": "E6/vit_base_patch16_224/seed_44/test_predictions.csv",
+      "sha256": "1f1ad619a766559665801aad74e862d51bfd1f863bb3b07d530cdb15f654b904"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\twins_svt_base\\seed_42\\test_predictions.csv",
+      "destination": "E6/twins_svt_base/seed_42/test_predictions.csv",
+      "sha256": "53ecf903585551234acb70eab1602149416b4427a44c98b654f4800585e24786"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\twins_svt_base\\seed_43\\test_predictions.csv",
+      "destination": "E6/twins_svt_base/seed_43/test_predictions.csv",
+      "sha256": "7fa4d8f25b46caecce1f3dcd3fb29d6b28afc9b8b3ea90d2eed29a46bd62b651"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\twins_svt_base\\seed_44\\test_predictions.csv",
+      "destination": "E6/twins_svt_base/seed_44/test_predictions.csv",
+      "sha256": "e72bafbcbe7af4ced40e64e914196155c08961a46ccff0675e35e6190d30eab2"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E6_efficientnet_bf16\\efficientnet_v2_s\\seed_42\\test_predictions.csv",
+      "destination": "E6/efficientnet_v2_s/seed_42/test_predictions.csv",
+      "sha256": "62438095c7d05de516c2e69cf73d2d00425ef258c2479db2cae6e875e88ef0cc"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E6_efficientnet_bf16\\efficientnet_v2_s\\seed_43\\test_predictions.csv",
+      "destination": "E6/efficientnet_v2_s/seed_43/test_predictions.csv",
+      "sha256": "f254abcb2080fb643b4ad4af5db7f17a3ae64d3783ea34032f6f21ea810e3018"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E6_efficientnet_bf16\\efficientnet_v2_s\\seed_44\\test_predictions.csv",
+      "destination": "E6/efficientnet_v2_s/seed_44/test_predictions.csv",
+      "sha256": "cc20ae0e05685e9bc079f9c5f30c45d44e1ec4bae8dc959a0169ae89a9bf2e5e"
+    },
+    {
+      "source": "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\class_to_index.json",
+      "destination": "E6/class_to_index.json",
+      "sha256": "77e3ac61bf04c76878f3da7dd2f207b42a3939f39e18f20282e28239d81fae3f"
+    }
+  ],
+  "notes": [
+    "EfficientNet predictions come exclusively from the explicit BF16 experiment folders.",
+    "Other models come from explicit final main experiment folders; archives/diagnostics are not scanned.",
+    "ViT is absent from E3/E4 at 300 pixels.",
+    "Predictions and mappings are copied byte-for-byte. Originals are unchanged.",
+    "All selected runs share image IDs, paths, true labels, split hash and class-index mapping.",
+    "Checkpoint hash metadata is compared; checkpoint bytes and test image contents are not reverified.",
+    "This is a collection/consistency check, not the statistical significance analysis."
+  ]
+}

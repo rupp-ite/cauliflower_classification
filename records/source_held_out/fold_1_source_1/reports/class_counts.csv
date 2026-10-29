@@ -1,0 +1,5 @@
+﻿final_label,development,train,val,test,warning
+Bacterial Spot Rot,126,108,18,70,
+Black Rot,117,100,17,63,
+Downy Mildew,480,408,72,83,
+Healthy,902,767,135,23,

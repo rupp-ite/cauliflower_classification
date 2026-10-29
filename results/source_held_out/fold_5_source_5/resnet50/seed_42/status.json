@@ -1,0 +1,27 @@
+{
+  "completed": true,
+  "model": "resnet50",
+  "seed": 42,
+  "best_epoch": 2,
+  "epochs_trained": 12,
+  "parameters": 24560196,
+  "optimizer_updates": 755,
+  "training_examples_seen": 24000,
+  "training_and_validation_seconds": 542.494258300052,
+  "training_only_seconds": 422.7282321997918,
+  "checkpoint_sha256": "09e8a174212bebf74762953094988f7177a55795df86369674d9c502d47511df",
+  "validation": {
+    "accuracy": 0.9949748743718593,
+    "macro_precision": 0.9964788732394366,
+    "macro_recall": 0.9868421052631579,
+    "macro_f1": 0.9914701935978532,
+    "weighted_precision": 0.995045650789157,
+    "weighted_recall": 0.9949748743718593,
+    "weighted_f1": 0.9949247868632024,
+    "loss": 0.4075915332715116
+  },
+  "test_evaluated": true,
+  "pretrained": true,
+  "training_peak_allocated_mib": 1787.6220703125,
+  "training_peak_reserved_mib": 2076.0
+}

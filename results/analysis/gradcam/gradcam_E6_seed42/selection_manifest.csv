@@ -1,0 +1,21 @@
+﻿cluster_id,image_path,true_label,true_index,selection_category
+CL_7429304e3b2f0d794dd3,test/Alternaria Leaf Spot/CL_7429304e3b2f0d794dd3.jpeg,Alternaria Leaf Spot,0,common_correct
+CL_ca3aef88df042b2c284e,test/Bacterial Soft Rot/CL_ca3aef88df042b2c284e.jpg,Bacterial Soft Rot,1,common_correct
+CL_c169f7fb88ae9fc1f1aa,test/Bacterial Soft Rot/CL_c169f7fb88ae9fc1f1aa.jpg,Bacterial Soft Rot,1,any_model_error
+CL_5e55b9e8a6dfcc5fa759,test/Bacterial Spot Rot/CL_5e55b9e8a6dfcc5fa759.png,Bacterial Spot Rot,2,common_correct
+CL_aee817de464e162bb4ce,test/Bacterial Spot Rot/CL_aee817de464e162bb4ce.jpg,Bacterial Spot Rot,2,any_model_error
+CL_87bc28331364a3598ab2,test/Black Leg/CL_87bc28331364a3598ab2.jpeg,Black Leg,3,common_correct
+CL_385fb82fcea7dd5fe675,test/Black Rot/CL_385fb82fcea7dd5fe675.jpeg,Black Rot,4,common_correct
+CL_b169381f093c94f692ac,test/Black Rot/CL_b169381f093c94f692ac.png,Black Rot,4,any_model_error
+CL_74b49b8856feb5649bd3,test/Black Spot/CL_74b49b8856feb5649bd3.jpg,Black Spot,5,common_correct
+CL_cea09ae3af9727b06622,test/Cabbage Aphid Colony/CL_cea09ae3af9727b06622.jpeg,Cabbage Aphid Colony,6,common_correct
+CL_1413ca18e0a4267ea10b,test/Clubroot/CL_1413ca18e0a4267ea10b.jpg,Clubroot,7,common_correct
+CL_0bbba65807c3470d1dc8,test/Downy Mildew/CL_0bbba65807c3470d1dc8.jpeg,Downy Mildew,8,common_correct
+CL_1caaf29ce1b638bd1bab,test/Downy Mildew/CL_1caaf29ce1b638bd1bab.jpg,Downy Mildew,8,any_model_error
+CL_8b28d2bb37b34b1b693f,test/Healthy/CL_8b28d2bb37b34b1b693f.jpg,Healthy,9,common_correct
+CL_79054012fff120cdeada,test/Mosaic/CL_79054012fff120cdeada.jpeg,Mosaic,10,common_correct
+CL_1e3ee01043842f462844,test/Powdery Mildew/CL_1e3ee01043842f462844.jpeg,Powdery Mildew,11,common_correct
+CL_769afac414a21ff801e6,test/Powdery Mildew/CL_769afac414a21ff801e6.jpeg,Powdery Mildew,11,any_model_error
+CL_25cc0fd584cfd77afa7c,test/Ring Spot/CL_25cc0fd584cfd77afa7c.jpeg,Ring Spot,12,common_correct
+CL_a372c285f80a4a6b055f,test/Ring Spot/CL_a372c285f80a4a6b055f.jpeg,Ring Spot,12,any_model_error
+CL_83e7074bf4eeef9d1a5f,test/White Rust/CL_83e7074bf4eeef9d1a5f.jpeg,White Rust,13,common_correct

@@ -1,0 +1,10 @@
+{
+  "fold": "fold_5_source_5",
+  "held_out_source": "5_Cauliflower_Image_Dataset",
+  "eligible_classes": 4,
+  "train": 1139,
+  "val": 199,
+  "test": 382,
+  "excluded_shared": 29,
+  "excluded_class": 2165
+}

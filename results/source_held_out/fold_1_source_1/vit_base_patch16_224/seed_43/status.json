@@ -1,0 +1,27 @@
+{
+  "completed": true,
+  "model": "vit_base_patch16_224",
+  "seed": 43,
+  "best_epoch": 2,
+  "epochs_trained": 12,
+  "parameters": 85801732,
+  "optimizer_updates": 851,
+  "training_examples_seen": 27204,
+  "training_and_validation_seconds": 546.4103524000384,
+  "training_only_seconds": 428.00175210007,
+  "checkpoint_sha256": "f4afc3fdebcfc22bfe95fc5b288b613679ccbc669a07da15c9a460295fe5d259",
+  "validation": {
+    "accuracy": 1.0,
+    "macro_precision": 1.0,
+    "macro_recall": 1.0,
+    "macro_f1": 1.0,
+    "weighted_precision": 1.0,
+    "weighted_recall": 1.0,
+    "weighted_f1": 1.0,
+    "loss": 0.35601013135318915
+  },
+  "test_evaluated": true,
+  "pretrained": true,
+  "training_peak_allocated_mib": 4348.90087890625,
+  "training_peak_reserved_mib": 4804.0
+}

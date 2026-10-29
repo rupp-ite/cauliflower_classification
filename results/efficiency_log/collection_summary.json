@@ -1,0 +1,46 @@
+{
+  "experiments": [
+    "baseline",
+    "E1",
+    "E2",
+    "E3",
+    "E4",
+    "E5",
+    "E6"
+  ],
+  "total_files": 162,
+  "files_per_experiment": {
+    "baseline": 24,
+    "E1": 24,
+    "E2": 24,
+    "E3": 21,
+    "E4": 21,
+    "E5": 24,
+    "E6": 24
+  },
+  "source_experiment_json_sha256": {
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug\\experiment.json": "dacdded5191101fc4c0c31ab415249dd4cef84a8ece1b0247a661db20f5cb86b",
+    "D:\\Projects\\CauliflowerV2\\Results\\baseline_efficientnet_bf16\\experiment.json": "1e5add9452f0ce9ef9161d7af34712ba48a5ceadfbbcaa4dfd4f2dd27491971c",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_224_offline_no_online\\experiment.json": "efa42aa4c3819d32ed2a9ea3342a6ba60d42b129a05ace795aeace241e66e924",
+    "D:\\Projects\\CauliflowerV2\\Results\\E1_efficientnet_bf16\\experiment.json": "d985d58bcd35f08e866aabf1a6c8fc9d8058148ad368dca388fe6139f4f67948",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online\\experiment.json": "473e2d3c09552c2311e6722d079280ccf92bf3094c7f2c0a8f8a4a0f8c3fd264",
+    "D:\\Projects\\CauliflowerV2\\Results\\E2_efficientnet_bf16\\experiment.json": "0537b5ef7344e6ef6326925ff03f990819a3d722cee904470e74eeb59485ebdd",
+    "D:\\Projects\\CauliflowerV2\\Results\\E3_300_offline_no_online\\experiment.json": "2b6fd496abfbdc318146876d4c616ff448c8535735e4b401887ee1be479b60ca",
+    "D:\\Projects\\CauliflowerV2\\Results\\E3_efficientnet_bf16\\experiment.json": "e2b0ff9ec4394b40feff6aa8cf3471ca6dc876ea044c516bedab30a1634eaf30",
+    "D:\\Projects\\CauliflowerV2\\Results\\E4_300_offline_online\\experiment.json": "250cf0ca13251ee933356045556642e26fbf2b4e9993926d64c2102cd3269d78",
+    "D:\\Projects\\CauliflowerV2\\Results\\E4_efficientnet_bf16\\experiment.json": "53e1988e2dc7943a5ec49a0a9783d3d5775d4bd538fe238152659797b5130324",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_384_offline_no_online\\experiment.json": "84864d2c9821b25b4155f994625d40d43e8e916ab78436193778cfa72a8d4132",
+    "D:\\Projects\\CauliflowerV2\\Results\\E5_efficientnet_bf16\\experiment.json": "24da49453fc087accfaafb5c52ca9dc24225ab31e7ea2e26bb1e1fa01ad40039",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online\\experiment.json": "b55cdc46537a6b2fc323304dc29f5f4cedb9be3df9735d7bfb51db0e5252b02f",
+    "D:\\Projects\\CauliflowerV2\\Results\\E6_efficientnet_bf16\\experiment.json": "8ca2c835af4aad07f8db8584025830392d26caa2e06b9a5886ae83fe50537c0e"
+  },
+  "benchmark_status_or_precision_flags": [],
+  "notes": [
+    "Only explicit final experiment folders were read; no diagnostics or archives were scanned.",
+    "EfficientNet BF16 replaces earlier FP16 versions. ViT is absent at 300 pixels.",
+    "Files are copied byte-for-byte, never moved or rewritten.",
+    "Partial/failed benchmark records are retained and flagged, not hidden.",
+    "Checkpoint hash strings are checked against status.json; checkpoint bytes are not rehashed.",
+    "This collector packages the records; operator coverage and detailed timing still require the audit."
+  ]
+}

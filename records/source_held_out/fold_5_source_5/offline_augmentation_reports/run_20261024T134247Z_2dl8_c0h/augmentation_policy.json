@@ -1,0 +1,144 @@
+{
+  "__version__": "2.0.8",
+  "transform": {
+    "__class_fullname__": "Compose",
+    "p": 1.0,
+    "transforms": [
+      {
+        "__class_fullname__": "HorizontalFlip",
+        "p": 0.5
+      },
+      {
+        "__class_fullname__": "VerticalFlip",
+        "p": 0.1
+      },
+      {
+        "__class_fullname__": "RandomBrightnessContrast",
+        "p": 0.5,
+        "brightness_by_max": true,
+        "brightness_limit": [
+          -0.2,
+          0.2
+        ],
+        "contrast_limit": [
+          -0.2,
+          0.2
+        ],
+        "ensure_safe_range": false
+      },
+      {
+        "__class_fullname__": "GaussianBlur",
+        "p": 0.05,
+        "blur_limit": [
+          3,
+          3
+        ],
+        "sigma_limit": [
+          0.5,
+          3.0
+        ]
+      },
+      {
+        "__class_fullname__": "CLAHE",
+        "p": 0.2,
+        "clip_limit": [
+          1.0,
+          4.0
+        ],
+        "tile_grid_size": [
+          8,
+          8
+        ]
+      },
+      {
+        "__class_fullname__": "GaussNoise",
+        "p": 0.15,
+        "mean_range": [
+          0.0,
+          0.0
+        ],
+        "noise_scale_factor": 1.0,
+        "per_channel": true,
+        "std_range": [
+          0.02,
+          0.05
+        ]
+      },
+      {
+        "__class_fullname__": "Affine",
+        "p": 0.5,
+        "balanced_scale": false,
+        "border_mode": 4,
+        "fill": 0.0,
+        "fill_mask": 0.0,
+        "fit_output": false,
+        "interpolation": 1,
+        "keep_ratio": true,
+        "mask_interpolation": 0,
+        "rotate": [
+          -15.0,
+          15.0
+        ],
+        "rotate_method": "largest_box",
+        "scale": {
+          "x": [
+            0.9,
+            1.1
+          ],
+          "y": [
+            0.9,
+            1.1
+          ]
+        },
+        "shear": {
+          "x": [
+            0.0,
+            0.0
+          ],
+          "y": [
+            0.0,
+            0.0
+          ]
+        },
+        "translate_percent": {
+          "x": [
+            -0.05,
+            0.05
+          ],
+          "y": [
+            -0.05,
+            0.05
+          ]
+        },
+        "translate_px": null
+      },
+      {
+        "__class_fullname__": "HueSaturationValue",
+        "p": 0.2,
+        "hue_shift_limit": [
+          -5.0,
+          5.0
+        ],
+        "sat_shift_limit": [
+          -10.0,
+          10.0
+        ],
+        "val_shift_limit": [
+          -10.0,
+          10.0
+        ]
+      }
+    ],
+    "bbox_params": null,
+    "keypoint_params": null,
+    "additional_targets": {},
+    "is_check_shapes": true
+  },
+  "script_version": 2,
+  "operation_seeding": "each operation receives derive_seed(candidate_seed, operation, index, class_name); separate RNG streams",
+  "generated_format": "JPEG",
+  "jpeg_quality": 95,
+  "seed_derivation": "first 4 SHA-256 bytes of master seed, class, variant index and attempt separated by newline",
+  "acceptance": "reject exact no-op before encoding and decoded-pixel duplicates after encoding; retry with a new seed",
+  "parent_sampling": "shuffled cycles without replacement within each cycle; only raw training images"
+}

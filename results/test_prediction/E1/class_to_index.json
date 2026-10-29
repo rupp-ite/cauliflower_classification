@@ -1,0 +1,16 @@
+{
+  "Alternaria Leaf Spot": 0,
+  "Bacterial Soft Rot": 1,
+  "Bacterial Spot Rot": 2,
+  "Black Leg": 3,
+  "Black Rot": 4,
+  "Black Spot": 5,
+  "Cabbage Aphid Colony": 6,
+  "Clubroot": 7,
+  "Downy Mildew": 8,
+  "Healthy": 9,
+  "Mosaic": 10,
+  "Powdery Mildew": 11,
+  "Ring Spot": 12,
+  "White Rust": 13
+}

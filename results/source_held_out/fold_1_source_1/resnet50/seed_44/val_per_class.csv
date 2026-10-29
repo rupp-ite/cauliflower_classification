@@ -1,0 +1,5 @@
+﻿class_name,precision,recall,f1-score,support
+Bacterial Spot Rot,1.0,1.0,1.0,18.0
+Black Rot,1.0,1.0,1.0,17.0
+Downy Mildew,1.0,1.0,1.0,72.0
+Healthy,1.0,1.0,1.0,135.0

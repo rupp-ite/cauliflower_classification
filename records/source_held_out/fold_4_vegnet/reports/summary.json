@@ -1,0 +1,10 @@
+{
+  "fold": "fold_4_vegnet",
+  "held_out_source": "4_VegNet",
+  "eligible_classes": 4,
+  "train": 1225,
+  "val": 214,
+  "test": 218,
+  "excluded_shared": 295,
+  "excluded_class": 1962
+}

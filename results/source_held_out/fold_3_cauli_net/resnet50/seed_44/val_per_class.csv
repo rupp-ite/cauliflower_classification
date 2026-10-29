@@ -1,0 +1,4 @@
+﻿class_name,precision,recall,f1-score,support
+Alternaria Leaf Spot,1.0,1.0,1.0,65.0
+Bacterial Soft Rot,1.0,1.0,1.0,46.0
+Healthy,1.0,1.0,1.0,132.0

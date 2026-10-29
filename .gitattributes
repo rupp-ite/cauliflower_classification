@@ -1,0 +1,4 @@
+# Preserve original bytes of reproducibility records and outputs.
+records/** -text
+results/** -text
+* -text

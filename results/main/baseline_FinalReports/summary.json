@@ -1,0 +1,142 @@
+{
+  "experiment": "baseline",
+  "completed": true,
+  "models": [
+    "resnet50",
+    "densenet121",
+    "mobilenet_v3_large",
+    "efficientnet_v2_s",
+    "xception",
+    "convnext_tiny",
+    "vit_base_patch16_224",
+    "twins_svt_base"
+  ],
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "total_runs": 24,
+  "common_protocol": {
+    "experiment": "baseline",
+    "image_size": [
+      224,
+      224
+    ],
+    "class_names": [
+      "Alternaria Leaf Spot",
+      "Bacterial Soft Rot",
+      "Bacterial Spot Rot",
+      "Black Leg",
+      "Black Rot",
+      "Black Spot",
+      "Cabbage Aphid Colony",
+      "Clubroot",
+      "Downy Mildew",
+      "Healthy",
+      "Mosaic",
+      "Powdery Mildew",
+      "Ring Spot",
+      "White Rust"
+    ],
+    "counts": {
+      "train": 2756,
+      "val": 579,
+      "test": 579
+    },
+    "pretrained": true,
+    "offline_augmentation": false,
+    "online_augmentation": false,
+    "split_manifest_sha256": "9c700f7707969848bf09b068050ce2d56290eb077b6a91f9775427bc0ebd1e83",
+    "augmentation_manifest_sha256": null,
+    "augmentation_policy_sha256": null,
+    "training_device": "cuda:0",
+    "benchmark_protocol": {
+      "batch_size": 32,
+      "warmup": 20,
+      "repeats": 100,
+      "precision": "FP32",
+      "scope": "model forward only; synthetic input already on device; excludes preprocessing and transfers"
+    },
+    "hyperparameters_except_amp_dtype": {
+      "epochs": 100,
+      "batch_size": 32,
+      "learning_rate": 0.0001,
+      "weight_decay": 0.0001,
+      "label_smoothing": 0.1,
+      "early_stopping_patience": 10,
+      "scheduler": "ReduceLROnPlateau on validation loss",
+      "lr_patience": 3,
+      "lr_factor": 0.3,
+      "optimizer": "AdamW",
+      "normalization": "checkpoint",
+      "workers": 4,
+      "strict_deterministic": true,
+      "amp": true
+    }
+  },
+  "source_experiments": [
+    {
+      "results_directory": "D:\\Projects\\CauliflowerV2\\Results\\baseline_224_raw_no_aug",
+      "models_present": [
+        "resnet50",
+        "densenet121",
+        "mobilenet_v3_large",
+        "efficientnet_v2_s",
+        "xception",
+        "convnext_tiny",
+        "vit_base_patch16_224",
+        "twins_svt_base"
+      ],
+      "selected_models": [
+        "convnext_tiny",
+        "densenet121",
+        "mobilenet_v3_large",
+        "resnet50",
+        "twins_svt_base",
+        "vit_base_patch16_224",
+        "xception"
+      ],
+      "excluded_models": [
+        "efficientnet_v2_s"
+      ],
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "training_precision": "AMP_FP16",
+      "script_sha256": "9707abe556f9e89ff169729637d6b4f95b912638b6a6b9456e078489ed358494",
+      "runner_version": "2.0",
+      "memory_cleanup": "not recorded in experiment.json"
+    },
+    {
+      "results_directory": "D:\\Projects\\CauliflowerV2\\Results\\baseline_efficientnet_bf16",
+      "models_present": [
+        "efficientnet_v2_s"
+      ],
+      "selected_models": [
+        "efficientnet_v2_s"
+      ],
+      "excluded_models": [],
+      "seeds": [
+        42,
+        43,
+        44
+      ],
+      "training_precision": "AMP_BF16",
+      "script_sha256": "4ac510a63a5774977990050a17cb8aa996ec2bc4e55b182cff21366eb184c1ce",
+      "runner_version": "2.1-explicit-amp-dtype",
+      "memory_cleanup": "gc.collect and synchronized unused CUDA cache release before/after each model-seed train/test/benchmark job; live allocations are not reset"
+    }
+  ],
+  "notes": [
+    "Report consolidation only. Original checkpoints, images and predictions remain in their source folders.",
+    "EfficientNet uses BF16 AMP; other models use FP16 AMP. Inference benchmarks use FP32.",
+    "Any older EfficientNet rows in the primary folder are excluded and replaced by the BF16 group, never averaged together.",
+    "Means and sample SDs are recomputed from individual seed rows; classification metrics are fractions.",
+    "Different runner hashes are recorded, not assumed identical. Numerical protocol checks exclude only the declared AMP dtype difference.",
+    "Validation covers supplied configs and report consistency; checkpoint bytes, test predictions and image bytes were not reverified.",
+    "Operation counts retain their coverage status. Partial estimates are not exact totals."
+  ]
+}

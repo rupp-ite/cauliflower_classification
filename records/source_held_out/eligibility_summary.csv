@@ -1,0 +1,6 @@
+﻿fold,held_out_source,eligible_classes,train,val,test,excluded_shared,excluded_class
+fold_1_source_1,1_Cauliflower_Diseases_Identification_Image_Dataset,4,1383,242,239,88,1962
+fold_2_source_2,2_Cauliflower_Dataset,4,693,120,1444,293,1364
+fold_3_cauli_net,3_Cauli-Net,3,1386,243,342,12,1931
+fold_4_vegnet,4_VegNet,4,1225,214,218,295,1962
+fold_5_source_5,5_Cauliflower_Image_Dataset,4,1139,199,382,29,2165

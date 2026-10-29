@@ -1,0 +1,84 @@
+{
+  "completed": true,
+  "experiment": "E6",
+  "run_root": "D:\\Projects\\CauliflowerV2\\Results\\E6_384_offline_online",
+  "split_root": "D:\\Projects\\CauliflowerV2\\Dataset\\harmonized_splits",
+  "seed": 42,
+  "selection_seed": 42,
+  "per_class_per_category": 1,
+  "models": [
+    "resnet50",
+    "mobilenet_v3_large",
+    "vit_base_patch16_224",
+    "twins_svt_base"
+  ],
+  "class_names": [
+    "Alternaria Leaf Spot",
+    "Bacterial Soft Rot",
+    "Bacterial Spot Rot",
+    "Black Leg",
+    "Black Rot",
+    "Black Spot",
+    "Cabbage Aphid Colony",
+    "Clubroot",
+    "Downy Mildew",
+    "Healthy",
+    "Mosaic",
+    "Powdery Mildew",
+    "Ring Spot",
+    "White Rust"
+  ],
+  "image_size": [
+    384,
+    384
+  ],
+  "selected_images": 20,
+  "cam_precision": "FP32",
+  "target_rule": "predicted FP32 logit; additionally ground-truth logit for misclassified cases",
+  "selection": "SHA256 ranking independent of confidence/heatmaps; one common success and one any-model failure per true class when available",
+  "source_metadata": {
+    "resnet50": {
+      "checkpoint_sha256": "88f8d2469d626651b05ff62827702f1f0d435f5b550c7e9fb798583f2cea1eb2",
+      "config_sha256": "5f1aaf46bdaa3fe399cf5572b51a81a40befceea8d938574ce69f5912d0c2b0f",
+      "predictions_sha256": "2dad0b71cabe92f94147fe30841cb6a3b718a317c40da7dab11d6e67c9612993"
+    },
+    "mobilenet_v3_large": {
+      "checkpoint_sha256": "c4bb05260b304b45f8e85cd9f02bb564863e037dc51ce34b4f3dbd22356fec79",
+      "config_sha256": "390da668eb480211ffca49cad7688dc3d600e52c1c69006d709c6bed9ce02fe8",
+      "predictions_sha256": "c25c91d258ba3c7245cc2e50b42189da05a3a069bb8c9d9a2a73f9b834d430ac"
+    },
+    "vit_base_patch16_224": {
+      "checkpoint_sha256": "c948c3f79be640917a4e75edf4105df6129e76d2f443cb3b9ace9966d8b301d1",
+      "config_sha256": "e7b469df2ceffee8c8a1c65942b82ed6935d8581be508ab8ebdff71c34b4a8ad",
+      "predictions_sha256": "45a40fb90e127daffc19ea994b466e78de97d5339c83de1567f129de4f8581c0"
+    },
+    "twins_svt_base": {
+      "checkpoint_sha256": "40e54c20fb2adc890f2a8384d0b175b5baec047fc73a1df29169c740015c4d68",
+      "config_sha256": "fa88d9b483ecbff99c2560677defe5051a91d51d20c790c8a54767da1520ddac",
+      "predictions_sha256": "53ecf903585551234acb70eab1602149416b4427a44c98b654f4800585e24786"
+    }
+  },
+  "split_manifest_sha256": "9c700f7707969848bf09b068050ce2d56290eb077b6a91f9775427bc0ebd1e83",
+  "script_sha256": "fe008720542b315f8e6a391f793a3a92097a16f9d6db59284c95d4c09e1dc78a",
+  "software": {
+    "torch": "2.14.1+cu132",
+    "torchvision": "0.29.1+cu132",
+    "timm": "1.0.30",
+    "numpy": "2.5.4",
+    "Pillow": "13.0.0",
+    "matplotlib": "3.11.2"
+  },
+  "notes": [
+    "CAMs are qualitative, not evidence of correct symptom localization or causal feature use.",
+    "Model-specific late target layers differ in spatial resolution; colors are normalized separately per map and cannot compare absolute evidence across models.",
+    "Blank/nonfinite/constant maps and saved-AMP vs FP32 prediction differences are recorded, never silently repaired or removed.",
+    "Fixed seed 42 is used instead of choosing the seed with the most attractive heatmaps.",
+    "No retraining, new checkpoint selection, label changes or test-set filtering are performed."
+  ],
+  "created_utc": "2026-10-25T11:32:00.986770+00:00",
+  "cam_maps": 89,
+  "cam_status_counts": {
+    "valid": 89
+  },
+  "saved_prediction_mismatch_images": 0
+}

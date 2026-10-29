@@ -1,0 +1,18 @@
+{
+  "status": "complete",
+  "created_utc": "2026-10-24T13:08:18.734674+00:00",
+  "manifest": "D:\\Projects\\CauliflowerV2\\Dataset\\harmonized_dataset_reports\\retained_manifest.csv",
+  "manifest_sha256": "f802761bf41d6fd5fe23e35e6f036b687aac6ac4806ed293fcd79bc02429f746",
+  "image_root": "D:\\Projects\\CauliflowerV2\\Dataset\\harmonized_dataset",
+  "images": 3914,
+  "split_seed": 42,
+  "validation_fraction": 0.15,
+  "validation_rule": "per class: max(1, floor(development_count * validation_fraction))",
+  "test_rule": "exclusive held-out provenance; classes shared with development",
+  "mixed_source_rule": "exclude images associated with held-out and any other source",
+  "augmentation": "none; apply offline augmentation to train only in a subsequent step",
+  "limitations": [
+    "Repository separation does not establish farm/plant/session independence",
+    "Shared-class tasks differ between folds; small class supports require caution"
+  ]
+}

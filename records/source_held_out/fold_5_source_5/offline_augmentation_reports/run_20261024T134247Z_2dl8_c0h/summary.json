@@ -1,0 +1,47 @@
+{
+  "script_version": "source_held_out_1",
+  "held_out_source": "5_Cauliflower_Image_Dataset",
+  "mode": "apply",
+  "split_root": "D:\\Projects\\CauliflowerV2\\Dataset\\source_held_out\\fold_5_source_5",
+  "split_report": "D:\\Projects\\CauliflowerV2\\Dataset\\source_held_out\\fold_5_source_5\\reports",
+  "output": "D:\\Projects\\CauliflowerV2\\Dataset\\source_held_out\\fold_5_source_5\\augmented_train",
+  "report_directory": "D:\\Projects\\CauliflowerV2\\Dataset\\source_held_out\\fold_5_source_5\\offline_augmentation_reports\\run_20261024T134247Z_2dl8_c0h",
+  "seed": 42,
+  "minimum_per_class": 500,
+  "original_training_images": 1139,
+  "planned_generated_images": 861,
+  "planned_total_images": 2000,
+  "classes": 4,
+  "split_manifest_sha256": "032d8a9600c9407eed5d122f6a0dfbf286ccbbc6e05157fdd988ec381655a715",
+  "completed": true,
+  "notes": [
+    "Output includes unchanged original training images plus accepted offline variants.",
+    "No original is removed or downsampled; target is max(original_count, minimum).",
+    "No validation or test image is used as an augmentation parent.",
+    "Source-held-out assignments are checked against retained provenance and deterministic split rules.",
+    "Duplicate rejection includes all retained original pixel hashes, including fold exclusions.",
+    "Transform parameters follow the previous code except explicitly configured noise and modern Affine implementation.",
+    "No-op outputs and exact decoded-pixel matches to any original split or earlier generated output are retried.",
+    "Augmented variants are not independent observations; keep raw train for the no-offline baseline.",
+    "Inspect generated examples to assess preservation of disease symptoms."
+  ],
+  "copied_originals": 1139,
+  "generated_variants": 861,
+  "final_total": 2000,
+  "retry_counts": {
+    "no_op": 41,
+    "decoded_duplicate": 5
+  },
+  "applied_transform_counts": {
+    "RandomBrightnessContrast": 442,
+    "Affine": 468,
+    "HueSaturationValue": 182,
+    "CLAHE": 175,
+    "HorizontalFlip": 456,
+    "GaussNoise": 132,
+    "GaussianBlur": 45,
+    "VerticalFlip": 90
+  },
+  "source_verification": "all_frozen_split_files_match_manifest",
+  "output_verification": "original copies and generated JPEG writes verified; no accepted exact decoded matches to original splits or generated variants"
+}

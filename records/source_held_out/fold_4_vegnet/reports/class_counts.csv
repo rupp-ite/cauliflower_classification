@@ -1,0 +1,5 @@
+﻿final_label,development,train,val,test,warning
+Bacterial Spot Rot,70,60,10,126,
+Black Rot,118,101,17,62,
+Downy Mildew,436,371,65,3,Small held-out class support (<20)
+Healthy,815,693,122,27,

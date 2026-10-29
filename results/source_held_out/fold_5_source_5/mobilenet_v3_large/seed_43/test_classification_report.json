@@ -1,0 +1,39 @@
+{
+  "Alternaria Leaf Spot": {
+    "precision": 0.7619047619047619,
+    "recall": 0.5289256198347108,
+    "f1-score": 0.624390243902439,
+    "support": 121.0
+  },
+  "Bacterial Soft Rot": {
+    "precision": 0.6198347107438017,
+    "recall": 0.6637168141592921,
+    "f1-score": 0.6410256410256411,
+    "support": 113.0
+  },
+  "Black Rot": {
+    "precision": 0.17391304347826086,
+    "recall": 0.21818181818181817,
+    "f1-score": 0.1935483870967742,
+    "support": 55.0
+  },
+  "Downy Mildew": {
+    "precision": 0.5462962962962963,
+    "recall": 0.6344086021505376,
+    "f1-score": 0.5870646766169154,
+    "support": 93.0
+  },
+  "accuracy": 0.5497382198952879,
+  "macro avg": {
+    "precision": 0.5254872031057801,
+    "recall": 0.5113082135815896,
+    "f1-score": 0.5115072371604424,
+    "support": 382.0
+  },
+  "weighted avg": {
+    "precision": 0.5827292446371354,
+    "recall": 0.5497382198952879,
+    "f1-score": 0.5581918669209117,
+    "support": 382.0
+  }
+}

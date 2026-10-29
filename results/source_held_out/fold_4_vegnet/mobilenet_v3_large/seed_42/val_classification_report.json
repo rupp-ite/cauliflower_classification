@@ -1,0 +1,39 @@
+{
+  "Bacterial Spot Rot": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 10.0
+  },
+  "Black Rot": {
+    "precision": 0.8888888888888888,
+    "recall": 0.9411764705882353,
+    "f1-score": 0.9142857142857143,
+    "support": 17.0
+  },
+  "Downy Mildew": {
+    "precision": 0.984375,
+    "recall": 0.9692307692307692,
+    "f1-score": 0.9767441860465116,
+    "support": 65.0
+  },
+  "Healthy": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 122.0
+  },
+  "accuracy": 0.985981308411215,
+  "macro avg": {
+    "precision": 0.9683159722222222,
+    "recall": 0.9776018099547511,
+    "f1-score": 0.9727574750830564,
+    "support": 214.0
+  },
+  "weighted avg": {
+    "precision": 0.986427505192108,
+    "recall": 0.985981308411215,
+    "f1-score": 0.9861272394200019,
+    "support": 214.0
+  }
+}

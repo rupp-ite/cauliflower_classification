@@ -1,0 +1,7 @@
+{
+  "checkpoint_sha256": "85c1b4086931a6d341974a728f470b2dfb1a32350130b1be5540d47c1e61441c",
+  "split_manifest_sha256": "74f038e489f88cd00328b18ad908b9ea363629394e3513b2b0ed04a4492a5223",
+  "device": "cuda:0",
+  "amp": true,
+  "evaluated_utc": "2026-10-24T16:17:01.529545+00:00"
+}

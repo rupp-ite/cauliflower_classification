@@ -1,0 +1,53 @@
+{
+  "prediction_files": 162,
+  "model_conditions": 54,
+  "unique_test_images": 579,
+  "classes": 14,
+  "checked_prediction_rows": 93798,
+  "class_supports": {
+    "Alternaria Leaf Spot": 88,
+    "Bacterial Soft Rot": 60,
+    "Bacterial Spot Rot": 31,
+    "Black Leg": 15,
+    "Black Rot": 27,
+    "Black Spot": 36,
+    "Cabbage Aphid Colony": 20,
+    "Clubroot": 20,
+    "Downy Mildew": 85,
+    "Healthy": 148,
+    "Mosaic": 11,
+    "Powdery Mildew": 12,
+    "Ring Spot": 13,
+    "White Rust": 13
+  },
+  "efficientnet_precision": "BF16 per collection manifest and explicit source paths",
+  "collection_hashes": "all 169 copied files match collection metadata",
+  "labels_and_pairing": "identical cluster IDs, image paths, true labels and class mapping in all 162 runs",
+  "split_manifest_sha256": "9c700f7707969848bf09b068050ce2d56290eb077b6a91f9775427bc0ebd1e83",
+  "limitation": "Collector metadata checked; original checkpoint/image bytes and training source records are not present in this package.",
+  "input_zip_sha256": "0c171be212503e3aebb3b5b411df686ff176ca2a42ffb7daedd6f4a486f00b80",
+  "bootstrap_replicates": 10000,
+  "permutation_replicates": 50000,
+  "resampling_seed": 20261025,
+  "analysis": "Exploratory analysis specified after benchmark results were available; no confirmatory preregistration.",
+  "bootstrap": "Class-stratified percentile 95% intervals, sampling image IDs with replacement within each true class. All three seed predictions move together. Same draws for every condition.",
+  "statistic": "Arithmetic mean of the three per-seed accuracies or per-seed macro-F1 scores; not a seed ensemble or pooled 1737-observation metric.",
+  "permutation": "Two-sided absolute-difference paired randomization: swap A/B three-seed prediction vectors together within each image. Enumerate all swaps when <=15 discordant images; otherwise Monte Carlo with +1 numerator/denominator correction.",
+  "multiplicity": "One Holm family over all 118 tests: 31 augmentation comparisons and 28 E6 architecture pairs, each on accuracy and macro-F1.",
+  "limitations": [
+    "Intervals are pointwise, not simultaneous; Holm correction applies to p-values only.",
+    "Inference is conditional on three trained seeds; it does not quantify uncertainty over new training runs or independently resampled training datasets.",
+    "Image-level independence is assumed; unknown farm/plant/session clusters are not accounted for.",
+    "Fixed class supports and one fixed split; uncertainty in class prevalence, split selection and source shift is not captured.",
+    "Only three seeds limits characterization of training randomness; seed SD is reported separately.",
+    "Offline augmentation increases training set size and optimizer updates; its contrast concerns the entire training condition.",
+    "A nonsignificant result does not establish equality/equivalence. CI exclusion of zero can coexist with a nonsignificant Holm-adjusted p-value.",
+    "E6 architecture comparisons are only for 384px with offline+online augmentation; EfficientNet BF16 differs from other models FP16."
+  ],
+  "software": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "numpy": "2.3.5",
+    "platform": "Linux-6.18.55-x86_64-with-glibc2.39"
+  },
+  "supported_significant_tests": 2
+}

@@ -1,0 +1,27 @@
+{
+  "completed": true,
+  "model": "mobilenet_v3_large",
+  "seed": 43,
+  "best_epoch": 7,
+  "epochs_trained": 17,
+  "parameters": 3466036,
+  "optimizer_updates": 1071,
+  "training_examples_seen": 34000,
+  "training_and_validation_seconds": 765.1113533999305,
+  "training_only_seconds": 594.4680897003273,
+  "checkpoint_sha256": "166d2671c4eaf890c9be198be25655e5b8adc162f06773899745ed7fdabc043b",
+  "validation": {
+    "accuracy": 0.9798994974874372,
+    "macro_precision": 0.9859601449275363,
+    "macro_recall": 0.9569548872180451,
+    "macro_f1": 0.9697043575320536,
+    "weighted_precision": 0.9803910858641032,
+    "weighted_recall": 0.9798994974874372,
+    "weighted_f1": 0.979413302615827,
+    "loss": 0.3854305276918651
+  },
+  "test_evaluated": true,
+  "pretrained": true,
+  "training_peak_allocated_mib": 833.00439453125,
+  "training_peak_reserved_mib": 1004.0
+}

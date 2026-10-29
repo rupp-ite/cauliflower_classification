@@ -1,0 +1,10 @@
+{
+  "fold": "fold_2_source_2",
+  "held_out_source": "2_Cauliflower_Dataset",
+  "eligible_classes": 4,
+  "train": 693,
+  "val": 120,
+  "test": 1444,
+  "excluded_shared": 293,
+  "excluded_class": 1364
+}

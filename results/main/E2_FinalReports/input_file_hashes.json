@@ -1,0 +1,18 @@
+{
+  "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online/experiment.json": "473e2d3c09552c2311e6722d079280ccf92bf3094c7f2c0a8f8a4a0f8c3fd264",
+  "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online/environment.json": "f599f588eb8cca39c4f6be6dbc9e8f057f85b37d73fa7cb1ba11322b7b571807",
+  "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online/class_to_index.json": "77e3ac61bf04c76878f3da7dd2f207b42a3939f39e18f20282e28239d81fae3f",
+  "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online/test_runs.csv": "a02702c607cd669c580eda46974143bc6018883a230857e69a35170b582ccf72",
+  "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online/val_runs.csv": "10c5a7347b56f00c9aeffb758d85232bf4aff09b200f0a2d1d4b67a427f973a2",
+  "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online/test_mean_sd.csv": "d22e415063bed7f624b3ad7dc7d5fb6a36ca8bc0aeae9ae9315fcc2ed9daced1",
+  "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online/val_mean_sd.csv": "1e9b1411cb655242cb66d98e27c2893c69d4a944532bd7bdd245869d3615d7f9",
+  "D:\\Projects\\CauliflowerV2\\Results\\E2_224_offline_online/benchmark_summary.csv": "1e6b4c323b4f36782c59ca7b6868e61beb2fe9cb8d8b3bc3d012429fa7b2872b",
+  "D:\\Projects\\CauliflowerV2\\Results\\E2_efficientnet_bf16/experiment.json": "0537b5ef7344e6ef6326925ff03f990819a3d722cee904470e74eeb59485ebdd",
+  "D:\\Projects\\CauliflowerV2\\Results\\E2_efficientnet_bf16/environment.json": "f599f588eb8cca39c4f6be6dbc9e8f057f85b37d73fa7cb1ba11322b7b571807",
+  "D:\\Projects\\CauliflowerV2\\Results\\E2_efficientnet_bf16/class_to_index.json": "77e3ac61bf04c76878f3da7dd2f207b42a3939f39e18f20282e28239d81fae3f",
+  "D:\\Projects\\CauliflowerV2\\Results\\E2_efficientnet_bf16/test_runs.csv": "ed1701d357ee195bf9c15debff5bd666d7cd3d6c803570b424f42bd192f27ef4",
+  "D:\\Projects\\CauliflowerV2\\Results\\E2_efficientnet_bf16/val_runs.csv": "51e2cfa3c1c5f8eff26f9a9fbb0722758b147218152be89ce3415be7a06eeb79",
+  "D:\\Projects\\CauliflowerV2\\Results\\E2_efficientnet_bf16/test_mean_sd.csv": "5ad5f951491957b960a4ab5ada9bb9a7f68cefe3f742f92185a5452d0871428b",
+  "D:\\Projects\\CauliflowerV2\\Results\\E2_efficientnet_bf16/val_mean_sd.csv": "f456a82ceacd2edaa67a6d0026c489455d7536d27e8d9e23c94db55a265af9e4",
+  "D:\\Projects\\CauliflowerV2\\Results\\E2_efficientnet_bf16/benchmark_summary.csv": "b22954b66bf23b2316c24d7f3935c5299afd9714e5707454847d893c293406e3"
+}

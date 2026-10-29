@@ -1,0 +1,5 @@
+﻿display_row,cluster_id,image_path,true_label,true_index,selection_category
+1,CL_87bc28331364a3598ab2,test/Black Leg/CL_87bc28331364a3598ab2.jpeg,Black Leg,3,common_correct
+2,CL_385fb82fcea7dd5fe675,test/Black Rot/CL_385fb82fcea7dd5fe675.jpeg,Black Rot,4,common_correct
+3,CL_b169381f093c94f692ac,test/Black Rot/CL_b169381f093c94f692ac.png,Black Rot,4,any_model_error
+4,CL_769afac414a21ff801e6,test/Powdery Mildew/CL_769afac414a21ff801e6.jpeg,Powdery Mildew,11,any_model_error

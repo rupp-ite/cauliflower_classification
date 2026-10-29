@@ -1,0 +1,27 @@
+{
+  "completed": true,
+  "model": "twins_svt_base",
+  "seed": 44,
+  "best_epoch": 7,
+  "epochs_trained": 17,
+  "parameters": 55305028,
+  "optimizer_updates": 1070,
+  "training_examples_seen": 34000,
+  "training_and_validation_seconds": 736.4401779999025,
+  "training_only_seconds": 572.6655485001393,
+  "checkpoint_sha256": "dd024ae080affa3558d17ce123a30d58618383bc995d6552f70bae6c6004922e",
+  "validation": {
+    "accuracy": 0.9798994974874372,
+    "macro_precision": 0.9864864864864865,
+    "macro_recall": 0.9473684210526316,
+    "macro_f1": 0.9636437908496732,
+    "weighted_precision": 0.9809860111367648,
+    "weighted_recall": 0.9798994974874372,
+    "weighted_f1": 0.978996288632706,
+    "loss": 0.3834079554931602
+  },
+  "test_evaluated": true,
+  "pretrained": true,
+  "training_peak_allocated_mib": 4354.4013671875,
+  "training_peak_reserved_mib": 4694.0
+}

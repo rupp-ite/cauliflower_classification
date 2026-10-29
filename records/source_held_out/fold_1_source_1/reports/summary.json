@@ -1,0 +1,10 @@
+{
+  "fold": "fold_1_source_1",
+  "held_out_source": "1_Cauliflower_Diseases_Identification_Image_Dataset",
+  "eligible_classes": 4,
+  "train": 1383,
+  "val": 242,
+  "test": 239,
+  "excluded_shared": 88,
+  "excluded_class": 1962
+}

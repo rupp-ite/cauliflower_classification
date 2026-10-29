@@ -1,0 +1,15 @@
+﻿class_name,original,target,generated
+Alternaria Leaf Spot,415,500,85
+Bacterial Soft Rot,285,500,215
+Bacterial Spot Rot,150,500,350
+Black Leg,73,500,427
+Black Rot,132,500,368
+Black Spot,171,500,329
+Cabbage Aphid Colony,99,500,401
+Clubroot,97,500,403
+Downy Mildew,397,500,103
+Healthy,691,691,0
+Mosaic,54,500,446
+Powdery Mildew,62,500,438
+Ring Spot,65,500,435
+White Rust,65,500,435

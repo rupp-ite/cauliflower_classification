@@ -1,0 +1,33 @@
+﻿source_folder,original_label,final_label,include,note
+1_Cauliflower_Diseases_Identification_Image_Dataset,Bacterial Spot Rot,Bacterial Spot Rot,yes,Retain source-defined category; do not merge with source 2 Bacterial Spot.
+1_Cauliflower_Diseases_Identification_Image_Dataset,Black Rot,Black Rot,yes,Exact folder label from source audit; retains existing provisional harmonized taxonomy.
+1_Cauliflower_Diseases_Identification_Image_Dataset,Downy Mildew,Downy Mildew,yes,Exact folder label from source audit; retains existing provisional harmonized taxonomy.
+1_Cauliflower_Diseases_Identification_Image_Dataset,Healthy Fruit,Healthy,yes,Exact folder label from source audit; retains existing provisional harmonized taxonomy.
+2_Cauliflower_Dataset,Alternaria Brassicae,Alternaria Leaf Spot,yes,Exact folder label from source audit; retains existing provisional harmonized taxonomy.
+2_Cauliflower_Dataset,Alternaria Leaf Spot,Alternaria Leaf Spot,yes,Exact folder label from source audit; retains existing provisional harmonized taxonomy.
+2_Cauliflower_Dataset,Bacterial Soft Rot,Bacterial Soft Rot,yes,Exact folder label from source audit; retains existing provisional harmonized taxonomy.
+2_Cauliflower_Dataset,Bacterial Spot,,no,Excluded: equivalence to source-defined Bacterial Spot Rot remains unresolved.
+2_Cauliflower_Dataset,Black Spot,Black Spot,yes,Exact folder label from source audit; retains existing provisional harmonized taxonomy.
+2_Cauliflower_Dataset,Downy Mildew,Downy Mildew,yes,Exact folder label from source audit; retains existing provisional harmonized taxonomy.
+2_Cauliflower_Dataset,Healthy,Healthy,yes,Exact folder label from source audit; retains existing provisional harmonized taxonomy.
+2_Cauliflower_Dataset,Healthy_,Healthy,yes,Exact folder label from source audit; retains existing provisional harmonized taxonomy.
+2_Cauliflower_Dataset,Purple Tinges,,no,Excluded: color-based/physiological category outside the revised disease-and-aphid-infestation scope.
+3_Cauli-Net,AlterneriaLeafSpot,Alternaria Leaf Spot,yes,Exact folder label from source audit; retains existing provisional harmonized taxonomy.
+3_Cauli-Net,BacterialSoftRot,Bacterial Soft Rot,yes,Exact folder label from source audit; retains existing provisional harmonized taxonomy.
+3_Cauli-Net,BoronDifiency,,no,Excluded: nutritional deficiency outside the revised disease-and-aphid-infestation scope.
+3_Cauli-Net,Healthy,Healthy,yes,Exact folder label from source audit; retains existing provisional harmonized taxonomy.
+4_VegNet,Bacterial spot rot,Bacterial Spot Rot,yes,Retain source-defined category; do not merge with source 2 Bacterial Spot.
+4_VegNet,Black Rot,Black Rot,yes,Exact folder label from source audit; retains existing provisional harmonized taxonomy.
+4_VegNet,Downy Mildew,Downy Mildew,yes,Exact folder label from source audit; retains existing provisional harmonized taxonomy.
+4_VegNet,No disease,Healthy,yes,Exact folder label from source audit; retains existing provisional harmonized taxonomy.
+5_Cauliflower_Image_Dataset,AlternariaLeafSpot__,Alternaria Leaf Spot,yes,Exact folder label from source audit; retains existing provisional harmonized taxonomy.
+5_Cauliflower_Image_Dataset,BacterialSoftRot__,Bacterial Soft Rot,yes,Exact folder label from source audit; retains existing provisional harmonized taxonomy.
+5_Cauliflower_Image_Dataset,BlackLeg__,Black Leg,yes,Exact folder label from source audit; retains existing provisional harmonized taxonomy.
+5_Cauliflower_Image_Dataset,BlackRot__,Black Rot,yes,Exact folder label from source audit; retains existing provisional harmonized taxonomy.
+5_Cauliflower_Image_Dataset,CabbageAphidColony__,Cabbage Aphid Colony,yes,Retain specific source label instead of broad Pest Damage category.
+5_Cauliflower_Image_Dataset,CauliflowerMosaic__,Mosaic,yes,Exact folder label from source audit; retains existing provisional harmonized taxonomy.
+5_Cauliflower_Image_Dataset,ClubRoot__,Clubroot,yes,Retain specific source condition; spelling standardized from Club Root.
+5_Cauliflower_Image_Dataset,DowneyMildew__,Downy Mildew,yes,Exact folder label from source audit; retains existing provisional harmonized taxonomy.
+5_Cauliflower_Image_Dataset,PowderyMildew__,Powdery Mildew,yes,Exact folder label from source audit; retains existing provisional harmonized taxonomy.
+5_Cauliflower_Image_Dataset,RingSpot__,Ring Spot,yes,Exact folder label from source audit; retains existing provisional harmonized taxonomy.
+5_Cauliflower_Image_Dataset,WhiteRust__,White Rust,yes,Exact folder label from source audit; retains existing provisional harmonized taxonomy.

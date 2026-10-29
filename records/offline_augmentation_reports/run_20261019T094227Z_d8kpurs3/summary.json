@@ -1,0 +1,44 @@
+{
+  "script_version": 2,
+  "mode": "apply",
+  "split_root": "D:\\Projects\\CauliflowerV2\\Dataset\\harmonized_splits",
+  "split_report": "D:\\Projects\\CauliflowerV2\\Dataset\\harmonized_splits_reports\\run_20261019T080508Z_u3t42fl4",
+  "output": "D:\\Projects\\CauliflowerV2\\Dataset\\harmonized_splits\\augmented_train",
+  "report_directory": "D:\\Projects\\CauliflowerV2\\Dataset\\offline_augmentation_reports\\run_20261019T094227Z_d8kpurs3",
+  "seed": 42,
+  "minimum_per_class": 500,
+  "original_training_images": 2756,
+  "planned_generated_images": 4435,
+  "planned_total_images": 7191,
+  "classes": 14,
+  "split_manifest_sha256": "9c700f7707969848bf09b068050ce2d56290eb077b6a91f9775427bc0ebd1e83",
+  "completed": true,
+  "notes": [
+    "Output includes unchanged original training images plus accepted offline variants.",
+    "No original is removed or downsampled; target is max(original_count, minimum).",
+    "No validation or test image is used as an augmentation parent.",
+    "Transform parameters follow the previous code except explicitly configured noise and modern Affine implementation.",
+    "No-op outputs and exact decoded-pixel matches to any original split or earlier generated output are retried.",
+    "Augmented variants are not independent observations; keep raw train for the no-offline baseline.",
+    "Inspect generated examples to assess preservation of disease symptoms."
+  ],
+  "copied_originals": 2756,
+  "generated_variants": 4435,
+  "final_total": 7191,
+  "retry_counts": {
+    "no_op": 255,
+    "decoded_duplicate": 32
+  },
+  "applied_transform_counts": {
+    "RandomBrightnessContrast": 2348,
+    "Affine": 2384,
+    "HueSaturationValue": 971,
+    "CLAHE": 977,
+    "HorizontalFlip": 2366,
+    "GaussNoise": 743,
+    "GaussianBlur": 243,
+    "VerticalFlip": 456
+  },
+  "source_verification": "all_frozen_split_files_match_manifest",
+  "output_verification": "original copies and generated JPEG writes verified; no accepted exact decoded matches to original splits or generated variants"
+}

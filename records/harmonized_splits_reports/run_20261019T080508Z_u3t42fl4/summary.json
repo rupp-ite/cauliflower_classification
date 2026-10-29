@@ -1,0 +1,30 @@
+{
+  "mode": "apply",
+  "dataset": "D:\\Projects\\CauliflowerV2\\Dataset\\harmonized_dataset",
+  "output": "D:\\Projects\\CauliflowerV2\\Dataset\\harmonized_splits",
+  "cleaning_report": "D:\\Projects\\CauliflowerV2\\Dataset\\harmonized_dataset_reports\\run_20261019T053300Z_wnpcpkvs",
+  "report_directory": "D:\\Projects\\CauliflowerV2\\Dataset\\harmonized_splits_reports\\run_20261019T080508Z_u3t42fl4",
+  "seed": 42,
+  "total_images": 3914,
+  "classes": 14,
+  "split_totals": {
+    "train": 2756,
+    "val": 579,
+    "test": 579
+  },
+  "percentages": {
+    "train": 70.414,
+    "val": 14.793,
+    "test": 14.793
+  },
+  "overlap_checks": "passed: cluster IDs, audited pixel hashes, file hashes and cleaned paths",
+  "byte_verification": "all_source_and_destination_files_verified",
+  "notes": [
+    "No augmentation or source-held-out evaluation is performed.",
+    "Keep these assignments fixed across model comparisons and training seeds.",
+    "The script cannot infer plant/session identities. Known related captures must be grouped before using this protocol.",
+    "Hash checks and prior review do not prove absence of every possible related capture or near-duplicate."
+  ],
+  "copied_and_verified": 3914,
+  "completed": true
+}

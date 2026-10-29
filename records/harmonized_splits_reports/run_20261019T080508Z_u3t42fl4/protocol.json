@@ -1,0 +1,12 @@
+{
+  "seed": 42,
+  "target_percentages": {
+    "train": 70,
+    "val": 15,
+    "test": 15
+  },
+  "allocation": "Per class: val = test = floor(15*n/100); train = n - val - test.",
+  "ordering": "SHA-256 of seed, newline, cleaned relative path; ascending digest, then path.",
+  "split_manifest_sha256": "9c700f7707969848bf09b068050ce2d56290eb077b6a91f9775427bc0ebd1e83",
+  "cleaning_manifest_sha256": "f802761bf41d6fd5fe23e35e6f036b687aac6ac4806ed293fcd79bc02429f746"
+}

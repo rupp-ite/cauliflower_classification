@@ -1,0 +1,5 @@
+﻿class_name,precision,recall,f1-score,support
+Alternaria Leaf Spot,1.0,1.0,1.0,68.0
+Bacterial Soft Rot,1.0,1.0,1.0,42.0
+Black Rot,1.0,0.9473684210526315,0.972972972972973,19.0
+Downy Mildew,0.9859154929577465,1.0,0.9929078014184397,70.0

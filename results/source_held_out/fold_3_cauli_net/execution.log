@@ -1,0 +1,1312 @@
+[2026-10-24T17:20:10.652761+00:00] Command: ['11_train_source_held_out.py', '--device', 'cuda:0', '--run']
+{
+  "runner_version": "source_held_out_1",
+  "fold": "fold_3_cauli_net",
+  "held_out_source": "3_Cauli-Net",
+  "experiment": "source_held_out_224_offline_online",
+  "models": [
+    "resnet50",
+    "mobilenet_v3_large",
+    "vit_base_patch16_224",
+    "twins_svt_base"
+  ],
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "class_names": [
+    "Alternaria Leaf Spot",
+    "Bacterial Soft Rot",
+    "Healthy"
+  ],
+  "image_size": [
+    224,
+    224
+  ],
+  "counts": {
+    "train": 1750,
+    "val": 243,
+    "test": 342
+  },
+  "raw_training_images": 1386,
+  "train_folder": "augmented_train",
+  "offline_augmentation": true,
+  "online_augmentation": true,
+  "precision": "FP16 AMP",
+  "hyperparameters": {
+    "epochs": 100,
+    "batch_size": 32,
+    "learning_rate": 0.0001,
+    "weight_decay": 0.0001,
+    "label_smoothing": 0.1,
+    "early_stopping_patience": 10,
+    "scheduler": "ReduceLROnPlateau on validation loss",
+    "lr_patience": 3,
+    "lr_factor": 0.3,
+    "optimizer": "AdamW",
+    "normalization": "checkpoint",
+    "workers": 4,
+    "strict_deterministic": true,
+    "amp": true
+  },
+  "pretrained": true,
+  "completed": false,
+  "output": "D:\\Projects\\CauliflowerV2\\Results\\source_held_out_224_offline_online\\fold_3_cauli_net",
+  "split_root": "D:\\Projects\\CauliflowerV2\\Dataset\\source_held_out\\fold_3_cauli_net",
+  "split_report": "D:\\Projects\\CauliflowerV2\\Dataset\\source_held_out\\fold_3_cauli_net\\reports",
+  "split_manifest_sha256": "56876f4df2fd4f714a99087bbc542885512109898e7c7ab76217b289d84cc896",
+  "augmentation_report": "D:\\Projects\\CauliflowerV2\\Dataset\\source_held_out\\fold_3_cauli_net\\offline_augmentation_reports\\run_20261024T134029Z_fbdst32o",
+  "augmentation_manifest_sha256": "ca3fb13a3afae0aa31f03967af3bab0e8cb5858b2227f48f4e95bb4000233ef6",
+  "augmentation_policy_sha256": "0bf15bc40eae2b7496360065d2303a0085db826fbdb68ae78be4eb4dfc206a6b",
+  "script_sha256": "aeca695d7b2c7170c64264211278656ed9abacb8556e8c26b1b217c34200f8b1",
+  "training_device": "cuda:0",
+  "automatic_test": true,
+  "checkpoint_rule": "highest validation accuracy; earliest ties",
+  "memory_cleanup": "gc.collect and synchronized unused CUDA cache release between model-seed jobs",
+  "benchmark_protocol": {
+    "batch_size": 32,
+    "warmup": 20,
+    "repeats": 100,
+    "precision": "FP32",
+    "scope": "model forward only; synthetic device input"
+  },
+  "interpretation": "Shared-class source-held-out task; class sets and supports differ between folds. Do not tune on held-out test results."
+}
+CUDA cleanup before training resnet50 seed=42: allocated=64.0 MiB, reserved=64.0 MiB, device free=15006.0 MiB
+  resnet50 seed=42 epoch=1/100 batch=1/55 loss=1.3563 acc=0.2188 elapsed=8.3s ETA=447.5s
+  resnet50 seed=42 epoch=1/100 batch=10/55 loss=0.8797 acc=0.6219 elapsed=12.4s ETA=55.9s
+  resnet50 seed=42 epoch=1/100 batch=20/55 loss=0.6967 acc=0.7578 elapsed=18.0s ETA=31.5s
+  resnet50 seed=42 epoch=1/100 batch=30/55 loss=0.5993 acc=0.8271 elapsed=23.3s ETA=19.5s
+  resnet50 seed=42 epoch=1/100 batch=40/55 loss=0.5484 acc=0.8633 elapsed=29.6s ETA=11.1s
+  resnet50 seed=42 epoch=1/100 batch=50/55 loss=0.5153 acc=0.8862 elapsed=34.8s ETA=3.5s
+  resnet50 seed=42 epoch=1/100 batch=55/55 loss=0.5026 acc=0.8949 elapsed=36.7s ETA=0.0s
+resnet50 seed=42 epoch=1/100: train_loss=0.5026 train_acc=0.8949 val_loss=0.3254 val_acc=0.9959 macroF1=0.9938 lr=0.0001 best_epoch=1 stale=0/10 seconds=49.3
+  resnet50 seed=42 epoch=2/100 batch=1/55 loss=0.3548 acc=1.0000 elapsed=7.7s ETA=414.6s
+  resnet50 seed=42 epoch=2/100 batch=10/55 loss=0.3578 acc=0.9938 elapsed=11.5s ETA=51.7s
+  resnet50 seed=42 epoch=2/100 batch=20/55 loss=0.3543 acc=0.9938 elapsed=16.4s ETA=28.7s
+  resnet50 seed=42 epoch=2/100 batch=30/55 loss=0.3504 acc=0.9948 elapsed=19.4s ETA=16.2s
+  resnet50 seed=42 epoch=2/100 batch=40/55 loss=0.3552 acc=0.9922 elapsed=22.7s ETA=8.5s
+  resnet50 seed=42 epoch=2/100 batch=50/55 loss=0.3552 acc=0.9931 elapsed=26.8s ETA=2.7s
+  resnet50 seed=42 epoch=2/100 batch=55/55 loss=0.3535 acc=0.9937 elapsed=28.0s ETA=0.0s
+resnet50 seed=42 epoch=2/100: train_loss=0.3535 train_acc=0.9937 val_loss=0.3194 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=2 stale=0/10 seconds=39.0
+  resnet50 seed=42 epoch=3/100 batch=1/55 loss=0.3294 acc=1.0000 elapsed=8.1s ETA=438.1s
+  resnet50 seed=42 epoch=3/100 batch=10/55 loss=0.3358 acc=0.9969 elapsed=11.6s ETA=52.1s
+  resnet50 seed=42 epoch=3/100 batch=20/55 loss=0.3398 acc=0.9969 elapsed=15.6s ETA=27.3s
+  resnet50 seed=42 epoch=3/100 batch=30/55 loss=0.3404 acc=0.9958 elapsed=18.5s ETA=15.4s
+  resnet50 seed=42 epoch=3/100 batch=40/55 loss=0.3388 acc=0.9969 elapsed=22.3s ETA=8.4s
+  resnet50 seed=42 epoch=3/100 batch=50/55 loss=0.3401 acc=0.9969 elapsed=26.3s ETA=2.6s
+  resnet50 seed=42 epoch=3/100 batch=55/55 loss=0.3395 acc=0.9966 elapsed=27.7s ETA=0.0s
+resnet50 seed=42 epoch=3/100: train_loss=0.3395 train_acc=0.9966 val_loss=0.3100 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=2 stale=1/10 seconds=38.5
+  resnet50 seed=42 epoch=4/100 batch=1/55 loss=0.3370 acc=1.0000 elapsed=8.2s ETA=442.3s
+  resnet50 seed=42 epoch=4/100 batch=10/55 loss=0.3372 acc=1.0000 elapsed=10.9s ETA=48.9s
+  resnet50 seed=42 epoch=4/100 batch=20/55 loss=0.3431 acc=0.9953 elapsed=14.4s ETA=25.2s
+  resnet50 seed=42 epoch=4/100 batch=30/55 loss=0.3416 acc=0.9958 elapsed=18.6s ETA=15.5s
+  resnet50 seed=42 epoch=4/100 batch=40/55 loss=0.3400 acc=0.9961 elapsed=21.5s ETA=8.1s
+  resnet50 seed=42 epoch=4/100 batch=50/55 loss=0.3373 acc=0.9969 elapsed=25.0s ETA=2.5s
+  resnet50 seed=42 epoch=4/100 batch=55/55 loss=0.3385 acc=0.9966 elapsed=26.5s ETA=0.0s
+resnet50 seed=42 epoch=4/100: train_loss=0.3385 train_acc=0.9966 val_loss=0.3073 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=2 stale=2/10 seconds=37.5
+  resnet50 seed=42 epoch=5/100 batch=1/55 loss=0.3168 acc=1.0000 elapsed=7.9s ETA=424.4s
+  resnet50 seed=42 epoch=5/100 batch=10/55 loss=0.3262 acc=1.0000 elapsed=10.8s ETA=48.8s
+  resnet50 seed=42 epoch=5/100 batch=20/55 loss=0.3324 acc=0.9984 elapsed=15.1s ETA=26.4s
+  resnet50 seed=42 epoch=5/100 batch=30/55 loss=0.3315 acc=0.9990 elapsed=18.2s ETA=15.2s
+  resnet50 seed=42 epoch=5/100 batch=40/55 loss=0.3322 acc=0.9984 elapsed=22.0s ETA=8.2s
+  resnet50 seed=42 epoch=5/100 batch=50/55 loss=0.3311 acc=0.9981 elapsed=25.4s ETA=2.5s
+  resnet50 seed=42 epoch=5/100 batch=55/55 loss=0.3304 acc=0.9983 elapsed=27.0s ETA=0.0s
+resnet50 seed=42 epoch=5/100: train_loss=0.3304 train_acc=0.9983 val_loss=0.3046 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=2 stale=3/10 seconds=37.8
+  resnet50 seed=42 epoch=6/100 batch=1/55 loss=0.3266 acc=1.0000 elapsed=7.6s ETA=412.8s
+  resnet50 seed=42 epoch=6/100 batch=10/55 loss=0.3328 acc=1.0000 elapsed=11.2s ETA=50.2s
+  resnet50 seed=42 epoch=6/100 batch=20/55 loss=0.3318 acc=1.0000 elapsed=15.9s ETA=27.8s
+  resnet50 seed=42 epoch=6/100 batch=30/55 loss=0.3316 acc=1.0000 elapsed=18.7s ETA=15.6s
+  resnet50 seed=42 epoch=6/100 batch=40/55 loss=0.3335 acc=0.9992 elapsed=22.6s ETA=8.5s
+  resnet50 seed=42 epoch=6/100 batch=50/55 loss=0.3312 acc=0.9994 elapsed=25.7s ETA=2.6s
+  resnet50 seed=42 epoch=6/100 batch=55/55 loss=0.3311 acc=0.9994 elapsed=27.2s ETA=0.0s
+resnet50 seed=42 epoch=6/100: train_loss=0.3311 train_acc=0.9994 val_loss=0.3075 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=2 stale=4/10 seconds=38.1
+  resnet50 seed=42 epoch=7/100 batch=1/55 loss=0.3395 acc=1.0000 elapsed=8.0s ETA=433.7s
+  resnet50 seed=42 epoch=7/100 batch=10/55 loss=0.3218 acc=1.0000 elapsed=11.5s ETA=51.6s
+  resnet50 seed=42 epoch=7/100 batch=20/55 loss=0.3227 acc=1.0000 elapsed=15.8s ETA=27.7s
+  resnet50 seed=42 epoch=7/100 batch=30/55 loss=0.3235 acc=1.0000 elapsed=19.0s ETA=15.8s
+  resnet50 seed=42 epoch=7/100 batch=40/55 loss=0.3247 acc=0.9984 elapsed=23.2s ETA=8.7s
+  resnet50 seed=42 epoch=7/100 batch=50/55 loss=0.3251 acc=0.9988 elapsed=26.8s ETA=2.7s
+  resnet50 seed=42 epoch=7/100 batch=55/55 loss=0.3248 acc=0.9989 elapsed=28.0s ETA=0.0s
+resnet50 seed=42 epoch=7/100: train_loss=0.3248 train_acc=0.9989 val_loss=0.3029 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=2 stale=5/10 seconds=38.9
+  resnet50 seed=42 epoch=8/100 batch=1/55 loss=0.3253 acc=1.0000 elapsed=8.1s ETA=435.5s
+  resnet50 seed=42 epoch=8/100 batch=10/55 loss=0.3212 acc=1.0000 elapsed=11.4s ETA=51.2s
+  resnet50 seed=42 epoch=8/100 batch=20/55 loss=0.3196 acc=1.0000 elapsed=14.9s ETA=26.1s
+  resnet50 seed=42 epoch=8/100 batch=30/55 loss=0.3198 acc=1.0000 elapsed=19.2s ETA=16.0s
+  resnet50 seed=42 epoch=8/100 batch=40/55 loss=0.3214 acc=1.0000 elapsed=22.5s ETA=8.5s
+  resnet50 seed=42 epoch=8/100 batch=50/55 loss=0.3220 acc=1.0000 elapsed=26.3s ETA=2.6s
+  resnet50 seed=42 epoch=8/100 batch=55/55 loss=0.3225 acc=1.0000 elapsed=27.8s ETA=0.0s
+resnet50 seed=42 epoch=8/100: train_loss=0.3225 train_acc=1.0000 val_loss=0.3051 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=2 stale=6/10 seconds=38.5
+  resnet50 seed=42 epoch=9/100 batch=1/55 loss=0.3253 acc=1.0000 elapsed=7.6s ETA=409.5s
+  resnet50 seed=42 epoch=9/100 batch=10/55 loss=0.3234 acc=0.9969 elapsed=10.8s ETA=48.7s
+  resnet50 seed=42 epoch=9/100 batch=20/55 loss=0.3240 acc=0.9984 elapsed=14.5s ETA=25.4s
+  resnet50 seed=42 epoch=9/100 batch=30/55 loss=0.3225 acc=0.9990 elapsed=18.2s ETA=15.2s
+  resnet50 seed=42 epoch=9/100 batch=40/55 loss=0.3244 acc=0.9992 elapsed=21.4s ETA=8.0s
+  resnet50 seed=42 epoch=9/100 batch=50/55 loss=0.3231 acc=0.9994 elapsed=25.3s ETA=2.5s
+  resnet50 seed=42 epoch=9/100 batch=55/55 loss=0.3225 acc=0.9994 elapsed=26.6s ETA=0.0s
+resnet50 seed=42 epoch=9/100: train_loss=0.3225 train_acc=0.9994 val_loss=0.3012 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=2 stale=7/10 seconds=37.3
+  resnet50 seed=42 epoch=10/100 batch=1/55 loss=0.3317 acc=1.0000 elapsed=7.8s ETA=420.8s
+  resnet50 seed=42 epoch=10/100 batch=10/55 loss=0.3225 acc=1.0000 elapsed=11.2s ETA=50.3s
+  resnet50 seed=42 epoch=10/100 batch=20/55 loss=0.3211 acc=1.0000 elapsed=15.0s ETA=26.2s
+  resnet50 seed=42 epoch=10/100 batch=30/55 loss=0.3209 acc=1.0000 elapsed=18.3s ETA=15.3s
+  resnet50 seed=42 epoch=10/100 batch=40/55 loss=0.3193 acc=1.0000 elapsed=22.5s ETA=8.5s
+  resnet50 seed=42 epoch=10/100 batch=50/55 loss=0.3200 acc=1.0000 elapsed=25.5s ETA=2.5s
+  resnet50 seed=42 epoch=10/100 batch=55/55 loss=0.3201 acc=1.0000 elapsed=27.0s ETA=0.0s
+resnet50 seed=42 epoch=10/100: train_loss=0.3201 train_acc=1.0000 val_loss=0.3027 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=2 stale=8/10 seconds=37.8
+  resnet50 seed=42 epoch=11/100 batch=1/55 loss=0.3140 acc=1.0000 elapsed=7.8s ETA=420.9s
+  resnet50 seed=42 epoch=11/100 batch=10/55 loss=0.3158 acc=1.0000 elapsed=10.5s ETA=47.5s
+  resnet50 seed=42 epoch=11/100 batch=20/55 loss=0.3189 acc=1.0000 elapsed=15.3s ETA=26.7s
+  resnet50 seed=42 epoch=11/100 batch=30/55 loss=0.3172 acc=1.0000 elapsed=18.6s ETA=15.5s
+  resnet50 seed=42 epoch=11/100 batch=40/55 loss=0.3170 acc=1.0000 elapsed=23.8s ETA=8.9s
+  resnet50 seed=42 epoch=11/100 batch=50/55 loss=0.3171 acc=1.0000 elapsed=27.4s ETA=2.7s
+  resnet50 seed=42 epoch=11/100 batch=55/55 loss=0.3172 acc=1.0000 elapsed=28.8s ETA=0.0s
+resnet50 seed=42 epoch=11/100: train_loss=0.3172 train_acc=1.0000 val_loss=0.3014 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=2 stale=9/10 seconds=39.7
+  resnet50 seed=42 epoch=12/100 batch=1/55 loss=0.3197 acc=1.0000 elapsed=7.7s ETA=416.2s
+  resnet50 seed=42 epoch=12/100 batch=10/55 loss=0.3215 acc=1.0000 elapsed=10.7s ETA=48.2s
+  resnet50 seed=42 epoch=12/100 batch=20/55 loss=0.3206 acc=1.0000 elapsed=14.4s ETA=25.3s
+  resnet50 seed=42 epoch=12/100 batch=30/55 loss=0.3179 acc=1.0000 elapsed=18.6s ETA=15.5s
+  resnet50 seed=42 epoch=12/100 batch=40/55 loss=0.3173 acc=1.0000 elapsed=21.8s ETA=8.2s
+  resnet50 seed=42 epoch=12/100 batch=50/55 loss=0.3155 acc=1.0000 elapsed=25.8s ETA=2.6s
+  resnet50 seed=42 epoch=12/100 batch=55/55 loss=0.3151 acc=1.0000 elapsed=27.1s ETA=0.0s
+resnet50 seed=42 epoch=12/100: train_loss=0.3151 train_acc=1.0000 val_loss=0.2980 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=2 stale=10/10 seconds=38.2
+CUDA cleanup after training resnet50 seed=42: allocated=64.0 MiB, reserved=64.0 MiB, device free=15006.0 MiB
+CUDA cleanup before training resnet50 seed=43: allocated=64.0 MiB, reserved=64.0 MiB, device free=15006.0 MiB
+  resnet50 seed=43 epoch=1/100 batch=1/55 loss=1.2713 acc=0.3750 elapsed=7.8s ETA=421.5s
+  resnet50 seed=43 epoch=1/100 batch=10/55 loss=0.8382 acc=0.6625 elapsed=11.0s ETA=49.7s
+  resnet50 seed=43 epoch=1/100 batch=20/55 loss=0.6629 acc=0.7859 elapsed=14.8s ETA=25.9s
+  resnet50 seed=43 epoch=1/100 batch=30/55 loss=0.5846 acc=0.8438 elapsed=18.3s ETA=15.3s
+  resnet50 seed=43 epoch=1/100 batch=40/55 loss=0.5344 acc=0.8773 elapsed=22.5s ETA=8.4s
+  resnet50 seed=43 epoch=1/100 batch=50/55 loss=0.5039 acc=0.8975 elapsed=26.1s ETA=2.6s
+  resnet50 seed=43 epoch=1/100 batch=55/55 loss=0.4951 acc=0.9023 elapsed=27.5s ETA=0.0s
+resnet50 seed=43 epoch=1/100: train_loss=0.4951 train_acc=0.9023 val_loss=0.3271 val_acc=0.9959 macroF1=0.9938 lr=0.0001 best_epoch=1 stale=0/10 seconds=38.6
+  resnet50 seed=43 epoch=2/100 batch=1/55 loss=0.3747 acc=1.0000 elapsed=7.9s ETA=427.0s
+  resnet50 seed=43 epoch=2/100 batch=10/55 loss=0.3521 acc=0.9938 elapsed=11.7s ETA=52.7s
+  resnet50 seed=43 epoch=2/100 batch=20/55 loss=0.3577 acc=0.9922 elapsed=14.8s ETA=25.9s
+  resnet50 seed=43 epoch=2/100 batch=30/55 loss=0.3510 acc=0.9948 elapsed=18.4s ETA=15.3s
+  resnet50 seed=43 epoch=2/100 batch=40/55 loss=0.3495 acc=0.9945 elapsed=22.4s ETA=8.4s
+  resnet50 seed=43 epoch=2/100 batch=50/55 loss=0.3481 acc=0.9950 elapsed=25.8s ETA=2.6s
+  resnet50 seed=43 epoch=2/100 batch=55/55 loss=0.3481 acc=0.9949 elapsed=27.1s ETA=0.0s
+resnet50 seed=43 epoch=2/100: train_loss=0.3481 train_acc=0.9949 val_loss=0.3137 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=2 stale=0/10 seconds=38.1
+  resnet50 seed=43 epoch=3/100 batch=1/55 loss=0.3502 acc=1.0000 elapsed=7.8s ETA=419.0s
+  resnet50 seed=43 epoch=3/100 batch=10/55 loss=0.3451 acc=1.0000 elapsed=10.6s ETA=47.8s
+  resnet50 seed=43 epoch=3/100 batch=20/55 loss=0.3447 acc=1.0000 elapsed=14.6s ETA=25.6s
+  resnet50 seed=43 epoch=3/100 batch=30/55 loss=0.3439 acc=0.9990 elapsed=18.4s ETA=15.3s
+  resnet50 seed=43 epoch=3/100 batch=40/55 loss=0.3430 acc=0.9992 elapsed=22.2s ETA=8.3s
+  resnet50 seed=43 epoch=3/100 batch=50/55 loss=0.3411 acc=0.9988 elapsed=25.6s ETA=2.6s
+  resnet50 seed=43 epoch=3/100 batch=55/55 loss=0.3409 acc=0.9989 elapsed=26.7s ETA=0.0s
+resnet50 seed=43 epoch=3/100: train_loss=0.3409 train_acc=0.9989 val_loss=0.3096 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=2 stale=1/10 seconds=37.6
+  resnet50 seed=43 epoch=4/100 batch=1/55 loss=0.3217 acc=1.0000 elapsed=8.1s ETA=435.8s
+  resnet50 seed=43 epoch=4/100 batch=10/55 loss=0.3395 acc=0.9969 elapsed=10.6s ETA=47.7s
+  resnet50 seed=43 epoch=4/100 batch=20/55 loss=0.3375 acc=0.9984 elapsed=14.2s ETA=24.8s
+  resnet50 seed=43 epoch=4/100 batch=30/55 loss=0.3343 acc=0.9990 elapsed=17.9s ETA=14.9s
+  resnet50 seed=43 epoch=4/100 batch=40/55 loss=0.3331 acc=0.9992 elapsed=21.6s ETA=8.1s
+  resnet50 seed=43 epoch=4/100 batch=50/55 loss=0.3331 acc=0.9994 elapsed=25.5s ETA=2.6s
+  resnet50 seed=43 epoch=4/100 batch=55/55 loss=0.3325 acc=0.9994 elapsed=27.0s ETA=0.0s
+resnet50 seed=43 epoch=4/100: train_loss=0.3325 train_acc=0.9994 val_loss=0.3071 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=2 stale=2/10 seconds=37.9
+  resnet50 seed=43 epoch=5/100 batch=1/55 loss=0.3203 acc=1.0000 elapsed=7.7s ETA=417.9s
+  resnet50 seed=43 epoch=5/100 batch=10/55 loss=0.3385 acc=0.9938 elapsed=11.5s ETA=51.5s
+  resnet50 seed=43 epoch=5/100 batch=20/55 loss=0.3312 acc=0.9969 elapsed=14.9s ETA=26.0s
+  resnet50 seed=43 epoch=5/100 batch=30/55 loss=0.3392 acc=0.9948 elapsed=18.8s ETA=15.7s
+  resnet50 seed=43 epoch=5/100 batch=40/55 loss=0.3354 acc=0.9961 elapsed=22.0s ETA=8.2s
+  resnet50 seed=43 epoch=5/100 batch=50/55 loss=0.3343 acc=0.9962 elapsed=26.4s ETA=2.6s
+  resnet50 seed=43 epoch=5/100 batch=55/55 loss=0.3332 acc=0.9966 elapsed=27.5s ETA=0.0s
+resnet50 seed=43 epoch=5/100: train_loss=0.3332 train_acc=0.9966 val_loss=0.3042 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=2 stale=3/10 seconds=38.4
+  resnet50 seed=43 epoch=6/100 batch=1/55 loss=0.3178 acc=1.0000 elapsed=7.8s ETA=419.6s
+  resnet50 seed=43 epoch=6/100 batch=10/55 loss=0.3241 acc=1.0000 elapsed=10.9s ETA=49.0s
+  resnet50 seed=43 epoch=6/100 batch=20/55 loss=0.3315 acc=0.9984 elapsed=14.7s ETA=25.7s
+  resnet50 seed=43 epoch=6/100 batch=30/55 loss=0.3293 acc=0.9990 elapsed=18.7s ETA=15.6s
+  resnet50 seed=43 epoch=6/100 batch=40/55 loss=0.3310 acc=0.9977 elapsed=21.6s ETA=8.1s
+  resnet50 seed=43 epoch=6/100 batch=50/55 loss=0.3313 acc=0.9975 elapsed=26.1s ETA=2.6s
+  resnet50 seed=43 epoch=6/100 batch=55/55 loss=0.3315 acc=0.9971 elapsed=27.6s ETA=0.0s
+resnet50 seed=43 epoch=6/100: train_loss=0.3315 train_acc=0.9971 val_loss=0.3043 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=2 stale=4/10 seconds=38.3
+  resnet50 seed=43 epoch=7/100 batch=1/55 loss=0.3219 acc=1.0000 elapsed=8.1s ETA=436.2s
+  resnet50 seed=43 epoch=7/100 batch=10/55 loss=0.3340 acc=1.0000 elapsed=11.1s ETA=50.0s
+  resnet50 seed=43 epoch=7/100 batch=20/55 loss=0.3264 acc=1.0000 elapsed=14.3s ETA=25.1s
+  resnet50 seed=43 epoch=7/100 batch=30/55 loss=0.3250 acc=1.0000 elapsed=18.7s ETA=15.6s
+  resnet50 seed=43 epoch=7/100 batch=40/55 loss=0.3260 acc=1.0000 elapsed=22.7s ETA=8.5s
+  resnet50 seed=43 epoch=7/100 batch=50/55 loss=0.3250 acc=1.0000 elapsed=25.5s ETA=2.5s
+  resnet50 seed=43 epoch=7/100 batch=55/55 loss=0.3254 acc=1.0000 elapsed=27.0s ETA=0.0s
+resnet50 seed=43 epoch=7/100: train_loss=0.3254 train_acc=1.0000 val_loss=0.3029 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=2 stale=5/10 seconds=37.8
+  resnet50 seed=43 epoch=8/100 batch=1/55 loss=0.3154 acc=1.0000 elapsed=8.1s ETA=439.3s
+  resnet50 seed=43 epoch=8/100 batch=10/55 loss=0.3250 acc=1.0000 elapsed=11.8s ETA=53.3s
+  resnet50 seed=43 epoch=8/100 batch=20/55 loss=0.3264 acc=1.0000 elapsed=15.1s ETA=26.5s
+  resnet50 seed=43 epoch=8/100 batch=30/55 loss=0.3266 acc=1.0000 elapsed=19.2s ETA=16.0s
+  resnet50 seed=43 epoch=8/100 batch=40/55 loss=0.3238 acc=1.0000 elapsed=21.7s ETA=8.1s
+  resnet50 seed=43 epoch=8/100 batch=50/55 loss=0.3229 acc=0.9994 elapsed=25.3s ETA=2.5s
+  resnet50 seed=43 epoch=8/100 batch=55/55 loss=0.3229 acc=0.9994 elapsed=26.5s ETA=0.0s
+resnet50 seed=43 epoch=8/100: train_loss=0.3229 train_acc=0.9994 val_loss=0.2998 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=2 stale=6/10 seconds=37.2
+  resnet50 seed=43 epoch=9/100 batch=1/55 loss=0.3123 acc=1.0000 elapsed=7.9s ETA=424.8s
+  resnet50 seed=43 epoch=9/100 batch=10/55 loss=0.3183 acc=1.0000 elapsed=10.9s ETA=49.2s
+  resnet50 seed=43 epoch=9/100 batch=20/55 loss=0.3208 acc=1.0000 elapsed=14.7s ETA=25.8s
+  resnet50 seed=43 epoch=9/100 batch=30/55 loss=0.3218 acc=0.9990 elapsed=18.4s ETA=15.3s
+  resnet50 seed=43 epoch=9/100 batch=40/55 loss=0.3214 acc=0.9984 elapsed=21.9s ETA=8.2s
+  resnet50 seed=43 epoch=9/100 batch=50/55 loss=0.3211 acc=0.9988 elapsed=25.5s ETA=2.5s
+  resnet50 seed=43 epoch=9/100 batch=55/55 loss=0.3213 acc=0.9983 elapsed=26.8s ETA=0.0s
+resnet50 seed=43 epoch=9/100: train_loss=0.3213 train_acc=0.9983 val_loss=0.3010 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=2 stale=7/10 seconds=37.6
+  resnet50 seed=43 epoch=10/100 batch=1/55 loss=0.3119 acc=1.0000 elapsed=7.6s ETA=411.4s
+  resnet50 seed=43 epoch=10/100 batch=10/55 loss=0.3173 acc=1.0000 elapsed=10.6s ETA=47.6s
+  resnet50 seed=43 epoch=10/100 batch=20/55 loss=0.3209 acc=1.0000 elapsed=14.7s ETA=25.7s
+  resnet50 seed=43 epoch=10/100 batch=30/55 loss=0.3203 acc=1.0000 elapsed=18.0s ETA=15.0s
+  resnet50 seed=43 epoch=10/100 batch=40/55 loss=0.3198 acc=1.0000 elapsed=22.2s ETA=8.3s
+  resnet50 seed=43 epoch=10/100 batch=50/55 loss=0.3192 acc=1.0000 elapsed=25.6s ETA=2.6s
+  resnet50 seed=43 epoch=10/100 batch=55/55 loss=0.3190 acc=1.0000 elapsed=27.1s ETA=0.0s
+resnet50 seed=43 epoch=10/100: train_loss=0.3190 train_acc=1.0000 val_loss=0.2980 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=2 stale=8/10 seconds=37.9
+  resnet50 seed=43 epoch=11/100 batch=1/55 loss=0.3174 acc=1.0000 elapsed=7.6s ETA=410.7s
+  resnet50 seed=43 epoch=11/100 batch=10/55 loss=0.3197 acc=1.0000 elapsed=10.5s ETA=47.2s
+  resnet50 seed=43 epoch=11/100 batch=20/55 loss=0.3190 acc=1.0000 elapsed=14.2s ETA=24.9s
+  resnet50 seed=43 epoch=11/100 batch=30/55 loss=0.3181 acc=1.0000 elapsed=19.5s ETA=16.2s
+  resnet50 seed=43 epoch=11/100 batch=40/55 loss=0.3168 acc=1.0000 elapsed=22.3s ETA=8.4s
+  resnet50 seed=43 epoch=11/100 batch=50/55 loss=0.3180 acc=1.0000 elapsed=26.0s ETA=2.6s
+  resnet50 seed=43 epoch=11/100 batch=55/55 loss=0.3179 acc=1.0000 elapsed=27.1s ETA=0.0s
+resnet50 seed=43 epoch=11/100: train_loss=0.3179 train_acc=1.0000 val_loss=0.3001 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=2 stale=9/10 seconds=37.9
+  resnet50 seed=43 epoch=12/100 batch=1/55 loss=0.3102 acc=1.0000 elapsed=7.5s ETA=403.8s
+  resnet50 seed=43 epoch=12/100 batch=10/55 loss=0.3145 acc=1.0000 elapsed=11.1s ETA=49.8s
+  resnet50 seed=43 epoch=12/100 batch=20/55 loss=0.3152 acc=1.0000 elapsed=16.2s ETA=28.4s
+  resnet50 seed=43 epoch=12/100 batch=30/55 loss=0.3154 acc=1.0000 elapsed=19.0s ETA=15.9s
+  resnet50 seed=43 epoch=12/100 batch=40/55 loss=0.3161 acc=1.0000 elapsed=23.4s ETA=8.8s
+  resnet50 seed=43 epoch=12/100 batch=50/55 loss=0.3162 acc=1.0000 elapsed=25.8s ETA=2.6s
+  resnet50 seed=43 epoch=12/100 batch=55/55 loss=0.3168 acc=1.0000 elapsed=27.2s ETA=0.0s
+resnet50 seed=43 epoch=12/100: train_loss=0.3168 train_acc=1.0000 val_loss=0.2997 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=2 stale=10/10 seconds=38.0
+CUDA cleanup after training resnet50 seed=43: allocated=64.0 MiB, reserved=64.0 MiB, device free=15006.0 MiB
+CUDA cleanup before training resnet50 seed=44: allocated=64.0 MiB, reserved=64.0 MiB, device free=15006.0 MiB
+  resnet50 seed=44 epoch=1/100 batch=1/55 loss=1.2105 acc=0.3438 elapsed=7.4s ETA=401.0s
+  resnet50 seed=44 epoch=1/100 batch=10/55 loss=0.8641 acc=0.6438 elapsed=10.8s ETA=48.5s
+  resnet50 seed=44 epoch=1/100 batch=20/55 loss=0.6786 acc=0.7703 elapsed=15.2s ETA=26.6s
+  resnet50 seed=44 epoch=1/100 batch=30/55 loss=0.5873 acc=0.8354 elapsed=18.7s ETA=15.6s
+  resnet50 seed=44 epoch=1/100 batch=40/55 loss=0.5362 acc=0.8719 elapsed=22.6s ETA=8.5s
+  resnet50 seed=44 epoch=1/100 batch=50/55 loss=0.5064 acc=0.8931 elapsed=25.6s ETA=2.6s
+  resnet50 seed=44 epoch=1/100 batch=55/55 loss=0.4934 acc=0.9017 elapsed=26.8s ETA=0.0s
+resnet50 seed=44 epoch=1/100: train_loss=0.4934 train_acc=0.9017 val_loss=0.3300 val_acc=0.9918 macroF1=0.9875 lr=0.0001 best_epoch=1 stale=0/10 seconds=37.7
+  resnet50 seed=44 epoch=2/100 batch=1/55 loss=0.3779 acc=1.0000 elapsed=7.9s ETA=429.2s
+  resnet50 seed=44 epoch=2/100 batch=10/55 loss=0.3581 acc=0.9938 elapsed=10.8s ETA=48.6s
+  resnet50 seed=44 epoch=2/100 batch=20/55 loss=0.3601 acc=0.9906 elapsed=13.7s ETA=24.0s
+  resnet50 seed=44 epoch=2/100 batch=30/55 loss=0.3561 acc=0.9938 elapsed=18.6s ETA=15.5s
+  resnet50 seed=44 epoch=2/100 batch=40/55 loss=0.3542 acc=0.9938 elapsed=21.8s ETA=8.2s
+  resnet50 seed=44 epoch=2/100 batch=50/55 loss=0.3527 acc=0.9938 elapsed=25.8s ETA=2.6s
+  resnet50 seed=44 epoch=2/100 batch=55/55 loss=0.3514 acc=0.9943 elapsed=26.8s ETA=0.0s
+resnet50 seed=44 epoch=2/100: train_loss=0.3514 train_acc=0.9943 val_loss=0.3172 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=2 stale=0/10 seconds=37.7
+  resnet50 seed=44 epoch=3/100 batch=1/55 loss=0.3270 acc=1.0000 elapsed=8.2s ETA=444.8s
+  resnet50 seed=44 epoch=3/100 batch=10/55 loss=0.3333 acc=1.0000 elapsed=10.9s ETA=49.2s
+  resnet50 seed=44 epoch=3/100 batch=20/55 loss=0.3395 acc=1.0000 elapsed=14.8s ETA=25.9s
+  resnet50 seed=44 epoch=3/100 batch=30/55 loss=0.3388 acc=0.9979 elapsed=17.7s ETA=14.8s
+  resnet50 seed=44 epoch=3/100 batch=40/55 loss=0.3429 acc=0.9961 elapsed=21.7s ETA=8.1s
+  resnet50 seed=44 epoch=3/100 batch=50/55 loss=0.3423 acc=0.9956 elapsed=25.2s ETA=2.5s
+  resnet50 seed=44 epoch=3/100 batch=55/55 loss=0.3419 acc=0.9954 elapsed=26.5s ETA=0.0s
+resnet50 seed=44 epoch=3/100: train_loss=0.3419 train_acc=0.9954 val_loss=0.3101 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=2 stale=1/10 seconds=37.4
+  resnet50 seed=44 epoch=4/100 batch=1/55 loss=0.3214 acc=1.0000 elapsed=7.5s ETA=405.5s
+  resnet50 seed=44 epoch=4/100 batch=10/55 loss=0.3417 acc=0.9875 elapsed=11.1s ETA=50.0s
+  resnet50 seed=44 epoch=4/100 batch=20/55 loss=0.3383 acc=0.9922 elapsed=14.8s ETA=25.9s
+  resnet50 seed=44 epoch=4/100 batch=30/55 loss=0.3412 acc=0.9927 elapsed=18.8s ETA=15.7s
+  resnet50 seed=44 epoch=4/100 batch=40/55 loss=0.3398 acc=0.9945 elapsed=21.7s ETA=8.1s
+  resnet50 seed=44 epoch=4/100 batch=50/55 loss=0.3381 acc=0.9956 elapsed=26.0s ETA=2.6s
+  resnet50 seed=44 epoch=4/100 batch=55/55 loss=0.3379 acc=0.9960 elapsed=27.0s ETA=0.0s
+resnet50 seed=44 epoch=4/100: train_loss=0.3379 train_acc=0.9960 val_loss=0.3100 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=2 stale=2/10 seconds=37.8
+  resnet50 seed=44 epoch=5/100 batch=1/55 loss=0.3252 acc=1.0000 elapsed=7.8s ETA=422.0s
+  resnet50 seed=44 epoch=5/100 batch=10/55 loss=0.3367 acc=0.9969 elapsed=10.7s ETA=47.9s
+  resnet50 seed=44 epoch=5/100 batch=20/55 loss=0.3372 acc=0.9969 elapsed=14.7s ETA=25.8s
+  resnet50 seed=44 epoch=5/100 batch=30/55 loss=0.3359 acc=0.9979 elapsed=18.2s ETA=15.2s
+  resnet50 seed=44 epoch=5/100 batch=40/55 loss=0.3359 acc=0.9984 elapsed=21.5s ETA=8.0s
+  resnet50 seed=44 epoch=5/100 batch=50/55 loss=0.3332 acc=0.9988 elapsed=24.7s ETA=2.5s
+  resnet50 seed=44 epoch=5/100 batch=55/55 loss=0.3323 acc=0.9989 elapsed=26.4s ETA=0.0s
+resnet50 seed=44 epoch=5/100: train_loss=0.3323 train_acc=0.9989 val_loss=0.3074 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=2 stale=3/10 seconds=37.1
+  resnet50 seed=44 epoch=6/100 batch=1/55 loss=0.3237 acc=1.0000 elapsed=7.7s ETA=416.4s
+  resnet50 seed=44 epoch=6/100 batch=10/55 loss=0.3242 acc=1.0000 elapsed=11.2s ETA=50.5s
+  resnet50 seed=44 epoch=6/100 batch=20/55 loss=0.3261 acc=0.9969 elapsed=14.7s ETA=25.8s
+  resnet50 seed=44 epoch=6/100 batch=30/55 loss=0.3276 acc=0.9969 elapsed=19.4s ETA=16.1s
+  resnet50 seed=44 epoch=6/100 batch=40/55 loss=0.3274 acc=0.9977 elapsed=22.1s ETA=8.3s
+  resnet50 seed=44 epoch=6/100 batch=50/55 loss=0.3273 acc=0.9981 elapsed=26.4s ETA=2.6s
+  resnet50 seed=44 epoch=6/100 batch=55/55 loss=0.3269 acc=0.9983 elapsed=27.5s ETA=0.0s
+resnet50 seed=44 epoch=6/100: train_loss=0.3269 train_acc=0.9983 val_loss=0.3069 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=2 stale=4/10 seconds=38.3
+  resnet50 seed=44 epoch=7/100 batch=1/55 loss=0.3269 acc=1.0000 elapsed=7.8s ETA=418.7s
+  resnet50 seed=44 epoch=7/100 batch=10/55 loss=0.3220 acc=1.0000 elapsed=11.1s ETA=50.1s
+  resnet50 seed=44 epoch=7/100 batch=20/55 loss=0.3224 acc=1.0000 elapsed=15.0s ETA=26.2s
+  resnet50 seed=44 epoch=7/100 batch=30/55 loss=0.3232 acc=1.0000 elapsed=18.9s ETA=15.7s
+  resnet50 seed=44 epoch=7/100 batch=40/55 loss=0.3247 acc=1.0000 elapsed=22.1s ETA=8.3s
+  resnet50 seed=44 epoch=7/100 batch=50/55 loss=0.3264 acc=0.9994 elapsed=25.8s ETA=2.6s
+  resnet50 seed=44 epoch=7/100 batch=55/55 loss=0.3259 acc=0.9994 elapsed=27.1s ETA=0.0s
+resnet50 seed=44 epoch=7/100: train_loss=0.3259 train_acc=0.9994 val_loss=0.3045 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=2 stale=5/10 seconds=38.0
+  resnet50 seed=44 epoch=8/100 batch=1/55 loss=0.3233 acc=1.0000 elapsed=7.7s ETA=417.5s
+  resnet50 seed=44 epoch=8/100 batch=10/55 loss=0.3240 acc=0.9938 elapsed=11.4s ETA=51.5s
+  resnet50 seed=44 epoch=8/100 batch=20/55 loss=0.3240 acc=0.9969 elapsed=15.3s ETA=26.8s
+  resnet50 seed=44 epoch=8/100 batch=30/55 loss=0.3225 acc=0.9979 elapsed=18.3s ETA=15.2s
+  resnet50 seed=44 epoch=8/100 batch=40/55 loss=0.3219 acc=0.9984 elapsed=22.7s ETA=8.5s
+  resnet50 seed=44 epoch=8/100 batch=50/55 loss=0.3215 acc=0.9988 elapsed=25.9s ETA=2.6s
+  resnet50 seed=44 epoch=8/100 batch=55/55 loss=0.3223 acc=0.9983 elapsed=27.1s ETA=0.0s
+resnet50 seed=44 epoch=8/100: train_loss=0.3223 train_acc=0.9983 val_loss=0.3048 val_acc=0.9959 macroF1=0.9938 lr=0.0001 best_epoch=2 stale=6/10 seconds=37.8
+  resnet50 seed=44 epoch=9/100 batch=1/55 loss=0.3154 acc=1.0000 elapsed=7.8s ETA=422.8s
+  resnet50 seed=44 epoch=9/100 batch=10/55 loss=0.3167 acc=1.0000 elapsed=10.9s ETA=48.9s
+  resnet50 seed=44 epoch=9/100 batch=20/55 loss=0.3193 acc=1.0000 elapsed=14.1s ETA=24.6s
+  resnet50 seed=44 epoch=9/100 batch=30/55 loss=0.3194 acc=1.0000 elapsed=18.9s ETA=15.7s
+  resnet50 seed=44 epoch=9/100 batch=40/55 loss=0.3221 acc=1.0000 elapsed=22.2s ETA=8.3s
+  resnet50 seed=44 epoch=9/100 batch=50/55 loss=0.3215 acc=1.0000 elapsed=25.6s ETA=2.6s
+  resnet50 seed=44 epoch=9/100 batch=55/55 loss=0.3216 acc=1.0000 elapsed=27.0s ETA=0.0s
+resnet50 seed=44 epoch=9/100: train_loss=0.3216 train_acc=1.0000 val_loss=0.3029 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=2 stale=7/10 seconds=37.8
+  resnet50 seed=44 epoch=10/100 batch=1/55 loss=0.3146 acc=1.0000 elapsed=7.2s ETA=391.3s
+  resnet50 seed=44 epoch=10/100 batch=10/55 loss=0.3281 acc=1.0000 elapsed=10.8s ETA=48.4s
+  resnet50 seed=44 epoch=10/100 batch=20/55 loss=0.3246 acc=0.9984 elapsed=14.6s ETA=25.6s
+  resnet50 seed=44 epoch=10/100 batch=30/55 loss=0.3225 acc=0.9990 elapsed=18.1s ETA=15.1s
+  resnet50 seed=44 epoch=10/100 batch=40/55 loss=0.3208 acc=0.9992 elapsed=22.2s ETA=8.3s
+  resnet50 seed=44 epoch=10/100 batch=50/55 loss=0.3191 acc=0.9994 elapsed=25.7s ETA=2.6s
+  resnet50 seed=44 epoch=10/100 batch=55/55 loss=0.3192 acc=0.9994 elapsed=27.1s ETA=0.0s
+resnet50 seed=44 epoch=10/100: train_loss=0.3192 train_acc=0.9994 val_loss=0.3018 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=2 stale=8/10 seconds=37.9
+  resnet50 seed=44 epoch=11/100 batch=1/55 loss=0.3100 acc=1.0000 elapsed=7.6s ETA=412.4s
+  resnet50 seed=44 epoch=11/100 batch=10/55 loss=0.3172 acc=1.0000 elapsed=10.7s ETA=48.3s
+  resnet50 seed=44 epoch=11/100 batch=20/55 loss=0.3167 acc=1.0000 elapsed=14.9s ETA=26.0s
+  resnet50 seed=44 epoch=11/100 batch=30/55 loss=0.3164 acc=1.0000 elapsed=18.2s ETA=15.2s
+  resnet50 seed=44 epoch=11/100 batch=40/55 loss=0.3166 acc=1.0000 elapsed=22.1s ETA=8.3s
+  resnet50 seed=44 epoch=11/100 batch=50/55 loss=0.3184 acc=0.9988 elapsed=25.3s ETA=2.5s
+  resnet50 seed=44 epoch=11/100 batch=55/55 loss=0.3186 acc=0.9989 elapsed=26.4s ETA=0.0s
+resnet50 seed=44 epoch=11/100: train_loss=0.3186 train_acc=0.9989 val_loss=0.3008 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=2 stale=9/10 seconds=37.1
+  resnet50 seed=44 epoch=12/100 batch=1/55 loss=0.3157 acc=1.0000 elapsed=7.3s ETA=396.3s
+  resnet50 seed=44 epoch=12/100 batch=10/55 loss=0.3138 acc=1.0000 elapsed=11.3s ETA=50.8s
+  resnet50 seed=44 epoch=12/100 batch=20/55 loss=0.3158 acc=1.0000 elapsed=15.0s ETA=26.2s
+  resnet50 seed=44 epoch=12/100 batch=30/55 loss=0.3165 acc=1.0000 elapsed=17.8s ETA=14.8s
+  resnet50 seed=44 epoch=12/100 batch=40/55 loss=0.3168 acc=1.0000 elapsed=22.1s ETA=8.3s
+  resnet50 seed=44 epoch=12/100 batch=50/55 loss=0.3167 acc=1.0000 elapsed=24.8s ETA=2.5s
+  resnet50 seed=44 epoch=12/100 batch=55/55 loss=0.3169 acc=1.0000 elapsed=26.3s ETA=0.0s
+resnet50 seed=44 epoch=12/100: train_loss=0.3169 train_acc=1.0000 val_loss=0.3003 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=2 stale=10/10 seconds=37.2
+CUDA cleanup after training resnet50 seed=44: allocated=64.0 MiB, reserved=64.0 MiB, device free=15006.0 MiB
+CUDA cleanup before training mobilenet_v3_large seed=42: allocated=64.0 MiB, reserved=64.0 MiB, device free=15006.0 MiB
+  mobilenet_v3_large seed=42 epoch=1/100 batch=1/55 loss=1.1075 acc=0.3438 elapsed=7.8s ETA=423.3s
+  mobilenet_v3_large seed=42 epoch=1/100 batch=10/55 loss=1.0195 acc=0.5563 elapsed=10.6s ETA=47.9s
+  mobilenet_v3_large seed=42 epoch=1/100 batch=20/55 loss=0.9055 acc=0.6844 elapsed=14.8s ETA=25.9s
+  mobilenet_v3_large seed=42 epoch=1/100 batch=30/55 loss=0.8031 acc=0.7635 elapsed=18.3s ETA=15.2s
+  mobilenet_v3_large seed=42 epoch=1/100 batch=40/55 loss=0.7173 acc=0.8117 elapsed=22.8s ETA=8.5s
+  mobilenet_v3_large seed=42 epoch=1/100 batch=50/55 loss=0.6481 acc=0.8444 elapsed=25.9s ETA=2.6s
+  mobilenet_v3_large seed=42 epoch=1/100 batch=55/55 loss=0.6213 acc=0.8571 elapsed=27.9s ETA=0.0s
+mobilenet_v3_large seed=42 epoch=1/100: train_loss=0.6213 train_acc=0.8571 val_loss=0.4484 val_acc=0.9671 macroF1=0.9577 lr=0.0001 best_epoch=1 stale=0/10 seconds=38.8
+  mobilenet_v3_large seed=42 epoch=2/100 batch=1/55 loss=0.3277 acc=1.0000 elapsed=7.5s ETA=404.2s
+  mobilenet_v3_large seed=42 epoch=2/100 batch=10/55 loss=0.3386 acc=0.9812 elapsed=11.1s ETA=50.1s
+  mobilenet_v3_large seed=42 epoch=2/100 batch=20/55 loss=0.3319 acc=0.9875 elapsed=15.9s ETA=27.8s
+  mobilenet_v3_large seed=42 epoch=2/100 batch=30/55 loss=0.3265 acc=0.9906 elapsed=18.8s ETA=15.6s
+  mobilenet_v3_large seed=42 epoch=2/100 batch=40/55 loss=0.3254 acc=0.9922 elapsed=22.2s ETA=8.3s
+  mobilenet_v3_large seed=42 epoch=2/100 batch=50/55 loss=0.3236 acc=0.9925 elapsed=25.9s ETA=2.6s
+  mobilenet_v3_large seed=42 epoch=2/100 batch=55/55 loss=0.3227 acc=0.9931 elapsed=27.1s ETA=0.0s
+mobilenet_v3_large seed=42 epoch=2/100: train_loss=0.3227 train_acc=0.9931 val_loss=0.3195 val_acc=0.9959 macroF1=0.9938 lr=0.0001 best_epoch=2 stale=0/10 seconds=37.9
+  mobilenet_v3_large seed=42 epoch=3/100 batch=1/55 loss=0.2995 acc=1.0000 elapsed=8.2s ETA=442.1s
+  mobilenet_v3_large seed=42 epoch=3/100 batch=10/55 loss=0.3005 acc=1.0000 elapsed=11.1s ETA=50.0s
+  mobilenet_v3_large seed=42 epoch=3/100 batch=20/55 loss=0.3032 acc=1.0000 elapsed=14.9s ETA=26.2s
+  mobilenet_v3_large seed=42 epoch=3/100 batch=30/55 loss=0.3037 acc=1.0000 elapsed=17.5s ETA=14.6s
+  mobilenet_v3_large seed=42 epoch=3/100 batch=40/55 loss=0.3035 acc=1.0000 elapsed=21.0s ETA=7.9s
+  mobilenet_v3_large seed=42 epoch=3/100 batch=50/55 loss=0.3055 acc=1.0000 elapsed=24.4s ETA=2.4s
+  mobilenet_v3_large seed=42 epoch=3/100 batch=55/55 loss=0.3051 acc=1.0000 elapsed=26.1s ETA=0.0s
+mobilenet_v3_large seed=42 epoch=3/100: train_loss=0.3051 train_acc=1.0000 val_loss=0.3073 val_acc=0.9959 macroF1=0.9938 lr=0.0001 best_epoch=2 stale=1/10 seconds=36.8
+  mobilenet_v3_large seed=42 epoch=4/100 batch=1/55 loss=0.2981 acc=1.0000 elapsed=8.0s ETA=434.1s
+  mobilenet_v3_large seed=42 epoch=4/100 batch=10/55 loss=0.3022 acc=1.0000 elapsed=10.8s ETA=48.5s
+  mobilenet_v3_large seed=42 epoch=4/100 batch=20/55 loss=0.3077 acc=1.0000 elapsed=14.4s ETA=25.1s
+  mobilenet_v3_large seed=42 epoch=4/100 batch=30/55 loss=0.3074 acc=1.0000 elapsed=18.0s ETA=15.0s
+  mobilenet_v3_large seed=42 epoch=4/100 batch=40/55 loss=0.3057 acc=1.0000 elapsed=21.4s ETA=8.0s
+  mobilenet_v3_large seed=42 epoch=4/100 batch=50/55 loss=0.3045 acc=1.0000 elapsed=24.5s ETA=2.4s
+  mobilenet_v3_large seed=42 epoch=4/100 batch=55/55 loss=0.3053 acc=1.0000 elapsed=25.9s ETA=0.0s
+mobilenet_v3_large seed=42 epoch=4/100: train_loss=0.3053 train_acc=1.0000 val_loss=0.3008 val_acc=0.9959 macroF1=0.9938 lr=0.0001 best_epoch=2 stale=2/10 seconds=36.7
+  mobilenet_v3_large seed=42 epoch=5/100 batch=1/55 loss=0.2994 acc=1.0000 elapsed=7.7s ETA=416.1s
+  mobilenet_v3_large seed=42 epoch=5/100 batch=10/55 loss=0.2984 acc=1.0000 elapsed=10.7s ETA=48.1s
+  mobilenet_v3_large seed=42 epoch=5/100 batch=20/55 loss=0.3011 acc=1.0000 elapsed=15.0s ETA=26.2s
+  mobilenet_v3_large seed=42 epoch=5/100 batch=30/55 loss=0.3003 acc=1.0000 elapsed=18.1s ETA=15.1s
+  mobilenet_v3_large seed=42 epoch=5/100 batch=40/55 loss=0.3006 acc=1.0000 elapsed=21.7s ETA=8.1s
+  mobilenet_v3_large seed=42 epoch=5/100 batch=50/55 loss=0.3007 acc=1.0000 elapsed=25.3s ETA=2.5s
+  mobilenet_v3_large seed=42 epoch=5/100 batch=55/55 loss=0.3007 acc=1.0000 elapsed=26.6s ETA=0.0s
+mobilenet_v3_large seed=42 epoch=5/100: train_loss=0.3007 train_acc=1.0000 val_loss=0.2983 val_acc=0.9959 macroF1=0.9938 lr=0.0001 best_epoch=2 stale=3/10 seconds=37.4
+  mobilenet_v3_large seed=42 epoch=6/100 batch=1/55 loss=0.2977 acc=1.0000 elapsed=7.8s ETA=423.4s
+  mobilenet_v3_large seed=42 epoch=6/100 batch=10/55 loss=0.2984 acc=1.0000 elapsed=10.8s ETA=48.7s
+  mobilenet_v3_large seed=42 epoch=6/100 batch=20/55 loss=0.2992 acc=1.0000 elapsed=15.7s ETA=27.4s
+  mobilenet_v3_large seed=42 epoch=6/100 batch=30/55 loss=0.2994 acc=1.0000 elapsed=18.5s ETA=15.4s
+  mobilenet_v3_large seed=42 epoch=6/100 batch=40/55 loss=0.3002 acc=1.0000 elapsed=22.6s ETA=8.5s
+  mobilenet_v3_large seed=42 epoch=6/100 batch=50/55 loss=0.2995 acc=1.0000 elapsed=25.4s ETA=2.5s
+  mobilenet_v3_large seed=42 epoch=6/100 batch=55/55 loss=0.2996 acc=1.0000 elapsed=26.7s ETA=0.0s
+mobilenet_v3_large seed=42 epoch=6/100: train_loss=0.2996 train_acc=1.0000 val_loss=0.3009 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=6 stale=0/10 seconds=37.5
+  mobilenet_v3_large seed=42 epoch=7/100 batch=1/55 loss=0.3093 acc=1.0000 elapsed=7.9s ETA=428.4s
+  mobilenet_v3_large seed=42 epoch=7/100 batch=10/55 loss=0.3006 acc=1.0000 elapsed=11.7s ETA=52.5s
+  mobilenet_v3_large seed=42 epoch=7/100 batch=20/55 loss=0.2991 acc=1.0000 elapsed=16.0s ETA=28.1s
+  mobilenet_v3_large seed=42 epoch=7/100 batch=30/55 loss=0.2987 acc=1.0000 elapsed=19.1s ETA=15.9s
+  mobilenet_v3_large seed=42 epoch=7/100 batch=40/55 loss=0.2983 acc=1.0000 elapsed=22.9s ETA=8.6s
+  mobilenet_v3_large seed=42 epoch=7/100 batch=50/55 loss=0.2982 acc=1.0000 elapsed=26.6s ETA=2.7s
+  mobilenet_v3_large seed=42 epoch=7/100 batch=55/55 loss=0.2981 acc=1.0000 elapsed=27.7s ETA=0.0s
+mobilenet_v3_large seed=42 epoch=7/100: train_loss=0.2981 train_acc=1.0000 val_loss=0.2975 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=6 stale=1/10 seconds=38.5
+  mobilenet_v3_large seed=42 epoch=8/100 batch=1/55 loss=0.2979 acc=1.0000 elapsed=8.0s ETA=432.9s
+  mobilenet_v3_large seed=42 epoch=8/100 batch=10/55 loss=0.2973 acc=1.0000 elapsed=11.3s ETA=50.9s
+  mobilenet_v3_large seed=42 epoch=8/100 batch=20/55 loss=0.2968 acc=1.0000 elapsed=14.6s ETA=25.6s
+  mobilenet_v3_large seed=42 epoch=8/100 batch=30/55 loss=0.2968 acc=1.0000 elapsed=18.9s ETA=15.7s
+  mobilenet_v3_large seed=42 epoch=8/100 batch=40/55 loss=0.2971 acc=1.0000 elapsed=22.0s ETA=8.3s
+  mobilenet_v3_large seed=42 epoch=8/100 batch=50/55 loss=0.2969 acc=1.0000 elapsed=25.9s ETA=2.6s
+  mobilenet_v3_large seed=42 epoch=8/100 batch=55/55 loss=0.2969 acc=1.0000 elapsed=27.3s ETA=0.0s
+mobilenet_v3_large seed=42 epoch=8/100: train_loss=0.2969 train_acc=1.0000 val_loss=0.2989 val_acc=0.9959 macroF1=0.9938 lr=0.0001 best_epoch=6 stale=2/10 seconds=38.1
+  mobilenet_v3_large seed=42 epoch=9/100 batch=1/55 loss=0.3004 acc=1.0000 elapsed=7.7s ETA=416.5s
+  mobilenet_v3_large seed=42 epoch=9/100 batch=10/55 loss=0.2963 acc=1.0000 elapsed=10.8s ETA=48.7s
+  mobilenet_v3_large seed=42 epoch=9/100 batch=20/55 loss=0.2966 acc=1.0000 elapsed=14.5s ETA=25.4s
+  mobilenet_v3_large seed=42 epoch=9/100 batch=30/55 loss=0.2958 acc=1.0000 elapsed=18.1s ETA=15.1s
+  mobilenet_v3_large seed=42 epoch=9/100 batch=40/55 loss=0.2960 acc=1.0000 elapsed=21.2s ETA=8.0s
+  mobilenet_v3_large seed=42 epoch=9/100 batch=50/55 loss=0.2958 acc=1.0000 elapsed=24.7s ETA=2.5s
+  mobilenet_v3_large seed=42 epoch=9/100 batch=55/55 loss=0.2957 acc=1.0000 elapsed=26.1s ETA=0.0s
+mobilenet_v3_large seed=42 epoch=9/100: train_loss=0.2957 train_acc=1.0000 val_loss=0.2996 val_acc=0.9959 macroF1=0.9938 lr=0.0001 best_epoch=6 stale=3/10 seconds=37.0
+  mobilenet_v3_large seed=42 epoch=10/100 batch=1/55 loss=0.2970 acc=1.0000 elapsed=7.9s ETA=426.6s
+  mobilenet_v3_large seed=42 epoch=10/100 batch=10/55 loss=0.2955 acc=1.0000 elapsed=10.6s ETA=47.8s
+  mobilenet_v3_large seed=42 epoch=10/100 batch=20/55 loss=0.2958 acc=1.0000 elapsed=14.6s ETA=25.5s
+  mobilenet_v3_large seed=42 epoch=10/100 batch=30/55 loss=0.2959 acc=1.0000 elapsed=18.1s ETA=15.1s
+  mobilenet_v3_large seed=42 epoch=10/100 batch=40/55 loss=0.2957 acc=1.0000 elapsed=22.5s ETA=8.4s
+  mobilenet_v3_large seed=42 epoch=10/100 batch=50/55 loss=0.2958 acc=1.0000 elapsed=25.2s ETA=2.5s
+  mobilenet_v3_large seed=42 epoch=10/100 batch=55/55 loss=0.2958 acc=1.0000 elapsed=26.9s ETA=0.0s
+mobilenet_v3_large seed=42 epoch=10/100: train_loss=0.2958 train_acc=1.0000 val_loss=0.2983 val_acc=0.9959 macroF1=0.9938 lr=0.0001 best_epoch=6 stale=4/10 seconds=37.7
+  mobilenet_v3_large seed=42 epoch=11/100 batch=1/55 loss=0.2956 acc=1.0000 elapsed=7.8s ETA=418.8s
+  mobilenet_v3_large seed=42 epoch=11/100 batch=10/55 loss=0.2945 acc=1.0000 elapsed=10.3s ETA=46.3s
+  mobilenet_v3_large seed=42 epoch=11/100 batch=20/55 loss=0.2952 acc=1.0000 elapsed=14.6s ETA=25.5s
+  mobilenet_v3_large seed=42 epoch=11/100 batch=30/55 loss=0.2949 acc=1.0000 elapsed=17.6s ETA=14.7s
+  mobilenet_v3_large seed=42 epoch=11/100 batch=40/55 loss=0.2949 acc=1.0000 elapsed=22.6s ETA=8.5s
+  mobilenet_v3_large seed=42 epoch=11/100 batch=50/55 loss=0.2950 acc=1.0000 elapsed=26.2s ETA=2.6s
+  mobilenet_v3_large seed=42 epoch=11/100 batch=55/55 loss=0.2952 acc=1.0000 elapsed=27.5s ETA=0.0s
+mobilenet_v3_large seed=42 epoch=11/100: train_loss=0.2952 train_acc=1.0000 val_loss=0.2977 val_acc=0.9959 macroF1=0.9938 lr=0.0001 best_epoch=6 stale=5/10 seconds=38.4
+  mobilenet_v3_large seed=42 epoch=12/100 batch=1/55 loss=0.2934 acc=1.0000 elapsed=7.6s ETA=411.2s
+  mobilenet_v3_large seed=42 epoch=12/100 batch=10/55 loss=0.2961 acc=1.0000 elapsed=10.5s ETA=47.4s
+  mobilenet_v3_large seed=42 epoch=12/100 batch=20/55 loss=0.2960 acc=1.0000 elapsed=14.0s ETA=24.4s
+  mobilenet_v3_large seed=42 epoch=12/100 batch=30/55 loss=0.2954 acc=1.0000 elapsed=18.1s ETA=15.1s
+  mobilenet_v3_large seed=42 epoch=12/100 batch=40/55 loss=0.2952 acc=1.0000 elapsed=21.2s ETA=8.0s
+  mobilenet_v3_large seed=42 epoch=12/100 batch=50/55 loss=0.2949 acc=1.0000 elapsed=25.3s ETA=2.5s
+  mobilenet_v3_large seed=42 epoch=12/100 batch=55/55 loss=0.2948 acc=1.0000 elapsed=26.6s ETA=0.0s
+mobilenet_v3_large seed=42 epoch=12/100: train_loss=0.2948 train_acc=1.0000 val_loss=0.2975 val_acc=0.9959 macroF1=0.9938 lr=3e-05 best_epoch=6 stale=6/10 seconds=37.3
+  mobilenet_v3_large seed=42 epoch=13/100 batch=1/55 loss=0.2929 acc=1.0000 elapsed=7.9s ETA=425.0s
+  mobilenet_v3_large seed=42 epoch=13/100 batch=10/55 loss=0.2937 acc=1.0000 elapsed=10.7s ETA=48.1s
+  mobilenet_v3_large seed=42 epoch=13/100 batch=20/55 loss=0.2936 acc=1.0000 elapsed=14.7s ETA=25.7s
+  mobilenet_v3_large seed=42 epoch=13/100 batch=30/55 loss=0.2939 acc=1.0000 elapsed=18.0s ETA=15.0s
+  mobilenet_v3_large seed=42 epoch=13/100 batch=40/55 loss=0.2941 acc=1.0000 elapsed=22.2s ETA=8.3s
+  mobilenet_v3_large seed=42 epoch=13/100 batch=50/55 loss=0.2940 acc=1.0000 elapsed=25.0s ETA=2.5s
+  mobilenet_v3_large seed=42 epoch=13/100 batch=55/55 loss=0.2940 acc=1.0000 elapsed=26.1s ETA=0.0s
+mobilenet_v3_large seed=42 epoch=13/100: train_loss=0.2940 train_acc=1.0000 val_loss=0.2961 val_acc=0.9959 macroF1=0.9938 lr=3e-05 best_epoch=6 stale=7/10 seconds=36.9
+  mobilenet_v3_large seed=42 epoch=14/100 batch=1/55 loss=0.2930 acc=1.0000 elapsed=8.2s ETA=442.0s
+  mobilenet_v3_large seed=42 epoch=14/100 batch=10/55 loss=0.2965 acc=1.0000 elapsed=10.3s ETA=46.5s
+  mobilenet_v3_large seed=42 epoch=14/100 batch=20/55 loss=0.2952 acc=1.0000 elapsed=13.9s ETA=24.3s
+  mobilenet_v3_large seed=42 epoch=14/100 batch=30/55 loss=0.2947 acc=1.0000 elapsed=17.6s ETA=14.7s
+  mobilenet_v3_large seed=42 epoch=14/100 batch=40/55 loss=0.2944 acc=1.0000 elapsed=21.1s ETA=7.9s
+  mobilenet_v3_large seed=42 epoch=14/100 batch=50/55 loss=0.2945 acc=1.0000 elapsed=24.3s ETA=2.4s
+  mobilenet_v3_large seed=42 epoch=14/100 batch=55/55 loss=0.2945 acc=1.0000 elapsed=25.8s ETA=0.0s
+mobilenet_v3_large seed=42 epoch=14/100: train_loss=0.2945 train_acc=1.0000 val_loss=0.2960 val_acc=0.9959 macroF1=0.9938 lr=3e-05 best_epoch=6 stale=8/10 seconds=36.7
+  mobilenet_v3_large seed=42 epoch=15/100 batch=1/55 loss=0.2950 acc=1.0000 elapsed=7.9s ETA=427.7s
+  mobilenet_v3_large seed=42 epoch=15/100 batch=10/55 loss=0.2945 acc=1.0000 elapsed=11.1s ETA=50.1s
+  mobilenet_v3_large seed=42 epoch=15/100 batch=20/55 loss=0.2940 acc=1.0000 elapsed=14.9s ETA=26.2s
+  mobilenet_v3_large seed=42 epoch=15/100 batch=30/55 loss=0.2938 acc=1.0000 elapsed=18.3s ETA=15.2s
+  mobilenet_v3_large seed=42 epoch=15/100 batch=40/55 loss=0.2938 acc=1.0000 elapsed=21.7s ETA=8.1s
+  mobilenet_v3_large seed=42 epoch=15/100 batch=50/55 loss=0.2938 acc=1.0000 elapsed=24.8s ETA=2.5s
+  mobilenet_v3_large seed=42 epoch=15/100 batch=55/55 loss=0.2938 acc=1.0000 elapsed=26.7s ETA=0.0s
+mobilenet_v3_large seed=42 epoch=15/100: train_loss=0.2938 train_acc=1.0000 val_loss=0.2957 val_acc=0.9959 macroF1=0.9938 lr=3e-05 best_epoch=6 stale=9/10 seconds=37.5
+  mobilenet_v3_large seed=42 epoch=16/100 batch=1/55 loss=0.2978 acc=1.0000 elapsed=7.6s ETA=412.1s
+  mobilenet_v3_large seed=42 epoch=16/100 batch=10/55 loss=0.2949 acc=1.0000 elapsed=11.0s ETA=49.3s
+  mobilenet_v3_large seed=42 epoch=16/100 batch=20/55 loss=0.2946 acc=1.0000 elapsed=16.3s ETA=28.5s
+  mobilenet_v3_large seed=42 epoch=16/100 batch=30/55 loss=0.2942 acc=1.0000 elapsed=19.2s ETA=16.0s
+  mobilenet_v3_large seed=42 epoch=16/100 batch=40/55 loss=0.2944 acc=1.0000 elapsed=24.0s ETA=9.0s
+  mobilenet_v3_large seed=42 epoch=16/100 batch=50/55 loss=0.2944 acc=1.0000 elapsed=27.8s ETA=2.8s
+  mobilenet_v3_large seed=42 epoch=16/100 batch=55/55 loss=0.2944 acc=1.0000 elapsed=28.7s ETA=0.0s
+mobilenet_v3_large seed=42 epoch=16/100: train_loss=0.2944 train_acc=1.0000 val_loss=0.2960 val_acc=0.9959 macroF1=0.9938 lr=3e-05 best_epoch=6 stale=10/10 seconds=39.5
+CUDA cleanup after training mobilenet_v3_large seed=42: allocated=64.0 MiB, reserved=64.0 MiB, device free=15006.0 MiB
+CUDA cleanup before training mobilenet_v3_large seed=43: allocated=64.0 MiB, reserved=64.0 MiB, device free=15006.0 MiB
+  mobilenet_v3_large seed=43 epoch=1/100 batch=1/55 loss=1.1057 acc=0.2812 elapsed=7.7s ETA=417.6s
+  mobilenet_v3_large seed=43 epoch=1/100 batch=10/55 loss=1.0052 acc=0.4875 elapsed=10.8s ETA=48.5s
+  mobilenet_v3_large seed=43 epoch=1/100 batch=20/55 loss=0.9094 acc=0.6422 elapsed=14.5s ETA=25.4s
+  mobilenet_v3_large seed=43 epoch=1/100 batch=30/55 loss=0.8085 acc=0.7406 elapsed=17.8s ETA=14.9s
+  mobilenet_v3_large seed=43 epoch=1/100 batch=40/55 loss=0.7168 acc=0.7953 elapsed=22.1s ETA=8.3s
+  mobilenet_v3_large seed=43 epoch=1/100 batch=50/55 loss=0.6519 acc=0.8306 elapsed=25.5s ETA=2.6s
+  mobilenet_v3_large seed=43 epoch=1/100 batch=55/55 loss=0.6286 acc=0.8423 elapsed=26.7s ETA=0.0s
+mobilenet_v3_large seed=43 epoch=1/100: train_loss=0.6286 train_acc=0.8423 val_loss=0.3827 val_acc=0.9959 macroF1=0.9938 lr=0.0001 best_epoch=1 stale=0/10 seconds=37.7
+  mobilenet_v3_large seed=43 epoch=2/100 batch=1/55 loss=0.3727 acc=0.9688 elapsed=8.0s ETA=431.8s
+  mobilenet_v3_large seed=43 epoch=2/100 batch=10/55 loss=0.3309 acc=0.9938 elapsed=11.4s ETA=51.1s
+  mobilenet_v3_large seed=43 epoch=2/100 batch=20/55 loss=0.3341 acc=0.9906 elapsed=14.6s ETA=25.6s
+  mobilenet_v3_large seed=43 epoch=2/100 batch=30/55 loss=0.3251 acc=0.9938 elapsed=18.1s ETA=15.0s
+  mobilenet_v3_large seed=43 epoch=2/100 batch=40/55 loss=0.3236 acc=0.9922 elapsed=22.2s ETA=8.3s
+  mobilenet_v3_large seed=43 epoch=2/100 batch=50/55 loss=0.3215 acc=0.9931 elapsed=25.2s ETA=2.5s
+  mobilenet_v3_large seed=43 epoch=2/100 batch=55/55 loss=0.3216 acc=0.9926 elapsed=26.6s ETA=0.0s
+mobilenet_v3_large seed=43 epoch=2/100: train_loss=0.3216 train_acc=0.9926 val_loss=0.3140 val_acc=0.9959 macroF1=0.9938 lr=0.0001 best_epoch=1 stale=1/10 seconds=37.5
+  mobilenet_v3_large seed=43 epoch=3/100 batch=1/55 loss=0.3052 acc=1.0000 elapsed=7.7s ETA=416.2s
+  mobilenet_v3_large seed=43 epoch=3/100 batch=10/55 loss=0.3109 acc=1.0000 elapsed=10.7s ETA=48.0s
+  mobilenet_v3_large seed=43 epoch=3/100 batch=20/55 loss=0.3086 acc=1.0000 elapsed=14.7s ETA=25.8s
+  mobilenet_v3_large seed=43 epoch=3/100 batch=30/55 loss=0.3098 acc=1.0000 elapsed=18.4s ETA=15.4s
+  mobilenet_v3_large seed=43 epoch=3/100 batch=40/55 loss=0.3092 acc=1.0000 elapsed=22.7s ETA=8.5s
+  mobilenet_v3_large seed=43 epoch=3/100 batch=50/55 loss=0.3079 acc=1.0000 elapsed=25.9s ETA=2.6s
+  mobilenet_v3_large seed=43 epoch=3/100 batch=55/55 loss=0.3077 acc=1.0000 elapsed=27.0s ETA=0.0s
+mobilenet_v3_large seed=43 epoch=3/100: train_loss=0.3077 train_acc=1.0000 val_loss=0.3009 val_acc=0.9959 macroF1=0.9938 lr=0.0001 best_epoch=1 stale=2/10 seconds=37.8
+  mobilenet_v3_large seed=43 epoch=4/100 batch=1/55 loss=0.2991 acc=1.0000 elapsed=8.1s ETA=439.1s
+  mobilenet_v3_large seed=43 epoch=4/100 batch=10/55 loss=0.3028 acc=1.0000 elapsed=11.0s ETA=49.4s
+  mobilenet_v3_large seed=43 epoch=4/100 batch=20/55 loss=0.3023 acc=1.0000 elapsed=14.1s ETA=24.6s
+  mobilenet_v3_large seed=43 epoch=4/100 batch=30/55 loss=0.3010 acc=1.0000 elapsed=18.8s ETA=15.7s
+  mobilenet_v3_large seed=43 epoch=4/100 batch=40/55 loss=0.3005 acc=1.0000 elapsed=22.1s ETA=8.3s
+  mobilenet_v3_large seed=43 epoch=4/100 batch=50/55 loss=0.3002 acc=1.0000 elapsed=26.3s ETA=2.6s
+  mobilenet_v3_large seed=43 epoch=4/100 batch=55/55 loss=0.3000 acc=1.0000 elapsed=27.7s ETA=0.0s
+mobilenet_v3_large seed=43 epoch=4/100: train_loss=0.3000 train_acc=1.0000 val_loss=0.2985 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=4 stale=0/10 seconds=38.4
+  mobilenet_v3_large seed=43 epoch=5/100 batch=1/55 loss=0.2957 acc=1.0000 elapsed=7.6s ETA=413.0s
+  mobilenet_v3_large seed=43 epoch=5/100 batch=10/55 loss=0.3015 acc=1.0000 elapsed=11.3s ETA=50.7s
+  mobilenet_v3_large seed=43 epoch=5/100 batch=20/55 loss=0.2997 acc=1.0000 elapsed=14.5s ETA=25.4s
+  mobilenet_v3_large seed=43 epoch=5/100 batch=30/55 loss=0.3020 acc=0.9990 elapsed=18.4s ETA=15.3s
+  mobilenet_v3_large seed=43 epoch=5/100 batch=40/55 loss=0.3023 acc=0.9992 elapsed=21.4s ETA=8.0s
+  mobilenet_v3_large seed=43 epoch=5/100 batch=50/55 loss=0.3021 acc=0.9994 elapsed=25.6s ETA=2.6s
+  mobilenet_v3_large seed=43 epoch=5/100 batch=55/55 loss=0.3016 acc=0.9994 elapsed=26.8s ETA=0.0s
+mobilenet_v3_large seed=43 epoch=5/100: train_loss=0.3016 train_acc=0.9994 val_loss=0.2995 val_acc=0.9959 macroF1=0.9938 lr=0.0001 best_epoch=4 stale=1/10 seconds=37.5
+  mobilenet_v3_large seed=43 epoch=6/100 batch=1/55 loss=0.3004 acc=1.0000 elapsed=7.7s ETA=418.4s
+  mobilenet_v3_large seed=43 epoch=6/100 batch=10/55 loss=0.2981 acc=1.0000 elapsed=10.7s ETA=48.3s
+  mobilenet_v3_large seed=43 epoch=6/100 batch=20/55 loss=0.2998 acc=1.0000 elapsed=14.5s ETA=25.4s
+  mobilenet_v3_large seed=43 epoch=6/100 batch=30/55 loss=0.2989 acc=1.0000 elapsed=18.5s ETA=15.4s
+  mobilenet_v3_large seed=43 epoch=6/100 batch=40/55 loss=0.2997 acc=1.0000 elapsed=21.2s ETA=7.9s
+  mobilenet_v3_large seed=43 epoch=6/100 batch=50/55 loss=0.3001 acc=1.0000 elapsed=25.4s ETA=2.5s
+  mobilenet_v3_large seed=43 epoch=6/100 batch=55/55 loss=0.3000 acc=1.0000 elapsed=26.9s ETA=0.0s
+mobilenet_v3_large seed=43 epoch=6/100: train_loss=0.3000 train_acc=1.0000 val_loss=0.2992 val_acc=0.9959 macroF1=0.9938 lr=0.0001 best_epoch=4 stale=2/10 seconds=37.7
+  mobilenet_v3_large seed=43 epoch=7/100 batch=1/55 loss=0.2991 acc=1.0000 elapsed=8.0s ETA=431.6s
+  mobilenet_v3_large seed=43 epoch=7/100 batch=10/55 loss=0.2997 acc=1.0000 elapsed=11.2s ETA=50.4s
+  mobilenet_v3_large seed=43 epoch=7/100 batch=20/55 loss=0.2991 acc=1.0000 elapsed=14.4s ETA=25.2s
+  mobilenet_v3_large seed=43 epoch=7/100 batch=30/55 loss=0.2987 acc=1.0000 elapsed=18.9s ETA=15.7s
+  mobilenet_v3_large seed=43 epoch=7/100 batch=40/55 loss=0.2984 acc=1.0000 elapsed=23.0s ETA=8.6s
+  mobilenet_v3_large seed=43 epoch=7/100 batch=50/55 loss=0.2981 acc=1.0000 elapsed=25.9s ETA=2.6s
+  mobilenet_v3_large seed=43 epoch=7/100 batch=55/55 loss=0.2983 acc=1.0000 elapsed=27.2s ETA=0.0s
+mobilenet_v3_large seed=43 epoch=7/100: train_loss=0.2983 train_acc=1.0000 val_loss=0.3020 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=4 stale=3/10 seconds=37.4
+  mobilenet_v3_large seed=43 epoch=8/100 batch=1/55 loss=0.2946 acc=1.0000 elapsed=7.7s ETA=413.5s
+  mobilenet_v3_large seed=43 epoch=8/100 batch=10/55 loss=0.2977 acc=1.0000 elapsed=11.1s ETA=50.2s
+  mobilenet_v3_large seed=43 epoch=8/100 batch=20/55 loss=0.2983 acc=1.0000 elapsed=14.3s ETA=25.0s
+  mobilenet_v3_large seed=43 epoch=8/100 batch=30/55 loss=0.2983 acc=1.0000 elapsed=18.4s ETA=15.3s
+  mobilenet_v3_large seed=43 epoch=8/100 batch=40/55 loss=0.2974 acc=1.0000 elapsed=20.9s ETA=7.8s
+  mobilenet_v3_large seed=43 epoch=8/100 batch=50/55 loss=0.2971 acc=1.0000 elapsed=24.4s ETA=2.4s
+  mobilenet_v3_large seed=43 epoch=8/100 batch=55/55 loss=0.2970 acc=1.0000 elapsed=25.5s ETA=0.0s
+mobilenet_v3_large seed=43 epoch=8/100: train_loss=0.2970 train_acc=1.0000 val_loss=0.3017 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=4 stale=4/10 seconds=35.7
+  mobilenet_v3_large seed=43 epoch=9/100 batch=1/55 loss=0.2941 acc=1.0000 elapsed=7.5s ETA=407.6s
+  mobilenet_v3_large seed=43 epoch=9/100 batch=10/55 loss=0.2957 acc=1.0000 elapsed=10.4s ETA=46.6s
+  mobilenet_v3_large seed=43 epoch=9/100 batch=20/55 loss=0.2954 acc=1.0000 elapsed=13.9s ETA=24.3s
+  mobilenet_v3_large seed=43 epoch=9/100 batch=30/55 loss=0.2957 acc=1.0000 elapsed=17.5s ETA=14.6s
+  mobilenet_v3_large seed=43 epoch=9/100 batch=40/55 loss=0.2955 acc=1.0000 elapsed=20.8s ETA=7.8s
+  mobilenet_v3_large seed=43 epoch=9/100 batch=50/55 loss=0.2954 acc=1.0000 elapsed=24.2s ETA=2.4s
+  mobilenet_v3_large seed=43 epoch=9/100 batch=55/55 loss=0.2954 acc=1.0000 elapsed=25.5s ETA=0.0s
+mobilenet_v3_large seed=43 epoch=9/100: train_loss=0.2954 train_acc=1.0000 val_loss=0.2969 val_acc=1.0000 macroF1=1.0000 lr=3e-05 best_epoch=4 stale=5/10 seconds=35.7
+  mobilenet_v3_large seed=43 epoch=10/100 batch=1/55 loss=0.2935 acc=1.0000 elapsed=7.3s ETA=392.6s
+  mobilenet_v3_large seed=43 epoch=10/100 batch=10/55 loss=0.2943 acc=1.0000 elapsed=9.7s ETA=43.9s
+  mobilenet_v3_large seed=43 epoch=10/100 batch=20/55 loss=0.2951 acc=1.0000 elapsed=13.7s ETA=24.0s
+  mobilenet_v3_large seed=43 epoch=10/100 batch=30/55 loss=0.2951 acc=1.0000 elapsed=16.7s ETA=13.9s
+  mobilenet_v3_large seed=43 epoch=10/100 batch=40/55 loss=0.2952 acc=1.0000 elapsed=20.7s ETA=7.8s
+  mobilenet_v3_large seed=43 epoch=10/100 batch=50/55 loss=0.2952 acc=1.0000 elapsed=24.2s ETA=2.4s
+  mobilenet_v3_large seed=43 epoch=10/100 batch=55/55 loss=0.2952 acc=1.0000 elapsed=25.5s ETA=0.0s
+mobilenet_v3_large seed=43 epoch=10/100: train_loss=0.2952 train_acc=1.0000 val_loss=0.2959 val_acc=1.0000 macroF1=1.0000 lr=3e-05 best_epoch=4 stale=6/10 seconds=35.7
+  mobilenet_v3_large seed=43 epoch=11/100 batch=1/55 loss=0.2930 acc=1.0000 elapsed=7.2s ETA=386.3s
+  mobilenet_v3_large seed=43 epoch=11/100 batch=10/55 loss=0.2953 acc=1.0000 elapsed=9.7s ETA=43.7s
+  mobilenet_v3_large seed=43 epoch=11/100 batch=20/55 loss=0.2955 acc=1.0000 elapsed=13.3s ETA=23.3s
+  mobilenet_v3_large seed=43 epoch=11/100 batch=30/55 loss=0.2952 acc=1.0000 elapsed=17.8s ETA=14.8s
+  mobilenet_v3_large seed=43 epoch=11/100 batch=40/55 loss=0.2950 acc=1.0000 elapsed=20.5s ETA=7.7s
+  mobilenet_v3_large seed=43 epoch=11/100 batch=50/55 loss=0.2957 acc=1.0000 elapsed=24.1s ETA=2.4s
+  mobilenet_v3_large seed=43 epoch=11/100 batch=55/55 loss=0.2961 acc=0.9994 elapsed=25.1s ETA=0.0s
+mobilenet_v3_large seed=43 epoch=11/100: train_loss=0.2961 train_acc=0.9994 val_loss=0.2954 val_acc=1.0000 macroF1=1.0000 lr=3e-05 best_epoch=4 stale=7/10 seconds=35.2
+  mobilenet_v3_large seed=43 epoch=12/100 batch=1/55 loss=0.2945 acc=1.0000 elapsed=7.1s ETA=382.0s
+  mobilenet_v3_large seed=43 epoch=12/100 batch=10/55 loss=0.2949 acc=1.0000 elapsed=10.2s ETA=45.9s
+  mobilenet_v3_large seed=43 epoch=12/100 batch=20/55 loss=0.2947 acc=1.0000 elapsed=14.9s ETA=26.1s
+  mobilenet_v3_large seed=43 epoch=12/100 batch=30/55 loss=0.2950 acc=1.0000 elapsed=17.4s ETA=14.5s
+  mobilenet_v3_large seed=43 epoch=12/100 batch=40/55 loss=0.2950 acc=1.0000 elapsed=21.5s ETA=8.1s
+  mobilenet_v3_large seed=43 epoch=12/100 batch=50/55 loss=0.2950 acc=1.0000 elapsed=23.7s ETA=2.4s
+  mobilenet_v3_large seed=43 epoch=12/100 batch=55/55 loss=0.2951 acc=1.0000 elapsed=24.9s ETA=0.0s
+mobilenet_v3_large seed=43 epoch=12/100: train_loss=0.2951 train_acc=1.0000 val_loss=0.2944 val_acc=1.0000 macroF1=1.0000 lr=3e-05 best_epoch=4 stale=8/10 seconds=35.2
+  mobilenet_v3_large seed=43 epoch=13/100 batch=1/55 loss=0.2956 acc=1.0000 elapsed=7.6s ETA=409.2s
+  mobilenet_v3_large seed=43 epoch=13/100 batch=10/55 loss=0.2945 acc=1.0000 elapsed=10.1s ETA=45.6s
+  mobilenet_v3_large seed=43 epoch=13/100 batch=20/55 loss=0.2955 acc=1.0000 elapsed=13.7s ETA=23.9s
+  mobilenet_v3_large seed=43 epoch=13/100 batch=30/55 loss=0.2966 acc=1.0000 elapsed=16.5s ETA=13.7s
+  mobilenet_v3_large seed=43 epoch=13/100 batch=40/55 loss=0.2962 acc=1.0000 elapsed=20.2s ETA=7.6s
+  mobilenet_v3_large seed=43 epoch=13/100 batch=50/55 loss=0.2959 acc=1.0000 elapsed=24.1s ETA=2.4s
+  mobilenet_v3_large seed=43 epoch=13/100 batch=55/55 loss=0.2960 acc=1.0000 elapsed=25.1s ETA=0.0s
+mobilenet_v3_large seed=43 epoch=13/100: train_loss=0.2960 train_acc=1.0000 val_loss=0.2945 val_acc=1.0000 macroF1=1.0000 lr=3e-05 best_epoch=4 stale=9/10 seconds=35.3
+  mobilenet_v3_large seed=43 epoch=14/100 batch=1/55 loss=0.2946 acc=1.0000 elapsed=7.5s ETA=403.2s
+  mobilenet_v3_large seed=43 epoch=14/100 batch=10/55 loss=0.2946 acc=1.0000 elapsed=10.2s ETA=45.8s
+  mobilenet_v3_large seed=43 epoch=14/100 batch=20/55 loss=0.2950 acc=1.0000 elapsed=14.5s ETA=25.4s
+  mobilenet_v3_large seed=43 epoch=14/100 batch=30/55 loss=0.2952 acc=1.0000 elapsed=17.5s ETA=14.5s
+  mobilenet_v3_large seed=43 epoch=14/100 batch=40/55 loss=0.2950 acc=1.0000 elapsed=20.8s ETA=7.8s
+  mobilenet_v3_large seed=43 epoch=14/100 batch=50/55 loss=0.2949 acc=1.0000 elapsed=24.2s ETA=2.4s
+  mobilenet_v3_large seed=43 epoch=14/100 batch=55/55 loss=0.2949 acc=1.0000 elapsed=25.7s ETA=0.0s
+mobilenet_v3_large seed=43 epoch=14/100: train_loss=0.2949 train_acc=1.0000 val_loss=0.2947 val_acc=1.0000 macroF1=1.0000 lr=3e-05 best_epoch=4 stale=10/10 seconds=35.9
+CUDA cleanup after training mobilenet_v3_large seed=43: allocated=64.0 MiB, reserved=64.0 MiB, device free=15006.0 MiB
+CUDA cleanup before training mobilenet_v3_large seed=44: allocated=64.0 MiB, reserved=64.0 MiB, device free=15006.0 MiB
+  mobilenet_v3_large seed=44 epoch=1/100 batch=1/55 loss=1.0999 acc=0.3125 elapsed=7.0s ETA=380.4s
+  mobilenet_v3_large seed=44 epoch=1/100 batch=10/55 loss=1.0140 acc=0.6250 elapsed=10.2s ETA=45.9s
+  mobilenet_v3_large seed=44 epoch=1/100 batch=20/55 loss=0.8944 acc=0.7531 elapsed=14.3s ETA=24.9s
+  mobilenet_v3_large seed=44 epoch=1/100 batch=30/55 loss=0.7685 acc=0.8219 elapsed=17.5s ETA=14.6s
+  mobilenet_v3_large seed=44 epoch=1/100 batch=40/55 loss=0.6735 acc=0.8586 elapsed=21.3s ETA=8.0s
+  mobilenet_v3_large seed=44 epoch=1/100 batch=50/55 loss=0.6096 acc=0.8844 elapsed=24.1s ETA=2.4s
+  mobilenet_v3_large seed=44 epoch=1/100 batch=55/55 loss=0.5874 acc=0.8937 elapsed=25.3s ETA=0.0s
+mobilenet_v3_large seed=44 epoch=1/100: train_loss=0.5874 train_acc=0.8937 val_loss=0.3702 val_acc=0.9918 macroF1=0.9875 lr=0.0001 best_epoch=1 stale=0/10 seconds=35.5
+  mobilenet_v3_large seed=44 epoch=2/100 batch=1/55 loss=0.3427 acc=1.0000 elapsed=7.3s ETA=394.5s
+  mobilenet_v3_large seed=44 epoch=2/100 batch=10/55 loss=0.3314 acc=0.9969 elapsed=10.0s ETA=45.1s
+  mobilenet_v3_large seed=44 epoch=2/100 batch=20/55 loss=0.3269 acc=0.9953 elapsed=13.0s ETA=22.8s
+  mobilenet_v3_large seed=44 epoch=2/100 batch=30/55 loss=0.3241 acc=0.9958 elapsed=17.4s ETA=14.5s
+  mobilenet_v3_large seed=44 epoch=2/100 batch=40/55 loss=0.3209 acc=0.9969 elapsed=20.5s ETA=7.7s
+  mobilenet_v3_large seed=44 epoch=2/100 batch=50/55 loss=0.3193 acc=0.9975 elapsed=24.4s ETA=2.4s
+  mobilenet_v3_large seed=44 epoch=2/100 batch=55/55 loss=0.3184 acc=0.9977 elapsed=25.4s ETA=0.0s
+mobilenet_v3_large seed=44 epoch=2/100: train_loss=0.3184 train_acc=0.9977 val_loss=0.3221 val_acc=0.9959 macroF1=0.9938 lr=0.0001 best_epoch=2 stale=0/10 seconds=35.5
+  mobilenet_v3_large seed=44 epoch=3/100 batch=1/55 loss=0.3049 acc=1.0000 elapsed=7.6s ETA=410.1s
+  mobilenet_v3_large seed=44 epoch=3/100 batch=10/55 loss=0.3029 acc=1.0000 elapsed=10.1s ETA=45.5s
+  mobilenet_v3_large seed=44 epoch=3/100 batch=20/55 loss=0.3064 acc=1.0000 elapsed=13.8s ETA=24.1s
+  mobilenet_v3_large seed=44 epoch=3/100 batch=30/55 loss=0.3052 acc=1.0000 elapsed=16.7s ETA=13.9s
+  mobilenet_v3_large seed=44 epoch=3/100 batch=40/55 loss=0.3097 acc=0.9984 elapsed=20.1s ETA=7.5s
+  mobilenet_v3_large seed=44 epoch=3/100 batch=50/55 loss=0.3090 acc=0.9988 elapsed=23.7s ETA=2.4s
+  mobilenet_v3_large seed=44 epoch=3/100 batch=55/55 loss=0.3089 acc=0.9989 elapsed=24.9s ETA=0.0s
+mobilenet_v3_large seed=44 epoch=3/100: train_loss=0.3089 train_acc=0.9989 val_loss=0.3033 val_acc=0.9959 macroF1=0.9951 lr=0.0001 best_epoch=2 stale=1/10 seconds=35.1
+  mobilenet_v3_large seed=44 epoch=4/100 batch=1/55 loss=0.2968 acc=1.0000 elapsed=7.1s ETA=382.2s
+  mobilenet_v3_large seed=44 epoch=4/100 batch=10/55 loss=0.3105 acc=0.9969 elapsed=10.4s ETA=46.8s
+  mobilenet_v3_large seed=44 epoch=4/100 batch=20/55 loss=0.3089 acc=0.9969 elapsed=13.8s ETA=24.2s
+  mobilenet_v3_large seed=44 epoch=4/100 batch=30/55 loss=0.3093 acc=0.9979 elapsed=17.7s ETA=14.8s
+  mobilenet_v3_large seed=44 epoch=4/100 batch=40/55 loss=0.3078 acc=0.9984 elapsed=20.3s ETA=7.6s
+  mobilenet_v3_large seed=44 epoch=4/100 batch=50/55 loss=0.3067 acc=0.9988 elapsed=24.5s ETA=2.5s
+  mobilenet_v3_large seed=44 epoch=4/100 batch=55/55 loss=0.3064 acc=0.9989 elapsed=25.5s ETA=0.0s
+mobilenet_v3_large seed=44 epoch=4/100: train_loss=0.3064 train_acc=0.9989 val_loss=0.2989 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=4 stale=0/10 seconds=35.7
+  mobilenet_v3_large seed=44 epoch=5/100 batch=1/55 loss=0.2951 acc=1.0000 elapsed=7.4s ETA=398.4s
+  mobilenet_v3_large seed=44 epoch=5/100 batch=10/55 loss=0.3017 acc=1.0000 elapsed=10.1s ETA=45.4s
+  mobilenet_v3_large seed=44 epoch=5/100 batch=20/55 loss=0.3021 acc=1.0000 elapsed=13.9s ETA=24.2s
+  mobilenet_v3_large seed=44 epoch=5/100 batch=30/55 loss=0.3017 acc=1.0000 elapsed=17.2s ETA=14.3s
+  mobilenet_v3_large seed=44 epoch=5/100 batch=40/55 loss=0.3017 acc=1.0000 elapsed=19.9s ETA=7.4s
+  mobilenet_v3_large seed=44 epoch=5/100 batch=50/55 loss=0.3009 acc=1.0000 elapsed=23.4s ETA=2.3s
+  mobilenet_v3_large seed=44 epoch=5/100 batch=55/55 loss=0.3005 acc=1.0000 elapsed=24.9s ETA=0.0s
+mobilenet_v3_large seed=44 epoch=5/100: train_loss=0.3005 train_acc=1.0000 val_loss=0.3006 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=4 stale=1/10 seconds=35.2
+  mobilenet_v3_large seed=44 epoch=6/100 batch=1/55 loss=0.2942 acc=1.0000 elapsed=7.4s ETA=399.9s
+  mobilenet_v3_large seed=44 epoch=6/100 batch=10/55 loss=0.2970 acc=1.0000 elapsed=10.5s ETA=47.2s
+  mobilenet_v3_large seed=44 epoch=6/100 batch=20/55 loss=0.2986 acc=1.0000 elapsed=13.6s ETA=23.7s
+  mobilenet_v3_large seed=44 epoch=6/100 batch=30/55 loss=0.2990 acc=1.0000 elapsed=18.0s ETA=15.0s
+  mobilenet_v3_large seed=44 epoch=6/100 batch=40/55 loss=0.2988 acc=1.0000 elapsed=20.4s ETA=7.6s
+  mobilenet_v3_large seed=44 epoch=6/100 batch=50/55 loss=0.2985 acc=1.0000 elapsed=24.8s ETA=2.5s
+  mobilenet_v3_large seed=44 epoch=6/100 batch=55/55 loss=0.2984 acc=1.0000 elapsed=25.8s ETA=0.0s
+mobilenet_v3_large seed=44 epoch=6/100: train_loss=0.2984 train_acc=1.0000 val_loss=0.2989 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=4 stale=2/10 seconds=36.0
+  mobilenet_v3_large seed=44 epoch=7/100 batch=1/55 loss=0.2947 acc=1.0000 elapsed=7.2s ETA=390.7s
+  mobilenet_v3_large seed=44 epoch=7/100 batch=10/55 loss=0.2967 acc=1.0000 elapsed=10.4s ETA=46.7s
+  mobilenet_v3_large seed=44 epoch=7/100 batch=20/55 loss=0.2970 acc=1.0000 elapsed=14.0s ETA=24.5s
+  mobilenet_v3_large seed=44 epoch=7/100 batch=30/55 loss=0.2971 acc=1.0000 elapsed=17.8s ETA=14.8s
+  mobilenet_v3_large seed=44 epoch=7/100 batch=40/55 loss=0.2979 acc=1.0000 elapsed=20.9s ETA=7.8s
+  mobilenet_v3_large seed=44 epoch=7/100 batch=50/55 loss=0.2979 acc=1.0000 elapsed=24.5s ETA=2.5s
+  mobilenet_v3_large seed=44 epoch=7/100 batch=55/55 loss=0.2978 acc=1.0000 elapsed=25.8s ETA=0.0s
+mobilenet_v3_large seed=44 epoch=7/100: train_loss=0.2978 train_acc=1.0000 val_loss=0.2966 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=4 stale=3/10 seconds=35.9
+  mobilenet_v3_large seed=44 epoch=8/100 batch=1/55 loss=0.2937 acc=1.0000 elapsed=7.4s ETA=401.3s
+  mobilenet_v3_large seed=44 epoch=8/100 batch=10/55 loss=0.2965 acc=1.0000 elapsed=10.7s ETA=47.9s
+  mobilenet_v3_large seed=44 epoch=8/100 batch=20/55 loss=0.2971 acc=1.0000 elapsed=14.3s ETA=25.0s
+  mobilenet_v3_large seed=44 epoch=8/100 batch=30/55 loss=0.2964 acc=1.0000 elapsed=17.3s ETA=14.4s
+  mobilenet_v3_large seed=44 epoch=8/100 batch=40/55 loss=0.2968 acc=1.0000 elapsed=21.4s ETA=8.0s
+  mobilenet_v3_large seed=44 epoch=8/100 batch=50/55 loss=0.2967 acc=1.0000 elapsed=24.3s ETA=2.4s
+  mobilenet_v3_large seed=44 epoch=8/100 batch=55/55 loss=0.2966 acc=1.0000 elapsed=25.5s ETA=0.0s
+mobilenet_v3_large seed=44 epoch=8/100: train_loss=0.2966 train_acc=1.0000 val_loss=0.2971 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=4 stale=4/10 seconds=35.7
+  mobilenet_v3_large seed=44 epoch=9/100 batch=1/55 loss=0.2945 acc=1.0000 elapsed=7.5s ETA=407.1s
+  mobilenet_v3_large seed=44 epoch=9/100 batch=10/55 loss=0.2943 acc=1.0000 elapsed=10.5s ETA=47.1s
+  mobilenet_v3_large seed=44 epoch=9/100 batch=20/55 loss=0.2948 acc=1.0000 elapsed=13.5s ETA=23.7s
+  mobilenet_v3_large seed=44 epoch=9/100 batch=30/55 loss=0.2952 acc=1.0000 elapsed=17.9s ETA=14.9s
+  mobilenet_v3_large seed=44 epoch=9/100 batch=40/55 loss=0.2957 acc=1.0000 elapsed=20.7s ETA=7.8s
+  mobilenet_v3_large seed=44 epoch=9/100 batch=50/55 loss=0.2955 acc=1.0000 elapsed=24.0s ETA=2.4s
+  mobilenet_v3_large seed=44 epoch=9/100 batch=55/55 loss=0.2955 acc=1.0000 elapsed=25.4s ETA=0.0s
+mobilenet_v3_large seed=44 epoch=9/100: train_loss=0.2955 train_acc=1.0000 val_loss=0.2946 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=4 stale=5/10 seconds=36.1
+  mobilenet_v3_large seed=44 epoch=10/100 batch=1/55 loss=0.2941 acc=1.0000 elapsed=7.2s ETA=391.0s
+  mobilenet_v3_large seed=44 epoch=10/100 batch=10/55 loss=0.2974 acc=1.0000 elapsed=11.1s ETA=50.0s
+  mobilenet_v3_large seed=44 epoch=10/100 batch=20/55 loss=0.2961 acc=1.0000 elapsed=14.4s ETA=25.1s
+  mobilenet_v3_large seed=44 epoch=10/100 batch=30/55 loss=0.2958 acc=1.0000 elapsed=18.1s ETA=15.1s
+  mobilenet_v3_large seed=44 epoch=10/100 batch=40/55 loss=0.2955 acc=1.0000 elapsed=21.9s ETA=8.2s
+  mobilenet_v3_large seed=44 epoch=10/100 batch=50/55 loss=0.2952 acc=1.0000 elapsed=25.4s ETA=2.5s
+  mobilenet_v3_large seed=44 epoch=10/100 batch=55/55 loss=0.2952 acc=1.0000 elapsed=26.8s ETA=0.0s
+mobilenet_v3_large seed=44 epoch=10/100: train_loss=0.2952 train_acc=1.0000 val_loss=0.2937 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=4 stale=6/10 seconds=37.6
+  mobilenet_v3_large seed=44 epoch=11/100 batch=1/55 loss=0.2959 acc=1.0000 elapsed=7.6s ETA=408.5s
+  mobilenet_v3_large seed=44 epoch=11/100 batch=10/55 loss=0.2958 acc=1.0000 elapsed=10.8s ETA=48.7s
+  mobilenet_v3_large seed=44 epoch=11/100 batch=20/55 loss=0.2954 acc=1.0000 elapsed=15.0s ETA=26.2s
+  mobilenet_v3_large seed=44 epoch=11/100 batch=30/55 loss=0.2950 acc=1.0000 elapsed=18.2s ETA=15.2s
+  mobilenet_v3_large seed=44 epoch=11/100 batch=40/55 loss=0.2948 acc=1.0000 elapsed=22.5s ETA=8.4s
+  mobilenet_v3_large seed=44 epoch=11/100 batch=50/55 loss=0.2959 acc=0.9994 elapsed=25.4s ETA=2.5s
+  mobilenet_v3_large seed=44 epoch=11/100 batch=55/55 loss=0.2959 acc=0.9994 elapsed=26.8s ETA=0.0s
+mobilenet_v3_large seed=44 epoch=11/100: train_loss=0.2959 train_acc=0.9994 val_loss=0.2951 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=4 stale=7/10 seconds=37.6
+  mobilenet_v3_large seed=44 epoch=12/100 batch=1/55 loss=0.2948 acc=1.0000 elapsed=7.3s ETA=396.3s
+  mobilenet_v3_large seed=44 epoch=12/100 batch=10/55 loss=0.2949 acc=1.0000 elapsed=11.4s ETA=51.3s
+  mobilenet_v3_large seed=44 epoch=12/100 batch=20/55 loss=0.2949 acc=1.0000 elapsed=15.4s ETA=26.9s
+  mobilenet_v3_large seed=44 epoch=12/100 batch=30/55 loss=0.2948 acc=1.0000 elapsed=18.3s ETA=15.2s
+  mobilenet_v3_large seed=44 epoch=12/100 batch=40/55 loss=0.2948 acc=1.0000 elapsed=22.5s ETA=8.5s
+  mobilenet_v3_large seed=44 epoch=12/100 batch=50/55 loss=0.2948 acc=1.0000 elapsed=25.4s ETA=2.5s
+  mobilenet_v3_large seed=44 epoch=12/100 batch=55/55 loss=0.2949 acc=1.0000 elapsed=26.8s ETA=0.0s
+mobilenet_v3_large seed=44 epoch=12/100: train_loss=0.2949 train_acc=1.0000 val_loss=0.2931 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=4 stale=8/10 seconds=37.5
+  mobilenet_v3_large seed=44 epoch=13/100 batch=1/55 loss=0.2937 acc=1.0000 elapsed=7.4s ETA=401.3s
+  mobilenet_v3_large seed=44 epoch=13/100 batch=10/55 loss=0.2945 acc=1.0000 elapsed=10.6s ETA=47.7s
+  mobilenet_v3_large seed=44 epoch=13/100 batch=20/55 loss=0.2948 acc=1.0000 elapsed=15.0s ETA=26.3s
+  mobilenet_v3_large seed=44 epoch=13/100 batch=30/55 loss=0.2954 acc=0.9990 elapsed=18.1s ETA=15.1s
+  mobilenet_v3_large seed=44 epoch=13/100 batch=40/55 loss=0.2956 acc=0.9992 elapsed=23.2s ETA=8.7s
+  mobilenet_v3_large seed=44 epoch=13/100 batch=50/55 loss=0.2954 acc=0.9994 elapsed=26.3s ETA=2.6s
+  mobilenet_v3_large seed=44 epoch=13/100 batch=55/55 loss=0.2953 acc=0.9994 elapsed=27.8s ETA=0.0s
+mobilenet_v3_large seed=44 epoch=13/100: train_loss=0.2953 train_acc=0.9994 val_loss=0.2938 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=4 stale=9/10 seconds=38.7
+  mobilenet_v3_large seed=44 epoch=14/100 batch=1/55 loss=0.2942 acc=1.0000 elapsed=7.3s ETA=396.4s
+  mobilenet_v3_large seed=44 epoch=14/100 batch=10/55 loss=0.2947 acc=1.0000 elapsed=10.8s ETA=48.7s
+  mobilenet_v3_large seed=44 epoch=14/100 batch=20/55 loss=0.2944 acc=1.0000 elapsed=15.6s ETA=27.4s
+  mobilenet_v3_large seed=44 epoch=14/100 batch=30/55 loss=0.2950 acc=1.0000 elapsed=18.9s ETA=15.8s
+  mobilenet_v3_large seed=44 epoch=14/100 batch=40/55 loss=0.2948 acc=1.0000 elapsed=23.9s ETA=9.0s
+  mobilenet_v3_large seed=44 epoch=14/100 batch=50/55 loss=0.2947 acc=1.0000 elapsed=26.8s ETA=2.7s
+  mobilenet_v3_large seed=44 epoch=14/100 batch=55/55 loss=0.2947 acc=1.0000 elapsed=27.9s ETA=0.0s
+mobilenet_v3_large seed=44 epoch=14/100: train_loss=0.2947 train_acc=1.0000 val_loss=0.2928 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=4 stale=10/10 seconds=38.6
+CUDA cleanup after training mobilenet_v3_large seed=44: allocated=64.0 MiB, reserved=64.0 MiB, device free=15006.0 MiB
+CUDA cleanup before training vit_base_patch16_224 seed=42: allocated=64.0 MiB, reserved=64.0 MiB, device free=15006.0 MiB
+  vit_base_patch16_224 seed=42 epoch=1/100 batch=1/55 loss=1.1785 acc=0.3125 elapsed=8.0s ETA=432.9s
+  vit_base_patch16_224 seed=42 epoch=1/100 batch=10/55 loss=0.6729 acc=0.7438 elapsed=11.6s ETA=52.2s
+  vit_base_patch16_224 seed=42 epoch=1/100 batch=20/55 loss=0.5062 acc=0.8688 elapsed=15.4s ETA=26.9s
+  vit_base_patch16_224 seed=42 epoch=1/100 batch=30/55 loss=0.4427 acc=0.9115 elapsed=19.5s ETA=16.3s
+  vit_base_patch16_224 seed=42 epoch=1/100 batch=40/55 loss=0.4099 acc=0.9320 elapsed=23.2s ETA=8.7s
+  vit_base_patch16_224 seed=42 epoch=1/100 batch=50/55 loss=0.3882 acc=0.9456 elapsed=26.8s ETA=2.7s
+  vit_base_patch16_224 seed=42 epoch=1/100 batch=55/55 loss=0.3805 acc=0.9503 elapsed=28.2s ETA=0.0s
+vit_base_patch16_224 seed=42 epoch=1/100: train_loss=0.3805 train_acc=0.9503 val_loss=0.2982 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=1 stale=0/10 seconds=39.4
+  vit_base_patch16_224 seed=42 epoch=2/100 batch=1/55 loss=0.2986 acc=1.0000 elapsed=7.7s ETA=414.7s
+  vit_base_patch16_224 seed=42 epoch=2/100 batch=10/55 loss=0.2972 acc=1.0000 elapsed=12.1s ETA=54.3s
+  vit_base_patch16_224 seed=42 epoch=2/100 batch=20/55 loss=0.2995 acc=0.9969 elapsed=16.6s ETA=29.0s
+  vit_base_patch16_224 seed=42 epoch=2/100 batch=30/55 loss=0.2982 acc=0.9979 elapsed=19.8s ETA=16.5s
+  vit_base_patch16_224 seed=42 epoch=2/100 batch=40/55 loss=0.2972 acc=0.9984 elapsed=22.9s ETA=8.6s
+  vit_base_patch16_224 seed=42 epoch=2/100 batch=50/55 loss=0.2970 acc=0.9981 elapsed=26.9s ETA=2.7s
+  vit_base_patch16_224 seed=42 epoch=2/100 batch=55/55 loss=0.2978 acc=0.9977 elapsed=28.3s ETA=0.0s
+vit_base_patch16_224 seed=42 epoch=2/100: train_loss=0.2978 train_acc=0.9977 val_loss=0.2985 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=1 stale=1/10 seconds=39.3
+  vit_base_patch16_224 seed=42 epoch=3/100 batch=1/55 loss=0.2954 acc=1.0000 elapsed=8.4s ETA=452.1s
+  vit_base_patch16_224 seed=42 epoch=3/100 batch=10/55 loss=0.2946 acc=1.0000 elapsed=11.9s ETA=53.6s
+  vit_base_patch16_224 seed=42 epoch=3/100 batch=20/55 loss=0.2942 acc=1.0000 elapsed=15.8s ETA=27.7s
+  vit_base_patch16_224 seed=42 epoch=3/100 batch=30/55 loss=0.2939 acc=1.0000 elapsed=19.0s ETA=15.8s
+  vit_base_patch16_224 seed=42 epoch=3/100 batch=40/55 loss=0.2937 acc=1.0000 elapsed=22.5s ETA=8.4s
+  vit_base_patch16_224 seed=42 epoch=3/100 batch=50/55 loss=0.2934 acc=1.0000 elapsed=26.5s ETA=2.7s
+  vit_base_patch16_224 seed=42 epoch=3/100 batch=55/55 loss=0.2932 acc=1.0000 elapsed=28.1s ETA=0.0s
+vit_base_patch16_224 seed=42 epoch=3/100: train_loss=0.2932 train_acc=1.0000 val_loss=0.2958 val_acc=0.9959 macroF1=0.9938 lr=0.0001 best_epoch=1 stale=2/10 seconds=39.2
+  vit_base_patch16_224 seed=42 epoch=4/100 batch=1/55 loss=0.2921 acc=1.0000 elapsed=8.3s ETA=447.0s
+  vit_base_patch16_224 seed=42 epoch=4/100 batch=10/55 loss=0.2920 acc=1.0000 elapsed=11.4s ETA=51.5s
+  vit_base_patch16_224 seed=42 epoch=4/100 batch=20/55 loss=0.2918 acc=1.0000 elapsed=14.9s ETA=26.2s
+  vit_base_patch16_224 seed=42 epoch=4/100 batch=30/55 loss=0.2918 acc=1.0000 elapsed=19.2s ETA=16.0s
+  vit_base_patch16_224 seed=42 epoch=4/100 batch=40/55 loss=0.2918 acc=1.0000 elapsed=22.6s ETA=8.5s
+  vit_base_patch16_224 seed=42 epoch=4/100 batch=50/55 loss=0.2917 acc=1.0000 elapsed=26.0s ETA=2.6s
+  vit_base_patch16_224 seed=42 epoch=4/100 batch=55/55 loss=0.2917 acc=1.0000 elapsed=27.9s ETA=0.0s
+vit_base_patch16_224 seed=42 epoch=4/100: train_loss=0.2917 train_acc=1.0000 val_loss=0.2919 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=1 stale=3/10 seconds=38.9
+  vit_base_patch16_224 seed=42 epoch=5/100 batch=1/55 loss=0.2917 acc=1.0000 elapsed=8.0s ETA=430.7s
+  vit_base_patch16_224 seed=42 epoch=5/100 batch=10/55 loss=0.2915 acc=1.0000 elapsed=11.0s ETA=49.7s
+  vit_base_patch16_224 seed=42 epoch=5/100 batch=20/55 loss=0.2916 acc=1.0000 elapsed=15.1s ETA=26.4s
+  vit_base_patch16_224 seed=42 epoch=5/100 batch=30/55 loss=0.2915 acc=1.0000 elapsed=18.6s ETA=15.5s
+  vit_base_patch16_224 seed=42 epoch=5/100 batch=40/55 loss=0.2915 acc=1.0000 elapsed=22.3s ETA=8.4s
+  vit_base_patch16_224 seed=42 epoch=5/100 batch=50/55 loss=0.2915 acc=1.0000 elapsed=25.9s ETA=2.6s
+  vit_base_patch16_224 seed=42 epoch=5/100 batch=55/55 loss=0.2915 acc=1.0000 elapsed=27.4s ETA=0.0s
+vit_base_patch16_224 seed=42 epoch=5/100: train_loss=0.2915 train_acc=1.0000 val_loss=0.2917 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=1 stale=4/10 seconds=38.4
+  vit_base_patch16_224 seed=42 epoch=6/100 batch=1/55 loss=0.2915 acc=1.0000 elapsed=7.7s ETA=414.6s
+  vit_base_patch16_224 seed=42 epoch=6/100 batch=10/55 loss=0.2915 acc=1.0000 elapsed=11.2s ETA=50.6s
+  vit_base_patch16_224 seed=42 epoch=6/100 batch=20/55 loss=0.2914 acc=1.0000 elapsed=15.7s ETA=27.6s
+  vit_base_patch16_224 seed=42 epoch=6/100 batch=30/55 loss=0.2914 acc=1.0000 elapsed=18.7s ETA=15.6s
+  vit_base_patch16_224 seed=42 epoch=6/100 batch=40/55 loss=0.2914 acc=1.0000 elapsed=22.2s ETA=8.3s
+  vit_base_patch16_224 seed=42 epoch=6/100 batch=50/55 loss=0.2914 acc=1.0000 elapsed=25.4s ETA=2.5s
+  vit_base_patch16_224 seed=42 epoch=6/100 batch=55/55 loss=0.2914 acc=1.0000 elapsed=26.8s ETA=0.0s
+vit_base_patch16_224 seed=42 epoch=6/100: train_loss=0.2914 train_acc=1.0000 val_loss=0.2916 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=1 stale=5/10 seconds=37.6
+  vit_base_patch16_224 seed=42 epoch=7/100 batch=1/55 loss=0.2914 acc=1.0000 elapsed=8.0s ETA=434.0s
+  vit_base_patch16_224 seed=42 epoch=7/100 batch=10/55 loss=0.2914 acc=1.0000 elapsed=11.7s ETA=52.8s
+  vit_base_patch16_224 seed=42 epoch=7/100 batch=20/55 loss=0.2914 acc=1.0000 elapsed=15.7s ETA=27.4s
+  vit_base_patch16_224 seed=42 epoch=7/100 batch=30/55 loss=0.2914 acc=1.0000 elapsed=18.8s ETA=15.7s
+  vit_base_patch16_224 seed=42 epoch=7/100 batch=40/55 loss=0.2914 acc=1.0000 elapsed=22.6s ETA=8.5s
+  vit_base_patch16_224 seed=42 epoch=7/100 batch=50/55 loss=0.2914 acc=1.0000 elapsed=26.5s ETA=2.6s
+  vit_base_patch16_224 seed=42 epoch=7/100 batch=55/55 loss=0.2914 acc=1.0000 elapsed=27.8s ETA=0.0s
+vit_base_patch16_224 seed=42 epoch=7/100: train_loss=0.2914 train_acc=1.0000 val_loss=0.2915 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=1 stale=6/10 seconds=38.8
+  vit_base_patch16_224 seed=42 epoch=8/100 batch=1/55 loss=0.2914 acc=1.0000 elapsed=8.2s ETA=442.8s
+  vit_base_patch16_224 seed=42 epoch=8/100 batch=10/55 loss=0.2913 acc=1.0000 elapsed=11.4s ETA=51.3s
+  vit_base_patch16_224 seed=42 epoch=8/100 batch=20/55 loss=0.2913 acc=1.0000 elapsed=15.0s ETA=26.2s
+  vit_base_patch16_224 seed=42 epoch=8/100 batch=30/55 loss=0.2913 acc=1.0000 elapsed=18.8s ETA=15.7s
+  vit_base_patch16_224 seed=42 epoch=8/100 batch=40/55 loss=0.2913 acc=1.0000 elapsed=22.2s ETA=8.3s
+  vit_base_patch16_224 seed=42 epoch=8/100 batch=50/55 loss=0.2913 acc=1.0000 elapsed=25.7s ETA=2.6s
+  vit_base_patch16_224 seed=42 epoch=8/100 batch=55/55 loss=0.2913 acc=1.0000 elapsed=27.2s ETA=0.0s
+vit_base_patch16_224 seed=42 epoch=8/100: train_loss=0.2913 train_acc=1.0000 val_loss=0.2915 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=1 stale=7/10 seconds=38.0
+  vit_base_patch16_224 seed=42 epoch=9/100 batch=1/55 loss=0.2913 acc=1.0000 elapsed=7.8s ETA=421.5s
+  vit_base_patch16_224 seed=42 epoch=9/100 batch=10/55 loss=0.2913 acc=1.0000 elapsed=11.1s ETA=49.9s
+  vit_base_patch16_224 seed=42 epoch=9/100 batch=20/55 loss=0.2913 acc=1.0000 elapsed=14.9s ETA=26.1s
+  vit_base_patch16_224 seed=42 epoch=9/100 batch=30/55 loss=0.2913 acc=1.0000 elapsed=18.6s ETA=15.5s
+  vit_base_patch16_224 seed=42 epoch=9/100 batch=40/55 loss=0.2913 acc=1.0000 elapsed=21.9s ETA=8.2s
+  vit_base_patch16_224 seed=42 epoch=9/100 batch=50/55 loss=0.2913 acc=1.0000 elapsed=25.7s ETA=2.6s
+  vit_base_patch16_224 seed=42 epoch=9/100 batch=55/55 loss=0.2913 acc=1.0000 elapsed=27.1s ETA=0.0s
+vit_base_patch16_224 seed=42 epoch=9/100: train_loss=0.2913 train_acc=1.0000 val_loss=0.2915 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=1 stale=8/10 seconds=37.9
+  vit_base_patch16_224 seed=42 epoch=10/100 batch=1/55 loss=0.2913 acc=1.0000 elapsed=7.9s ETA=427.7s
+  vit_base_patch16_224 seed=42 epoch=10/100 batch=10/55 loss=0.2913 acc=1.0000 elapsed=11.2s ETA=50.2s
+  vit_base_patch16_224 seed=42 epoch=10/100 batch=20/55 loss=0.2913 acc=1.0000 elapsed=14.8s ETA=25.9s
+  vit_base_patch16_224 seed=42 epoch=10/100 batch=30/55 loss=0.2913 acc=1.0000 elapsed=18.5s ETA=15.4s
+  vit_base_patch16_224 seed=42 epoch=10/100 batch=40/55 loss=0.2913 acc=1.0000 elapsed=22.4s ETA=8.4s
+  vit_base_patch16_224 seed=42 epoch=10/100 batch=50/55 loss=0.2913 acc=1.0000 elapsed=25.9s ETA=2.6s
+  vit_base_patch16_224 seed=42 epoch=10/100 batch=55/55 loss=0.2913 acc=1.0000 elapsed=27.4s ETA=0.0s
+vit_base_patch16_224 seed=42 epoch=10/100: train_loss=0.2913 train_acc=1.0000 val_loss=0.2914 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=1 stale=9/10 seconds=38.4
+  vit_base_patch16_224 seed=42 epoch=11/100 batch=1/55 loss=0.2913 acc=1.0000 elapsed=8.0s ETA=429.7s
+  vit_base_patch16_224 seed=42 epoch=11/100 batch=10/55 loss=0.2913 acc=1.0000 elapsed=10.8s ETA=48.6s
+  vit_base_patch16_224 seed=42 epoch=11/100 batch=20/55 loss=0.2913 acc=1.0000 elapsed=14.9s ETA=26.0s
+  vit_base_patch16_224 seed=42 epoch=11/100 batch=30/55 loss=0.2913 acc=1.0000 elapsed=18.6s ETA=15.5s
+  vit_base_patch16_224 seed=42 epoch=11/100 batch=40/55 loss=0.2913 acc=1.0000 elapsed=23.1s ETA=8.7s
+  vit_base_patch16_224 seed=42 epoch=11/100 batch=50/55 loss=0.2913 acc=1.0000 elapsed=27.0s ETA=2.7s
+  vit_base_patch16_224 seed=42 epoch=11/100 batch=55/55 loss=0.2913 acc=1.0000 elapsed=28.5s ETA=0.0s
+vit_base_patch16_224 seed=42 epoch=11/100: train_loss=0.2913 train_acc=1.0000 val_loss=0.2914 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=1 stale=10/10 seconds=39.3
+CUDA cleanup after training vit_base_patch16_224 seed=42: allocated=64.0 MiB, reserved=64.0 MiB, device free=15006.0 MiB
+CUDA cleanup before training vit_base_patch16_224 seed=43: allocated=64.0 MiB, reserved=64.0 MiB, device free=15006.0 MiB
+  vit_base_patch16_224 seed=43 epoch=1/100 batch=1/55 loss=1.1889 acc=0.1875 elapsed=7.8s ETA=420.1s
+  vit_base_patch16_224 seed=43 epoch=1/100 batch=10/55 loss=0.5500 acc=0.8281 elapsed=11.3s ETA=50.7s
+  vit_base_patch16_224 seed=43 epoch=1/100 batch=20/55 loss=0.4505 acc=0.9062 elapsed=14.6s ETA=25.6s
+  vit_base_patch16_224 seed=43 epoch=1/100 batch=30/55 loss=0.4176 acc=0.9281 elapsed=18.2s ETA=15.2s
+  vit_base_patch16_224 seed=43 epoch=1/100 batch=40/55 loss=0.3964 acc=0.9422 elapsed=22.1s ETA=8.3s
+  vit_base_patch16_224 seed=43 epoch=1/100 batch=50/55 loss=0.3776 acc=0.9525 elapsed=25.8s ETA=2.6s
+  vit_base_patch16_224 seed=43 epoch=1/100 batch=55/55 loss=0.3714 acc=0.9560 elapsed=27.6s ETA=0.0s
+vit_base_patch16_224 seed=43 epoch=1/100: train_loss=0.3714 train_acc=0.9560 val_loss=0.2997 val_acc=0.9959 macroF1=0.9938 lr=0.0001 best_epoch=1 stale=0/10 seconds=38.7
+  vit_base_patch16_224 seed=43 epoch=2/100 batch=1/55 loss=0.2970 acc=1.0000 elapsed=8.0s ETA=430.4s
+  vit_base_patch16_224 seed=43 epoch=2/100 batch=10/55 loss=0.2959 acc=1.0000 elapsed=11.6s ETA=52.1s
+  vit_base_patch16_224 seed=43 epoch=2/100 batch=20/55 loss=0.2956 acc=1.0000 elapsed=15.1s ETA=26.5s
+  vit_base_patch16_224 seed=43 epoch=2/100 batch=30/55 loss=0.2949 acc=1.0000 elapsed=18.5s ETA=15.4s
+  vit_base_patch16_224 seed=43 epoch=2/100 batch=40/55 loss=0.2944 acc=1.0000 elapsed=23.0s ETA=8.6s
+  vit_base_patch16_224 seed=43 epoch=2/100 batch=50/55 loss=0.2942 acc=1.0000 elapsed=26.3s ETA=2.6s
+  vit_base_patch16_224 seed=43 epoch=2/100 batch=55/55 loss=0.2941 acc=1.0000 elapsed=27.7s ETA=0.0s
+vit_base_patch16_224 seed=43 epoch=2/100: train_loss=0.2941 train_acc=1.0000 val_loss=0.2924 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=2 stale=0/10 seconds=38.8
+  vit_base_patch16_224 seed=43 epoch=3/100 batch=1/55 loss=0.2918 acc=1.0000 elapsed=7.9s ETA=428.9s
+  vit_base_patch16_224 seed=43 epoch=3/100 batch=10/55 loss=0.2921 acc=1.0000 elapsed=11.0s ETA=49.4s
+  vit_base_patch16_224 seed=43 epoch=3/100 batch=20/55 loss=0.2920 acc=1.0000 elapsed=14.7s ETA=25.7s
+  vit_base_patch16_224 seed=43 epoch=3/100 batch=30/55 loss=0.2920 acc=1.0000 elapsed=18.9s ETA=15.7s
+  vit_base_patch16_224 seed=43 epoch=3/100 batch=40/55 loss=0.2920 acc=1.0000 elapsed=22.4s ETA=8.4s
+  vit_base_patch16_224 seed=43 epoch=3/100 batch=50/55 loss=0.2919 acc=1.0000 elapsed=26.1s ETA=2.6s
+  vit_base_patch16_224 seed=43 epoch=3/100 batch=55/55 loss=0.2919 acc=1.0000 elapsed=27.3s ETA=0.0s
+vit_base_patch16_224 seed=43 epoch=3/100: train_loss=0.2919 train_acc=1.0000 val_loss=0.2919 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=2 stale=1/10 seconds=38.2
+  vit_base_patch16_224 seed=43 epoch=4/100 batch=1/55 loss=0.2923 acc=1.0000 elapsed=8.4s ETA=452.2s
+  vit_base_patch16_224 seed=43 epoch=4/100 batch=10/55 loss=0.2917 acc=1.0000 elapsed=11.0s ETA=49.3s
+  vit_base_patch16_224 seed=43 epoch=4/100 batch=20/55 loss=0.2917 acc=1.0000 elapsed=14.4s ETA=25.3s
+  vit_base_patch16_224 seed=43 epoch=4/100 batch=30/55 loss=0.2917 acc=1.0000 elapsed=18.4s ETA=15.3s
+  vit_base_patch16_224 seed=43 epoch=4/100 batch=40/55 loss=0.2916 acc=1.0000 elapsed=22.2s ETA=8.3s
+  vit_base_patch16_224 seed=43 epoch=4/100 batch=50/55 loss=0.2916 acc=1.0000 elapsed=26.0s ETA=2.6s
+  vit_base_patch16_224 seed=43 epoch=4/100 batch=55/55 loss=0.2916 acc=1.0000 elapsed=27.5s ETA=0.0s
+vit_base_patch16_224 seed=43 epoch=4/100: train_loss=0.2916 train_acc=1.0000 val_loss=0.2917 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=2 stale=2/10 seconds=38.6
+  vit_base_patch16_224 seed=43 epoch=5/100 batch=1/55 loss=0.2916 acc=1.0000 elapsed=7.8s ETA=422.3s
+  vit_base_patch16_224 seed=43 epoch=5/100 batch=10/55 loss=0.2915 acc=1.0000 elapsed=11.5s ETA=51.9s
+  vit_base_patch16_224 seed=43 epoch=5/100 batch=20/55 loss=0.2915 acc=1.0000 elapsed=14.8s ETA=26.0s
+  vit_base_patch16_224 seed=43 epoch=5/100 batch=30/55 loss=0.2915 acc=1.0000 elapsed=19.0s ETA=15.8s
+  vit_base_patch16_224 seed=43 epoch=5/100 batch=40/55 loss=0.2914 acc=1.0000 elapsed=22.3s ETA=8.4s
+  vit_base_patch16_224 seed=43 epoch=5/100 batch=50/55 loss=0.2915 acc=1.0000 elapsed=26.7s ETA=2.7s
+  vit_base_patch16_224 seed=43 epoch=5/100 batch=55/55 loss=0.2914 acc=1.0000 elapsed=27.8s ETA=0.0s
+vit_base_patch16_224 seed=43 epoch=5/100: train_loss=0.2914 train_acc=1.0000 val_loss=0.2915 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=2 stale=3/10 seconds=38.8
+  vit_base_patch16_224 seed=43 epoch=6/100 batch=1/55 loss=0.2914 acc=1.0000 elapsed=7.9s ETA=427.7s
+  vit_base_patch16_224 seed=43 epoch=6/100 batch=10/55 loss=0.2914 acc=1.0000 elapsed=11.2s ETA=50.4s
+  vit_base_patch16_224 seed=43 epoch=6/100 batch=20/55 loss=0.2914 acc=1.0000 elapsed=15.1s ETA=26.4s
+  vit_base_patch16_224 seed=43 epoch=6/100 batch=30/55 loss=0.2914 acc=1.0000 elapsed=19.3s ETA=16.1s
+  vit_base_patch16_224 seed=43 epoch=6/100 batch=40/55 loss=0.2914 acc=1.0000 elapsed=22.3s ETA=8.4s
+  vit_base_patch16_224 seed=43 epoch=6/100 batch=50/55 loss=0.2914 acc=1.0000 elapsed=26.4s ETA=2.6s
+  vit_base_patch16_224 seed=43 epoch=6/100 batch=55/55 loss=0.2914 acc=1.0000 elapsed=28.0s ETA=0.0s
+vit_base_patch16_224 seed=43 epoch=6/100: train_loss=0.2914 train_acc=1.0000 val_loss=0.2915 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=2 stale=4/10 seconds=38.8
+  vit_base_patch16_224 seed=43 epoch=7/100 batch=1/55 loss=0.2913 acc=1.0000 elapsed=8.1s ETA=438.2s
+  vit_base_patch16_224 seed=43 epoch=7/100 batch=10/55 loss=0.2913 acc=1.0000 elapsed=11.2s ETA=50.3s
+  vit_base_patch16_224 seed=43 epoch=7/100 batch=20/55 loss=0.2913 acc=1.0000 elapsed=14.5s ETA=25.4s
+  vit_base_patch16_224 seed=43 epoch=7/100 batch=30/55 loss=0.2913 acc=1.0000 elapsed=18.6s ETA=15.5s
+  vit_base_patch16_224 seed=43 epoch=7/100 batch=40/55 loss=0.2913 acc=1.0000 elapsed=22.5s ETA=8.4s
+  vit_base_patch16_224 seed=43 epoch=7/100 batch=50/55 loss=0.2913 acc=1.0000 elapsed=25.5s ETA=2.5s
+  vit_base_patch16_224 seed=43 epoch=7/100 batch=55/55 loss=0.2913 acc=1.0000 elapsed=27.0s ETA=0.0s
+vit_base_patch16_224 seed=43 epoch=7/100: train_loss=0.2913 train_acc=1.0000 val_loss=0.2914 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=2 stale=5/10 seconds=38.1
+  vit_base_patch16_224 seed=43 epoch=8/100 batch=1/55 loss=0.2913 acc=1.0000 elapsed=8.3s ETA=449.1s
+  vit_base_patch16_224 seed=43 epoch=8/100 batch=10/55 loss=0.2913 acc=1.0000 elapsed=12.2s ETA=54.8s
+  vit_base_patch16_224 seed=43 epoch=8/100 batch=20/55 loss=0.2913 acc=1.0000 elapsed=15.8s ETA=27.7s
+  vit_base_patch16_224 seed=43 epoch=8/100 batch=30/55 loss=0.2913 acc=1.0000 elapsed=19.9s ETA=16.6s
+  vit_base_patch16_224 seed=43 epoch=8/100 batch=40/55 loss=0.2913 acc=1.0000 elapsed=22.8s ETA=8.6s
+  vit_base_patch16_224 seed=43 epoch=8/100 batch=50/55 loss=0.2913 acc=1.0000 elapsed=26.6s ETA=2.7s
+  vit_base_patch16_224 seed=43 epoch=8/100 batch=55/55 loss=0.2913 acc=1.0000 elapsed=28.0s ETA=0.0s
+vit_base_patch16_224 seed=43 epoch=8/100: train_loss=0.2913 train_acc=1.0000 val_loss=0.2914 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=2 stale=6/10 seconds=38.9
+  vit_base_patch16_224 seed=43 epoch=9/100 batch=1/55 loss=0.2914 acc=1.0000 elapsed=8.1s ETA=438.4s
+  vit_base_patch16_224 seed=43 epoch=9/100 batch=10/55 loss=0.2913 acc=1.0000 elapsed=11.4s ETA=51.1s
+  vit_base_patch16_224 seed=43 epoch=9/100 batch=20/55 loss=0.2913 acc=1.0000 elapsed=15.4s ETA=27.0s
+  vit_base_patch16_224 seed=43 epoch=9/100 batch=30/55 loss=0.2913 acc=1.0000 elapsed=19.2s ETA=16.0s
+  vit_base_patch16_224 seed=43 epoch=9/100 batch=40/55 loss=0.2913 acc=1.0000 elapsed=22.2s ETA=8.3s
+  vit_base_patch16_224 seed=43 epoch=9/100 batch=50/55 loss=0.2913 acc=1.0000 elapsed=26.4s ETA=2.6s
+  vit_base_patch16_224 seed=43 epoch=9/100 batch=55/55 loss=0.2913 acc=1.0000 elapsed=27.8s ETA=0.0s
+vit_base_patch16_224 seed=43 epoch=9/100: train_loss=0.2913 train_acc=1.0000 val_loss=0.2914 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=2 stale=7/10 seconds=38.7
+  vit_base_patch16_224 seed=43 epoch=10/100 batch=1/55 loss=0.2913 acc=1.0000 elapsed=7.8s ETA=420.0s
+  vit_base_patch16_224 seed=43 epoch=10/100 batch=10/55 loss=0.2913 acc=1.0000 elapsed=11.0s ETA=49.5s
+  vit_base_patch16_224 seed=43 epoch=10/100 batch=20/55 loss=0.2913 acc=1.0000 elapsed=15.0s ETA=26.2s
+  vit_base_patch16_224 seed=43 epoch=10/100 batch=30/55 loss=0.2913 acc=1.0000 elapsed=18.4s ETA=15.3s
+  vit_base_patch16_224 seed=43 epoch=10/100 batch=40/55 loss=0.2913 acc=1.0000 elapsed=22.5s ETA=8.5s
+  vit_base_patch16_224 seed=43 epoch=10/100 batch=50/55 loss=0.2913 acc=1.0000 elapsed=26.4s ETA=2.6s
+  vit_base_patch16_224 seed=43 epoch=10/100 batch=55/55 loss=0.2913 acc=1.0000 elapsed=27.9s ETA=0.0s
+vit_base_patch16_224 seed=43 epoch=10/100: train_loss=0.2913 train_acc=1.0000 val_loss=0.2914 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=2 stale=8/10 seconds=38.7
+  vit_base_patch16_224 seed=43 epoch=11/100 batch=1/55 loss=0.2913 acc=1.0000 elapsed=7.9s ETA=426.7s
+  vit_base_patch16_224 seed=43 epoch=11/100 batch=10/55 loss=0.2913 acc=1.0000 elapsed=10.9s ETA=49.3s
+  vit_base_patch16_224 seed=43 epoch=11/100 batch=20/55 loss=0.2912 acc=1.0000 elapsed=15.0s ETA=26.2s
+  vit_base_patch16_224 seed=43 epoch=11/100 batch=30/55 loss=0.2912 acc=1.0000 elapsed=19.8s ETA=16.5s
+  vit_base_patch16_224 seed=43 epoch=11/100 batch=40/55 loss=0.2912 acc=1.0000 elapsed=23.0s ETA=8.6s
+  vit_base_patch16_224 seed=43 epoch=11/100 batch=50/55 loss=0.2912 acc=1.0000 elapsed=26.5s ETA=2.7s
+  vit_base_patch16_224 seed=43 epoch=11/100 batch=55/55 loss=0.2912 acc=1.0000 elapsed=27.8s ETA=0.0s
+vit_base_patch16_224 seed=43 epoch=11/100: train_loss=0.2912 train_acc=1.0000 val_loss=0.2913 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=2 stale=9/10 seconds=38.7
+  vit_base_patch16_224 seed=43 epoch=12/100 batch=1/55 loss=0.2912 acc=1.0000 elapsed=7.5s ETA=406.3s
+  vit_base_patch16_224 seed=43 epoch=12/100 batch=10/55 loss=0.2912 acc=1.0000 elapsed=11.3s ETA=51.0s
+  vit_base_patch16_224 seed=43 epoch=12/100 batch=20/55 loss=0.2912 acc=1.0000 elapsed=16.0s ETA=28.1s
+  vit_base_patch16_224 seed=43 epoch=12/100 batch=30/55 loss=0.2912 acc=1.0000 elapsed=19.2s ETA=16.0s
+  vit_base_patch16_224 seed=43 epoch=12/100 batch=40/55 loss=0.2912 acc=1.0000 elapsed=23.1s ETA=8.7s
+  vit_base_patch16_224 seed=43 epoch=12/100 batch=50/55 loss=0.2912 acc=1.0000 elapsed=26.1s ETA=2.6s
+  vit_base_patch16_224 seed=43 epoch=12/100 batch=55/55 loss=0.2912 acc=1.0000 elapsed=27.5s ETA=0.0s
+vit_base_patch16_224 seed=43 epoch=12/100: train_loss=0.2912 train_acc=1.0000 val_loss=0.2913 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=2 stale=10/10 seconds=38.3
+CUDA cleanup after training vit_base_patch16_224 seed=43: allocated=64.0 MiB, reserved=64.0 MiB, device free=15006.0 MiB
+CUDA cleanup before training vit_base_patch16_224 seed=44: allocated=64.0 MiB, reserved=64.0 MiB, device free=15006.0 MiB
+  vit_base_patch16_224 seed=44 epoch=1/100 batch=1/55 loss=1.3504 acc=0.2188 elapsed=7.6s ETA=408.5s
+  vit_base_patch16_224 seed=44 epoch=1/100 batch=10/55 loss=0.6844 acc=0.7500 elapsed=11.6s ETA=52.3s
+  vit_base_patch16_224 seed=44 epoch=1/100 batch=20/55 loss=0.5241 acc=0.8531 elapsed=16.4s ETA=28.6s
+  vit_base_patch16_224 seed=44 epoch=1/100 batch=30/55 loss=0.4554 acc=0.8990 elapsed=20.4s ETA=17.0s
+  vit_base_patch16_224 seed=44 epoch=1/100 batch=40/55 loss=0.4170 acc=0.9242 elapsed=24.4s ETA=9.1s
+  vit_base_patch16_224 seed=44 epoch=1/100 batch=50/55 loss=0.3939 acc=0.9387 elapsed=28.0s ETA=2.8s
+  vit_base_patch16_224 seed=44 epoch=1/100 batch=55/55 loss=0.3856 acc=0.9440 elapsed=29.4s ETA=0.0s
+vit_base_patch16_224 seed=44 epoch=1/100: train_loss=0.3856 train_acc=0.9440 val_loss=0.2961 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=1 stale=0/10 seconds=40.8
+  vit_base_patch16_224 seed=44 epoch=2/100 batch=1/55 loss=0.2971 acc=1.0000 elapsed=8.0s ETA=431.0s
+  vit_base_patch16_224 seed=44 epoch=2/100 batch=10/55 loss=0.2970 acc=1.0000 elapsed=11.1s ETA=49.8s
+  vit_base_patch16_224 seed=44 epoch=2/100 batch=20/55 loss=0.2956 acc=1.0000 elapsed=14.7s ETA=25.8s
+  vit_base_patch16_224 seed=44 epoch=2/100 batch=30/55 loss=0.2947 acc=1.0000 elapsed=19.6s ETA=16.3s
+  vit_base_patch16_224 seed=44 epoch=2/100 batch=40/55 loss=0.2941 acc=1.0000 elapsed=23.2s ETA=8.7s
+  vit_base_patch16_224 seed=44 epoch=2/100 batch=50/55 loss=0.2937 acc=1.0000 elapsed=27.4s ETA=2.7s
+  vit_base_patch16_224 seed=44 epoch=2/100 batch=55/55 loss=0.2936 acc=1.0000 elapsed=28.5s ETA=0.0s
+vit_base_patch16_224 seed=44 epoch=2/100: train_loss=0.2936 train_acc=1.0000 val_loss=0.2924 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=1 stale=1/10 seconds=39.8
+  vit_base_patch16_224 seed=44 epoch=3/100 batch=1/55 loss=0.2918 acc=1.0000 elapsed=8.4s ETA=453.2s
+  vit_base_patch16_224 seed=44 epoch=3/100 batch=10/55 loss=0.2918 acc=1.0000 elapsed=11.7s ETA=52.5s
+  vit_base_patch16_224 seed=44 epoch=3/100 batch=20/55 loss=0.2918 acc=1.0000 elapsed=15.7s ETA=27.5s
+  vit_base_patch16_224 seed=44 epoch=3/100 batch=30/55 loss=0.2918 acc=1.0000 elapsed=18.8s ETA=15.6s
+  vit_base_patch16_224 seed=44 epoch=3/100 batch=40/55 loss=0.2918 acc=1.0000 elapsed=23.1s ETA=8.7s
+  vit_base_patch16_224 seed=44 epoch=3/100 batch=50/55 loss=0.2918 acc=1.0000 elapsed=26.8s ETA=2.7s
+  vit_base_patch16_224 seed=44 epoch=3/100 batch=55/55 loss=0.2918 acc=1.0000 elapsed=28.3s ETA=0.0s
+vit_base_patch16_224 seed=44 epoch=3/100: train_loss=0.2918 train_acc=1.0000 val_loss=0.2918 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=1 stale=2/10 seconds=39.4
+  vit_base_patch16_224 seed=44 epoch=4/100 batch=1/55 loss=0.2916 acc=1.0000 elapsed=7.6s ETA=407.7s
+  vit_base_patch16_224 seed=44 epoch=4/100 batch=10/55 loss=0.2916 acc=1.0000 elapsed=11.4s ETA=51.1s
+  vit_base_patch16_224 seed=44 epoch=4/100 batch=20/55 loss=0.2915 acc=1.0000 elapsed=15.1s ETA=26.5s
+  vit_base_patch16_224 seed=44 epoch=4/100 batch=30/55 loss=0.2915 acc=1.0000 elapsed=19.2s ETA=16.0s
+  vit_base_patch16_224 seed=44 epoch=4/100 batch=40/55 loss=0.2916 acc=1.0000 elapsed=22.5s ETA=8.4s
+  vit_base_patch16_224 seed=44 epoch=4/100 batch=50/55 loss=0.2916 acc=1.0000 elapsed=27.1s ETA=2.7s
+  vit_base_patch16_224 seed=44 epoch=4/100 batch=55/55 loss=0.2916 acc=1.0000 elapsed=28.8s ETA=0.0s
+vit_base_patch16_224 seed=44 epoch=4/100: train_loss=0.2916 train_acc=1.0000 val_loss=0.2917 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=1 stale=3/10 seconds=40.0
+  vit_base_patch16_224 seed=44 epoch=5/100 batch=1/55 loss=0.2916 acc=1.0000 elapsed=8.0s ETA=433.0s
+  vit_base_patch16_224 seed=44 epoch=5/100 batch=10/55 loss=0.2915 acc=1.0000 elapsed=11.2s ETA=50.6s
+  vit_base_patch16_224 seed=44 epoch=5/100 batch=20/55 loss=0.2914 acc=1.0000 elapsed=15.3s ETA=26.8s
+  vit_base_patch16_224 seed=44 epoch=5/100 batch=30/55 loss=0.2914 acc=1.0000 elapsed=19.0s ETA=15.8s
+  vit_base_patch16_224 seed=44 epoch=5/100 batch=40/55 loss=0.2914 acc=1.0000 elapsed=22.2s ETA=8.3s
+  vit_base_patch16_224 seed=44 epoch=5/100 batch=50/55 loss=0.2914 acc=1.0000 elapsed=26.2s ETA=2.6s
+  vit_base_patch16_224 seed=44 epoch=5/100 batch=55/55 loss=0.2914 acc=1.0000 elapsed=27.9s ETA=0.0s
+vit_base_patch16_224 seed=44 epoch=5/100: train_loss=0.2914 train_acc=1.0000 val_loss=0.2919 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=1 stale=4/10 seconds=39.0
+  vit_base_patch16_224 seed=44 epoch=6/100 batch=1/55 loss=0.2915 acc=1.0000 elapsed=7.9s ETA=426.0s
+  vit_base_patch16_224 seed=44 epoch=6/100 batch=10/55 loss=0.2914 acc=1.0000 elapsed=11.5s ETA=51.7s
+  vit_base_patch16_224 seed=44 epoch=6/100 batch=20/55 loss=0.2914 acc=1.0000 elapsed=15.3s ETA=26.8s
+  vit_base_patch16_224 seed=44 epoch=6/100 batch=30/55 loss=0.2914 acc=1.0000 elapsed=20.0s ETA=16.7s
+  vit_base_patch16_224 seed=44 epoch=6/100 batch=40/55 loss=0.2914 acc=1.0000 elapsed=23.2s ETA=8.7s
+  vit_base_patch16_224 seed=44 epoch=6/100 batch=50/55 loss=0.2914 acc=1.0000 elapsed=26.5s ETA=2.7s
+  vit_base_patch16_224 seed=44 epoch=6/100 batch=55/55 loss=0.2914 acc=1.0000 elapsed=28.1s ETA=0.0s
+vit_base_patch16_224 seed=44 epoch=6/100: train_loss=0.2914 train_acc=1.0000 val_loss=0.2916 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=1 stale=5/10 seconds=39.2
+  vit_base_patch16_224 seed=44 epoch=7/100 batch=1/55 loss=0.2914 acc=1.0000 elapsed=8.1s ETA=435.2s
+  vit_base_patch16_224 seed=44 epoch=7/100 batch=10/55 loss=0.2913 acc=1.0000 elapsed=11.6s ETA=52.1s
+  vit_base_patch16_224 seed=44 epoch=7/100 batch=20/55 loss=0.2913 acc=1.0000 elapsed=15.7s ETA=27.5s
+  vit_base_patch16_224 seed=44 epoch=7/100 batch=30/55 loss=0.2913 acc=1.0000 elapsed=19.9s ETA=16.6s
+  vit_base_patch16_224 seed=44 epoch=7/100 batch=40/55 loss=0.2913 acc=1.0000 elapsed=23.8s ETA=8.9s
+  vit_base_patch16_224 seed=44 epoch=7/100 batch=50/55 loss=0.2913 acc=1.0000 elapsed=27.3s ETA=2.7s
+  vit_base_patch16_224 seed=44 epoch=7/100 batch=55/55 loss=0.2913 acc=1.0000 elapsed=29.1s ETA=0.0s
+vit_base_patch16_224 seed=44 epoch=7/100: train_loss=0.2913 train_acc=1.0000 val_loss=0.2916 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=1 stale=6/10 seconds=40.2
+  vit_base_patch16_224 seed=44 epoch=8/100 batch=1/55 loss=0.2914 acc=1.0000 elapsed=8.0s ETA=431.7s
+  vit_base_patch16_224 seed=44 epoch=8/100 batch=10/55 loss=0.2913 acc=1.0000 elapsed=11.8s ETA=53.1s
+  vit_base_patch16_224 seed=44 epoch=8/100 batch=20/55 loss=0.2913 acc=1.0000 elapsed=15.5s ETA=27.0s
+  vit_base_patch16_224 seed=44 epoch=8/100 batch=30/55 loss=0.2913 acc=1.0000 elapsed=18.7s ETA=15.6s
+  vit_base_patch16_224 seed=44 epoch=8/100 batch=40/55 loss=0.2913 acc=1.0000 elapsed=23.0s ETA=8.6s
+  vit_base_patch16_224 seed=44 epoch=8/100 batch=50/55 loss=0.2913 acc=1.0000 elapsed=26.5s ETA=2.7s
+  vit_base_patch16_224 seed=44 epoch=8/100 batch=55/55 loss=0.2913 acc=1.0000 elapsed=27.8s ETA=0.0s
+vit_base_patch16_224 seed=44 epoch=8/100: train_loss=0.2913 train_acc=1.0000 val_loss=0.2914 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=1 stale=7/10 seconds=39.0
+  vit_base_patch16_224 seed=44 epoch=9/100 batch=1/55 loss=0.2913 acc=1.0000 elapsed=8.1s ETA=435.6s
+  vit_base_patch16_224 seed=44 epoch=9/100 batch=10/55 loss=0.2913 acc=1.0000 elapsed=11.2s ETA=50.5s
+  vit_base_patch16_224 seed=44 epoch=9/100 batch=20/55 loss=0.2913 acc=1.0000 elapsed=14.6s ETA=25.6s
+  vit_base_patch16_224 seed=44 epoch=9/100 batch=30/55 loss=0.2913 acc=1.0000 elapsed=19.4s ETA=16.1s
+  vit_base_patch16_224 seed=44 epoch=9/100 batch=40/55 loss=0.2913 acc=1.0000 elapsed=22.7s ETA=8.5s
+  vit_base_patch16_224 seed=44 epoch=9/100 batch=50/55 loss=0.2913 acc=1.0000 elapsed=26.1s ETA=2.6s
+  vit_base_patch16_224 seed=44 epoch=9/100 batch=55/55 loss=0.2913 acc=1.0000 elapsed=27.8s ETA=0.0s
+vit_base_patch16_224 seed=44 epoch=9/100: train_loss=0.2913 train_acc=1.0000 val_loss=0.2915 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=1 stale=8/10 seconds=38.8
+  vit_base_patch16_224 seed=44 epoch=10/100 batch=1/55 loss=0.2912 acc=1.0000 elapsed=7.6s ETA=408.9s
+  vit_base_patch16_224 seed=44 epoch=10/100 batch=10/55 loss=0.2913 acc=1.0000 elapsed=11.4s ETA=51.5s
+  vit_base_patch16_224 seed=44 epoch=10/100 batch=20/55 loss=0.2913 acc=1.0000 elapsed=15.4s ETA=27.0s
+  vit_base_patch16_224 seed=44 epoch=10/100 batch=30/55 loss=0.2912 acc=1.0000 elapsed=19.4s ETA=16.2s
+  vit_base_patch16_224 seed=44 epoch=10/100 batch=40/55 loss=0.2912 acc=1.0000 elapsed=22.7s ETA=8.5s
+  vit_base_patch16_224 seed=44 epoch=10/100 batch=50/55 loss=0.2913 acc=1.0000 elapsed=26.3s ETA=2.6s
+  vit_base_patch16_224 seed=44 epoch=10/100 batch=55/55 loss=0.2913 acc=1.0000 elapsed=27.8s ETA=0.0s
+vit_base_patch16_224 seed=44 epoch=10/100: train_loss=0.2913 train_acc=1.0000 val_loss=0.2915 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=1 stale=9/10 seconds=38.7
+  vit_base_patch16_224 seed=44 epoch=11/100 batch=1/55 loss=0.2913 acc=1.0000 elapsed=7.9s ETA=426.4s
+  vit_base_patch16_224 seed=44 epoch=11/100 batch=10/55 loss=0.2913 acc=1.0000 elapsed=11.7s ETA=52.4s
+  vit_base_patch16_224 seed=44 epoch=11/100 batch=20/55 loss=0.2913 acc=1.0000 elapsed=16.3s ETA=28.5s
+  vit_base_patch16_224 seed=44 epoch=11/100 batch=30/55 loss=0.2913 acc=1.0000 elapsed=20.0s ETA=16.7s
+  vit_base_patch16_224 seed=44 epoch=11/100 batch=40/55 loss=0.2913 acc=1.0000 elapsed=24.4s ETA=9.1s
+  vit_base_patch16_224 seed=44 epoch=11/100 batch=50/55 loss=0.2912 acc=1.0000 elapsed=27.8s ETA=2.8s
+  vit_base_patch16_224 seed=44 epoch=11/100 batch=55/55 loss=0.2912 acc=1.0000 elapsed=29.2s ETA=0.0s
+vit_base_patch16_224 seed=44 epoch=11/100: train_loss=0.2912 train_acc=1.0000 val_loss=0.2914 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=1 stale=10/10 seconds=40.4
+CUDA cleanup after training vit_base_patch16_224 seed=44: allocated=64.0 MiB, reserved=64.0 MiB, device free=15006.0 MiB
+CUDA cleanup before training twins_svt_base seed=42: allocated=64.0 MiB, reserved=64.0 MiB, device free=15006.0 MiB
+  twins_svt_base seed=42 epoch=1/100 batch=1/55 loss=1.1125 acc=0.3125 elapsed=8.3s ETA=446.5s
+  twins_svt_base seed=42 epoch=1/100 batch=10/55 loss=0.7053 acc=0.7531 elapsed=11.7s ETA=52.7s
+  twins_svt_base seed=42 epoch=1/100 batch=20/55 loss=0.5425 acc=0.8641 elapsed=15.8s ETA=27.7s
+  twins_svt_base seed=42 epoch=1/100 batch=30/55 loss=0.4712 acc=0.9062 elapsed=19.8s ETA=16.5s
+  twins_svt_base seed=42 epoch=1/100 batch=40/55 loss=0.4339 acc=0.9273 elapsed=24.5s ETA=9.2s
+  twins_svt_base seed=42 epoch=1/100 batch=50/55 loss=0.4073 acc=0.9419 elapsed=28.2s ETA=2.8s
+  twins_svt_base seed=42 epoch=1/100 batch=55/55 loss=0.3978 acc=0.9469 elapsed=30.3s ETA=0.0s
+twins_svt_base seed=42 epoch=1/100: train_loss=0.3978 train_acc=0.9469 val_loss=0.2953 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=1 stale=0/10 seconds=41.5
+  twins_svt_base seed=42 epoch=2/100 batch=1/55 loss=0.2957 acc=1.0000 elapsed=7.7s ETA=418.3s
+  twins_svt_base seed=42 epoch=2/100 batch=10/55 loss=0.2949 acc=1.0000 elapsed=12.1s ETA=54.3s
+  twins_svt_base seed=42 epoch=2/100 batch=20/55 loss=0.2947 acc=1.0000 elapsed=16.9s ETA=29.6s
+  twins_svt_base seed=42 epoch=2/100 batch=30/55 loss=0.2942 acc=1.0000 elapsed=20.2s ETA=16.9s
+  twins_svt_base seed=42 epoch=2/100 batch=40/55 loss=0.2939 acc=1.0000 elapsed=23.5s ETA=8.8s
+  twins_svt_base seed=42 epoch=2/100 batch=50/55 loss=0.2937 acc=1.0000 elapsed=27.9s ETA=2.8s
+  twins_svt_base seed=42 epoch=2/100 batch=55/55 loss=0.2936 acc=1.0000 elapsed=29.3s ETA=0.0s
+twins_svt_base seed=42 epoch=2/100: train_loss=0.2936 train_acc=1.0000 val_loss=0.2924 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=1 stale=1/10 seconds=40.5
+  twins_svt_base seed=42 epoch=3/100 batch=1/55 loss=0.2922 acc=1.0000 elapsed=8.4s ETA=454.0s
+  twins_svt_base seed=42 epoch=3/100 batch=10/55 loss=0.2921 acc=1.0000 elapsed=11.7s ETA=52.8s
+  twins_svt_base seed=42 epoch=3/100 batch=20/55 loss=0.2920 acc=1.0000 elapsed=15.6s ETA=27.3s
+  twins_svt_base seed=42 epoch=3/100 batch=30/55 loss=0.2920 acc=1.0000 elapsed=18.6s ETA=15.5s
+  twins_svt_base seed=42 epoch=3/100 batch=40/55 loss=0.2920 acc=1.0000 elapsed=22.1s ETA=8.3s
+  twins_svt_base seed=42 epoch=3/100 batch=50/55 loss=0.2920 acc=1.0000 elapsed=25.6s ETA=2.6s
+  twins_svt_base seed=42 epoch=3/100 batch=55/55 loss=0.2919 acc=1.0000 elapsed=27.5s ETA=0.0s
+twins_svt_base seed=42 epoch=3/100: train_loss=0.2919 train_acc=1.0000 val_loss=0.2921 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=1 stale=2/10 seconds=38.6
+  twins_svt_base seed=42 epoch=4/100 batch=1/55 loss=0.2920 acc=1.0000 elapsed=8.3s ETA=448.5s
+  twins_svt_base seed=42 epoch=4/100 batch=10/55 loss=0.2917 acc=1.0000 elapsed=11.4s ETA=51.2s
+  twins_svt_base seed=42 epoch=4/100 batch=20/55 loss=0.2917 acc=1.0000 elapsed=15.0s ETA=26.2s
+  twins_svt_base seed=42 epoch=4/100 batch=30/55 loss=0.2917 acc=1.0000 elapsed=18.9s ETA=15.8s
+  twins_svt_base seed=42 epoch=4/100 batch=40/55 loss=0.2917 acc=1.0000 elapsed=22.2s ETA=8.3s
+  twins_svt_base seed=42 epoch=4/100 batch=50/55 loss=0.2917 acc=1.0000 elapsed=26.2s ETA=2.6s
+  twins_svt_base seed=42 epoch=4/100 batch=55/55 loss=0.2917 acc=1.0000 elapsed=27.4s ETA=0.0s
+twins_svt_base seed=42 epoch=4/100: train_loss=0.2917 train_acc=1.0000 val_loss=0.2918 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=1 stale=3/10 seconds=38.6
+  twins_svt_base seed=42 epoch=5/100 batch=1/55 loss=0.2916 acc=1.0000 elapsed=8.1s ETA=434.9s
+  twins_svt_base seed=42 epoch=5/100 batch=10/55 loss=0.2915 acc=1.0000 elapsed=11.1s ETA=50.2s
+  twins_svt_base seed=42 epoch=5/100 batch=20/55 loss=0.2916 acc=1.0000 elapsed=15.2s ETA=26.6s
+  twins_svt_base seed=42 epoch=5/100 batch=30/55 loss=0.2916 acc=1.0000 elapsed=18.7s ETA=15.6s
+  twins_svt_base seed=42 epoch=5/100 batch=40/55 loss=0.2916 acc=1.0000 elapsed=22.5s ETA=8.4s
+  twins_svt_base seed=42 epoch=5/100 batch=50/55 loss=0.2916 acc=1.0000 elapsed=26.0s ETA=2.6s
+  twins_svt_base seed=42 epoch=5/100 batch=55/55 loss=0.2916 acc=1.0000 elapsed=27.5s ETA=0.0s
+twins_svt_base seed=42 epoch=5/100: train_loss=0.2916 train_acc=1.0000 val_loss=0.2917 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=1 stale=4/10 seconds=38.5
+  twins_svt_base seed=42 epoch=6/100 batch=1/55 loss=0.2919 acc=1.0000 elapsed=7.8s ETA=419.8s
+  twins_svt_base seed=42 epoch=6/100 batch=10/55 loss=0.2916 acc=1.0000 elapsed=11.3s ETA=50.9s
+  twins_svt_base seed=42 epoch=6/100 batch=20/55 loss=0.2916 acc=1.0000 elapsed=15.9s ETA=27.7s
+  twins_svt_base seed=42 epoch=6/100 batch=30/55 loss=0.2915 acc=1.0000 elapsed=19.0s ETA=15.9s
+  twins_svt_base seed=42 epoch=6/100 batch=40/55 loss=0.2915 acc=1.0000 elapsed=22.8s ETA=8.6s
+  twins_svt_base seed=42 epoch=6/100 batch=50/55 loss=0.2915 acc=1.0000 elapsed=26.0s ETA=2.6s
+  twins_svt_base seed=42 epoch=6/100 batch=55/55 loss=0.2915 acc=1.0000 elapsed=27.4s ETA=0.0s
+twins_svt_base seed=42 epoch=6/100: train_loss=0.2915 train_acc=1.0000 val_loss=0.2918 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=1 stale=5/10 seconds=38.3
+  twins_svt_base seed=42 epoch=7/100 batch=1/55 loss=0.2917 acc=1.0000 elapsed=8.3s ETA=445.7s
+  twins_svt_base seed=42 epoch=7/100 batch=10/55 loss=0.2914 acc=1.0000 elapsed=11.8s ETA=53.0s
+  twins_svt_base seed=42 epoch=7/100 batch=20/55 loss=0.2915 acc=1.0000 elapsed=15.8s ETA=27.7s
+  twins_svt_base seed=42 epoch=7/100 batch=30/55 loss=0.2914 acc=1.0000 elapsed=18.8s ETA=15.7s
+  twins_svt_base seed=42 epoch=7/100 batch=40/55 loss=0.2915 acc=1.0000 elapsed=23.2s ETA=8.7s
+  twins_svt_base seed=42 epoch=7/100 batch=50/55 loss=0.2914 acc=1.0000 elapsed=27.1s ETA=2.7s
+  twins_svt_base seed=42 epoch=7/100 batch=55/55 loss=0.2914 acc=1.0000 elapsed=28.3s ETA=0.0s
+twins_svt_base seed=42 epoch=7/100: train_loss=0.2914 train_acc=1.0000 val_loss=0.2917 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=1 stale=6/10 seconds=39.3
+  twins_svt_base seed=42 epoch=8/100 batch=1/55 loss=0.2914 acc=1.0000 elapsed=8.2s ETA=441.1s
+  twins_svt_base seed=42 epoch=8/100 batch=10/55 loss=0.2914 acc=1.0000 elapsed=11.6s ETA=52.1s
+  twins_svt_base seed=42 epoch=8/100 batch=20/55 loss=0.2914 acc=1.0000 elapsed=15.3s ETA=26.8s
+  twins_svt_base seed=42 epoch=8/100 batch=30/55 loss=0.2914 acc=1.0000 elapsed=19.3s ETA=16.1s
+  twins_svt_base seed=42 epoch=8/100 batch=40/55 loss=0.2914 acc=1.0000 elapsed=22.9s ETA=8.6s
+  twins_svt_base seed=42 epoch=8/100 batch=50/55 loss=0.2914 acc=1.0000 elapsed=26.4s ETA=2.6s
+  twins_svt_base seed=42 epoch=8/100 batch=55/55 loss=0.2914 acc=1.0000 elapsed=27.9s ETA=0.0s
+twins_svt_base seed=42 epoch=8/100: train_loss=0.2914 train_acc=1.0000 val_loss=0.2917 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=1 stale=7/10 seconds=39.1
+  twins_svt_base seed=42 epoch=9/100 batch=1/55 loss=0.2916 acc=1.0000 elapsed=7.9s ETA=424.6s
+  twins_svt_base seed=42 epoch=9/100 batch=10/55 loss=0.2914 acc=1.0000 elapsed=11.2s ETA=50.4s
+  twins_svt_base seed=42 epoch=9/100 batch=20/55 loss=0.2914 acc=1.0000 elapsed=15.1s ETA=26.4s
+  twins_svt_base seed=42 epoch=9/100 batch=30/55 loss=0.2914 acc=1.0000 elapsed=18.9s ETA=15.8s
+  twins_svt_base seed=42 epoch=9/100 batch=40/55 loss=0.2914 acc=1.0000 elapsed=22.0s ETA=8.3s
+  twins_svt_base seed=42 epoch=9/100 batch=50/55 loss=0.2913 acc=1.0000 elapsed=25.8s ETA=2.6s
+  twins_svt_base seed=42 epoch=9/100 batch=55/55 loss=0.2913 acc=1.0000 elapsed=27.3s ETA=0.0s
+twins_svt_base seed=42 epoch=9/100: train_loss=0.2913 train_acc=1.0000 val_loss=0.2915 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=1 stale=8/10 seconds=38.4
+  twins_svt_base seed=42 epoch=10/100 batch=1/55 loss=0.2912 acc=1.0000 elapsed=8.1s ETA=435.8s
+  twins_svt_base seed=42 epoch=10/100 batch=10/55 loss=0.2913 acc=1.0000 elapsed=11.5s ETA=51.9s
+  twins_svt_base seed=42 epoch=10/100 batch=20/55 loss=0.2913 acc=1.0000 elapsed=15.7s ETA=27.4s
+  twins_svt_base seed=42 epoch=10/100 batch=30/55 loss=0.2913 acc=1.0000 elapsed=19.4s ETA=16.1s
+  twins_svt_base seed=42 epoch=10/100 batch=40/55 loss=0.2913 acc=1.0000 elapsed=23.6s ETA=8.9s
+  twins_svt_base seed=42 epoch=10/100 batch=50/55 loss=0.2913 acc=1.0000 elapsed=26.8s ETA=2.7s
+  twins_svt_base seed=42 epoch=10/100 batch=55/55 loss=0.2913 acc=1.0000 elapsed=28.7s ETA=0.0s
+twins_svt_base seed=42 epoch=10/100: train_loss=0.2913 train_acc=1.0000 val_loss=0.2914 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=1 stale=9/10 seconds=39.7
+  twins_svt_base seed=42 epoch=11/100 batch=1/55 loss=0.2913 acc=1.0000 elapsed=7.9s ETA=427.8s
+  twins_svt_base seed=42 epoch=11/100 batch=10/55 loss=0.2913 acc=1.0000 elapsed=11.0s ETA=49.7s
+  twins_svt_base seed=42 epoch=11/100 batch=20/55 loss=0.2913 acc=1.0000 elapsed=15.4s ETA=27.0s
+  twins_svt_base seed=42 epoch=11/100 batch=30/55 loss=0.2913 acc=1.0000 elapsed=18.8s ETA=15.6s
+  twins_svt_base seed=42 epoch=11/100 batch=40/55 loss=0.2913 acc=1.0000 elapsed=24.0s ETA=9.0s
+  twins_svt_base seed=42 epoch=11/100 batch=50/55 loss=0.2913 acc=1.0000 elapsed=27.9s ETA=2.8s
+  twins_svt_base seed=42 epoch=11/100 batch=55/55 loss=0.2913 acc=1.0000 elapsed=29.4s ETA=0.0s
+twins_svt_base seed=42 epoch=11/100: train_loss=0.2913 train_acc=1.0000 val_loss=0.2914 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=1 stale=10/10 seconds=40.6
+CUDA cleanup after training twins_svt_base seed=42: allocated=64.0 MiB, reserved=64.0 MiB, device free=15006.0 MiB
+CUDA cleanup before training twins_svt_base seed=43: allocated=64.0 MiB, reserved=64.0 MiB, device free=15006.0 MiB
+  twins_svt_base seed=43 epoch=1/100 batch=1/55 loss=1.1081 acc=0.4375 elapsed=7.8s ETA=421.2s
+  twins_svt_base seed=43 epoch=1/100 batch=10/55 loss=0.6328 acc=0.8000 elapsed=11.3s ETA=50.8s
+  twins_svt_base seed=43 epoch=1/100 batch=20/55 loss=0.5018 acc=0.8891 elapsed=14.8s ETA=25.9s
+  twins_svt_base seed=43 epoch=1/100 batch=30/55 loss=0.4445 acc=0.9229 elapsed=18.5s ETA=15.4s
+  twins_svt_base seed=43 epoch=1/100 batch=40/55 loss=0.4116 acc=0.9406 elapsed=22.7s ETA=8.5s
+  twins_svt_base seed=43 epoch=1/100 batch=50/55 loss=0.3902 acc=0.9525 elapsed=26.6s ETA=2.7s
+  twins_svt_base seed=43 epoch=1/100 batch=55/55 loss=0.3824 acc=0.9566 elapsed=28.0s ETA=0.0s
+twins_svt_base seed=43 epoch=1/100: train_loss=0.3824 train_acc=0.9566 val_loss=0.2986 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=1 stale=0/10 seconds=39.0
+  twins_svt_base seed=43 epoch=2/100 batch=1/55 loss=0.2959 acc=1.0000 elapsed=8.2s ETA=440.3s
+  twins_svt_base seed=43 epoch=2/100 batch=10/55 loss=0.2966 acc=1.0000 elapsed=12.0s ETA=54.0s
+  twins_svt_base seed=43 epoch=2/100 batch=20/55 loss=0.2962 acc=1.0000 elapsed=15.1s ETA=26.4s
+  twins_svt_base seed=43 epoch=2/100 batch=30/55 loss=0.2957 acc=1.0000 elapsed=18.9s ETA=15.7s
+  twins_svt_base seed=43 epoch=2/100 batch=40/55 loss=0.2952 acc=1.0000 elapsed=22.9s ETA=8.6s
+  twins_svt_base seed=43 epoch=2/100 batch=50/55 loss=0.2947 acc=1.0000 elapsed=26.6s ETA=2.7s
+  twins_svt_base seed=43 epoch=2/100 batch=55/55 loss=0.2945 acc=1.0000 elapsed=28.1s ETA=0.0s
+twins_svt_base seed=43 epoch=2/100: train_loss=0.2945 train_acc=1.0000 val_loss=0.2928 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=1 stale=1/10 seconds=39.0
+  twins_svt_base seed=43 epoch=3/100 batch=1/55 loss=0.2926 acc=1.0000 elapsed=7.9s ETA=424.2s
+  twins_svt_base seed=43 epoch=3/100 batch=10/55 loss=0.2925 acc=1.0000 elapsed=11.0s ETA=49.7s
+  twins_svt_base seed=43 epoch=3/100 batch=20/55 loss=0.2925 acc=1.0000 elapsed=14.9s ETA=26.1s
+  twins_svt_base seed=43 epoch=3/100 batch=30/55 loss=0.2924 acc=1.0000 elapsed=19.3s ETA=16.0s
+  twins_svt_base seed=43 epoch=3/100 batch=40/55 loss=0.2928 acc=1.0000 elapsed=22.9s ETA=8.6s
+  twins_svt_base seed=43 epoch=3/100 batch=50/55 loss=0.2927 acc=1.0000 elapsed=26.8s ETA=2.7s
+  twins_svt_base seed=43 epoch=3/100 batch=55/55 loss=0.2927 acc=1.0000 elapsed=28.0s ETA=0.0s
+twins_svt_base seed=43 epoch=3/100: train_loss=0.2927 train_acc=1.0000 val_loss=0.2921 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=1 stale=2/10 seconds=38.9
+  twins_svt_base seed=43 epoch=4/100 batch=1/55 loss=0.2928 acc=1.0000 elapsed=8.3s ETA=450.4s
+  twins_svt_base seed=43 epoch=4/100 batch=10/55 loss=0.2921 acc=1.0000 elapsed=11.0s ETA=49.5s
+  twins_svt_base seed=43 epoch=4/100 batch=20/55 loss=0.2920 acc=1.0000 elapsed=14.4s ETA=25.1s
+  twins_svt_base seed=43 epoch=4/100 batch=30/55 loss=0.2919 acc=1.0000 elapsed=18.4s ETA=15.4s
+  twins_svt_base seed=43 epoch=4/100 batch=40/55 loss=0.2919 acc=1.0000 elapsed=21.8s ETA=8.2s
+  twins_svt_base seed=43 epoch=4/100 batch=50/55 loss=0.2918 acc=1.0000 elapsed=26.1s ETA=2.6s
+  twins_svt_base seed=43 epoch=4/100 batch=55/55 loss=0.2918 acc=1.0000 elapsed=27.7s ETA=0.0s
+twins_svt_base seed=43 epoch=4/100: train_loss=0.2918 train_acc=1.0000 val_loss=0.2916 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=1 stale=3/10 seconds=38.6
+  twins_svt_base seed=43 epoch=5/100 batch=1/55 loss=0.2917 acc=1.0000 elapsed=8.0s ETA=429.3s
+  twins_svt_base seed=43 epoch=5/100 batch=10/55 loss=0.2916 acc=1.0000 elapsed=12.1s ETA=54.3s
+  twins_svt_base seed=43 epoch=5/100 batch=20/55 loss=0.2916 acc=1.0000 elapsed=15.6s ETA=27.3s
+  twins_svt_base seed=43 epoch=5/100 batch=30/55 loss=0.2916 acc=1.0000 elapsed=19.8s ETA=16.5s
+  twins_svt_base seed=43 epoch=5/100 batch=40/55 loss=0.2916 acc=1.0000 elapsed=23.1s ETA=8.7s
+  twins_svt_base seed=43 epoch=5/100 batch=50/55 loss=0.2916 acc=1.0000 elapsed=27.7s ETA=2.8s
+  twins_svt_base seed=43 epoch=5/100 batch=55/55 loss=0.2916 acc=1.0000 elapsed=29.0s ETA=0.0s
+twins_svt_base seed=43 epoch=5/100: train_loss=0.2916 train_acc=1.0000 val_loss=0.2916 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=1 stale=4/10 seconds=40.0
+  twins_svt_base seed=43 epoch=6/100 batch=1/55 loss=0.2914 acc=1.0000 elapsed=7.9s ETA=426.9s
+  twins_svt_base seed=43 epoch=6/100 batch=10/55 loss=0.2914 acc=1.0000 elapsed=11.1s ETA=50.1s
+  twins_svt_base seed=43 epoch=6/100 batch=20/55 loss=0.2915 acc=1.0000 elapsed=15.2s ETA=26.5s
+  twins_svt_base seed=43 epoch=6/100 batch=30/55 loss=0.2915 acc=1.0000 elapsed=19.1s ETA=15.9s
+  twins_svt_base seed=43 epoch=6/100 batch=40/55 loss=0.2915 acc=1.0000 elapsed=22.1s ETA=8.3s
+  twins_svt_base seed=43 epoch=6/100 batch=50/55 loss=0.2915 acc=1.0000 elapsed=26.2s ETA=2.6s
+  twins_svt_base seed=43 epoch=6/100 batch=55/55 loss=0.2915 acc=1.0000 elapsed=27.9s ETA=0.0s
+twins_svt_base seed=43 epoch=6/100: train_loss=0.2915 train_acc=1.0000 val_loss=0.2915 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=1 stale=5/10 seconds=38.6
+  twins_svt_base seed=43 epoch=7/100 batch=1/55 loss=0.2915 acc=1.0000 elapsed=8.1s ETA=436.7s
+  twins_svt_base seed=43 epoch=7/100 batch=10/55 loss=0.2914 acc=1.0000 elapsed=11.3s ETA=50.6s
+  twins_svt_base seed=43 epoch=7/100 batch=20/55 loss=0.2914 acc=1.0000 elapsed=14.6s ETA=25.6s
+  twins_svt_base seed=43 epoch=7/100 batch=30/55 loss=0.2914 acc=1.0000 elapsed=19.2s ETA=16.0s
+  twins_svt_base seed=43 epoch=7/100 batch=40/55 loss=0.2914 acc=1.0000 elapsed=23.1s ETA=8.7s
+  twins_svt_base seed=43 epoch=7/100 batch=50/55 loss=0.2914 acc=1.0000 elapsed=26.4s ETA=2.6s
+  twins_svt_base seed=43 epoch=7/100 batch=55/55 loss=0.2914 acc=1.0000 elapsed=27.7s ETA=0.0s
+twins_svt_base seed=43 epoch=7/100: train_loss=0.2914 train_acc=1.0000 val_loss=0.2914 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=1 stale=6/10 seconds=38.5
+  twins_svt_base seed=43 epoch=8/100 batch=1/55 loss=0.2914 acc=1.0000 elapsed=8.3s ETA=446.5s
+  twins_svt_base seed=43 epoch=8/100 batch=10/55 loss=0.2914 acc=1.0000 elapsed=12.1s ETA=54.5s
+  twins_svt_base seed=43 epoch=8/100 batch=20/55 loss=0.2914 acc=1.0000 elapsed=15.8s ETA=27.7s
+  twins_svt_base seed=43 epoch=8/100 batch=30/55 loss=0.2913 acc=1.0000 elapsed=20.0s ETA=16.7s
+  twins_svt_base seed=43 epoch=8/100 batch=40/55 loss=0.2913 acc=1.0000 elapsed=23.1s ETA=8.7s
+  twins_svt_base seed=43 epoch=8/100 batch=50/55 loss=0.2913 acc=1.0000 elapsed=27.0s ETA=2.7s
+  twins_svt_base seed=43 epoch=8/100 batch=55/55 loss=0.2913 acc=1.0000 elapsed=28.3s ETA=0.0s
+twins_svt_base seed=43 epoch=8/100: train_loss=0.2913 train_acc=1.0000 val_loss=0.2915 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=1 stale=7/10 seconds=39.3
+  twins_svt_base seed=43 epoch=9/100 batch=1/55 loss=0.2915 acc=1.0000 elapsed=8.0s ETA=432.6s
+  twins_svt_base seed=43 epoch=9/100 batch=10/55 loss=0.2913 acc=1.0000 elapsed=11.5s ETA=51.6s
+  twins_svt_base seed=43 epoch=9/100 batch=20/55 loss=0.2913 acc=1.0000 elapsed=15.5s ETA=27.1s
+  twins_svt_base seed=43 epoch=9/100 batch=30/55 loss=0.2913 acc=1.0000 elapsed=19.6s ETA=16.3s
+  twins_svt_base seed=43 epoch=9/100 batch=40/55 loss=0.2913 acc=1.0000 elapsed=23.1s ETA=8.7s
+  twins_svt_base seed=43 epoch=9/100 batch=50/55 loss=0.2913 acc=1.0000 elapsed=27.1s ETA=2.7s
+  twins_svt_base seed=43 epoch=9/100 batch=55/55 loss=0.2913 acc=1.0000 elapsed=28.6s ETA=0.0s
+twins_svt_base seed=43 epoch=9/100: train_loss=0.2913 train_acc=1.0000 val_loss=0.2913 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=1 stale=8/10 seconds=39.4
+  twins_svt_base seed=43 epoch=10/100 batch=1/55 loss=0.2915 acc=1.0000 elapsed=7.8s ETA=420.0s
+  twins_svt_base seed=43 epoch=10/100 batch=10/55 loss=0.2913 acc=1.0000 elapsed=10.7s ETA=48.3s
+  twins_svt_base seed=43 epoch=10/100 batch=20/55 loss=0.2913 acc=1.0000 elapsed=14.6s ETA=25.5s
+  twins_svt_base seed=43 epoch=10/100 batch=30/55 loss=0.2913 acc=1.0000 elapsed=17.9s ETA=14.9s
+  twins_svt_base seed=43 epoch=10/100 batch=40/55 loss=0.2913 acc=1.0000 elapsed=21.9s ETA=8.2s
+  twins_svt_base seed=43 epoch=10/100 batch=50/55 loss=0.2913 acc=1.0000 elapsed=25.6s ETA=2.6s
+  twins_svt_base seed=43 epoch=10/100 batch=55/55 loss=0.2913 acc=1.0000 elapsed=27.2s ETA=0.0s
+twins_svt_base seed=43 epoch=10/100: train_loss=0.2913 train_acc=1.0000 val_loss=0.2913 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=1 stale=9/10 seconds=38.1
+  twins_svt_base seed=43 epoch=11/100 batch=1/55 loss=0.2913 acc=1.0000 elapsed=8.0s ETA=429.8s
+  twins_svt_base seed=43 epoch=11/100 batch=10/55 loss=0.2913 acc=1.0000 elapsed=11.0s ETA=49.3s
+  twins_svt_base seed=43 epoch=11/100 batch=20/55 loss=0.2913 acc=1.0000 elapsed=14.9s ETA=26.0s
+  twins_svt_base seed=43 epoch=11/100 batch=30/55 loss=0.2913 acc=1.0000 elapsed=19.7s ETA=16.4s
+  twins_svt_base seed=43 epoch=11/100 batch=40/55 loss=0.2913 acc=1.0000 elapsed=22.8s ETA=8.6s
+  twins_svt_base seed=43 epoch=11/100 batch=50/55 loss=0.2913 acc=1.0000 elapsed=26.4s ETA=2.6s
+  twins_svt_base seed=43 epoch=11/100 batch=55/55 loss=0.2913 acc=1.0000 elapsed=27.6s ETA=0.0s
+twins_svt_base seed=43 epoch=11/100: train_loss=0.2913 train_acc=1.0000 val_loss=0.2913 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=1 stale=10/10 seconds=38.6
+CUDA cleanup after training twins_svt_base seed=43: allocated=64.0 MiB, reserved=64.0 MiB, device free=15006.0 MiB
+CUDA cleanup before training twins_svt_base seed=44: allocated=64.0 MiB, reserved=64.0 MiB, device free=15006.0 MiB
+  twins_svt_base seed=44 epoch=1/100 batch=1/55 loss=1.1801 acc=0.1875 elapsed=7.6s ETA=410.8s
+  twins_svt_base seed=44 epoch=1/100 batch=10/55 loss=0.7413 acc=0.7188 elapsed=11.2s ETA=50.3s
+  twins_svt_base seed=44 epoch=1/100 batch=20/55 loss=0.5610 acc=0.8469 elapsed=15.6s ETA=27.3s
+  twins_svt_base seed=44 epoch=1/100 batch=30/55 loss=0.4835 acc=0.8958 elapsed=19.3s ETA=16.1s
+  twins_svt_base seed=44 epoch=1/100 batch=40/55 loss=0.4399 acc=0.9219 elapsed=23.0s ETA=8.6s
+  twins_svt_base seed=44 epoch=1/100 batch=50/55 loss=0.4119 acc=0.9375 elapsed=26.2s ETA=2.6s
+  twins_svt_base seed=44 epoch=1/100 batch=55/55 loss=0.4020 acc=0.9429 elapsed=27.6s ETA=0.0s
+twins_svt_base seed=44 epoch=1/100: train_loss=0.4020 train_acc=0.9429 val_loss=0.2957 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=1 stale=0/10 seconds=38.8
+  twins_svt_base seed=44 epoch=2/100 batch=1/55 loss=0.2942 acc=1.0000 elapsed=8.0s ETA=429.4s
+  twins_svt_base seed=44 epoch=2/100 batch=10/55 loss=0.2962 acc=1.0000 elapsed=10.7s ETA=48.3s
+  twins_svt_base seed=44 epoch=2/100 batch=20/55 loss=0.2958 acc=1.0000 elapsed=14.2s ETA=24.9s
+  twins_svt_base seed=44 epoch=2/100 batch=30/55 loss=0.2949 acc=1.0000 elapsed=18.8s ETA=15.7s
+  twins_svt_base seed=44 epoch=2/100 batch=40/55 loss=0.2944 acc=1.0000 elapsed=22.8s ETA=8.5s
+  twins_svt_base seed=44 epoch=2/100 batch=50/55 loss=0.2939 acc=1.0000 elapsed=26.6s ETA=2.7s
+  twins_svt_base seed=44 epoch=2/100 batch=55/55 loss=0.2938 acc=1.0000 elapsed=27.7s ETA=0.0s
+twins_svt_base seed=44 epoch=2/100: train_loss=0.2938 train_acc=1.0000 val_loss=0.2922 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=1 stale=1/10 seconds=38.5
+  twins_svt_base seed=44 epoch=3/100 batch=1/55 loss=0.2918 acc=1.0000 elapsed=8.3s ETA=446.1s
+  twins_svt_base seed=44 epoch=3/100 batch=10/55 loss=0.2921 acc=1.0000 elapsed=11.4s ETA=51.5s
+  twins_svt_base seed=44 epoch=3/100 batch=20/55 loss=0.2920 acc=1.0000 elapsed=15.4s ETA=26.9s
+  twins_svt_base seed=44 epoch=3/100 batch=30/55 loss=0.2920 acc=1.0000 elapsed=18.1s ETA=15.1s
+  twins_svt_base seed=44 epoch=3/100 batch=40/55 loss=0.2920 acc=1.0000 elapsed=22.7s ETA=8.5s
+  twins_svt_base seed=44 epoch=3/100 batch=50/55 loss=0.2919 acc=1.0000 elapsed=25.7s ETA=2.6s
+  twins_svt_base seed=44 epoch=3/100 batch=55/55 loss=0.2919 acc=1.0000 elapsed=27.3s ETA=0.0s
+twins_svt_base seed=44 epoch=3/100: train_loss=0.2919 train_acc=1.0000 val_loss=0.2919 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=1 stale=2/10 seconds=38.2
+  twins_svt_base seed=44 epoch=4/100 batch=1/55 loss=0.2918 acc=1.0000 elapsed=7.7s ETA=413.3s
+  twins_svt_base seed=44 epoch=4/100 batch=10/55 loss=0.2917 acc=1.0000 elapsed=11.5s ETA=51.6s
+  twins_svt_base seed=44 epoch=4/100 batch=20/55 loss=0.2916 acc=1.0000 elapsed=15.6s ETA=27.3s
+  twins_svt_base seed=44 epoch=4/100 batch=30/55 loss=0.2916 acc=1.0000 elapsed=19.9s ETA=16.6s
+  twins_svt_base seed=44 epoch=4/100 batch=40/55 loss=0.2916 acc=1.0000 elapsed=23.0s ETA=8.6s
+  twins_svt_base seed=44 epoch=4/100 batch=50/55 loss=0.2916 acc=1.0000 elapsed=27.4s ETA=2.7s
+  twins_svt_base seed=44 epoch=4/100 batch=55/55 loss=0.2916 acc=1.0000 elapsed=28.5s ETA=0.0s
+twins_svt_base seed=44 epoch=4/100: train_loss=0.2916 train_acc=1.0000 val_loss=0.2917 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=1 stale=3/10 seconds=39.4
+  twins_svt_base seed=44 epoch=5/100 batch=1/55 loss=0.2914 acc=1.0000 elapsed=8.0s ETA=431.0s
+  twins_svt_base seed=44 epoch=5/100 batch=10/55 loss=0.2915 acc=1.0000 elapsed=11.1s ETA=49.9s
+  twins_svt_base seed=44 epoch=5/100 batch=20/55 loss=0.2916 acc=1.0000 elapsed=15.1s ETA=26.4s
+  twins_svt_base seed=44 epoch=5/100 batch=30/55 loss=0.2915 acc=1.0000 elapsed=19.3s ETA=16.1s
+  twins_svt_base seed=44 epoch=5/100 batch=40/55 loss=0.2915 acc=1.0000 elapsed=22.2s ETA=8.3s
+  twins_svt_base seed=44 epoch=5/100 batch=50/55 loss=0.2915 acc=1.0000 elapsed=26.2s ETA=2.6s
+  twins_svt_base seed=44 epoch=5/100 batch=55/55 loss=0.2915 acc=1.0000 elapsed=27.8s ETA=0.0s
+twins_svt_base seed=44 epoch=5/100: train_loss=0.2915 train_acc=1.0000 val_loss=0.2916 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=1 stale=4/10 seconds=38.8
+  twins_svt_base seed=44 epoch=6/100 batch=1/55 loss=0.2915 acc=1.0000 elapsed=8.0s ETA=431.3s
+  twins_svt_base seed=44 epoch=6/100 batch=10/55 loss=0.2914 acc=1.0000 elapsed=11.5s ETA=51.9s
+  twins_svt_base seed=44 epoch=6/100 batch=20/55 loss=0.2914 acc=1.0000 elapsed=15.6s ETA=27.2s
+  twins_svt_base seed=44 epoch=6/100 batch=30/55 loss=0.2914 acc=1.0000 elapsed=20.3s ETA=16.9s
+  twins_svt_base seed=44 epoch=6/100 batch=40/55 loss=0.2914 acc=1.0000 elapsed=23.2s ETA=8.7s
+  twins_svt_base seed=44 epoch=6/100 batch=50/55 loss=0.2914 acc=1.0000 elapsed=27.4s ETA=2.7s
+  twins_svt_base seed=44 epoch=6/100 batch=55/55 loss=0.2914 acc=1.0000 elapsed=28.6s ETA=0.0s
+twins_svt_base seed=44 epoch=6/100: train_loss=0.2914 train_acc=1.0000 val_loss=0.2915 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=1 stale=5/10 seconds=39.4
+  twins_svt_base seed=44 epoch=7/100 batch=1/55 loss=0.2913 acc=1.0000 elapsed=7.8s ETA=421.3s
+  twins_svt_base seed=44 epoch=7/100 batch=10/55 loss=0.2914 acc=1.0000 elapsed=11.2s ETA=50.4s
+  twins_svt_base seed=44 epoch=7/100 batch=20/55 loss=0.2914 acc=1.0000 elapsed=15.1s ETA=26.5s
+  twins_svt_base seed=44 epoch=7/100 batch=30/55 loss=0.2914 acc=1.0000 elapsed=19.1s ETA=15.9s
+  twins_svt_base seed=44 epoch=7/100 batch=40/55 loss=0.2914 acc=1.0000 elapsed=22.9s ETA=8.6s
+  twins_svt_base seed=44 epoch=7/100 batch=50/55 loss=0.2914 acc=1.0000 elapsed=26.7s ETA=2.7s
+  twins_svt_base seed=44 epoch=7/100 batch=55/55 loss=0.2914 acc=1.0000 elapsed=28.1s ETA=0.0s
+twins_svt_base seed=44 epoch=7/100: train_loss=0.2914 train_acc=1.0000 val_loss=0.2915 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=1 stale=6/10 seconds=39.0
+  twins_svt_base seed=44 epoch=8/100 batch=1/55 loss=0.2913 acc=1.0000 elapsed=7.9s ETA=427.3s
+  twins_svt_base seed=44 epoch=8/100 batch=10/55 loss=0.2914 acc=1.0000 elapsed=11.6s ETA=52.4s
+  twins_svt_base seed=44 epoch=8/100 batch=20/55 loss=0.2914 acc=1.0000 elapsed=15.2s ETA=26.6s
+  twins_svt_base seed=44 epoch=8/100 batch=30/55 loss=0.2914 acc=1.0000 elapsed=18.3s ETA=15.3s
+  twins_svt_base seed=44 epoch=8/100 batch=40/55 loss=0.2914 acc=1.0000 elapsed=22.5s ETA=8.4s
+  twins_svt_base seed=44 epoch=8/100 batch=50/55 loss=0.2914 acc=1.0000 elapsed=25.8s ETA=2.6s
+  twins_svt_base seed=44 epoch=8/100 batch=55/55 loss=0.2914 acc=1.0000 elapsed=27.1s ETA=0.0s
+twins_svt_base seed=44 epoch=8/100: train_loss=0.2914 train_acc=1.0000 val_loss=0.2915 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=1 stale=7/10 seconds=38.5
+  twins_svt_base seed=44 epoch=9/100 batch=1/55 loss=0.2912 acc=1.0000 elapsed=19.2s ETA=1036.3s
+  twins_svt_base seed=44 epoch=9/100 batch=10/55 loss=0.2913 acc=1.0000 elapsed=22.6s ETA=101.7s
+  twins_svt_base seed=44 epoch=9/100 batch=20/55 loss=0.2913 acc=1.0000 elapsed=26.6s ETA=46.5s
+  twins_svt_base seed=44 epoch=9/100 batch=30/55 loss=0.2913 acc=1.0000 elapsed=31.5s ETA=26.2s
+  twins_svt_base seed=44 epoch=9/100 batch=40/55 loss=0.2913 acc=1.0000 elapsed=35.3s ETA=13.2s
+  twins_svt_base seed=44 epoch=9/100 batch=50/55 loss=0.2913 acc=1.0000 elapsed=39.2s ETA=3.9s
+  twins_svt_base seed=44 epoch=9/100 batch=55/55 loss=0.2913 acc=1.0000 elapsed=41.0s ETA=0.0s
+twins_svt_base seed=44 epoch=9/100: train_loss=0.2913 train_acc=1.0000 val_loss=0.2914 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=1 stale=8/10 seconds=52.3
+  twins_svt_base seed=44 epoch=10/100 batch=1/55 loss=0.2913 acc=1.0000 elapsed=7.4s ETA=397.2s
+  twins_svt_base seed=44 epoch=10/100 batch=10/55 loss=0.2913 acc=1.0000 elapsed=11.1s ETA=49.9s
+  twins_svt_base seed=44 epoch=10/100 batch=20/55 loss=0.2913 acc=1.0000 elapsed=15.0s ETA=26.3s
+  twins_svt_base seed=44 epoch=10/100 batch=30/55 loss=0.2913 acc=1.0000 elapsed=19.0s ETA=15.8s
+  twins_svt_base seed=44 epoch=10/100 batch=40/55 loss=0.2913 acc=1.0000 elapsed=23.0s ETA=8.6s
+  twins_svt_base seed=44 epoch=10/100 batch=50/55 loss=0.2913 acc=1.0000 elapsed=26.8s ETA=2.7s
+  twins_svt_base seed=44 epoch=10/100 batch=55/55 loss=0.2913 acc=1.0000 elapsed=28.3s ETA=0.0s
+twins_svt_base seed=44 epoch=10/100: train_loss=0.2913 train_acc=1.0000 val_loss=0.2915 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=1 stale=9/10 seconds=39.0
+  twins_svt_base seed=44 epoch=11/100 batch=1/55 loss=0.2913 acc=1.0000 elapsed=7.7s ETA=413.5s
+  twins_svt_base seed=44 epoch=11/100 batch=10/55 loss=0.2913 acc=1.0000 elapsed=11.2s ETA=50.5s
+  twins_svt_base seed=44 epoch=11/100 batch=20/55 loss=0.2913 acc=1.0000 elapsed=15.2s ETA=26.5s
+  twins_svt_base seed=44 epoch=11/100 batch=30/55 loss=0.2913 acc=1.0000 elapsed=19.3s ETA=16.1s
+  twins_svt_base seed=44 epoch=11/100 batch=40/55 loss=0.2913 acc=1.0000 elapsed=22.8s ETA=8.5s
+  twins_svt_base seed=44 epoch=11/100 batch=50/55 loss=0.2913 acc=1.0000 elapsed=26.9s ETA=2.7s
+  twins_svt_base seed=44 epoch=11/100 batch=55/55 loss=0.2913 acc=1.0000 elapsed=27.9s ETA=0.0s
+twins_svt_base seed=44 epoch=11/100: train_loss=0.2913 train_acc=1.0000 val_loss=0.2913 val_acc=1.0000 macroF1=1.0000 lr=0.0001 best_epoch=1 stale=10/10 seconds=38.9
+CUDA cleanup after training twins_svt_base seed=44: allocated=64.0 MiB, reserved=64.0 MiB, device free=15006.0 MiB
+CUDA cleanup before test resnet50 seed=42: allocated=64.0 MiB, reserved=64.0 MiB, device free=15006.0 MiB
+resnet50 seed=42: test accuracy=0.4269, macro F1=0.4102
+CUDA cleanup after test resnet50 seed=42: allocated=64.0 MiB, reserved=64.0 MiB, device free=15006.0 MiB
+CUDA cleanup before test resnet50 seed=43: allocated=64.0 MiB, reserved=64.0 MiB, device free=15006.0 MiB
+resnet50 seed=43: test accuracy=0.4123, macro F1=0.3891
+CUDA cleanup after test resnet50 seed=43: allocated=64.0 MiB, reserved=64.0 MiB, device free=15006.0 MiB
+CUDA cleanup before test resnet50 seed=44: allocated=64.0 MiB, reserved=64.0 MiB, device free=15006.0 MiB
+resnet50 seed=44: test accuracy=0.4591, macro F1=0.4459
+CUDA cleanup after test resnet50 seed=44: allocated=64.0 MiB, reserved=64.0 MiB, device free=15006.0 MiB
+CUDA cleanup before test mobilenet_v3_large seed=42: allocated=64.0 MiB, reserved=64.0 MiB, device free=15006.0 MiB
+mobilenet_v3_large seed=42: test accuracy=0.3918, macro F1=0.3597
+CUDA cleanup after test mobilenet_v3_large seed=42: allocated=64.0 MiB, reserved=64.0 MiB, device free=15006.0 MiB
+CUDA cleanup before test mobilenet_v3_large seed=43: allocated=64.0 MiB, reserved=64.0 MiB, device free=15006.0 MiB
+mobilenet_v3_large seed=43: test accuracy=0.4064, macro F1=0.3808
+CUDA cleanup after test mobilenet_v3_large seed=43: allocated=64.0 MiB, reserved=64.0 MiB, device free=15006.0 MiB
+CUDA cleanup before test mobilenet_v3_large seed=44: allocated=64.0 MiB, reserved=64.0 MiB, device free=15006.0 MiB
+mobilenet_v3_large seed=44: test accuracy=0.3830, macro F1=0.3462
+CUDA cleanup after test mobilenet_v3_large seed=44: allocated=64.0 MiB, reserved=64.0 MiB, device free=15006.0 MiB
+CUDA cleanup before test vit_base_patch16_224 seed=42: allocated=64.0 MiB, reserved=64.0 MiB, device free=15006.0 MiB
+vit_base_patch16_224 seed=42: test accuracy=0.4327, macro F1=0.4157
+CUDA cleanup after test vit_base_patch16_224 seed=42: allocated=64.0 MiB, reserved=64.0 MiB, device free=15006.0 MiB
+CUDA cleanup before test vit_base_patch16_224 seed=43: allocated=64.0 MiB, reserved=64.0 MiB, device free=15006.0 MiB
+vit_base_patch16_224 seed=43: test accuracy=0.4152, macro F1=0.3876
+CUDA cleanup after test vit_base_patch16_224 seed=43: allocated=64.0 MiB, reserved=64.0 MiB, device free=15006.0 MiB
+CUDA cleanup before test vit_base_patch16_224 seed=44: allocated=64.0 MiB, reserved=64.0 MiB, device free=15006.0 MiB
+vit_base_patch16_224 seed=44: test accuracy=0.4152, macro F1=0.3928
+CUDA cleanup after test vit_base_patch16_224 seed=44: allocated=64.0 MiB, reserved=64.0 MiB, device free=15006.0 MiB
+CUDA cleanup before test twins_svt_base seed=42: allocated=64.0 MiB, reserved=64.0 MiB, device free=15006.0 MiB
+twins_svt_base seed=42: test accuracy=0.3830, macro F1=0.3478
+CUDA cleanup after test twins_svt_base seed=42: allocated=64.0 MiB, reserved=64.0 MiB, device free=15006.0 MiB
+CUDA cleanup before test twins_svt_base seed=43: allocated=64.0 MiB, reserved=64.0 MiB, device free=15006.0 MiB
+twins_svt_base seed=43: test accuracy=0.5789, macro F1=0.5781
+CUDA cleanup after test twins_svt_base seed=43: allocated=64.0 MiB, reserved=64.0 MiB, device free=15006.0 MiB
+CUDA cleanup before test twins_svt_base seed=44: allocated=64.0 MiB, reserved=64.0 MiB, device free=15006.0 MiB
+twins_svt_base seed=44: test accuracy=0.4357, macro F1=0.4145
+CUDA cleanup after test twins_svt_base seed=44: allocated=64.0 MiB, reserved=64.0 MiB, device free=15006.0 MiB
+Completed fold: fold_3_cauli_net

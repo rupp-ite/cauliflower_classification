@@ -1,0 +1,9 @@
+﻿transform_name,nominal_probability,applied_count,accepted_variants,observed_fraction
+HorizontalFlip,0.5,523,968,0.5402892561983471
+VerticalFlip,0.1,105,968,0.10847107438016529
+RandomBrightnessContrast,0.5,506,968,0.5227272727272727
+GaussianBlur,0.05,50,968,0.05165289256198347
+CLAHE,0.2,211,968,0.21797520661157024
+GaussNoise,0.15,150,968,0.15495867768595042
+Affine,0.5,520,968,0.5371900826446281
+HueSaturationValue,0.2,204,968,0.21074380165289255

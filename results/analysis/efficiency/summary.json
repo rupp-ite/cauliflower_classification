@@ -1,0 +1,33 @@
+{
+  "total_runs": 162,
+  "experiment_model_groups": 54,
+  "audit_flags": 0,
+  "input_collection_manifest_sha256": "e03e5cb0a4699cc296d1d5b518aa5a73672eae3411954025121f0d9774a7b2c4",
+  "observed_inference_protocols": [
+    {
+      "cuda_runtime": "13.2",
+      "device": "cuda:0",
+      "gpu": "NVIDIA GeForce RTX 5060 Ti",
+      "precision": "FP32",
+      "repeats": 100,
+      "scope": "model forward only; excludes loading, preprocessing and host/device transfers",
+      "strict_deterministic": true,
+      "tf32": false,
+      "timing_method": "CUDA events, synchronized per repetition",
+      "torch_version": "2.14.1+cu132",
+      "warmup": 20
+    }
+  ],
+  "notes": [
+    "Inference timings are recomputed from saved timing repetitions; no GPU workload was rerun.",
+    "Summary means and sample SDs are across the three seed-level measurements, not pooled timing repetitions.",
+    "Per-run repeat SD is separate from across-seed SD. Seeds with missing measurements are counted explicitly.",
+    "GMACs = supported_macs/1e9. Derived GFLOPs = (2*MACs + remaining counted operations)/1e9.",
+    "fvcore native operations count one fused multiply-add as one operation; they are not the same convention as the derived GFLOPs.",
+    "Unsupported operator counts describe trace occurrences, not missing scalar FLOPs. Explicitly ignored operations may not appear in that list.",
+    "Partial counts are not exact model totals. No missing-operation counts were added.",
+    "Batch-32 amortized time per image is not batch-1 single-image latency.",
+    "Peak allocated/reserved memory are PyTorch allocator measurements, not total Windows/NVIDIA device usage.",
+    "No confidence intervals or significance claims are calculated by this script."
+  ]
+}

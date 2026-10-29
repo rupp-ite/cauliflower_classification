@@ -1,0 +1,70 @@
+{
+  "fold": "fold_1_source_1",
+  "held_out_source": "1_Cauliflower_Diseases_Identification_Image_Dataset",
+  "precision": "FP16 AMP",
+  "model": "resnet50",
+  "seed": 42,
+  "model_info": {
+    "provider": "torchvision",
+    "name": "resnet50",
+    "weights": "ResNet50_Weights.IMAGENET1K_V2",
+    "pretrained": true,
+    "weights_url": "https://download.pytorch.org/models/resnet50-11ad3fa6.pth",
+    "head": "512-unit task-specific head; see script",
+    "recommended_mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "recommended_std": [
+      0.229,
+      0.224,
+      0.225
+    ]
+  },
+  "labels": [
+    "Bacterial Spot Rot",
+    "Black Rot",
+    "Downy Mildew",
+    "Healthy"
+  ],
+  "mean": [
+    0.485,
+    0.456,
+    0.406
+  ],
+  "std": [
+    0.229,
+    0.224,
+    0.225
+  ],
+  "image_size": [
+    224,
+    224
+  ],
+  "experiment": "source_held_out_224_offline_online",
+  "offline_augmentation": true,
+  "online_augmentation": true,
+  "augmentation": "horizontal flip .5, rotation +/-10 degrees, color jitter .1",
+  "initial_state_before_resize_sha256": "08a681e3269264c1063bc5885b31b0f6e39a503f1323190e81e9e7c576356c66",
+  "initial_state_sha256": "08a681e3269264c1063bc5885b31b0f6e39a503f1323190e81e9e7c576356c66",
+  "training_preprocessing": "Compose(\n    Resize(size=(224, 224), interpolation=bilinear, max_size=None, antialias=True)\n    RandomHorizontalFlip(p=0.5)\n    RandomRotation(degrees=[-10.0, 10.0], interpolation=bilinear, expand=False, fill=0)\n    ColorJitter(brightness=(0.9, 1.1), contrast=(0.9, 1.1), saturation=(0.9, 1.1), hue=None)\n    ToTensor()\n    Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])\n)",
+  "evaluation_preprocessing": "Compose(\n    Resize(size=(224, 224), interpolation=bilinear, max_size=None, antialias=True)\n    ToTensor()\n    Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])\n)",
+  "checkpoint_rule": "strictly highest validation accuracy; retain earliest epoch on ties",
+  "hyperparameters": {
+    "epochs": 100,
+    "batch_size": 32,
+    "learning_rate": 0.0001,
+    "weight_decay": 0.0001,
+    "label_smoothing": 0.1,
+    "early_stopping_patience": 10,
+    "scheduler": "ReduceLROnPlateau on validation loss",
+    "lr_patience": 3,
+    "lr_factor": 0.3,
+    "optimizer": "AdamW",
+    "normalization": "checkpoint",
+    "workers": 4,
+    "strict_deterministic": true,
+    "amp": true
+  }
+}
